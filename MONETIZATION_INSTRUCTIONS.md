@@ -200,7 +200,8 @@ Repo: `C:\Users\bhine\source\repos\apex_apps\bigsimplesite\bigsimpledev`. **A se
 - [ ] RevenueCat `ad_free` entitlement + `remove_ads` package with both products
 - [ ] Small Business Program enrollment confirmed (account level)
 - [ ] Privacy page live; privacy URL set in both consoles
-- [ ] `npx cap sync`; iOS `cd ios/App && pod install` on the Mac
+- [ ] `npx cap sync`; on the Mac open `ios/App/App.xcodeproj` (Swift Package Manager — no `pod install`)
+- [ ] Store listing text, screenshots, data safety and App Privacy answers from `STORE_LISTING.md`
 - [ ] Sandbox purchase + restore tested on a real device; a rewarded ad (hearts and energy) tested with test ids
 
 ## Where each value lives

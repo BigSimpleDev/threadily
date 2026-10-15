@@ -251,3 +251,23 @@
   height: 34px; padding: 0 16px; border-radius: 10px; border: none; cursor: pointer;
   background: var(--ion-color-primary); color: #fff; font-weight: 900;
 }
+
+/* Tablets: the phone-sized board left most of a tall screen empty, so scale
+   tiles and type up with the viewport. Tile height stays vh-based so the
+   5×4 board still fits without scrolling. */
+@media (min-width: 700px) and (min-height: 900px) {
+  :host {
+    --thr-tile-h: clamp(46px, 6.4vh, 92px);
+    --thr-gap: 10px;
+  }
+  .thr-board { max-width: 780px; gap: 16px; }
+  .thr-cats { gap: 10px; }
+  .thr-cat { border-radius: 18px; padding: 6px 8px 8px; }
+  .thr-cat-name { font-size: 18px; }
+  .thr-cat-count { font-size: 15px; }
+  .thr-lock-btn { font-size: 16px; padding: 4px 18px; }
+  .thr-tile { font-size: 21px; border-radius: 14px; }
+  .thr-tile-long { font-size: 16px; }
+  .thr-game-name { font-size: 20px; }
+  .thr-game-stars, .thr-game-num { font-size: 14px; }
+}
