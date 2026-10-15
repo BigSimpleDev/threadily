@@ -1,0 +1,3748 @@
+{
+ "pack": 6,
+ "puzzles": [
+  {
+   "id": 501,
+   "rating": 1,
+   "title": "Wet or Dry",
+   "categories": [
+    {
+     "name": "Wetlands",
+     "tiles": [
+      "Swamp",
+      "Lagoon",
+      "Marsh",
+      "Bog"
+     ]
+    },
+    {
+     "name": "Drylands",
+     "tiles": [
+      "Desert",
+      "Mesa",
+      "Dune",
+      "Badlands"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 502,
+   "rating": 1,
+   "title": "Loud or Quiet",
+   "categories": [
+    {
+     "name": "Loud",
+     "tiles": [
+      "Thunder",
+      "Fireworks",
+      "Siren",
+      "Jackhammer"
+     ]
+    },
+    {
+     "name": "Quiet",
+     "tiles": [
+      "Whisper",
+      "Library",
+      "Snowfall",
+      "Mime"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 503,
+   "rating": 3,
+   "title": "Plural Problems",
+   "categories": [
+    {
+     "name": "Same in the plural",
+     "tiles": [
+      "Sheep",
+      "Deer",
+      "Moose",
+      "Series"
+     ]
+    },
+    {
+     "name": "Irregular plurals",
+     "tiles": [
+      "Mice",
+      "Geese",
+      "Teeth",
+      "Oxen"
+     ]
+    },
+    {
+     "name": "Plurals ending in I",
+     "tiles": [
+      "Cacti",
+      "Fungi",
+      "Alumni",
+      "Stimuli"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 504,
+   "rating": 2,
+   "title": "Hot or Cold Dish",
+   "categories": [
+    {
+     "name": "Served hot",
+     "tiles": [
+      "Fondue",
+      "Chili",
+      "Lasagna",
+      "Fajitas"
+     ]
+    },
+    {
+     "name": "Served cold",
+     "tiles": [
+      "Gazpacho",
+      "Ceviche",
+      "Sushi",
+      "Potato salad"
+     ]
+    }
+   ],
+   "herrings": [
+    "Gazpacho"
+   ]
+  },
+  {
+   "id": 505,
+   "rating": 2,
+   "title": "Sound Effects",
+   "categories": [
+    {
+     "name": "Water sounds",
+     "tiles": [
+      "Splash",
+      "Drip",
+      "Gurgle",
+      "Plop"
+     ]
+    },
+    {
+     "name": "Machine sounds",
+     "tiles": [
+      "Whir",
+      "Beep",
+      "Clank",
+      "Vroom"
+     ]
+    },
+    {
+     "name": "Eating sounds",
+     "tiles": [
+      "Crunch",
+      "Slurp",
+      "Chomp",
+      "Gulp"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 506,
+   "rating": 1,
+   "title": "Orange or Green",
+   "categories": [
+    {
+     "name": "Orange foods",
+     "tiles": [
+      "Carrot",
+      "Cantaloupe",
+      "Sweet potato",
+      "Apricot"
+     ]
+    },
+    {
+     "name": "Green foods",
+     "tiles": [
+      "Kiwi",
+      "Avocado",
+      "Celery",
+      "Pickle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 507,
+   "rating": 2,
+   "title": "Mash-Ups",
+   "categories": [
+    {
+     "name": "Food mash-ups",
+     "tiles": [
+      "Brunch",
+      "Spork",
+      "Turducken",
+      "Mocktail"
+     ]
+    },
+    {
+     "name": "Animal mash-ups",
+     "tiles": [
+      "Labradoodle",
+      "Liger",
+      "Zorse",
+      "Cockapoo"
+     ]
+    },
+    {
+     "name": "Tech mash-ups",
+     "tiles": [
+      "Emoticon",
+      "Podcast",
+      "Blog",
+      "Malware"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 508,
+   "rating": 2,
+   "title": "Gym or Music Class",
+   "categories": [
+    {
+     "name": "Gym class",
+     "tiles": [
+      "Rope climb",
+      "Jumping jack",
+      "Push-up",
+      "Pacer test"
+     ]
+    },
+    {
+     "name": "Music class",
+     "tiles": [
+      "Choir",
+      "Triangle",
+      "Metronome",
+      "Sing-along"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 509,
+   "rating": 3,
+   "title": "Short Forms",
+   "categories": [
+    {
+     "name": "Clipped words",
+     "tiles": [
+      "Gym",
+      "Flu",
+      "Fridge",
+      "Phone"
+     ]
+    },
+    {
+     "name": "Acronyms, now words",
+     "tiles": [
+      "Laser",
+      "Radar",
+      "Scuba",
+      "Sonar"
+     ]
+    },
+    {
+     "name": "Latin abbreviations",
+     "tiles": [
+      "AM",
+      "PM",
+      "PS",
+      "Etc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 510,
+   "rating": 1,
+   "title": "Jungle or Savanna",
+   "categories": [
+    {
+     "name": "Jungle",
+     "tiles": [
+      "Jaguar",
+      "Toucan",
+      "Gorilla",
+      "Sloth"
+     ]
+    },
+    {
+     "name": "Savanna",
+     "tiles": [
+      "Giraffe",
+      "Zebra",
+      "Wildebeest",
+      "Ostrich"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 511,
+   "rating": 4,
+   "title": "Lost Empires",
+   "categories": [
+    {
+     "name": "Mesopotamia",
+     "tiles": [
+      "Ziggurat",
+      "Cuneiform",
+      "Babylon",
+      "Ur"
+     ]
+    },
+    {
+     "name": "Maya",
+     "tiles": [
+      "Chichen Itza",
+      "Tikal",
+      "Popol Vuh",
+      "Palenque"
+     ]
+    },
+    {
+     "name": "Inca",
+     "tiles": [
+      "Quipu",
+      "Cusco",
+      "Pachacuti",
+      "Vilcabamba"
+     ]
+    },
+    {
+     "name": "Aztec",
+     "tiles": [
+      "Tenochtitlan",
+      "Quetzalcoatl",
+      "Chinampa",
+      "Tlaloc"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 512,
+   "rating": 3,
+   "title": "Fast Food Styles",
+   "categories": [
+    {
+     "name": "Pizza styles",
+     "tiles": [
+      "Neapolitan",
+      "Deep dish",
+      "Detroit",
+      "Sicilian"
+     ]
+    },
+    {
+     "name": "Burger styles",
+     "tiles": [
+      "Smash",
+      "Slider",
+      "Patty melt",
+      "Juicy Lucy"
+     ]
+    },
+    {
+     "name": "Hot dog styles",
+     "tiles": [
+      "Coney",
+      "Chili dog",
+      "Sonoran",
+      "Frank"
+     ]
+    }
+   ],
+   "herrings": [
+    "Sicilian"
+   ]
+  },
+  {
+   "id": 513,
+   "rating": 1,
+   "title": "Snack Bar",
+   "categories": [
+    {
+     "name": "Desserts",
+     "tiles": [
+      "Pie",
+      "Cake",
+      "Pudding",
+      "Cobbler"
+     ]
+    },
+    {
+     "name": "Drinks",
+     "tiles": [
+      "Juice",
+      "Milk",
+      "Soda",
+      "Lemonade"
+     ]
+    },
+    {
+     "name": "Snacks",
+     "tiles": [
+      "Chips",
+      "Pretzels",
+      "Popcorn",
+      "Crackers"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 514,
+   "rating": 3,
+   "title": "Going for Gold",
+   "categories": [
+    {
+     "name": "Winter events",
+     "tiles": [
+      "Skeleton",
+      "Slalom",
+      "Ski jump",
+      "Halfpipe"
+     ]
+    },
+    {
+     "name": "Summer events",
+     "tiles": [
+      "Decathlon",
+      "Steeplechase",
+      "Dressage",
+      "Triathlon"
+     ]
+    },
+    {
+     "name": "Olympic symbols",
+     "tiles": [
+      "Rings",
+      "Torch",
+      "Podium",
+      "Motto"
+     ]
+    },
+    {
+     "name": "Host cities",
+     "tiles": [
+      "Sochi",
+      "Rio",
+      "Athens",
+      "Sapporo"
+     ]
+    }
+   ],
+   "herrings": [
+    "Skeleton"
+   ]
+  },
+  {
+   "id": 515,
+   "rating": 4,
+   "title": "Odd Spellings",
+   "categories": [
+    {
+     "name": "No vowels but Y",
+     "tiles": [
+      "Rhythm",
+      "Myth",
+      "Gym",
+      "Lynx"
+     ]
+    },
+    {
+     "name": "Three double letters",
+     "tiles": [
+      "Bookkeeper",
+      "Committee",
+      "Mississippi",
+      "Tennessee"
+     ]
+    },
+    {
+     "name": "Q without U",
+     "tiles": [
+      "Qatar",
+      "Iraqi",
+      "Qi",
+      "Niqab"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 516,
+   "rating": 2,
+   "title": "Pouch or Teeth",
+   "categories": [
+    {
+     "name": "Marsupials",
+     "tiles": [
+      "Koala",
+      "Wombat",
+      "Opossum",
+      "Wallaby"
+     ]
+    },
+    {
+     "name": "Rodents",
+     "tiles": [
+      "Beaver",
+      "Porcupine",
+      "Gerbil",
+      "Squirrel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 517,
+   "rating": 3,
+   "title": "Business Casual",
+   "categories": [
+    {
+     "name": "Accounting",
+     "tiles": [
+      "Ledger",
+      "Audit",
+      "Invoice",
+      "Payroll"
+     ]
+    },
+    {
+     "name": "Legal",
+     "tiles": [
+      "Affidavit",
+      "Subpoena",
+      "Plaintiff",
+      "Verdict"
+     ]
+    },
+    {
+     "name": "Marketing",
+     "tiles": [
+      "Branding",
+      "Campaign",
+      "Slogan",
+      "Jingle"
+     ]
+    },
+    {
+     "name": "Real estate",
+     "tiles": [
+      "Escrow",
+      "Mortgage",
+      "Appraisal",
+      "Lien"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 518,
+   "rating": 1,
+   "title": "Bus or Plane",
+   "categories": [
+    {
+     "name": "Plane trip",
+     "tiles": [
+      "Carry-on",
+      "Tray table",
+      "Aisle seat",
+      "Jet lag"
+     ]
+    },
+    {
+     "name": "Bus trip",
+     "tiles": [
+      "Fare card",
+      "Bus driver",
+      "Bus lane",
+      "Bus pass"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 519,
+   "rating": 3,
+   "title": "Tense Moment",
+   "categories": [
+    {
+     "name": "Present tense",
+     "tiles": [
+      "Swim",
+      "Fly",
+      "Drink",
+      "Sing"
+     ]
+    },
+    {
+     "name": "Past tense",
+     "tiles": [
+      "Swam",
+      "Flew",
+      "Drank",
+      "Sang"
+     ]
+    },
+    {
+     "name": "Past participle",
+     "tiles": [
+      "Swum",
+      "Flown",
+      "Drunk",
+      "Sung"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 520,
+   "rating": 1,
+   "title": "Salad Bar",
+   "categories": [
+    {
+     "name": "Fruit salad",
+     "tiles": [
+      "Melon",
+      "Grape",
+      "Kiwi",
+      "Mango"
+     ]
+    },
+    {
+     "name": "Garden salad",
+     "tiles": [
+      "Lettuce",
+      "Cucumber",
+      "Radish",
+      "Crouton"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 521,
+   "rating": 5,
+   "title": "Word Nerd",
+   "categories": [
+    {
+     "name": "Its own opposite",
+     "tiles": [
+      "Cleave",
+      "Sanction",
+      "Dust",
+      "Oversight"
+     ]
+    },
+    {
+     "name": "Capitalized, new word",
+     "tiles": [
+      "Polish",
+      "March",
+      "August",
+      "Reading"
+     ]
+    },
+    {
+     "name": "No perfect rhyme",
+     "tiles": [
+      "Orange",
+      "Silver",
+      "Purple",
+      "Month"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 522,
+   "rating": 4,
+   "title": "Gear Head",
+   "categories": [
+    {
+     "name": "Fencing",
+     "tiles": [
+      "Epee",
+      "Sabre",
+      "Lame",
+      "Plastron"
+     ]
+    },
+    {
+     "name": "Archery",
+     "tiles": [
+      "Quiver",
+      "Fletching",
+      "Nock",
+      "Bracer"
+     ]
+    },
+    {
+     "name": "Rowing",
+     "tiles": [
+      "Oar",
+      "Coxswain",
+      "Scull",
+      "Rigger"
+     ]
+    },
+    {
+     "name": "Climbing",
+     "tiles": [
+      "Carabiner",
+      "Belay",
+      "Crampon",
+      "Piton"
+     ]
+    },
+    {
+     "name": "Equestrian",
+     "tiles": [
+      "Crop",
+      "Jodhpurs",
+      "Girth",
+      "Martingale"
+     ]
+    }
+   ],
+   "herrings": [
+    "Lame",
+    "Crop"
+   ]
+  },
+  {
+   "id": 523,
+   "rating": 2,
+   "title": "Woodshop",
+   "categories": [
+    {
+     "name": "Wood joints",
+     "tiles": [
+      "Dovetail",
+      "Mortise",
+      "Dado",
+      "Miter"
+     ]
+    },
+    {
+     "name": "Woods",
+     "tiles": [
+      "Teak",
+      "Mahogany",
+      "Balsa",
+      "Ebony"
+     ]
+    },
+    {
+     "name": "Wood finishes",
+     "tiles": [
+      "Stain",
+      "Varnish",
+      "Shellac",
+      "Lacquer"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 524,
+   "rating": 3,
+   "title": "Say Cheese, Bread, Cream",
+   "categories": [
+    {
+     "name": "___ cheese",
+     "tiles": [
+      "Cottage",
+      "String",
+      "Head",
+      "Goat"
+     ]
+    },
+    {
+     "name": "___bread",
+     "tiles": [
+      "Ginger",
+      "Short",
+      "Corn",
+      "Monkey"
+     ]
+    },
+    {
+     "name": "___ cream",
+     "tiles": [
+      "Ice",
+      "Sour",
+      "Shaving",
+      "Clotted"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 525,
+   "rating": 1,
+   "title": "Truck Stop",
+   "categories": [
+    {
+     "name": "Fire truck",
+     "tiles": [
+      "Ladder",
+      "Siren",
+      "Hose",
+      "Axe"
+     ]
+    },
+    {
+     "name": "Ice cream truck",
+     "tiles": [
+      "Jingle",
+      "Popsicle",
+      "Sprinkles",
+      "Cone"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 526,
+   "rating": 4,
+   "title": "Celtic Fringe",
+   "categories": [
+    {
+     "name": "Scottish",
+     "tiles": [
+      "Kilt",
+      "Haggis",
+      "Loch",
+      "Tartan"
+     ]
+    },
+    {
+     "name": "Irish",
+     "tiles": [
+      "Craic",
+      "Boxty",
+      "Bodhran",
+      "Claddagh"
+     ]
+    },
+    {
+     "name": "Welsh",
+     "tiles": [
+      "Eisteddfod",
+      "Cawl",
+      "Rarebit",
+      "Cymru"
+     ]
+    },
+    {
+     "name": "English",
+     "tiles": [
+      "Morris dance",
+      "Crumpet",
+      "Beefeater",
+      "Bangers"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 527,
+   "rating": 2,
+   "title": "Parts Department",
+   "categories": [
+    {
+     "name": "Shoe parts",
+     "tiles": [
+      "Sole",
+      "Heel",
+      "Tongue",
+      "Eyelet"
+     ]
+    },
+    {
+     "name": "Hat parts",
+     "tiles": [
+      "Brim",
+      "Crown",
+      "Bill",
+      "Sweatband"
+     ]
+    },
+    {
+     "name": "Glove parts",
+     "tiles": [
+      "Palm",
+      "Thumb",
+      "Cuff",
+      "Webbing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 528,
+   "rating": 3,
+   "title": "Express Yourself",
+   "categories": [
+    {
+     "name": "Laugh",
+     "tiles": [
+      "Giggle",
+      "Chuckle",
+      "Cackle",
+      "Guffaw"
+     ]
+    },
+    {
+     "name": "Cry",
+     "tiles": [
+      "Sob",
+      "Weep",
+      "Whimper",
+      "Bawl"
+     ]
+    },
+    {
+     "name": "Shout",
+     "tiles": [
+      "Yell",
+      "Holler",
+      "Bellow",
+      "Bark"
+     ]
+    },
+    {
+     "name": "Smile",
+     "tiles": [
+      "Grin",
+      "Smirk",
+      "Beam",
+      "Simper"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 529,
+   "rating": 4,
+   "title": "Prefix Fix",
+   "categories": [
+    {
+     "name": "Add EX in front",
+     "tiles": [
+      "Plain",
+      "Pert",
+      "Hale",
+      "Ample"
+     ]
+    },
+    {
+     "name": "Add RE in front",
+     "tiles": [
+      "Main",
+      "Ward",
+      "Bel",
+      "Cycle"
+     ]
+    },
+    {
+     "name": "Add DE in front",
+     "tiles": [
+      "Tour",
+      "Fault",
+      "Mean",
+      "Bunk"
+     ]
+    }
+   ],
+   "note": "explain, expert, exhale, example / remain, reward, rebel, recycle / detour, default, demean, debunk"
+  },
+  {
+   "id": 530,
+   "rating": 2,
+   "title": "Bird Brain",
+   "categories": [
+    {
+     "name": "Bird parts",
+     "tiles": [
+      "Beak",
+      "Talon",
+      "Crest",
+      "Plumage"
+     ]
+    },
+    {
+     "name": "Bird behaviors",
+     "tiles": [
+      "Preen",
+      "Molt",
+      "Roost",
+      "Migrate"
+     ]
+    },
+    {
+     "name": "Bird homes",
+     "tiles": [
+      "Nest",
+      "Aerie",
+      "Rookery",
+      "Birdhouse"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 531,
+   "rating": 3,
+   "title": "Paddle Your Own Canoe",
+   "categories": [
+    {
+     "name": "Paddle craft",
+     "tiles": [
+      "Kayak",
+      "Canoe",
+      "Paddleboard",
+      "Dragon boat"
+     ]
+    },
+    {
+     "name": "Sailboats",
+     "tiles": [
+      "Sloop",
+      "Ketch",
+      "Yawl",
+      "Dinghy"
+     ]
+    },
+    {
+     "name": "Motorboats",
+     "tiles": [
+      "Speedboat",
+      "Pontoon",
+      "Bass boat",
+      "Airboat"
+     ]
+    },
+    {
+     "name": "Big ships",
+     "tiles": [
+      "Tanker",
+      "Freighter",
+      "Liner",
+      "Barge"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 532,
+   "rating": 5,
+   "title": "Name Game",
+   "categories": [
+    {
+     "name": "Tom___",
+     "tiles": [
+      "Boy",
+      "Cat",
+      "Thumb",
+      "Foolery"
+     ]
+    },
+    {
+     "name": "Bill___",
+     "tiles": [
+      "Board",
+      "Fold",
+      "Ion",
+      "Iards"
+     ]
+    },
+    {
+     "name": "Pat___",
+     "tiles": [
+      "Tern",
+      "Ent",
+      "Io",
+      "Rol"
+     ]
+    },
+    {
+     "name": "Art___",
+     "tiles": [
+      "Ichoke",
+      "Ery",
+      "Ist",
+      "Icle"
+     ]
+    }
+   ],
+   "note": "tomboy, tomcat, Tom Thumb, tomfoolery / billboard, billfold, billion, billiards / pattern, patent, patio, patrol / artichoke, artery, artist, article"
+  },
+  {
+   "id": 533,
+   "rating": 2,
+   "title": "Big Bird, Little Bird",
+   "categories": [
+    {
+     "name": "Big birds",
+     "tiles": [
+      "Ostrich",
+      "Albatross",
+      "Condor",
+      "Pelican"
+     ]
+    },
+    {
+     "name": "Small birds",
+     "tiles": [
+      "Hummingbird",
+      "Wren",
+      "Chickadee",
+      "Kinglet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 534,
+   "rating": 3,
+   "title": "Craft Fair",
+   "categories": [
+    {
+     "name": "Paper crafts",
+     "tiles": [
+      "Quilling",
+      "Papier-mache",
+      "Collage",
+      "Kirigami"
+     ]
+    },
+    {
+     "name": "Clay crafts",
+     "tiles": [
+      "Pinch pot",
+      "Coil pot",
+      "Slab",
+      "Raku"
+     ]
+    },
+    {
+     "name": "Wood crafts",
+     "tiles": [
+      "Whittling",
+      "Woodburning",
+      "Marquetry",
+      "Chip carving"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 535,
+   "rating": 3,
+   "title": "Under the Hood",
+   "categories": [
+    {
+     "name": "Engine",
+     "tiles": [
+      "Piston",
+      "Camshaft",
+      "Spark plug",
+      "Timing belt"
+     ]
+    },
+    {
+     "name": "Brakes",
+     "tiles": [
+      "Rotor",
+      "Caliper",
+      "Brake pad",
+      "Brake line"
+     ]
+    },
+    {
+     "name": "Suspension",
+     "tiles": [
+      "Strut",
+      "Shock",
+      "Coil spring",
+      "Sway bar"
+     ]
+    },
+    {
+     "name": "Exhaust",
+     "tiles": [
+      "Muffler",
+      "Tailpipe",
+      "Resonator",
+      "Manifold"
+     ]
+    }
+   ],
+   "herrings": [
+    "Strut"
+   ]
+  },
+  {
+   "id": 536,
+   "rating": 4,
+   "title": "Save, Lose, Steal",
+   "categories": [
+    {
+     "name": "Save ___",
+     "tiles": [
+      "Day",
+      "Breath",
+      "Whales",
+      "Bacon"
+     ]
+    },
+    {
+     "name": "Lose ___",
+     "tiles": [
+      "Temper",
+      "Nerve",
+      "Track",
+      "Sleep"
+     ]
+    },
+    {
+     "name": "Steal ___",
+     "tiles": [
+      "Show",
+      "Base",
+      "Thunder",
+      "Glance"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 537,
+   "rating": 2,
+   "title": "Pie Shop",
+   "categories": [
+    {
+     "name": "Fruit pies",
+     "tiles": [
+      "Blueberry",
+      "Peach",
+      "Apple",
+      "Cherry"
+     ]
+    },
+    {
+     "name": "Custard pies",
+     "tiles": [
+      "Chess",
+      "Buttermilk",
+      "Sweet potato",
+      "Pumpkin"
+     ]
+    },
+    {
+     "name": "Nut pies",
+     "tiles": [
+      "Pecan",
+      "Walnut",
+      "Macadamia",
+      "Hazelnut"
+     ]
+    }
+   ],
+   "herrings": [
+    "Chess"
+   ]
+  },
+  {
+   "id": 538,
+   "rating": 3,
+   "title": "Home on the Range",
+   "categories": [
+    {
+     "name": "Western wear",
+     "tiles": [
+      "Bolo tie",
+      "Duster",
+      "Pearl snaps",
+      "Cowboy boots"
+     ]
+    },
+    {
+     "name": "Ranch animals",
+     "tiles": [
+      "Longhorn",
+      "Cow pony",
+      "Heeler",
+      "Steer"
+     ]
+    },
+    {
+     "name": "Cowboy talk",
+     "tiles": [
+      "Howdy",
+      "Yeehaw",
+      "Varmint",
+      "Reckon"
+     ]
+    },
+    {
+     "name": "Old West towns",
+     "tiles": [
+      "Tombstone",
+      "Dodge City",
+      "Deadwood",
+      "Abilene"
+     ]
+    }
+   ],
+   "herrings": [
+    "Tombstone",
+    "Duster"
+   ]
+  },
+  {
+   "id": 539,
+   "rating": 5,
+   "title": "In Plain Sight",
+   "categories": [
+    {
+     "name": "Hides a vehicle",
+     "tiles": [
+      "Scarce",
+      "Vandal",
+      "Abusive",
+      "Cabbage"
+     ]
+    },
+    {
+     "name": "Hides a body part",
+     "tiles": [
+      "Whipped",
+      "Machine",
+      "Backgammon",
+      "Hearsay"
+     ]
+    },
+    {
+     "name": "Hides a number",
+     "tiles": [
+      "Stone",
+      "Attention",
+      "Freighter",
+      "Network"
+     ]
+    },
+    {
+     "name": "Hides a color",
+     "tiles": [
+      "Predict",
+      "Cyanide",
+      "Prose",
+      "Silverware"
+     ]
+    },
+    {
+     "name": "Hides an animal",
+     "tiles": [
+      "Batch",
+      "Ratio",
+      "Coward",
+      "Pigment"
+     ]
+    }
+   ],
+   "note": "car, van, bus, cab / hip, chin, back, ear / one, ten, eight, two / red, cyan, rose, silver / bat, rat, cow, pig"
+  },
+  {
+   "id": 540,
+   "rating": 1,
+   "title": "Rain or Snow",
+   "categories": [
+    {
+     "name": "Rain",
+     "tiles": [
+      "Drizzle",
+      "Downpour",
+      "Shower",
+      "Sprinkle"
+     ]
+    },
+    {
+     "name": "Snow",
+     "tiles": [
+      "Flurry",
+      "Blizzard",
+      "Whiteout",
+      "Snowfall"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 541,
+   "rating": 3,
+   "title": "Lay of the Land",
+   "categories": [
+    {
+     "name": "Mountain parts",
+     "tiles": [
+      "Peak",
+      "Ridge",
+      "Col",
+      "Saddle"
+     ]
+    },
+    {
+     "name": "River parts",
+     "tiles": [
+      "Delta",
+      "Mouth",
+      "Source",
+      "Tributary"
+     ]
+    },
+    {
+     "name": "Coast features",
+     "tiles": [
+      "Cove",
+      "Inlet",
+      "Fjord",
+      "Isthmus"
+     ]
+    },
+    {
+     "name": "Valleys",
+     "tiles": [
+      "Gorge",
+      "Ravine",
+      "Canyon",
+      "Gulch"
+     ]
+    }
+   ],
+   "herrings": [
+    "Mouth",
+    "Saddle",
+    "Delta"
+   ]
+  },
+  {
+   "id": 542,
+   "rating": 2,
+   "title": "Hats Off",
+   "categories": [
+    {
+     "name": "Dress hats",
+     "tiles": [
+      "Top hat",
+      "Bowler",
+      "Homburg",
+      "Boater"
+     ]
+    },
+    {
+     "name": "Sports caps",
+     "tiles": [
+      "Visor",
+      "Baseball cap",
+      "Trucker hat",
+      "Snapback"
+     ]
+    },
+    {
+     "name": "Winter hats",
+     "tiles": [
+      "Beanie",
+      "Trapper hat",
+      "Ushanka",
+      "Balaclava"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 543,
+   "rating": 3,
+   "title": "Logged In",
+   "categories": [
+    {
+     "name": "Social media",
+     "tiles": [
+      "Hashtag",
+      "Selfie",
+      "Meme",
+      "Viral"
+     ]
+    },
+    {
+     "name": "Phone gestures",
+     "tiles": [
+      "Swipe",
+      "Pinch",
+      "Tap",
+      "Scroll"
+     ]
+    },
+    {
+     "name": "Video calls",
+     "tiles": [
+      "Mute",
+      "Webcam",
+      "Screen share",
+      "Lag"
+     ]
+    },
+    {
+     "name": "Online shopping",
+     "tiles": [
+      "Cart",
+      "Checkout",
+      "Wishlist",
+      "Promo code"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 544,
+   "rating": 1,
+   "title": "Pet or Baby",
+   "categories": [
+    {
+     "name": "Pet supplies",
+     "tiles": [
+      "Leash",
+      "Chew toy",
+      "Flea collar",
+      "Fish food"
+     ]
+    },
+    {
+     "name": "Baby supplies",
+     "tiles": [
+      "Diaper",
+      "Onesie",
+      "Car seat",
+      "Bib"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 545,
+   "rating": 4,
+   "title": "Body of Things",
+   "categories": [
+    {
+     "name": "Has hands",
+     "tiles": [
+      "Clock",
+      "Stopwatch",
+      "Ranch",
+      "Farm"
+     ]
+    },
+    {
+     "name": "Has arms",
+     "tiles": [
+      "Chair",
+      "Sofa",
+      "Crane",
+      "Lamp"
+     ]
+    },
+    {
+     "name": "Has ears",
+     "tiles": [
+      "Corn",
+      "Wheat",
+      "Barley",
+      "Rye"
+     ]
+    }
+   ],
+   "herrings": [
+    "Ranch",
+    "Farm"
+   ]
+  },
+  {
+   "id": 546,
+   "rating": 2,
+   "title": "On Ice",
+   "categories": [
+    {
+     "name": "Ice",
+     "tiles": [
+      "Cube",
+      "Crushed",
+      "Shaved",
+      "Dry"
+     ]
+    },
+    {
+     "name": "Ice formations",
+     "tiles": [
+      "Icicle",
+      "Glacier",
+      "Floe",
+      "Frost"
+     ]
+    },
+    {
+     "name": "Ice sports",
+     "tiles": [
+      "Hockey",
+      "Curling",
+      "Bandy",
+      "Ice fishing"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 547,
+   "rating": 3,
+   "title": "Sweet Dreams",
+   "categories": [
+    {
+     "name": "Bed types",
+     "tiles": [
+      "Murphy",
+      "Canopy",
+      "Trundle",
+      "Futon"
+     ]
+    },
+    {
+     "name": "Pillow types",
+     "tiles": [
+      "Body",
+      "Neck",
+      "Memory foam",
+      "Throw"
+     ]
+    },
+    {
+     "name": "Sleepwear",
+     "tiles": [
+      "Nightgown",
+      "Nightcap",
+      "Robe",
+      "Slippers"
+     ]
+    },
+    {
+     "name": "Sleep words",
+     "tiles": [
+      "Nap",
+      "Siesta",
+      "Forty winks",
+      "Doze"
+     ]
+    }
+   ],
+   "herrings": [
+    "Nightcap",
+    "Throw"
+   ]
+  },
+  {
+   "id": 548,
+   "rating": 5,
+   "title": "Element Families",
+   "categories": [
+    {
+     "name": "Alkali metals",
+     "tiles": [
+      "Lithium",
+      "Sodium",
+      "Potassium",
+      "Cesium"
+     ]
+    },
+    {
+     "name": "Lanthanides",
+     "tiles": [
+      "Cerium",
+      "Neodymium",
+      "Europium",
+      "Gadolinium"
+     ]
+    },
+    {
+     "name": "Actinides",
+     "tiles": [
+      "Uranium",
+      "Plutonium",
+      "Thorium",
+      "Americium"
+     ]
+    },
+    {
+     "name": "Alkaline earth metals",
+     "tiles": [
+      "Calcium",
+      "Magnesium",
+      "Barium",
+      "Radium"
+     ]
+    },
+    {
+     "name": "Transition metals",
+     "tiles": [
+      "Titanium",
+      "Chromium",
+      "Tungsten",
+      "Vanadium"
+     ]
+    }
+   ],
+   "herrings": [
+    "Europium",
+    "Uranium",
+    "Plutonium",
+    "Thorium",
+    "Americium"
+   ]
+  },
+  {
+   "id": 549,
+   "rating": 2,
+   "title": "Getting Around Town",
+   "categories": [
+    {
+     "name": "City rides",
+     "tiles": [
+      "Rickshaw",
+      "Tuk-tuk",
+      "Pedicab",
+      "Jeepney"
+     ]
+    },
+    {
+     "name": "Animal power",
+     "tiles": [
+      "Dogsled",
+      "Camel",
+      "Pack mule",
+      "Horse cart"
+     ]
+    },
+    {
+     "name": "Snow travel",
+     "tiles": [
+      "Snowmobile",
+      "Snowcat",
+      "Toboggan",
+      "Ski lift"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 550,
+   "rating": 4,
+   "title": "Creepy Compounds",
+   "categories": [
+    {
+     "name": "___fly",
+     "tiles": [
+      "Butter",
+      "Dragon",
+      "Horse",
+      "Damsel"
+     ]
+    },
+    {
+     "name": "___bug",
+     "tiles": [
+      "Lady",
+      "Bed",
+      "Litter",
+      "Jitter"
+     ]
+    },
+    {
+     "name": "___worm",
+     "tiles": [
+      "Book",
+      "Inch",
+      "Earth",
+      "Silk"
+     ]
+    },
+    {
+     "name": "___bee",
+     "tiles": [
+      "Bumble",
+      "Spelling",
+      "Honey",
+      "Quilting"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 551,
+   "rating": 1,
+   "title": "Pond or Pool",
+   "categories": [
+    {
+     "name": "Pond",
+     "tiles": [
+      "Frog",
+      "Cattail",
+      "Tadpole",
+      "Algae"
+     ]
+    },
+    {
+     "name": "Pool",
+     "tiles": [
+      "Diving board",
+      "Pool float",
+      "Deep end",
+      "Chlorine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 552,
+   "rating": 4,
+   "title": "Bird Watch",
+   "categories": [
+    {
+     "name": "___ owl",
+     "tiles": [
+      "Barn",
+      "Snowy",
+      "Great horned",
+      "Screech"
+     ]
+    },
+    {
+     "name": "___ hawk",
+     "tiles": [
+      "Red-tailed",
+      "Cooper's",
+      "Harris's",
+      "Broad-winged"
+     ]
+    },
+    {
+     "name": "___ duck",
+     "tiles": [
+      "Ruddy",
+      "Teal",
+      "Canvasback",
+      "Pintail"
+     ]
+    },
+    {
+     "name": "Woodpeckers",
+     "tiles": [
+      "Downy",
+      "Hairy",
+      "Pileated",
+      "Flicker"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 553,
+   "rating": 2,
+   "title": "Fish Market",
+   "categories": [
+    {
+     "name": "Freshwater fish",
+     "tiles": [
+      "Trout",
+      "Carp",
+      "Catfish",
+      "Tilapia"
+     ]
+    },
+    {
+     "name": "Saltwater fish",
+     "tiles": [
+      "Tuna",
+      "Mackerel",
+      "Halibut",
+      "Swordfish"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 554,
+   "rating": 3,
+   "title": "Sweet and Popular",
+   "categories": [
+    {
+     "name": "Candy ___",
+     "tiles": [
+      "Cane",
+      "Apple",
+      "Floss",
+      "Striper"
+     ]
+    },
+    {
+     "name": "Pop ___",
+     "tiles": [
+      "Quiz",
+      "Star",
+      "Gun",
+      "Culture"
+     ]
+    },
+    {
+     "name": "Peanut ___",
+     "tiles": [
+      "Butter",
+      "Gallery",
+      "Brittle",
+      "Allergy"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 555,
+   "rating": 4,
+   "title": "Dress Code",
+   "categories": [
+    {
+     "name": "Jackets",
+     "tiles": [
+      "Bomber",
+      "Puffer",
+      "Varsity",
+      "Blazer"
+     ]
+    },
+    {
+     "name": "Boots",
+     "tiles": [
+      "Chelsea",
+      "Combat",
+      "Wellington",
+      "Chukka"
+     ]
+    },
+    {
+     "name": "Coats",
+     "tiles": [
+      "Pea",
+      "Trench",
+      "Duffle",
+      "Chesterfield"
+     ]
+    },
+    {
+     "name": "Sandals",
+     "tiles": [
+      "Gladiator",
+      "Slide",
+      "Huarache",
+      "Thong"
+     ]
+    },
+    {
+     "name": "Jeans",
+     "tiles": [
+      "Skinny",
+      "Bootcut",
+      "Boyfriend",
+      "Mom"
+     ]
+    }
+   ],
+   "herrings": [
+    "Chelsea",
+    "Wellington",
+    "Pea",
+    "Mom"
+   ]
+  },
+  {
+   "id": 556,
+   "rating": 2,
+   "title": "Cat or Bird",
+   "categories": [
+    {
+     "name": "Cat stuff",
+     "tiles": [
+      "Whiskers",
+      "Hairball",
+      "Catnip",
+      "Kitty litter"
+     ]
+    },
+    {
+     "name": "Bird stuff",
+     "tiles": [
+      "Feathers",
+      "Birdseed",
+      "Cuttlebone",
+      "Perch"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 557,
+   "rating": 4,
+   "title": "Creative Class",
+   "categories": [
+    {
+     "name": "Architects",
+     "tiles": [
+      "Gaudi",
+      "Wright",
+      "Gehry",
+      "Hadid"
+     ]
+    },
+    {
+     "name": "Photographers",
+     "tiles": [
+      "Adams",
+      "Lange",
+      "Avedon",
+      "Leibovitz"
+     ]
+    },
+    {
+     "name": "Sculptors",
+     "tiles": [
+      "Rodin",
+      "Bernini",
+      "Brancusi",
+      "Calder"
+     ]
+    },
+    {
+     "name": "Illustrators",
+     "tiles": [
+      "Sendak",
+      "Potter",
+      "Rockwell",
+      "Beardsley"
+     ]
+    }
+   ],
+   "herrings": [
+    "Wright",
+    "Adams",
+    "Potter"
+   ]
+  },
+  {
+   "id": 558,
+   "rating": 5,
+   "title": "Hidden Names",
+   "categories": [
+    {
+     "name": "Hides a president",
+     "tiles": [
+      "Polka",
+      "Bushel",
+      "Fordable",
+      "Pierced"
+     ]
+    },
+    {
+     "name": "Hides a Greek god",
+     "tiles": [
+      "Shades",
+      "Erosion",
+      "Pandemic",
+      "Squares"
+     ]
+    },
+    {
+     "name": "Hides a NATO letter",
+     "tiles": [
+      "Golfer",
+      "Hotelier",
+      "Deltoid",
+      "Kilowatt"
+     ]
+    }
+   ],
+   "note": "Polk, Bush, Ford, Pierce / Hades, Eros, Pan, Ares / Golf, Hotel, Delta, Kilo"
+  },
+  {
+   "id": 559,
+   "rating": 2,
+   "title": "Play Time",
+   "categories": [
+    {
+     "name": "Backyard play",
+     "tiles": [
+      "Trampoline",
+      "Swing set",
+      "Sandbox",
+      "Playhouse"
+     ]
+    },
+    {
+     "name": "Pretend play",
+     "tiles": [
+      "Play kitchen",
+      "Dress-up",
+      "Tea set",
+      "Doctor kit"
+     ]
+    },
+    {
+     "name": "Art play",
+     "tiles": [
+      "Finger paint",
+      "Stickers",
+      "Paint set",
+      "Crayons"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 560,
+   "rating": 4,
+   "title": "Verbing",
+   "categories": [
+    {
+     "name": "Jobs as verbs",
+     "tiles": [
+      "Butcher",
+      "Doctor",
+      "Nurse",
+      "Coach"
+     ]
+    },
+    {
+     "name": "Weather as verbs",
+     "tiles": [
+      "Storm",
+      "Snow",
+      "Hail",
+      "Thunder"
+     ]
+    },
+    {
+     "name": "Colors as verbs",
+     "tiles": [
+      "Brown",
+      "Yellow",
+      "Green",
+      "Gray"
+     ]
+    },
+    {
+     "name": "Kitchen tools as verbs",
+     "tiles": [
+      "Whisk",
+      "Ladle",
+      "Spoon",
+      "Fork"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 561,
+   "rating": 2,
+   "title": "Twins",
+   "categories": [
+    {
+     "name": "Dog breeds",
+     "tiles": [
+      "Labrador",
+      "Bulldog",
+      "Shih Tzu",
+      "Beagle"
+     ]
+    },
+    {
+     "name": "Cat breeds",
+     "tiles": [
+      "Persian",
+      "Siamese",
+      "Sphynx",
+      "Burmese"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 562,
+   "rating": 3,
+   "title": "Count On It",
+   "categories": [
+    {
+     "name": "One",
+     "tiles": [
+      "Unicycle",
+      "Monorail",
+      "Solo",
+      "Unicorn"
+     ]
+    },
+    {
+     "name": "Two",
+     "tiles": [
+      "Bicycle",
+      "Duet",
+      "Twins",
+      "Pair"
+     ]
+    },
+    {
+     "name": "Three",
+     "tiles": [
+      "Tricycle",
+      "Trio",
+      "Triplets",
+      "Tripod"
+     ]
+    },
+    {
+     "name": "Four",
+     "tiles": [
+      "Quartet",
+      "Quatrain",
+      "Quadruple",
+      "Tetrapod"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 563,
+   "rating": 2,
+   "title": "Summer Camp",
+   "categories": [
+    {
+     "name": "Camp activities",
+     "tiles": [
+      "Canoeing",
+      "Archery",
+      "Crafts",
+      "Zipline"
+     ]
+    },
+    {
+     "name": "Camp gear",
+     "tiles": [
+      "Bug spray",
+      "Mess kit",
+      "Footlocker",
+      "Flashlight"
+     ]
+    },
+    {
+     "name": "Camp staff",
+     "tiles": [
+      "Counselor",
+      "Lifeguard",
+      "Camp nurse",
+      "Bugler"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 564,
+   "rating": 4,
+   "title": "Forces of Nature",
+   "categories": [
+    {
+     "name": "___ moon",
+     "tiles": [
+      "Harvest",
+      "Blood",
+      "Wolf",
+      "Strawberry"
+     ]
+    },
+    {
+     "name": "___storm",
+     "tiles": [
+      "Dust",
+      "Ice",
+      "Hail",
+      "Brain"
+     ]
+    },
+    {
+     "name": "___ star",
+     "tiles": [
+      "Shooting",
+      "North",
+      "Neutron",
+      "Rock"
+     ]
+    },
+    {
+     "name": "___wave",
+     "tiles": [
+      "Heat",
+      "Tidal",
+      "Radio",
+      "Micro"
+     ]
+    },
+    {
+     "name": "___ light",
+     "tiles": [
+      "Strobe",
+      "Neon",
+      "Traffic",
+      "Pilot"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 565,
+   "rating": 1,
+   "title": "Beach or Backyard Build",
+   "categories": [
+    {
+     "name": "Snowman",
+     "tiles": [
+      "Carrot nose",
+      "Coal eyes",
+      "Stick arms",
+      "Top hat"
+     ]
+    },
+    {
+     "name": "Sandcastle",
+     "tiles": [
+      "Moat",
+      "Bucket",
+      "Seashells",
+      "Turret"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 566,
+   "rating": 5,
+   "title": "Moon Shot",
+   "categories": [
+    {
+     "name": "Moons of Jupiter",
+     "tiles": [
+      "Io",
+      "Europa",
+      "Ganymede",
+      "Callisto"
+     ]
+    },
+    {
+     "name": "Moons of Saturn",
+     "tiles": [
+      "Titan",
+      "Enceladus",
+      "Mimas",
+      "Rhea"
+     ]
+    },
+    {
+     "name": "Moons of Uranus",
+     "tiles": [
+      "Miranda",
+      "Ariel",
+      "Oberon",
+      "Titania"
+     ]
+    },
+    {
+     "name": "Moons of Neptune",
+     "tiles": [
+      "Triton",
+      "Nereid",
+      "Proteus",
+      "Naiad"
+     ]
+    }
+   ],
+   "herrings": [
+    "Rhea",
+    "Ariel",
+    "Miranda"
+   ]
+  },
+  {
+   "id": 567,
+   "rating": 2,
+   "title": "Bookworm",
+   "categories": [
+    {
+     "name": "Book formats",
+     "tiles": [
+      "Hardcover",
+      "Paperback",
+      "E-book",
+      "Audiobook"
+     ]
+    },
+    {
+     "name": "Reading spots",
+     "tiles": [
+      "Library",
+      "Nook",
+      "Hammock",
+      "Window seat"
+     ]
+    },
+    {
+     "name": "Bookseller talk",
+     "tiles": [
+      "Bestseller",
+      "Out of print",
+      "Pre-order",
+      "Remainder"
+     ]
+    }
+   ],
+   "herrings": [
+    "Nook"
+   ]
+  },
+  {
+   "id": 568,
+   "rating": 4,
+   "title": "Face Value",
+   "categories": [
+    {
+     "name": "Tooth___",
+     "tiles": [
+      "Paste",
+      "Fairy",
+      "Ache",
+      "Some"
+     ]
+    },
+    {
+     "name": "Hair___",
+     "tiles": [
+      "Cut",
+      "Pin",
+      "Line",
+      "Net"
+     ]
+    },
+    {
+     "name": "Eye___",
+     "tiles": [
+      "Lash",
+      "Sight",
+      "Brow",
+      "Witness"
+     ]
+    },
+    {
+     "name": "Nose___",
+     "tiles": [
+      "Bleed",
+      "Dive",
+      "Ring",
+      "Job"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 569,
+   "rating": 3,
+   "title": "Build It",
+   "categories": [
+    {
+     "name": "Plumbing",
+     "tiles": [
+      "Faucet",
+      "Valve",
+      "Elbow",
+      "Coupling"
+     ]
+    },
+    {
+     "name": "Electrical",
+     "tiles": [
+      "Outlet",
+      "Breaker",
+      "Fuse",
+      "Conduit"
+     ]
+    },
+    {
+     "name": "Framing",
+     "tiles": [
+      "Joist",
+      "Stud",
+      "Rafter",
+      "Header"
+     ]
+    },
+    {
+     "name": "Masonry",
+     "tiles": [
+      "Mortar",
+      "Grout",
+      "Cinder block",
+      "Brick"
+     ]
+    }
+   ],
+   "herrings": [
+    "Elbow",
+    "Stud"
+   ]
+  },
+  {
+   "id": 570,
+   "rating": 5,
+   "title": "Letter Games",
+   "categories": [
+    {
+     "name": "Double a letter",
+     "tiles": [
+      "Diner",
+      "Super",
+      "Later",
+      "Taped"
+     ]
+    },
+    {
+     "name": "Add a silent E",
+     "tiles": [
+      "Hop",
+      "Cub",
+      "Not",
+      "Kit"
+     ]
+    },
+    {
+     "name": "Drop the S, new word",
+     "tiles": [
+      "Slaughter",
+      "Smother",
+      "Scold",
+      "Spark"
+     ]
+    }
+   ],
+   "note": "dinner, supper, latter, tapped / hope, cube, note, kite / laughter, mother, cold, park"
+  },
+  {
+   "id": 571,
+   "rating": 2,
+   "title": "Kitchen Staples",
+   "categories": [
+    {
+     "name": "Baking aisle",
+     "tiles": [
+      "Vanilla",
+      "Cocoa",
+      "Yeast",
+      "Baking soda"
+     ]
+    },
+    {
+     "name": "Condiments",
+     "tiles": [
+      "Mustard",
+      "Relish",
+      "Hot sauce",
+      "Mayo"
+     ]
+    },
+    {
+     "name": "Grains",
+     "tiles": [
+      "Farro",
+      "Bulgur",
+      "Polenta",
+      "Barley"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 572,
+   "rating": 3,
+   "title": "On Air",
+   "categories": [
+    {
+     "name": "Radio",
+     "tiles": [
+      "Static",
+      "Call-in",
+      "Airwaves",
+      "Request"
+     ]
+    },
+    {
+     "name": "TV news",
+     "tiles": [
+      "Anchor",
+      "Teleprompter",
+      "Weather map",
+      "B-roll"
+     ]
+    },
+    {
+     "name": "Streaming",
+     "tiles": [
+      "Binge",
+      "Buffer",
+      "Subscribe",
+      "Autoplay"
+     ]
+    },
+    {
+     "name": "Newspaper",
+     "tiles": [
+      "Headline",
+      "Byline",
+      "Masthead",
+      "Op-ed"
+     ]
+    }
+   ],
+   "herrings": [
+    "Anchor"
+   ]
+  },
+  {
+   "id": 573,
+   "rating": 4,
+   "title": "Little Ones",
+   "categories": [
+    {
+     "name": "Baby birds",
+     "tiles": [
+      "Cygnet",
+      "Squab",
+      "Gosling",
+      "Eyas"
+     ]
+    },
+    {
+     "name": "Baby mammals",
+     "tiles": [
+      "Leveret",
+      "Kid",
+      "Cria",
+      "Kit"
+     ]
+    },
+    {
+     "name": "Baby water animals",
+     "tiles": [
+      "Elver",
+      "Spat",
+      "Fry",
+      "Fingerling"
+     ]
+    }
+   ],
+   "herrings": [
+    "Kid",
+    "Fry"
+   ]
+  },
+  {
+   "id": 574,
+   "rating": 3,
+   "title": "Soup Kitchen",
+   "categories": [
+    {
+     "name": "Cold soups",
+     "tiles": [
+      "Vichyssoise",
+      "Salmorejo",
+      "Okroshka",
+      "Ajo blanco"
+     ]
+    },
+    {
+     "name": "Noodle soups",
+     "tiles": [
+      "Laksa",
+      "Pho",
+      "Ramen",
+      "Saimin"
+     ]
+    },
+    {
+     "name": "Bean soups",
+     "tiles": [
+      "Lentil",
+      "Split pea",
+      "Black bean",
+      "Navy bean"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 575,
+   "rating": 3,
+   "title": "Sports Talk at Work",
+   "categories": [
+    {
+     "name": "Baseball idioms",
+     "tiles": [
+      "Curveball",
+      "Ballpark",
+      "Strike out",
+      "Off base"
+     ]
+    },
+    {
+     "name": "Football idioms",
+     "tiles": [
+      "Hail Mary",
+      "Fumble",
+      "Punt",
+      "Game plan"
+     ]
+    },
+    {
+     "name": "Boxing idioms",
+     "tiles": [
+      "Low blow",
+      "Sucker punch",
+      "On the ropes",
+      "Knockout"
+     ]
+    },
+    {
+     "name": "Horse racing idioms",
+     "tiles": [
+      "Dark horse",
+      "Home stretch",
+      "Front-runner",
+      "Long shot"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 576,
+   "rating": 1,
+   "title": "Bouquet or Basket",
+   "categories": [
+    {
+     "name": "Flowers",
+     "tiles": [
+      "Rose",
+      "Violet",
+      "Iris",
+      "Lilac"
+     ]
+    },
+    {
+     "name": "Fruit",
+     "tiles": [
+      "Banana",
+      "Cherry",
+      "Grape",
+      "Lemon"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 577,
+   "rating": 5,
+   "title": "Bookends",
+   "categories": [
+    {
+     "name": "Book___",
+     "tiles": [
+      "Worm",
+      "End",
+      "Case",
+      "Keeper"
+     ]
+    },
+    {
+     "name": "___book",
+     "tiles": [
+      "Cook",
+      "Note",
+      "Year",
+      "Scrap"
+     ]
+    },
+    {
+     "name": "Hand___",
+     "tiles": [
+      "Shake",
+      "Cuff",
+      "Writing",
+      "Rail"
+     ]
+    },
+    {
+     "name": "___hand",
+     "tiles": [
+      "Back",
+      "Short",
+      "Under",
+      "Second"
+     ]
+    },
+    {
+     "name": "Fire___",
+     "tiles": [
+      "Fly",
+      "Place",
+      "Wood",
+      "Arm"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 578,
+   "rating": 3,
+   "title": "Art Class",
+   "categories": [
+    {
+     "name": "Art movements",
+     "tiles": [
+      "Cubism",
+      "Pointillism",
+      "Fauvism",
+      "Dadaism"
+     ]
+    },
+    {
+     "name": "Painting subjects",
+     "tiles": [
+      "Landscape",
+      "Still life",
+      "Seascape",
+      "Mural"
+     ]
+    },
+    {
+     "name": "Paints",
+     "tiles": [
+      "Oil",
+      "Acrylic",
+      "Watercolor",
+      "Tempera"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 579,
+   "rating": 3,
+   "title": "Crowd Control",
+   "categories": [
+    {
+     "name": "Groups of birds",
+     "tiles": [
+      "Murder",
+      "Parliament",
+      "Gaggle",
+      "Murmuration"
+     ]
+    },
+    {
+     "name": "Groups of sea animals",
+     "tiles": [
+      "Pod",
+      "School",
+      "Shoal",
+      "Smack"
+     ]
+    },
+    {
+     "name": "Groups of insects",
+     "tiles": [
+      "Swarm",
+      "Army",
+      "Cloud",
+      "Hive"
+     ]
+    },
+    {
+     "name": "Groups of mammals",
+     "tiles": [
+      "Pride",
+      "Troop",
+      "Herd",
+      "Pack"
+     ]
+    }
+   ],
+   "herrings": [
+    "Murder",
+    "Parliament",
+    "Army"
+   ]
+  },
+  {
+   "id": 580,
+   "rating": 5,
+   "title": "Count in Other Tongues",
+   "categories": [
+    {
+     "name": "Japanese numbers",
+     "tiles": [
+      "Ichi",
+      "Ni",
+      "San",
+      "Shi"
+     ]
+    },
+    {
+     "name": "German numbers",
+     "tiles": [
+      "Eins",
+      "Zwei",
+      "Drei",
+      "Vier"
+     ]
+    },
+    {
+     "name": "Hindi numbers",
+     "tiles": [
+      "Ek",
+      "Do",
+      "Teen",
+      "Char"
+     ]
+    },
+    {
+     "name": "Italian numbers",
+     "tiles": [
+      "Due",
+      "Tre",
+      "Quattro",
+      "Cinque"
+     ]
+    }
+   ],
+   "herrings": [
+    "San",
+    "Teen",
+    "Char",
+    "Due"
+   ]
+  },
+  {
+   "id": 581,
+   "rating": 1,
+   "title": "Olympic Seasons",
+   "categories": [
+    {
+     "name": "Summer Olympics",
+     "tiles": [
+      "Swimming",
+      "Gymnastics",
+      "Diving",
+      "Sailing"
+     ]
+    },
+    {
+     "name": "Winter Olympics",
+     "tiles": [
+      "Bobsled",
+      "Biathlon",
+      "Luge",
+      "Curling"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 582,
+   "rating": 3,
+   "title": "Odd Body Parts",
+   "categories": [
+    {
+     "name": "Things with tails",
+     "tiles": [
+      "Coat",
+      "Comet",
+      "Kite",
+      "Coin"
+     ]
+    },
+    {
+     "name": "Things with necks",
+     "tiles": [
+      "Bottle",
+      "Guitar",
+      "Violin",
+      "Vase"
+     ]
+    },
+    {
+     "name": "Things with hearts",
+     "tiles": [
+      "Artichoke",
+      "Palm",
+      "Romaine",
+      "Card deck"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 583,
+   "rating": 2,
+   "title": "Signs and Symbols",
+   "categories": [
+    {
+     "name": "Road sign shapes",
+     "tiles": [
+      "Octagon",
+      "Triangle",
+      "Diamond",
+      "Pentagon"
+     ]
+    },
+    {
+     "name": "Map features",
+     "tiles": [
+      "Compass rose",
+      "Scale bar",
+      "Legend",
+      "Grid"
+     ]
+    },
+    {
+     "name": "Weather icons",
+     "tiles": [
+      "Sun",
+      "Raindrop",
+      "Snowflake",
+      "Cloud"
+     ]
+    }
+   ],
+   "herrings": [
+    "Diamond",
+    "Pentagon",
+    "Legend"
+   ]
+  },
+  {
+   "id": 584,
+   "rating": 4,
+   "title": "Suffix It",
+   "categories": [
+    {
+     "name": "Add LY",
+     "tiles": [
+      "Bull",
+      "Gull",
+      "Doll",
+      "Ear"
+     ]
+    },
+    {
+     "name": "Add ER",
+     "tiles": [
+      "Corn",
+      "Moth",
+      "Wand",
+      "Cap"
+     ]
+    },
+    {
+     "name": "Add OW",
+     "tiles": [
+      "Mead",
+      "Hall",
+      "Bell",
+      "Shad"
+     ]
+    },
+    {
+     "name": "Add AGE",
+     "tiles": [
+      "Band",
+      "Mess",
+      "Gar",
+      "Dam"
+     ]
+    }
+   ],
+   "note": "bully, gully, dolly, early / corner, mother, wander, caper / meadow, hallow, bellow, shadow / bandage, message, garage, damage"
+  },
+  {
+   "id": 585,
+   "rating": 2,
+   "title": "Harvest Time",
+   "categories": [
+    {
+     "name": "Pumpkin patch",
+     "tiles": [
+      "Gourd",
+      "Hay bale",
+      "Vine",
+      "Corn maze"
+     ]
+    },
+    {
+     "name": "Apple orchard",
+     "tiles": [
+      "Cider press",
+      "Ladder",
+      "Apple tree",
+      "Basket"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 586,
+   "rating": 3,
+   "title": "Sheet Music",
+   "categories": [
+    {
+     "name": "Notation",
+     "tiles": [
+      "Clef",
+      "Staff",
+      "Rest",
+      "Measure"
+     ]
+    },
+    {
+     "name": "Note values",
+     "tiles": [
+      "Whole",
+      "Half",
+      "Quarter",
+      "Eighth"
+     ]
+    },
+    {
+     "name": "Clefs",
+     "tiles": [
+      "Treble",
+      "Bass",
+      "Alto",
+      "Tenor"
+     ]
+    },
+    {
+     "name": "Accidentals",
+     "tiles": [
+      "Sharp",
+      "Flat",
+      "Natural",
+      "Double sharp"
+     ]
+    }
+   ],
+   "herrings": [
+    "Staff",
+    "Measure"
+   ]
+  },
+  {
+   "id": 587,
+   "rating": 4,
+   "title": "Furniture Showroom",
+   "categories": [
+    {
+     "name": "Chairs",
+     "tiles": [
+      "Rocking",
+      "Wing",
+      "Adirondack",
+      "Barber"
+     ]
+    },
+    {
+     "name": "Tables",
+     "tiles": [
+      "Drafting",
+      "Nesting",
+      "Pedestal",
+      "Card"
+     ]
+    },
+    {
+     "name": "Beds",
+     "tiles": [
+      "Bunk",
+      "Sleigh",
+      "Platform",
+      "Captain's"
+     ]
+    },
+    {
+     "name": "Lamps",
+     "tiles": [
+      "Lava",
+      "Floor",
+      "Arc",
+      "Salt"
+     ]
+    },
+    {
+     "name": "Sofas",
+     "tiles": [
+      "Sectional",
+      "Loveseat",
+      "Divan",
+      "Settee"
+     ]
+    }
+   ],
+   "herrings": [
+    "Wing",
+    "Sleigh",
+    "Salt"
+   ]
+  },
+  {
+   "id": 588,
+   "rating": 3,
+   "title": "Sewing Room",
+   "categories": [
+    {
+     "name": "Sewing tools",
+     "tiles": [
+      "Thread snips",
+      "Seam gauge",
+      "Bodkin",
+      "Needle"
+     ]
+    },
+    {
+     "name": "Thread types",
+     "tiles": [
+      "Floss",
+      "Upholstery",
+      "Monofilament",
+      "Cotton"
+     ]
+    },
+    {
+     "name": "Yarn weights",
+     "tiles": [
+      "Lace",
+      "Fingering",
+      "Worsted",
+      "Bulky"
+     ]
+    }
+   ],
+   "herrings": [
+    "Floss",
+    "Lace"
+   ]
+  },
+  {
+   "id": 589,
+   "rating": 4,
+   "title": "Thinkers",
+   "categories": [
+    {
+     "name": "Greek philosophers",
+     "tiles": [
+      "Plato",
+      "Socrates",
+      "Aristotle",
+      "Zeno"
+     ]
+    },
+    {
+     "name": "Chinese philosophers",
+     "tiles": [
+      "Confucius",
+      "Laozi",
+      "Mencius",
+      "Mozi"
+     ]
+    },
+    {
+     "name": "Roman philosophers",
+     "tiles": [
+      "Seneca",
+      "Cicero",
+      "Lucretius",
+      "Boethius"
+     ]
+    },
+    {
+     "name": "Enlightenment thinkers",
+     "tiles": [
+      "Locke",
+      "Hume",
+      "Kant",
+      "Voltaire"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 590,
+   "rating": 5,
+   "title": "Room to Hide",
+   "categories": [
+    {
+     "name": "Hides a room",
+     "tiles": [
+      "Denture",
+      "Shallot",
+      "Lobbyist",
+      "Studious"
+     ]
+    },
+    {
+     "name": "Hides furniture",
+     "tiles": [
+      "Bedlam",
+      "Describe",
+      "Scottish",
+      "Vegetable"
+     ]
+    },
+    {
+     "name": "Hides a garment",
+     "tiles": [
+      "Hatch",
+      "Probe",
+      "Socket",
+      "Investor"
+     ]
+    }
+   ],
+   "note": "den, hall, lobby, studio / bed, crib, cot, table / hat, robe, sock, vest"
+  },
+  {
+   "id": 591,
+   "rating": 3,
+   "title": "Just Desserts",
+   "categories": [
+    {
+     "name": "Baked fruit desserts",
+     "tiles": [
+      "Crumble",
+      "Buckle",
+      "Grunt",
+      "Slump"
+     ]
+    },
+    {
+     "name": "Frozen desserts",
+     "tiles": [
+      "Sherbet",
+      "Spumoni",
+      "Kulfi",
+      "Paleta"
+     ]
+    },
+    {
+     "name": "Custards",
+     "tiles": [
+      "Creme brulee",
+      "Pot de creme",
+      "Zabaglione",
+      "Flan"
+     ]
+    }
+   ],
+   "herrings": [
+    "Buckle",
+    "Grunt",
+    "Slump"
+   ]
+  },
+  {
+   "id": 592,
+   "rating": 4,
+   "title": "Whodunit",
+   "categories": [
+    {
+     "name": "Detectives",
+     "tiles": [
+      "Holmes",
+      "Poirot",
+      "Marple",
+      "Dupin"
+     ]
+    },
+    {
+     "name": "Sidekicks",
+     "tiles": [
+      "Watson",
+      "Hastings",
+      "Lestrade",
+      "Japp"
+     ]
+    },
+    {
+     "name": "Mystery writers",
+     "tiles": [
+      "Christie",
+      "Doyle",
+      "Poe",
+      "Sayers"
+     ]
+    },
+    {
+     "name": "Mystery terms",
+     "tiles": [
+      "Whodunit",
+      "Red herring",
+      "Motive",
+      "Suspect"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 593,
+   "rating": 1,
+   "title": "Rise and Shine",
+   "categories": [
+    {
+     "name": "Morning",
+     "tiles": [
+      "Alarm clock",
+      "Breakfast",
+      "Commute",
+      "Sunrise"
+     ]
+    },
+    {
+     "name": "Bedtime",
+     "tiles": [
+      "Lights out",
+      "Tuck in",
+      "Night cream",
+      "Dream"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 594,
+   "rating": 4,
+   "title": "Sides and Wards",
+   "categories": [
+    {
+     "name": "___cast",
+     "tiles": [
+      "Broad",
+      "News",
+      "Type",
+      "Pod"
+     ]
+    },
+    {
+     "name": "___ward",
+     "tiles": [
+      "Home",
+      "Wind",
+      "Sky",
+      "Lee"
+     ]
+    },
+    {
+     "name": "___ground",
+     "tiles": [
+      "Fair",
+      "Play",
+      "Camp",
+      "Battle"
+     ]
+    },
+    {
+     "name": "___side",
+     "tiles": [
+      "Bed",
+      "Fire",
+      "Road",
+      "Country"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 595,
+   "rating": 3,
+   "title": "Herb Families",
+   "categories": [
+    {
+     "name": "Mint family",
+     "tiles": [
+      "Basil",
+      "Oregano",
+      "Sage",
+      "Lavender"
+     ]
+    },
+    {
+     "name": "Onion family",
+     "tiles": [
+      "Garlic",
+      "Leek",
+      "Chive",
+      "Shallot"
+     ]
+    },
+    {
+     "name": "Carrot family",
+     "tiles": [
+      "Parsley",
+      "Dill",
+      "Cilantro",
+      "Fennel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 596,
+   "rating": 2,
+   "title": "Bee or Butterfly",
+   "categories": [
+    {
+     "name": "Bee stuff",
+     "tiles": [
+      "Hive",
+      "Stinger",
+      "Beeswax",
+      "Honeycomb"
+     ]
+    },
+    {
+     "name": "Butterfly stuff",
+     "tiles": [
+      "Chrysalis",
+      "Caterpillar",
+      "Monarch",
+      "Milkweed"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 597,
+   "rating": 4,
+   "title": "World of Sauces",
+   "categories": [
+    {
+     "name": "French mother sauces",
+     "tiles": [
+      "Hollandaise",
+      "Bechamel",
+      "Veloute",
+      "Espagnole"
+     ]
+    },
+    {
+     "name": "Mexican salsas",
+     "tiles": [
+      "Pico",
+      "Salsa verde",
+      "Mole",
+      "Pipian"
+     ]
+    },
+    {
+     "name": "Asian sauces",
+     "tiles": [
+      "Hoisin",
+      "Ponzu",
+      "Teriyaki",
+      "Fish sauce"
+     ]
+    },
+    {
+     "name": "BBQ styles",
+     "tiles": [
+      "Carolina",
+      "Kansas City",
+      "Memphis",
+      "Texas"
+     ]
+    },
+    {
+     "name": "Indian chutneys",
+     "tiles": [
+      "Mint",
+      "Mango",
+      "Tamarind",
+      "Coriander"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 598,
+   "rating": 2,
+   "title": "School Spirit",
+   "categories": [
+    {
+     "name": "Electives",
+     "tiles": [
+      "Band",
+      "Drama",
+      "Shop",
+      "Home ec"
+     ]
+    },
+    {
+     "name": "Languages",
+     "tiles": [
+      "Spanish",
+      "French",
+      "Latin",
+      "Mandarin"
+     ]
+    },
+    {
+     "name": "School events",
+     "tiles": [
+      "Prom",
+      "Homecoming",
+      "Pep rally",
+      "Field trip"
+     ]
+    }
+   ],
+   "herrings": [
+    "Band",
+    "Shop"
+   ]
+  },
+  {
+   "id": 599,
+   "rating": 3,
+   "title": "Holiday Table",
+   "categories": [
+    {
+     "name": "Hanukkah",
+     "tiles": [
+      "Latkes",
+      "Sufganiyot",
+      "Gelt",
+      "Kugel"
+     ]
+    },
+    {
+     "name": "Christmas",
+     "tiles": [
+      "Eggnog",
+      "Fruitcake",
+      "Yule log",
+      "Candy cane"
+     ]
+    },
+    {
+     "name": "Lunar New Year",
+     "tiles": [
+      "Dumplings",
+      "Nian gao",
+      "Tangyuan",
+      "Whole fish"
+     ]
+    },
+    {
+     "name": "Diwali",
+     "tiles": [
+      "Ladoo",
+      "Jalebi",
+      "Barfi",
+      "Gulab jamun"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 600,
+   "rating": 4,
+   "title": "Suffix Society",
+   "categories": [
+    {
+     "name": "___ship",
+     "tiles": [
+      "Friend",
+      "Court",
+      "Member",
+      "Citizen"
+     ]
+    },
+    {
+     "name": "___hood",
+     "tiles": [
+      "Child",
+      "Neighbor",
+      "Knight",
+      "Brother"
+     ]
+    },
+    {
+     "name": "___dom",
+     "tiles": [
+      "Bore",
+      "Martyr",
+      "Fan",
+      "Earl"
+     ]
+    },
+    {
+     "name": "___ness",
+     "tiles": [
+      "Kind",
+      "Dark",
+      "Happy",
+      "Weak"
+     ]
+    },
+    {
+     "name": "___ment",
+     "tiles": [
+      "Move",
+      "Pay",
+      "Enjoy",
+      "Govern"
+     ]
+    }
+   ]
+  }
+ ]
+}

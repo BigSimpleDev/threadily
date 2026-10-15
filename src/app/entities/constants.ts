@@ -23,7 +23,7 @@ export enum LOCAL_STORAGE_KEYS {
 // Highest main pack file that exists under src/assets/puzzles. Packs hold
 // PUZZLES_PER_PACK puzzles each; puzzle ids are global (pack n holds ids
 // (n-1)*100+1 .. n*100) so progress is one flat list of solved ids.
-export const MAX_PACK = 5;
+export const MAX_PACK = 6;
 export const PUZZLES_PER_PACK = 100;
 
 // ── Seasonal events ─────────────────────────────────
