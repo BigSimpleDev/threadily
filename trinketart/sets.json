@@ -1,0 +1,269 @@
+{
+  "_comment": "Source of truth for every trinket. Each set holds 12 items in position order: 1-6 common, 7-9 rare, 10-11 epic, 12 legendary (the chase piece). Each item is [name, placeholder emoji, one-line art subject]. Edit here, then run: node generate-trinkets.mjs",
+  "sets": [
+    {
+      "id": "cozy_critters",
+      "name": "Cozy Critters",
+      "theme": "Pets & backyard animals",
+      "emoji": "🐱",
+      "palette": "warm oatmeal, dusty rose, butter yellow",
+      "ground": "#F6E7D8",
+      "items": [
+        ["Tabby Kitten", "🐱", "a chubby orange tabby kitten curled around a tiny ball of yarn"],
+        ["Beagle Puppy", "🐶", "a floppy-eared beagle puppy with a little red knitted collar"],
+        ["Button Bunny", "🐰", "a cream bunny with a pink button nose hugging a felt carrot"],
+        ["Hammy Hamster", "🐹", "a round golden hamster with stuffed cheeks holding a sunflower seed"],
+        ["Bowl Goldfish", "🐠", "a goldfish peeking out of a small knitted fishbowl"],
+        ["Backyard Robin", "🐦", "a plump red-breasted robin perched on a felt fence post"],
+        ["Hedgehog Hugs", "🦔", "a hedgehog with knobbly boucle-yarn spines holding a red apple"],
+        ["Patchwork Tortoise", "🐢", "a slow tortoise with a granny-square patchwork shell"],
+        ["Perch Parrot", "🦜", "a bright green parrot on a wooden ring perch"],
+        ["Royal Corgi", "🐕", "a corgi wearing a tiny knitted crown and a velvet cape"],
+        ["Cat Nap", "🛏️", "a sleepy grey cat in a crocheted basket bed under a tiny quilt"],
+        ["Sunny the Golden Retriever", "🦮", "a golden retriever with a gold embroidered collar and sparkle stitches around it"]
+      ]
+    },
+    {
+      "id": "woodland_wanderers",
+      "name": "Woodland Wanderers",
+      "theme": "Forest animals",
+      "emoji": "🦊",
+      "palette": "moss green, rust orange, bark brown",
+      "ground": "#E4EBD9",
+      "items": [
+        ["Fox Kit", "🦊", "a red fox kit with a fluffy white-tipped tail"],
+        ["Sleepy Owl", "🦉", "a round brown owl with half-closed stitched eyes on a branch"],
+        ["Raccoon Bandit", "🦝", "a raccoon with a striped tail sneaking a tiny felt berry"],
+        ["Acorn Squirrel", "🐿️", "a grey squirrel clutching an oversized acorn"],
+        ["Spotted Fawn", "🦌", "a spotted fawn lying in felt clover"],
+        ["Toadstool Frog", "🐸", "a green frog sitting under a red spotted toadstool"],
+        ["Badger Baker", "🦡", "a badger in a tiny apron holding a berry pie"],
+        ["Beaver Builder", "🦫", "a beaver with buck teeth carrying a little log"],
+        ["Bear Cub", "🐻", "a black bear cub hugging a honeycomb"],
+        ["Moose Mountaineer", "🫎", "a moose in a knitted scarf with a tiny backpack"],
+        ["Hedgerow Hare", "🐇", "a long-eared brown hare leaping over a felt hedge"],
+        ["Ancient Forest Stag", "🌲", "a majestic stag with mossy antlers sprouting tiny felt leaves and mushrooms"]
+      ]
+    },
+    {
+      "id": "ocean_knits",
+      "name": "Ocean Knits",
+      "theme": "Sea creatures",
+      "emoji": "🐙",
+      "palette": "sea-glass teal, coral pink, sandy beige",
+      "ground": "#DCEEEC",
+      "items": [
+        ["Octopus Pal", "🐙", "a purple octopus waving four curly crocheted tentacles"],
+        ["Clownfish", "🐠", "an orange-and-white striped clownfish peeking from a felt anemone"],
+        ["Hermit Crab", "🦀", "a hermit crab carrying a swirly knitted shell"],
+        ["Starfish", "⭐", "a smiling pink starfish lying on felt sand"],
+        ["Moon Jelly", "🪼", "a translucent pale jellyfish with wavy yarn tendrils"],
+        ["Seal Pup", "🦭", "a white seal pup with big stitched eyes on an ice floe"],
+        ["Pufferfish", "🐡", "a puffed-up round pufferfish with soft yarn spikes"],
+        ["Sea Turtle", "🐢", "a green sea turtle gliding with a mosaic-stitched shell"],
+        ["Friendly Shark", "🦈", "a grinning grey shark with a soft felt smile"],
+        ["Humpback Whale", "🐋", "a blue humpback whale spouting a little yarn water plume"],
+        ["Narwhal", "🦄", "a narwhal with a spiral gold-thread tusk"],
+        ["Gentle Kraken", "🦑", "a giant friendly kraken cradling a tiny sailboat in its tentacles"]
+      ]
+    },
+    {
+      "id": "dino_stitch",
+      "name": "Dino Stitch",
+      "theme": "Dinosaurs & prehistoric",
+      "emoji": "🦕",
+      "palette": "leaf green, terracotta, cream",
+      "ground": "#E9EED8",
+      "items": [
+        ["Tiny T-Rex", "🦖", "a tiny green T-Rex with short arms and a big toothy felt grin"],
+        ["Long-Neck Bronto", "🦕", "a long-necked brontosaurus with soft spots along its back"],
+        ["Hatching Egg", "🥚", "a speckled dinosaur egg cracking open with a baby dino peeking out"],
+        ["Fossil Bone", "🦴", "a cream crocheted dinosaur bone on a felt rock"],
+        ["Fern Muncher Trike", "🌿", "a triceratops munching a felt fern"],
+        ["Amber Bug", "🦟", "a little bug caught inside a golden amber bead"],
+        ["Pterodactyl", "🪽", "a pterodactyl gliding with wide felt wings"],
+        ["Armored Anky", "🛡️", "an ankylosaurus with a studded shell and a club tail"],
+        ["Woolly Mammoth", "🦣", "a woolly mammoth with shaggy fringe-yarn fur and curved tusks"],
+        ["Spino Surfer", "🌊", "a spinosaurus with a sail fin riding a yarn wave"],
+        ["Bubbling Volcano", "🌋", "a small erupting volcano with orange yarn lava"],
+        ["Rex the Great", "👑", "a regal T-Rex wearing a golden crown, standing on a fossil throne"]
+      ]
+    },
+    {
+      "id": "sweet_skeins",
+      "name": "Sweet Skeins",
+      "theme": "Desserts & sweets",
+      "emoji": "🧁",
+      "palette": "strawberry pink, mint green, vanilla cream",
+      "ground": "#FBE3EA",
+      "items": [
+        ["Cupcake", "🧁", "a cupcake with swirly pink frosting and a cherry on top"],
+        ["Sprinkle Donut", "🍩", "a pink-glazed donut with stitched rainbow sprinkles"],
+        ["Chip Cookie", "🍪", "a chocolate chip cookie with a tiny bite missing"],
+        ["Swirl Lollipop", "🍭", "a rainbow swirl lollipop on a striped stick"],
+        ["Ice Cream Cone", "🍦", "a waffle cone with a scoop of mint chip ice cream"],
+        ["Wrapped Candy", "🍬", "a twist-wrapped candy with striped yarn wrapper"],
+        ["Cherry Pie Slice", "🥧", "a slice of lattice-top cherry pie"],
+        ["Chocolate Bar", "🍫", "a chocolate bar with its foil wrapper peeled back"],
+        ["Caramel Pudding", "🍮", "a wobbly caramel flan with a glossy top"],
+        ["Birthday Cake", "🎂", "a three-layer birthday cake with tiny felt candles"],
+        ["Honey Pot", "🍯", "a honey pot with a dripping golden yarn drizzle and a dipper"],
+        ["Gingerbread Castle", "🏰", "a gingerbread castle with candy towers and icing trim"]
+      ]
+    },
+    {
+      "id": "garden_patch",
+      "name": "Garden Patch",
+      "theme": "Fruits, veggies, flowers",
+      "emoji": "🌻",
+      "palette": "sunflower yellow, leaf green, soil brown",
+      "ground": "#F3EED2",
+      "items": [
+        ["Sunflower", "🌻", "a tall sunflower with a smiling seed face"],
+        ["Strawberry", "🍓", "a plump strawberry with seed stitches and a leafy cap"],
+        ["Carrot", "🥕", "an orange carrot with a feathery green top"],
+        ["Tulip", "🌷", "a red tulip in a little felt pot"],
+        ["Pea Pod", "🫛", "an open pea pod with three round peas inside"],
+        ["Toadstool", "🍄", "a red toadstool with white felt spots"],
+        ["Ladybug", "🐞", "a red ladybug with black button spots on a leaf"],
+        ["Bumblebee", "🐝", "a fuzzy striped bumblebee with sheer felt wings"],
+        ["Garden Snail", "🐌", "a snail with a spiral-stitched shell on a lettuce leaf"],
+        ["Scarecrow", "🌾", "a friendly scarecrow with straw-yarn hair and a patched hat"],
+        ["Prize Pumpkin", "🎃", "a giant prize pumpkin wearing a blue ribbon"],
+        ["Rainbow Rose", "🌹", "a single rose with rainbow-gradient yarn petals"]
+      ]
+    },
+    {
+      "id": "cosmic_crochet",
+      "name": "Cosmic Crochet",
+      "theme": "Space, planets, astronauts",
+      "emoji": "🚀",
+      "palette": "midnight navy, lavender, star gold",
+      "ground": "#E2E0F4",
+      "items": [
+        ["Little Rocket", "🚀", "a red-and-white rocket with a yarn flame trail"],
+        ["Crescent Moon", "🌙", "a sleepy crescent moon in a nightcap"],
+        ["Shooting Star", "🌠", "a smiling gold star with a sparkly tail"],
+        ["Satellite", "🛰️", "a satellite with felt solar panels"],
+        ["Ringed Planet", "🪐", "a ringed planet with a striped yarn ring"],
+        ["Comet", "☄️", "a blue comet with a long fluffy tail"],
+        ["Astronaut", "👩‍🚀", "a little astronaut in a puffy white suit giving a wave"],
+        ["Flying Saucer", "🛸", "a flying saucer with a glowing dome and blinking bead lights"],
+        ["Moon Rover", "🚙", "a six-wheeled moon rover on grey felt craters"],
+        ["Smiling Sun", "☀️", "a cheerful sun with wavy yarn rays"],
+        ["Galaxy Swirl", "🌌", "a spiral galaxy swirl of purple and gold yarn"],
+        ["Star Whale", "🐳", "a cosmic whale swimming through stitched stars with a nebula tail"]
+      ]
+    },
+    {
+      "id": "fable_folk",
+      "name": "Fable Folk",
+      "theme": "Fairy-tale characters (originals)",
+      "emoji": "🧚",
+      "palette": "storybook red, forest green, parchment",
+      "ground": "#F2E9D8",
+      "items": [
+        ["Pocket Fairy", "🧚", "a tiny fairy with gauzy felt wings sitting on a thimble"],
+        ["Mushroom Gnome", "🍄", "a bearded gnome with a mushroom-cap hat"],
+        ["Little Knight", "⚔️", "a small brave knight in a knitted chainmail hood holding a wooden sword"],
+        ["Frog Prince", "🐸", "a frog wearing a tiny gold crown on a lily pad"],
+        ["Gingerbread Runner", "🍪", "a running gingerbread figure with icing buttons"],
+        ["Goose Girl", "🪿", "a white goose wearing a little red bonnet"],
+        ["Kind Hedge Witch", "🧙‍♀️", "a kind witch with a patchwork cloak and a basket of herbs"],
+        ["Clockwork Mouse", "🐭", "a mouse with a brass wind-up key on its back"],
+        ["Beanstalk Sprout", "🌱", "a curly beanstalk climbing up to a fluffy cloud"],
+        ["Tower Princess", "👸", "a princess with a very long braided yarn plait in a stone tower window"],
+        ["Old Wizard", "🧙‍♂️", "a wise wizard with a starry robe and a long cloud-white beard"],
+        ["Enchanted Storybook", "📖", "an open storybook with a tiny castle and trees popping up from its pages"]
+      ]
+    },
+    {
+      "id": "myth_menagerie",
+      "name": "Myth Menagerie",
+      "theme": "Mythical creatures",
+      "emoji": "🐉",
+      "palette": "emerald, ruby, gold",
+      "ground": "#E3EFE6",
+      "items": [
+        ["Baby Dragon", "🐲", "a baby dragon with tiny felt wings and a puff of smoke"],
+        ["Unicorn Foal", "🦄", "a unicorn foal with a pastel yarn mane and a gold horn"],
+        ["Little Yeti", "❄️", "a fluffy white yeti with big blue feet"],
+        ["Pegasus Pony", "🪽", "a small winged pony with feathery felt wings"],
+        ["Sea Serpent", "🐍", "a looping green sea serpent rising from yarn waves"],
+        ["Gryphon Chick", "🦅", "a fluffy gryphon chick, half eagle half lion cub"],
+        ["Phoenix Hatchling", "🔥", "a phoenix chick with flame-colored yarn feathers"],
+        ["Kitsune", "🦊", "a white fox spirit with three fluffy tails"],
+        ["Jackalope", "🐇", "a jackalope rabbit with tiny antlers"],
+        ["Thunderbird", "⚡", "a great blue thunderbird with lightning-stitched wings"],
+        ["Moon Rabbit", "🌕", "a white rabbit sitting on a full moon with a mortar and pestle"],
+        ["Elder Dragon", "🐉", "a grand jewel-scaled dragon coiled around a pile of gold coins"]
+      ]
+    },
+    {
+      "id": "things_that_go",
+      "name": "Things That Go",
+      "theme": "Vehicles",
+      "emoji": "🚂",
+      "palette": "fire-engine red, sky blue, sunny yellow",
+      "ground": "#E1ECF7",
+      "items": [
+        ["Choo-Choo Train", "🚂", "a little steam train puffing yarn smoke"],
+        ["School Bus", "🚌", "a yellow school bus with round window faces"],
+        ["Taxi Cab", "🚕", "a yellow taxi with a checkered stripe"],
+        ["Bicycle", "🚲", "a red bicycle with a wicker basket of flowers"],
+        ["Sailboat", "⛵", "a sailboat with a striped felt sail"],
+        ["Tractor", "🚜", "a green farm tractor with big knobby wheels"],
+        ["Fire Engine", "🚒", "a red fire engine with a ladder and a bell"],
+        ["Hot Air Balloon", "🎈", "a patchwork hot air balloon with a tiny basket"],
+        ["Helicopter", "🚁", "a round helicopter with floppy rotor blades"],
+        ["Biplane", "✈️", "a vintage biplane with a scarf-trailing pilot"],
+        ["Ice Cream Truck", "🚚", "an ice cream truck with a giant cone on its roof"],
+        ["Golden Express", "🚄", "a sleek golden express train with star-shaped headlights"]
+      ]
+    },
+    {
+      "id": "world_wonders",
+      "name": "World Wonders",
+      "theme": "Landmarks around the world",
+      "emoji": "🗼",
+      "palette": "terracotta, stone grey, sky blue",
+      "ground": "#E8E4DE",
+      "items": [
+        ["Eiffel Tower", "🗼", "the Eiffel Tower in bronze-colored crochet lattice"],
+        ["Statue of Liberty", "🗽", "the Statue of Liberty in mint-green yarn holding a felt torch"],
+        ["Big Ben", "🕰️", "the Big Ben clock tower with a stitched clock face"],
+        ["Leaning Tower", "📐", "the Leaning Tower of Pisa, tilting playfully"],
+        ["Mount Fuji", "🗻", "Mount Fuji with a snowy yarn cap"],
+        ["Dutch Windmill", "🌬️", "a Dutch windmill with turning felt sails beside tulips"],
+        ["Colosseum", "🏛️", "the Roman Colosseum with arched stitched windows"],
+        ["Great Wall", "🧱", "a winding section of the Great Wall over green hills"],
+        ["Taj Mahal", "🕌", "the Taj Mahal in cream yarn with a reflecting pool"],
+        ["Pyramids of Giza", "🔺", "the three Pyramids of Giza on golden felt sand"],
+        ["Machu Picchu", "⛰️", "Machu Picchu terraces on a green peak with a little llama"],
+        ["Hanging Gardens", "🌺", "the legendary Hanging Gardens of Babylon, terraces overflowing with yarn flowers"]
+      ]
+    },
+    {
+      "id": "music_makers",
+      "name": "Music Makers",
+      "theme": "Instruments & musicians",
+      "emoji": "🎸",
+      "palette": "velvet red, brass gold, cream",
+      "ground": "#F4E4DA",
+      "items": [
+        ["Banjo", "🪕", "a round banjo with tiny yarn strings"],
+        ["Snare Drum", "🥁", "a snare drum with two drumsticks crossed on top"],
+        ["Maracas", "🪇", "a pair of striped maracas"],
+        ["Hand Drum", "🪘", "a tall hand drum with woven straps"],
+        ["Trumpet", "🎺", "a shiny brass-yarn trumpet"],
+        ["Microphone", "🎤", "a vintage microphone on a little stand"],
+        ["Violin", "🎻", "a violin with a bow resting across it"],
+        ["Saxophone", "🎷", "a curvy gold saxophone"],
+        ["Accordion", "🪗", "an accordion with pleated felt bellows"],
+        ["Grand Piano", "🎹", "a tiny black grand piano with its lid open"],
+        ["Rock Guitar", "🎸", "an electric guitar with a lightning-bolt body"],
+        ["Maestro Baton", "🎼", "a conductor's podium with a baton and floating stitched music notes"]
+      ]
+    }
+  ]
+}

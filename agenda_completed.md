@@ -106,3 +106,52 @@ Brand family: **indigo rounded-square base, white heavy rounded sans glyph, gold
 - ⚠️ **Brian's ChatGPT feature graphic says "Find the connections."** That breaks the naming rule (no "Connections" in store copy), and it is 1794×876, not 1024×500. Kept as `resources/feature-graphic-chatgpt-original.png` for reference only. `resources/feature-graphic.png` is now a compliant 1024×500 render of `resources/src/feature-graphic.svg` (logo left; "Threadily" / "Word Groups" / "Find the thread. Sort every word." right, in Nunito). Brian can regenerate a ChatGPT version without the word "connections" if he prefers that style.
 - Splash: keeps the bigSIMPLE Games studio wordmark; the Trivily hexagon background is now a grid of rounded word tiles. Home header uses the Threadily logo + "Thread**ily**" wordmark. `trivily-logo.svg` deleted.
 - Added `.gitattributes` (`eol=lf`) so the repo stays LF.
+
+---
+
+## #4 — Trinkets: 12 sets × 12 in Threadily (yarn) style, emoji placeholders first
+
+**144 trinkets.** Each set holds 12 with a fixed spread: 6 common / 3 rare / 2 epic / 1 legendary, and position 12 is the chase piece. The session writes all names, rarities, and placeholder emoji now. Brian generates the art later.
+
+- [x] Write `TRINKETS.md` with every set's 12 entries in the same table format Trivily uses: `file | name | rarity | placeholder`. Starting set list (the session may refine names):
+
+  | # | Set id | Theme | Placeholder emoji for set |
+  |---|---|---|---|
+  | 1 | `cozy_critters` | Pets & backyard animals | 🐱 |
+  | 2 | `woodland_wanderers` | Forest animals | 🦊 |
+  | 3 | `ocean_knits` | Sea creatures | 🐙 |
+  | 4 | `dino_stitch` | Dinosaurs & prehistoric | 🦕 |
+  | 5 | `sweet_skeins` | Desserts & sweets | 🧁 |
+  | 6 | `garden_patch` | Fruits, veggies, flowers | 🌻 |
+  | 7 | `cosmic_crochet` | Space, planets, astronauts | 🚀 |
+  | 8 | `fable_folk` | Fairy-tale characters (originals, no Disney echoes) | 🧚 |
+  | 9 | `myth_menagerie` | Mythical creatures | 🐉 |
+  | 10 | `things_that_go` | Vehicles | 🚂 |
+  | 11 | `world_wonders` | Landmarks around the world | 🗼 |
+  | 12 | `music_makers` | Instruments & musicians | 🎸 |
+
+- [x] Each trinket gets its own emoji placeholder (not just the set emoji).
+- [x] Generator script (adapt Trivily's `generate-event-trinkets.mjs` / `slice_trinkets.py`):
+  - emits placeholder SVG cards for every slot
+  - writes `src/assets/trinkets/catalog.json` (`{ id, name, rarity, set, img }`)
+  - swaps in the PNG when Brian drops art into `trinketart/<set>/`
+  - safe to re-run on partial drops
+- [x] Write `trinketart/ART_PROMPT.md` with the shared ChatGPT style template plus one subject line per trinket. Template:
+
+  > A handmade crochet amigurumi plush in the style of the attached reference image, photographed as a cozy craft diorama. Everything is made of yarn and felt: visible crochet stitches and knit texture, soft fuzzy fibers, tiny embroidered details, safety-bead or stitched eyes, felt accents, a little stuffing roundness. Square 1:1, ~1200×1200, full-bleed scene: the plush sits on a small round crocheted coaster base with a soft knitted or felt backdrop behind it, warm studio lighting, soft shadows, gentle background blur. Cute rounded proportions, oversized head. **{SET THEME}** theme. Palette: {PALETTE}. No border, no text, no watermark, no name plate.
+  >
+  > Subject: **{ONE-LINE SUBJECT}**
+
+- [x] Prompt rules:
+  - one subject per image
+  - keep the subject inside the middle ~80% (cards crop toward a circle)
+  - original characters only
+- [x] After the first art piece exists, use it as the attached style reference for every later piece (same as Trivily's `epic_figure_king_arthur.png` role).
+- [x] Ship with placeholders. Art is not a release blocker. Commit.
+
+**Session notes (#4):**
+- Single source of truth: `trinketart/sets.json` (12 sets × 12, each item `[name, emoji, art subject]`, plus per-set theme, palette, and placeholder ground color).
+- `node generate-trinkets.mjs [set…]` writes placeholder SVG cards (emoji on the set's soft ground inside a dashed "stitch" ring in the rarity color), swaps in PNGs dropped at `trinketart/<set>/<set>_NN.png`, keeps already-copied art when the drop folder is emptied, upserts `src/assets/trinkets/catalog.json` (144 items: 72 common / 36 rare / 24 epic / 12 legendary), and regenerates `TRINKETS.md` + `trinketart/ART_PROMPT.md`. Partial-drop behavior verified (new → kept → placeholder).
+- Set names kept from the agenda list; Fable Folk is all originals / public-domain tale types (no Disney echoes).
+- `slice_trinkets.py` (Trivily's 4×3 grid slicer) removed — Threadily art is one PNG per trinket.
+- Collection screen renders the placeholders (checked in the browser).
