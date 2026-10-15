@@ -221,3 +221,24 @@ All puzzles are open, so the rating tells players what they're getting into.
 - Pack select (`pack/:pack`, `src/app/pack/`): numbered grid with stars, grid size, and solved state (sage fill + stitched ring + check badge); star filter chips (All / 1★–5★, remembered under `bsd.thr.pack_star_filter`); sort chip cycles In order → Easiest first → Hardest first.
 - "Continue" = `GameService.nextUnsolved()`: first unsolved puzzle in authored order across packs, loading packs lazily and stopping at the first hit. `nextAfter()` powers "Next puzzle" (#7). Both unit-tested.
 - Home hero now shows "Continue · #N" + a Pack button (full home layout in #11).
+
+---
+
+## #8 — Energy (port from Trivily, retune)
+
+- [x] Port `EnergyService` + spec. Constants:
+  - `ENERGY_MAX = 120`
+  - `ENERGY_PER_GAME = 10`
+  - `ENERGY_REFILL_INTERVAL_MS = 6 min`
+  - `AD_ENERGY_GRANT = 5`
+- [x] Replace the rolling-hour cap with **`AD_ENERGY_MAX_PER_DAY = 5`**. Reset at local midnight; store `{date, count}` under `bsd.thr.energy_ad_*`.
+- [x] Remove the energy-continue path.
+- [x] Header meter. Out-of-energy modal shows a countdown plus "Watch ad +5 (N/5 left today)".
+- [x] Tests: the daily cap, the midnight reset, and offline refill. Commit.
+
+**Session notes (#8):**
+- `EnergyService` (ported from Trivily): `ENERGY_MAX = 120`, `ENERGY_PER_GAME = 10`, 1 point / 6 min, `AD_ENERGY_GRANT = 5`.
+- Rolling-hour cap replaced by `AD_ENERGY_MAX_PER_DAY = 5`, stored as `{date, count}` under `bsd.thr.energy_ad_daily` with a **local** `YYYY-MM-DD` date. `adsWatchedToday` is computed off the 1-second ticker, so the cap lifts at local midnight even while the app stays open.
+- Energy-continue path and its constants removed (#1).
+- New `adsLeftToday()` and `timeToAfford(cost)`. Home header meter shows energy + countdown + an ad button with "N/5" left today. The out-of-energy alert (when starting a puzzle) shows "Enough refills in M:SS" and "Watch ad +5 (N/5 left today)", hidden once today's ads are used.
+- Tests: daily cap, ads-left countdown, persistence shape, reset after a stored "yesterday", rollover while open across midnight, override bypass, time-to-afford, plus the ported offline-refill / clamp / countdown tests.

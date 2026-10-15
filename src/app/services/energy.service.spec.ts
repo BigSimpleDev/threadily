@@ -1,9 +1,9 @@
 import { TestBed, fakeAsync, tick, discardPeriodicTasks } from '@angular/core/testing';
-import { EnergyService } from './energy.service';
+import { EnergyService, localDay } from './energy.service';
 import { LocalstoreService } from './localstore.service';
 import {
   ENERGY_MAX, ENERGY_PER_GAME, ENERGY_PER_EVENT_GAME, AD_ENERGY_GRANT,
-  AD_ENERGY_MAX_PER_HOUR, ENERGY_REFILL_INTERVAL_MS, LOCAL_STORAGE_KEYS
+  AD_ENERGY_MAX_PER_DAY, ENERGY_REFILL_INTERVAL_MS, LOCAL_STORAGE_KEYS
 } from '../entities/constants';
 
 describe('EnergyService', () => {
@@ -54,7 +54,7 @@ describe('EnergyService', () => {
     });
   });
 
-  describe('grantFromAd + rolling-hour cap', () => {
+  describe('grantFromAd + daily cap', () => {
     it('adds a grant, capped at the ceiling', () => {
       svc.energy.set(ENERGY_MAX - 2);
       svc.grantFromAd();
@@ -67,18 +67,70 @@ describe('EnergyService', () => {
       expect(svc.energy()).toBe(10 + AD_ENERGY_GRANT);
     });
 
-    it('stops allowing ad energy after the hourly cap', () => {
+    it('stops allowing ad energy after the daily cap', () => {
       svc.energy.set(0);
-      for (let i = 0; i < AD_ENERGY_MAX_PER_HOUR; i++) svc.grantFromAd();
-      expect(svc.adsWatchedThisHour()).toBe(AD_ENERGY_MAX_PER_HOUR);
+      for (let i = 0; i < AD_ENERGY_MAX_PER_DAY; i++) svc.grantFromAd();
+      expect(svc.adsWatchedToday()).toBe(AD_ENERGY_MAX_PER_DAY);
+      expect(svc.adsLeftToday()).toBe(0);
       expect(svc.canWatchAdForEnergy()).toBeFalse();
     });
 
-    it('the override bypasses the hourly cap', () => {
+    it('counts down the ads left today', () => {
+      svc.grantFromAd();
+      svc.grantFromAd();
+      expect(svc.adsLeftToday()).toBe(AD_ENERGY_MAX_PER_DAY - 2);
+    });
+
+    it('persists the day and count under bsd.thr.energy_ad_daily', () => {
+      svc.grantFromAd();
+      const stored = JSON.parse(lstore.get(LOCAL_STORAGE_KEYS.EnergyAdDaily));
+      expect(stored).toEqual({ date: localDay(Date.now()), count: 1 });
+    });
+
+    it('resets at local midnight', fakeAsync(() => {
+      // Five ads watched "yesterday" — none count today.
+      const yesterday = localDay(Date.now() - 24 * 60 * 60 * 1000);
+      lstore.set(LOCAL_STORAGE_KEYS.EnergyAdDaily, JSON.stringify({ date: yesterday, count: AD_ENERGY_MAX_PER_DAY }));
+      svc.init();
+      expect(svc.adsWatchedToday()).toBe(0);
+      expect(svc.canWatchAdForEnergy()).toBeTrue();
+      svc.grantFromAd();
+      expect(JSON.parse(lstore.get(LOCAL_STORAGE_KEYS.EnergyAdDaily))).toEqual({ date: localDay(Date.now()), count: 1 });
+      discardPeriodicTasks();
+    }));
+
+    it('rolls over while the app stays open across midnight', fakeAsync(() => {
+      // fakeAsync owns Date here: tick the 1s ticker forward past the next
+      // local midnight and the cap must lift without a reload.
+      svc.init();
+      for (let i = 0; i < AD_ENERGY_MAX_PER_DAY; i++) svc.grantFromAd();
+      expect(svc.canWatchAdForEnergy()).toBeFalse();
+      const now = new Date();
+      const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime();
+      tick(midnight - now.getTime() + 2000);
+      expect(svc.adsWatchedToday()).toBe(0);
+      expect(svc.canWatchAdForEnergy()).toBeTrue();
+      discardPeriodicTasks();
+    }));
+
+    it('the override bypasses the daily cap', () => {
       lstore.setEnergyOverride(true);
       svc.energy.set(0);
-      for (let i = 0; i < AD_ENERGY_MAX_PER_HOUR + 2; i++) svc.grantFromAd();
+      for (let i = 0; i < AD_ENERGY_MAX_PER_DAY + 2; i++) svc.grantFromAd();
       expect(svc.canWatchAdForEnergy()).toBeTrue();
+    });
+  });
+
+  describe('timeToAfford', () => {
+    it('is empty when already affordable', () => {
+      svc.energy.set(ENERGY_PER_GAME);
+      expect(svc.timeToAfford()).toBe('');
+    });
+
+    it('estimates the wait for the shortfall', () => {
+      svc.energy.set(ENERGY_PER_GAME - 3);
+      // 3 points short at 6 min each: just under 18 minutes.
+      expect(svc.timeToAfford()).toMatch(/^1[78]:\d{2}$/);
     });
   });
 

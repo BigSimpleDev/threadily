@@ -12,7 +12,7 @@ export enum LOCAL_STORAGE_KEYS {
     Energy = 'bsd.thr.energy',
     EnergyTs = 'bsd.thr.energy_ts',
     EnergyOverride = 'bsd.thr.energy_override',
-    EnergyAdTimestamps = 'bsd.thr.energy_ad_ts',
+    EnergyAdDaily = 'bsd.thr.energy_ad_daily',
     FeaturedTrinket = 'bsd.thr.featured_trinket',
     EventLegendaryAwarded = 'bsd.thr.event_legendary_awarded',
     ExpandedSets = 'bsd.thr.expanded_sets',
@@ -110,8 +110,7 @@ export const ENERGY_PER_EVENT_GAME = 8;
 export const ENERGY_MAX = 120;              // stored ceiling (12 puzzles banked)
 export const ENERGY_REFILL_INTERVAL_MS = 6 * 60 * 1000; // 1 energy/6min → 10/hour
 export const AD_ENERGY_GRANT = 5;           // rewarded ad grants this much energy
-export const AD_ENERGY_MAX_PER_HOUR = 5;    // rewarded-ad energy grants per rolling hour (becomes a daily cap in #8)
-export const ENERGY_AD_WINDOW_MS = 60 * 60 * 1000;
+export const AD_ENERGY_MAX_PER_DAY = 5;     // rewarded-ad energy grants per local calendar day
 
 // ── Ads / monetization ───────────────────────────────────────
 // Interstitials are frequency-capped to avoid fatigue + AdMob policy strikes:

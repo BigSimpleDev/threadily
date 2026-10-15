@@ -106,18 +106,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
   - shuffle
 - [ ] Play it end to end in the browser. Commit.
 
-## #8 — Energy (port from Trivily, retune)
-
-- [ ] Port `EnergyService` + spec. Constants:
-  - `ENERGY_MAX = 120`
-  - `ENERGY_PER_GAME = 10`
-  - `ENERGY_REFILL_INTERVAL_MS = 6 min`
-  - `AD_ENERGY_GRANT = 5`
-- [ ] Replace the rolling-hour cap with **`AD_ENERGY_MAX_PER_DAY = 5`**. Reset at local midnight; store `{date, count}` under `bsd.thr.energy_ad_*`.
-- [ ] Remove the energy-continue path.
-- [ ] Header meter. Out-of-energy modal shows a countdown plus "Watch ad +5 (N/5 left today)".
-- [ ] Tests: the daily cap, the midnight reset, and offline refill. Commit.
-
 ## #9 — Ads, Remove Ads, and marketing site
 
 The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, interstitial caps), so port `AdService` + `PurchaseService`. Wire two rewarded flows: **+3 hearts** and **+5 energy**. Ad-free behaves exactly as it does in Trivily.

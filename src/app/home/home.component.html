@@ -19,7 +19,7 @@
         <button class="trv-energy-btn" (click)="addEnergy()"
           [disabled]="addingEnergy() || !energySvc.canWatchAdForEnergy() || energySvc.overridden()">
           ⚡<span class="trv-energy-plus">+</span>
-          <span class="trv-energy-count">{{ energySvc.adsWatchedThisHour() }}/{{ energySvc.adMaxPerHour }}</span>
+          <span class="trv-energy-count">{{ energySvc.adsLeftToday() }}/{{ energySvc.adMaxPerDay }}</span>
         </button>
       </div>
     </div>
