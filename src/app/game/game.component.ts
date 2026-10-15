@@ -45,7 +45,7 @@ export class GameComponent implements OnInit {
   readonly tutorialSteps = HOW_TO_STEPS;
   // A touch must rest briefly on a tile before it lifts, so a swipe that starts
   // on a tile still scrolls the board and a quick tap still taps.
-  readonly DRAG_START_DELAY = { touch: 150, mouse: 0 };
+  readonly DRAG_START_DELAY = { touch: 25, mouse: 0 };
 
   pack = signal(0);
   index = signal(0);

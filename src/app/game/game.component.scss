@@ -171,6 +171,10 @@
   color: #fff;
   box-shadow: 0 8px 18px rgba(79, 58, 244, 0.4);
   opacity: 0.95;
+  /* The CDK animates the preview home only if it has a transform transition
+     (it inherits .thr-tile's press effect). Home is the hidden placeholder, so
+     it would fly to the top-left corner; just let it vanish on drop. */
+  transition: none;
 }
 /* A drop always appends, so a placeholder inside a row's slot grid would only
    push a fifth cell onto a new line. In the pool it marks where the tile was. */
