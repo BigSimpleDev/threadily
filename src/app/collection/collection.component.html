@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goHome()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Trinkets</ion-title>
+    <ion-buttons slot="end">
+      <span class="dly-coin-chip"><span class="dly-coin-dot">¢</span>{{ lstoreSvc.coins() }}</span>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="dly-roll-toolbar">
+    <div class="dly-roll-bar">
+      <div class="dly-roll-info">
+        <span class="dly-roll-count">{{ ownedCount() }} / {{ totalCount() }} collected</span>
+      </div>
+      <div class="dly-roll-actions">
+        <button type="button" class="dly-mult-chip" (click)="cycleMultiplier()">{{ multiplier() }}×</button>
+        <ion-button class="dly-roll-btn" [disabled]="!canRoll()" (click)="roll()">
+          Roll · {{ rollCost() }}¢
+        </ion-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Album grouped by set -->
+  @for (s of sets(); track s.name) {
+  <button class="dly-set-header" (click)="toggleSet(s.name)" [attr.aria-expanded]="!isCollapsed(s.name)">
+    <span class="dly-set-label">{{ s.name }}</span>
+    <span class="dly-set-count" [class.complete]="setOwned(s) === s.items.length">{{ setOwned(s) }} / {{ s.items.length }}</span>
+    <ion-icon name="chevron-down" class="dly-set-chevron" [class.collapsed]="isCollapsed(s.name)"></ion-icon>
+  </button>
+  @if (!isCollapsed(s.name)) {
+  <div class="dly-trinket-grid">
+    @for (t of s.items; track t.id) {
+    <div class="dly-trinket-cell rarity-{{ t.rarity }}" [class.owned]="owns(t.id)"
+      (click)="inspect(t)">
+      @if (owns(t.id)) {
+      <img [src]="t.img" [alt]="t.name" loading="lazy">
+      <span class="dly-trinket-name">{{ t.name }}</span>
+      } @else {
+      <div class="dly-trinket-locked">?</div>
+      <span class="dly-trinket-name dly-locked-name">???</span>
+      }
+    </div>
+    }
+  </div>
+  }
+  }
+
+  <!-- Reveal overlay — a stack of pending pulls, dismissed one at a time -->
+  @if (currentReveal(); as r) {
+  <div class="dly-reveal-backdrop" (click)="advanceReveal()">
+    <div class="dly-reveal-stack" (click)="$event.stopPropagation()">
+      <!-- Depth cards behind the front, hinting at how many remain -->
+      @for (d of stackDepth(); track d) {
+      <div class="dly-reveal-card dly-stack-behind" [style.--i]="d"></div>
+      }
+      <div class="dly-reveal-card dly-stack-front rarity-{{ r.trinket.rarity }}">
+        @if (rollQueue().length > 1) {
+        <span class="dly-stack-count">{{ rollQueue().length }} left</span>
+        }
+        <span class="dly-reveal-rarity">{{ r.trinket.rarity | uppercase }}{{ r.duplicate ? ' · DUPLICATE' : '!' }}</span>
+        <img [src]="r.trinket.img" [alt]="r.trinket.name">
+        <span class="dly-reveal-name">{{ r.trinket.name }}</span>
+        @if (r.duplicate) {
+        <span class="dly-reveal-dupe">Already collected — redeem it for coins</span>
+        <ion-button expand="block" color="warning" (click)="redeemCurrent()">
+          Redeem for {{ DUPLICATE_REFUND }}¢
+        </ion-button>
+        } @else {
+        <ion-button expand="block" (click)="dismissCurrent()">Nice!</ion-button>
+        }
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Inspect overlay (larger view of an owned trinket) -->
+  @if (inspecting(); as t) {
+  <div class="dly-reveal-backdrop" (click)="closeInspect()">
+    <div class="dly-inspect-card rarity-{{ t.rarity }}" (click)="$event.stopPropagation()">
+      <span class="dly-reveal-rarity">{{ t.rarity | uppercase }}</span>
+      <img [src]="t.img" [alt]="t.name">
+      <span class="dly-reveal-name">{{ t.name }}</span>
+      <ion-button expand="block" fill="outline" class="dly-inspect-home-btn" (click)="setFeatured(t)">
+        <ion-icon slot="start" [name]="lstoreSvc.featuredTrinket()?.id === t.id ? 'home' : 'home-outline'"></ion-icon>
+        {{ lstoreSvc.featuredTrinket()?.id === t.id ? 'Remove from Home' : 'Set as Home Icon' }}
+      </ion-button>
+    </div>
+  </div>
+  }
+
+</ion-content>

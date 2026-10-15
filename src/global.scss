@@ -1,0 +1,110 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+$sizes: 10;
+
+@mixin size-list {
+    @for $i from 0 through $sizes {
+        .px-#{$i} {
+            padding-left: $i*.25rem !important;
+            padding-right: $i*.25rem !important;
+        }
+
+        .py-#{$i} {
+            padding-top: $i*.25rem !important;
+            padding-bottom: $i*.25rem !important;
+        }
+
+        .pl-#{$i} {
+            padding-left: $i*.25rem !important;
+        }
+
+        .pt-#{$i} {
+            padding-top: $i*.25rem !important;
+        }
+
+        .pr-#{$i} {
+            padding-right: $i*.25rem !important;
+        }
+
+        .pb-#{$i} {
+            padding-bottom: $i*.25rem !important;
+        }
+
+        .p-#{$i} {
+            padding: $i*.25rem !important;
+        }
+
+        .mx-#{$i} {
+            margin-left: $i*.25rem !important;
+            margin-right: $i*.25rem !important;
+        }
+
+        .my-#{$i} {
+            margin-top: $i*.25rem !important;
+            margin-bottom: $i*.25rem !important;
+        }
+
+        .ml-#{$i} {
+            margin-left: $i*.25rem !important;
+        }
+
+        .mt-#{$i} {
+            margin-top: $i*.25rem !important;
+        }
+
+        .mr-#{$i} {
+            margin-right: $i*.25rem !important;
+        }
+
+        .mb-#{$i} {
+            margin-bottom: $i*.25rem !important;
+        }
+
+        .m-#{$i} {
+            margin: $i*.25rem !important;
+        }
+    }
+}
+
+@include size-list;
+
+/* ── Trivily base overrides ─────────────────────────── */
+* { font-family: 'Nunito', sans-serif; }
+
+ion-content  { --background: var(--ion-background-color); }
+ion-toolbar  { --background: var(--ion-background-color); box-shadow: none; }
+ion-header   { box-shadow: 0 1px 0 var(--ion-border-color); }
+ion-card     { border-radius: var(--dly-card-radius); box-shadow: var(--dly-shadow-card); }
+
+ion-button {
+  --border-radius: var(--dly-btn-radius);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+ion-badge { border-radius: 20px; font-weight: 700; font-size: 11px; }
+
+@keyframes dly-shake {
+  0%,100% { transform: translateX(0); }
+  25%      { transform: translateX(-4px); }
+  75%      { transform: translateX(4px); }
+}
+.dly-shake { animation: dly-shake 0.35s ease; }

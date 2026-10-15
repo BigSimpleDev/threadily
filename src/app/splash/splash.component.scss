@@ -1,0 +1,100 @@
+:host {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: all;
+}
+
+.splash {
+  width: 100%;
+  height: 100%;
+  background: #F5F4F0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  container-type: inline-size;
+  container-name: splash;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+
+  &.fade-out {
+    opacity: 0;
+  }
+}
+
+.hex-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  animation: wmEnter 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  padding-bottom: 20px;
+}
+
+@keyframes wmEnter {
+  from { transform: translateY(10px) scale(0.96); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+.brand-name {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #1A1928;
+  font-size: 18cqw;
+
+  .part-big {
+    font-weight: 500;
+    color: #1A1928;
+  }
+
+  .part-simple {
+    color: #4F3AF4;
+  }
+}
+
+.brand-games {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7B7A90;
+  margin-top: 2.6cqw;
+  font-size: 4cqw;
+}
+
+.dots {
+  display: flex;
+  gap: 2cqw;
+  margin-top: 14cqw;
+}
+
+.dot {
+  width: 2.2cqw;
+  height: 2.2cqw;
+  border-radius: 50%;
+  background: #4F3AF4;
+  opacity: 0.25;
+  animation: dotPop 1.6s ease-in-out infinite;
+
+  &:nth-child(2) { animation-delay: 0.22s; }
+  &:nth-child(3) { animation-delay: 0.44s; }
+}
+
+@keyframes dotPop {
+  0%, 100% { opacity: 0.18; transform: scale(0.72); }
+  50%       { opacity: 0.90; transform: scale(1.12); }
+}

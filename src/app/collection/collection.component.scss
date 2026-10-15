@@ -1,0 +1,161 @@
+/* Coin chip (matches the game header chip) */
+.dly-coin-chip {
+  display: inline-flex; align-items: center; gap: 3px;
+  height: 28px; padding: 0 10px; margin-right: 6px;
+  border-radius: 8px; background: #FEF3C7;
+  font-size: 13px; font-weight: 800; color: #B45309;
+}
+.dly-coin-dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--ion-color-warning); color: white;
+  font-size: 11px; font-weight: 900;
+}
+
+/* Roll bar toolbar */
+.dly-roll-toolbar {
+  --background: var(--ion-toolbar-background, var(--ion-background-color));
+  --border-width: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+/* Roll bar */
+.dly-roll-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 6px 12px;
+}
+.dly-roll-count { font-size: 13px; font-weight: 800; color: var(--ion-color-medium); }
+.dly-roll-actions {
+  display: flex; align-items: center; gap: 6px;
+}
+.dly-roll-btn { --border-radius: 10px; font-weight: 800; margin: 0; }
+
+/* Multiplier chip — tap to cycle 1×→2×→3×→5× */
+.dly-mult-chip {
+  height: 34px; min-width: 40px; padding: 0 10px;
+  border-radius: 10px; border: 2px solid var(--ion-color-primary);
+  background: transparent; color: var(--ion-color-primary);
+  font-size: 14px; font-weight: 900;
+}
+
+/* Collapsible set header: name, owned count, chevron */
+.dly-set-header {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; margin: 14px 0 8px; padding: 6px 2px;
+  border: none; background: none; cursor: pointer;
+  border-bottom: 1px solid var(--ion-border-color, rgba(0, 0, 0, .1));
+}
+.dly-set-label {
+  flex: 1; text-align: left;
+  font-size: 12px; font-weight: 800; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--ion-color-medium);
+}
+.dly-set-count {
+  font-size: 12px; font-weight: 800; color: var(--ion-color-medium);
+  &.complete { color: var(--ion-color-success); }
+}
+.dly-set-chevron {
+  font-size: 16px; color: var(--ion-color-medium);
+  transition: transform .2s ease;
+  &.collapsed { transform: rotate(-90deg); }
+}
+
+/* Album grid */
+.dly-trinket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.dly-trinket-cell {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 8px 6px; border-radius: 14px;
+  border: 2px solid var(--ion-border-color);
+  background: var(--ion-color-light);
+
+  img { width: 100%; border-radius: 10px; aspect-ratio: 3 / 4; object-fit: cover; }
+}
+.dly-trinket-cell.owned { border-color: currentColor; }
+
+.dly-trinket-locked {
+  width: 100%; aspect-ratio: 3 / 4; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  background: #E2E8F0; color: #94A3B8;
+  font-size: 40px; font-weight: 900;
+}
+.dly-trinket-name {
+  margin-top: 6px; font-size: 12px; font-weight: 700; text-align: center;
+  color: var(--ion-text-color);
+}
+.dly-locked-name { color: var(--ion-color-medium); letter-spacing: 2px; }
+
+/* Rarity accent (applied to owned cells + reveal card) */
+.rarity-common    { color: #64748B; }
+.rarity-rare      { color: #1D4ED8; }
+.rarity-epic      { color: #6D28D9; }
+.rarity-legendary { color: #B45309; }
+
+/* Reveal overlay */
+.dly-reveal-backdrop {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(15, 15, 30, .6);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.dly-reveal-card {
+  width: 100%; max-width: 300px;
+  background: var(--dly-card-surface); border-radius: 20px;
+  border: 3px solid currentColor;
+  padding: 18px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+
+  img { width: 160px; border-radius: 12px; }
+  ion-button { width: 100%; margin-top: 6px; --border-radius: 10px; }
+}
+/* Stacked reveals — front card sits above depth cards offset behind it */
+.dly-reveal-stack {
+  position: relative;
+  width: 100%; max-width: 300px;
+}
+.dly-stack-front { position: relative; z-index: 2; }
+.dly-stack-behind {
+  position: absolute; inset: 0; z-index: 1;
+  transform: translate(calc(var(--i) * 7px), calc(var(--i) * 7px)) scale(calc(1 - var(--i) * .03));
+  opacity: calc(.5 - var(--i) * .12);
+  color: var(--ion-color-medium);
+  pointer-events: none;
+}
+.dly-stack-count {
+  position: absolute; top: 10px; right: 12px;
+  font-size: 11px; font-weight: 900; letter-spacing: .5px;
+  color: var(--ion-color-medium);
+}
+.dly-reveal-rarity {
+  font-size: 13px; font-weight: 900; letter-spacing: 2px; color: currentColor;
+}
+.dly-reveal-name { font-size: 18px; font-weight: 800; color: var(--ion-text-color); }
+.dly-reveal-dupe { font-size: 12px; font-weight: 700; color: var(--ion-color-medium); }
+
+/* Inspect card — bigger than reveal, still bounded (not full screen). */
+.dly-inspect-card {
+  width: auto; max-width: min(80vw, 360px);
+  background: var(--dly-card-surface); border-radius: 20px;
+  border: 3px solid currentColor;
+  padding: 18px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 12px;
+  }
+}
+
+/* Home icon button inside inspect overlay */
+.dly-inspect-home-btn { width: 100%; margin-top: 6px; --border-radius: 10px; }
+
+/* Back/icon button matches header foreground (blue in light, light in dark) */
+ion-buttons[slot="start"] ion-button { --color: var(--dly-toolbar-btn); }

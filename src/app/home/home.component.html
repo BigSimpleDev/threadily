@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <div class="dly-home-logo">
+    <img src="assets/trivily-logo.svg" width="36" height="36" alt="logo">
+    <span class="dly-wordmark"><span class="primary">Thread</span>ily</span>
+    <div class="dly-home-right">
+      <div class="dly-home-row">
+        <span class="dly-home-coins" (click)="openCollection()" title="Your coins">
+          <span class="dly-coin-dot">¢</span>{{ lstoreSvc.coins() }}
+        </span>
+        <button class="dly-theme-chip" (click)="toggleTheme()"
+          [title]="lstoreSvc.darkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
+          <ion-icon [name]="lstoreSvc.darkMode() ? 'sunny-outline' : 'moon-outline'"></ion-icon>
+        </button>
+      </div>
+      <div class="dly-home-row">
+        <span class="dly-home-energy" title="Energy">
+          ⚡@if (energySvc.overridden()) {∞} @else {{{ energySvc.energy() }}@if (energySvc.countdown()) {<span class="trv-energy-timer">{{ energySvc.countdown() }}</span>}}
+        </span>
+        <button class="trv-energy-btn" (click)="addEnergy()"
+          [disabled]="addingEnergy() || !energySvc.canWatchAdForEnergy() || energySvc.overridden()">
+          ⚡<span class="trv-energy-plus">+</span>
+          <span class="trv-energy-count">{{ energySvc.adsWatchedThisHour() }}/{{ energySvc.adMaxPerHour }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="dly-hero-card">
+    <h2 class="dly-hero-title">Threadily</h2>
+    <div class="dly-hero-actions">
+      <ion-button (click)="play()" class="dly-btn-hero-primary">Play</ion-button>
+    </div>
+  </div>
+
+  <ion-button expand="block" color="primary" fill="outline"
+    class="dly-completed-btn" (click)="openCollection()">
+    <ion-icon slot="start" name="sparkles-outline"></ion-icon>
+    Trinkets
+  </ion-button>
+</ion-content>

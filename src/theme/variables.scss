@@ -1,0 +1,165 @@
+/* ── Trivily Theme Variables ─────────────────────────── */
+
+:root {
+  /* Primary — Vivid Indigo */
+  --ion-color-primary:          #4F3AF4;
+  --ion-color-primary-rgb:      79, 58, 244;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade:    #3B28D8;
+  --ion-color-primary-tint:     #6D55F5;
+
+  /* Secondary — Coral */
+  --ion-color-secondary:        #F06030;
+  --ion-color-secondary-rgb:    240, 96, 48;
+  --ion-color-secondary-contrast:#ffffff;
+  --ion-color-secondary-shade:  #D4562B;
+  --ion-color-secondary-tint:   #F27044;
+
+  /* Tertiary — Amber */
+  --ion-color-tertiary:         #F5BE2E;
+  --ion-color-tertiary-rgb:     245, 190, 46;
+  --ion-color-tertiary-contrast:#1A1928;
+  --ion-color-tertiary-shade:   #D8A728;
+  --ion-color-tertiary-tint:    #F6C443;
+
+  /* Success */
+  --ion-color-success:          #22C55E;
+  --ion-color-success-rgb:      34, 197, 94;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-shade:    #1EAD53;
+  --ion-color-success-tint:     #38CB6E;
+
+  /* Warning */
+  --ion-color-warning:          #F5BE2E;
+  --ion-color-warning-rgb:      245, 190, 46;
+  --ion-color-warning-contrast: #1A1928;
+  --ion-color-warning-shade:    #D8A728;
+  --ion-color-warning-tint:     #F6C443;
+
+  /* Danger */
+  --ion-color-danger:           #E11D48;
+  --ion-color-danger-rgb:       225, 29, 72;
+  --ion-color-danger-contrast:  #ffffff;
+  --ion-color-danger-shade:     #C61940;
+  --ion-color-danger-tint:      #E43457;
+
+  /* Dark */
+  --ion-color-dark:             #1A1928;
+  --ion-color-dark-rgb:         26, 25, 40;
+  --ion-color-dark-contrast:    #ffffff;
+  --ion-color-dark-shade:       #171623;
+  --ion-color-dark-tint:        #31303E;
+
+  /* Medium */
+  --ion-color-medium:           #7B7A90;
+  --ion-color-medium-rgb:       123, 122, 144;
+  --ion-color-medium-contrast:  #ffffff;
+  --ion-color-medium-shade:     #6C6B7F;
+  --ion-color-medium-tint:      #88879B;
+
+  /* Light = page background */
+  --ion-color-light:            #F5F4F0;
+  --ion-color-light-rgb:        245, 244, 240;
+  --ion-color-light-contrast:   #1A1928;
+  --ion-color-light-shade:      #D8D7D2;
+  --ion-color-light-tint:       #F6F5F2;
+
+  /* ── App-level tokens ─────────────────────────────────── */
+  --ion-background-color:       #F5F4F0;
+  --ion-background-color-rgb:   245, 244, 240;
+  --ion-text-color:             #1A1928;
+  --ion-text-color-rgb:         26, 25, 40;
+
+  --ion-toolbar-background:     #F5F4F0;
+  --ion-toolbar-color:          #1A1928;
+  --ion-item-background:        #FFFFFF;
+  --ion-card-background:        #FFFFFF;
+  --ion-border-color:           #E8E7EF;
+  --ion-font-family:            'Nunito', sans-serif;
+
+  /* Custom tokens used across components */
+  --dly-primary-tint:           #EEEEFF;
+  --dly-card-radius:            18px;
+  --dly-btn-radius:             12px;
+  --dly-shadow-card:            0 2px 12px rgba(26,25,40,0.08);
+  --dly-shadow-btn:             0 4px 16px rgba(79,58,244,0.35);
+
+  /* Theme-toggle icon color (flips in dark) */
+  --dly-theme-icon:             var(--ion-color-primary);
+
+  /* Disabled/unavailable keyboard key (flips in dark) */
+  --dly-key-off-bg:             #d9d9d9;
+  --dly-key-off-color:          #000;
+  --dly-key-off-border:         #000;
+
+  /* Toolbar back/icon button foreground (flips in dark) */
+  --dly-toolbar-btn:            var(--ion-color-primary);
+
+  /* Level-select rows (flip in dark) */
+  --dly-level-bg:               #ffffff;
+  --dly-level-active-bg:        #EEEEFF;
+  --dly-level-done-bg:          #F0FDF4;
+  --dly-level-done-border:      #86EFAC;
+  --dly-level-done-tag:         #16A34A;
+  --dly-level-locked-bg:        #FAFAFA;
+  --dly-level-label:            #111827;
+  --dly-icon-lock-bg:           #F3F4F6;
+
+  /* Elevated card surface for modals/popups (flips in dark) */
+  --dly-card-surface:           #ffffff;
+}
+
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+}
+
+/* ── Dark mode ─────────────────────────────────────────────
+   Toggled by adding `.dark` to <html> (LocalstoreService). Only the
+   surface/text tokens flip; brand colors stay for identity. */
+html.dark {
+  --ion-color-light:            #1F1E2E;
+  --ion-color-light-rgb:        31, 30, 46;
+  --ion-color-light-contrast:   #F5F4F0;
+  --ion-color-light-shade:      #1B1A28;
+  --ion-color-light-tint:       #2A293A;
+
+  --ion-color-dark:             #F5F4F0;
+  --ion-color-dark-rgb:         245, 244, 240;
+  --ion-color-dark-contrast:    #1A1928;
+  --ion-color-dark-shade:       #D8D7D2;
+  --ion-color-dark-tint:        #FFFFFF;
+
+  --ion-color-medium:           #9C9BB2;
+  --ion-color-medium-rgb:       156, 155, 178;
+
+  --ion-background-color:       #141320;
+  --ion-background-color-rgb:   20, 19, 32;
+  --ion-text-color:             #F5F4F0;
+  --ion-text-color-rgb:         245, 244, 240;
+
+  --ion-toolbar-background:     #141320;
+  --ion-toolbar-color:          #F5F4F0;
+  --ion-item-background:        #1F1E2E;
+  --ion-card-background:        #1F1E2E;
+  --ion-border-color:           #2E2D40;
+
+  --dly-primary-tint:           #23204A;
+  --dly-shadow-card:            0 2px 12px rgba(0,0,0,0.45);
+  --dly-theme-icon:             var(--ion-color-primary-contrast);
+  --dly-key-off-bg:             #3A3950;
+  --dly-key-off-color:          #C7C6D6;
+  --dly-key-off-border:         #56546E;
+
+  --dly-toolbar-btn:            var(--ion-toolbar-color);
+
+  --dly-level-bg:               #1F1E2E;
+  --dly-level-active-bg:        #23204A;
+  --dly-level-done-bg:          #16301F;
+  --dly-level-done-border:      #2F6B43;
+  --dly-level-done-tag:         #4ADE80;
+  --dly-level-locked-bg:        #1B1A28;
+  --dly-level-label:            #F5F4F0;
+  --dly-icon-lock-bg:           #2E2D40;
+
+  --dly-card-surface:           #1F1E2E;
+}

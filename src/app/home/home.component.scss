@@ -1,0 +1,345 @@
+.dly-home-logo {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; position: relative;
+  /* Clear the status bar / camera cutout. env() is 0 where there's none. */
+  padding: max(14px, env(safe-area-inset-top)) 20px 28px;
+}
+.dly-wordmark { font-size: 22px; font-weight: 900; letter-spacing: -0.3px; }
+.dly-wordmark .primary { color: var(--ion-color-primary); }
+
+/* Right-side header cluster: Remove-ads chip + coins */
+.dly-home-right {
+  position: absolute; right: 20px; top: max(14px, env(safe-area-inset-top));
+  display: inline-flex; flex-direction: column; align-items: flex-end; gap: 6px;
+}
+/* Theme toggle + coins share one row; ADS chip sits below */
+.dly-home-row {
+  display: inline-flex; align-items: center; gap: 6px;
+}
+/* Small circular remove-ads button: 🚫 + ADS */
+.dly-removeads-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  height: 28px; padding: 0 9px 0 6px; cursor: pointer;
+  border-radius: 14px; border: 1px solid rgba(0,0,0,.08);
+  background: #FFFFFF;
+  font-size: 12px; font-weight: 800; color: var(--ion-color-danger);
+}
+.dly-removeads-chip ion-icon { font-size: 17px; }
+.dly-removeads-chip[disabled] { opacity: .5; }
+
+/* Theme toggle: moon / sunny */
+.dly-theme-chip {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; cursor: pointer;
+  border-radius: 14px; border: 1px solid var(--ion-border-color);
+  background: var(--ion-card-background);
+}
+.dly-theme-chip ion-icon { font-size: 17px; color: var(--dly-theme-icon); }
+html.dark .dly-theme-chip {
+  background: var(--ion-color-light-tint);
+  border-color: var(--ion-border-color);
+}
+
+.dly-home-coins {
+  display: inline-flex; align-items: center; gap: 3px;
+  height: 28px; padding: 0 10px; cursor: pointer;
+  border-radius: 8px; background: #FEF3C7;
+  font-size: 13px; font-weight: 800; color: #B45309;
+}
+.dly-home-coins .dly-coin-dot {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--ion-color-warning); color: white;
+  font-size: 11px; font-weight: 900;
+}
+
+/* Energy display + refill row */
+.dly-home-energy {
+  display: inline-flex; align-items: center; gap: 2px;
+  height: 28px; padding: 0 10px; border-radius: 8px;
+  background: var(--ion-color-light);
+  font-size: 13px; font-weight: 700; white-space: nowrap;
+}
+.trv-energy-timer { font-size: 10px; color: var(--ion-color-medium); margin-left: 3px; }
+.trv-energy-btn {
+  height: 28px; padding: 0 8px; border-radius: 8px; border: none; cursor: pointer;
+  background: #FEF3C7;
+  display: flex; align-items: center; gap: 4px; justify-content: center;
+  position: relative; margin-left: 2px;
+}
+.trv-energy-btn:disabled { opacity: .4; cursor: default; }
+.trv-energy-plus {
+  position: absolute; top: -3px; right: -3px;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--ion-color-primary);
+  font-size: 9px; font-weight: 900; color: white;
+  display: flex; align-items: center; justify-content: center;
+}
+.trv-energy-count {
+  font-size: 11px; font-weight: 800; color: #B45309;
+}
+
+/* Hero / active group card */
+.dly-hero-card {
+  position: relative;
+  z-index: 2;              /* covers the bottom of the featured trinket card */
+  background: linear-gradient(138deg, var(--ion-color-primary) 0%, #6D50F8 100%);
+  border-radius: 22px; padding: 18px 20px 20px; margin-bottom: 14px;
+  box-shadow: 0 8px 28px rgba(79, 58, 244, 0.38);
+}
+.dly-hero-top {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;
+}
+.dly-label-sm {
+  font-size: 10px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  color: rgba(255,255,255,.65);
+}
+.dly-lvl-badge {
+  background: rgba(255,255,255,.2) !important; color: white !important;
+  border-radius: 20px; font-size: 11px; font-weight: 700;
+}
+.dly-hero-title { font-size: 22px; font-weight: 900; color: white; margin: 2px 0 14px; }
+.dly-progress-bar {
+  height: 5px; background: rgba(255,255,255,.22); border-radius: 3px;
+  margin-bottom: 16px; overflow: hidden;
+}
+.dly-progress-fill { height: 100%; background: white; border-radius: 3px; transition: width .3s; }
+.dly-hero-actions { display: flex; gap: 10px; }
+.dly-btn-hero-primary {
+  flex: 1;
+  --background: white;
+  --color: var(--ion-color-primary);
+  font-weight: 800;
+  --border-radius: 12px;
+}
+.dly-btn-hero-outline {
+  flex: 1;
+  --background: rgba(255,255,255,.15);
+  --color: white;
+  --border-color: rgba(255,255,255,.38);
+  font-weight: 700;
+  --border-radius: 12px;
+}
+
+/* All-done congratulations card */
+.dly-alldone-card {
+  position: relative;
+  z-index: 2;              /* stays above the featured trinket card */
+  background: linear-gradient(138deg, var(--ion-color-primary) 0%, #6D50F8 100%);
+  border-radius: 22px; padding: 24px 20px 20px; margin-bottom: 16px;
+  box-shadow: 0 8px 28px rgba(79, 58, 244, 0.38);
+  text-align: center; color: white;
+}
+.dly-alldone-icon { font-size: 48px; color: white; margin-bottom: 6px; }
+.dly-alldone-title { font-size: 20px; font-weight: 900; color: white; margin: 0 0 8px; }
+.dly-alldone-sub {
+  font-size: 13px; line-height: 1.45; color: rgba(255,255,255,.82);
+  margin: 0 0 16px;
+}
+.dly-alldone-btn {
+  --background: white;
+  --color: var(--ion-color-primary);
+  --border-radius: 12px;
+  font-weight: 800;
+}
+
+/* Completed sets */
+/* Opaque and raised: when no hero/all-done card is present, this button is what
+   sits under the featured trinket card, so it must never be see-through. */
+.dly-completed-btn {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 20px;
+  --border-radius: 14px;
+  --border-width: 2px;
+  /* Painted on the host, not via --background: Ionic's own :host(.button-outline)
+     rule forces --background: transparent inside the shadow root, so the trinket
+     card showed through the button face. */
+  background: var(--ion-background-color, #fff);
+  border-radius: 14px;
+}
+
+/* Section label */
+.dly-section-label {
+  font-size: 11px; font-weight: 800; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ion-color-medium); margin-bottom: 10px;
+}
+
+/* Available group cards */
+.dly-group-card  { margin: 0 0 10px; }
+.dly-group-card-inner { display: flex; align-items: center; justify-content: space-between; }
+.dly-group-title { font-size: 16px; font-weight: 800; margin-bottom: 6px; color: var(--ion-text-color); }
+.dly-group-badge { --border-radius: 20px; font-size: 11px; }
+
+/* Restore purchases link at the bottom */
+.dly-restore-row { display: flex; justify-content: center; padding: 8px 0 4px; }
+
+/* ── Settings toggle row ─────────────────────────────────── */
+.trv-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  margin: 4px 0 8px;
+  border: 1px solid var(--ion-color-step-150, #e0e0e0);
+  border-radius: 14px;
+  background: var(--ion-card-background, var(--ion-background-color));
+  color: var(--ion-text-color);
+  cursor: pointer;
+  text-align: left;
+}
+.trv-setting-text { display: flex; flex-direction: column; gap: 2px; }
+.trv-setting-title { font-weight: 700; font-size: 15px; }
+.trv-setting-sub { font-size: 12px; color: var(--ion-color-medium); }
+
+.trv-toggle {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--ion-color-step-300, #c8c8c8);
+  position: relative;
+  transition: background 0.2s ease;
+}
+.trv-toggle-on { background: var(--ion-color-success); }
+.trv-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s ease;
+}
+.trv-toggle-on .trv-toggle-knob { transform: translateX(18px); }
+
+/* Featured trinket — the card sticks up out of the page and its bottom edge is
+   tucked under whatever element follows (hero card, all-done card, or the
+   Trinkets button), each of which is opaque and raised above it. */
+.dly-featured-trinket {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* Height sets how much of the trinket shows; the hero card then tucks the last
+   few pixels away so the flat bottom cut never reads as an edge. Visible height
+   is this minus the overlap on .dly-top-row-trinket. */
+.dly-featured-img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 16px 16px 0px 0px;
+}
+
+/* ── Seasonal event button ────────────────────────────────
+   Sits in the flow above the hero card, pinned to the left edge of its row and
+   vertically centred on the featured trinket beside it. */
+.dly-home-top-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 104px;
+  margin-bottom: 4px;
+}
+
+/* When a trinket is featured, the row overlaps into the next element so the hero
+   card cuts off the card's bottom edge. Set as a bound class rather than
+   `:has(.dly-featured-trinket)` — :has() needs Safari 15.4+ and this app
+   ships back to an iOS 13 deployment target. */
+.dly-top-row-trinket {
+  margin-bottom: -14px;
+}
+
+.dly-event-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Two-tone disc: outer ring, gradient inner face. Colors come from the event's
+   `colors` config via custom properties; fallbacks are the Halloween palette. */
+.dly-event-btn-disc {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--event-ring, #F97316);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 38%,
+      var(--event-face-light, #A78BFA) 0%,
+      var(--event-face, #8B5CF6) 58%,
+      var(--event-face-dark, #6D28D9) 100%);
+    box-shadow: inset 0 -3px 6px var(--event-face-glow, rgba(249, 115, 22, 0.30));
+  }
+}
+
+.dly-event-btn-art,
+.dly-event-btn-emoji {
+  position: relative;
+  z-index: 1;
+}
+
+.dly-event-btn-art {
+  width: 44px;
+  height: 44px;
+}
+
+.dly-event-btn-emoji {
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Name chip under the disc. */
+.dly-event-btn-label {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--event-pill, #7C3AED);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+/* Completion badge, pinned to the disc's top-right corner. */
+.dly-event-btn-check {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  background: #16A34A;
+  border: 2px solid var(--ion-background-color, #fff);
+}

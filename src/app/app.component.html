@@ -1,0 +1,11 @@
+<ion-app>
+  @if (showSplash()) {
+    <app-splash (dismissed)="onSplashDismissed()"></app-splash>
+  }
+  @if (adSvc.loading()) {
+    <div class="ad-loading-overlay">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  }
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
