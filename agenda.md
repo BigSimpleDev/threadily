@@ -87,18 +87,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
 - [ ] Brian: say "go" on the bigsimple.dev edits (Part 5). A session then copies `site-drafts/games/threadily/privacy.html`, adds the game card, footer, legal, and sitemap entries, and commits in the site repo. Brian deploys.
 
-## #12 — Content: 1,000 puzzles
-
-- [ ] Write `PUZZLES.md` seed bank: categories by domain (geography, sports, food, music, movies, science, nature, words-that-are-also-X, homophones, hidden words…), with dual-meaning tile candidates noted.
-- [ ] Author 10 packs of 100 following #6 (rating mix, 100+ small-but-hard puzzles). Run the validator after every pack. Commit per pack.
-- [ ] Content rules:
-  - no full copyrighted lyrics
-  - every tile has exactly **one** correct category (herrings plausible, never truly ambiguous)
-  - facts current (team relocations, renamed places)
-  - `warning` on brand-heavy puzzles
-- [ ] Ambiguity review pass on every herring.
-- [ ] Play 10 puzzles per star level in the browser to check the rating feel.
-
 ## #13 — Release config
 
 - [ ] Run `npx cap add android` and `npx cap add ios`. Verify `com.bigsimple.threadily` in Gradle and in Xcode. Display name `Threadily`.

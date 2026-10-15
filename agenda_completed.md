@@ -377,3 +377,25 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 - **Palette:** family indigo `#4F3AF4` primary. Category yarn tones in slot order: coral `#E9765B`, mustard `#D9A21F`, sage `#6FA07B`, sky `#4F9BD1`, plum `#9A62B3`. Solved-puzzle sage fill reuses the stitched ring.
 - **Fix:** component-level `html.dark …` selectors never matched under view encapsulation; now `:host-context(.dark)`.
 - **360px check:** home, settings, pack, collection, tutorial board, and 4×4 board, in light and dark — no horizontal overflow, no console errors.
+
+---
+
+## #12 — Content: 1,000 puzzles
+
+- [x] Write `PUZZLES.md` seed bank: categories by domain (geography, sports, food, music, movies, science, nature, words-that-are-also-X, homophones, hidden words…), with dual-meaning tile candidates noted.
+- [x] Author 10 packs of 100 following #6 (rating mix, 100+ small-but-hard puzzles). Run the validator after every pack. Commit per pack.
+- [x] Content rules:
+  - no full copyrighted lyrics
+  - every tile has exactly **one** correct category (herrings plausible, never truly ambiguous)
+  - facts current (team relocations, renamed places)
+  - `warning` on brand-heavy puzzles
+- [x] Ambiguity review pass on every herring.
+- [x] Play 10 puzzles per star level in the browser to check the rating feel.
+
+**Session notes (#12):**
+- 10 packs × 100 = 1,000 puzzles in `content/pack01–10.txt`. Final mix exactly on target: 1★ 150 · 2★ 250 · 3★ 300 · 4★ 200 · 5★ 100. Small-but-hard (≤3 categories at ≥4★): 119. Grids: 2×4 215 · 3×4 421 · 4×4 294 · 5×4 70.
+- Duplicate sweep: packs 9–10 had repeated many category sets from earlier packs (written after a context reset). A tile-overlap check across all 12,876 tiles found them; 97 puzzles were rewritten with new themes at the same rating and size. About 35 overlaps remain where one category shares 3 tiles with an older puzzle (for example, two different "Farm animals" lists). These are left as acceptable.
+- Herring review: every herring (~500) was checked against its puzzle's other categories. Fixed real ambiguities, for example Hardy (also a poet), Arc light, Compass (also a drawing tool), Gondola (also a ski lift), Ciao (hello and bye), Radio (fire and police), and Pumpkin (a fruit).
+- Brand-heavy puzzles carry `warning=` (car makers, consoles, toy makers, verbs from brands).
+- Playtest: `rateplay.mjs` (Playwright, 390px mobile) played 10 puzzles per star level. Each run did one deliberate wrong lock-in using a herring where one exists: the heart dropped and the tiles went back to the pool. Then it did a full solve: 50/50 won, no console errors. Dense 5×4 boards with 12-character tiles were checked at 360px and fit; long tiles shrink their font.
+- Fixed the sloppy "Sounds like a number" seed line in PUZZLES.md.

@@ -478,7 +478,7 @@ Heraldic colors: Gules, Azure, Vert, Sable
 Heraldic beasts: Wyvern, Griffin, Lion, Unicorn
 Heraldic poses: Rampant, Passant, Couchant, Sejant
 
-@ 5 | Card Tables of the World
+@ 5 | World Card Tables
 Italian card games: Scopa, Briscola, Tressette, Burraco
 Spanish card games: Mus, Tute, Brisca, Chinchon
 German card games: Skat, Doppelkopf, Schafkopf, Sixty-six
