@@ -32,7 +32,8 @@
     </button>
     <div class="thr-hearts" aria-label="Hearts" role="img" [attr.aria-label]="(board()?.hearts ?? 0) + ' hearts'">
       @for (filled of hearts(); track $index) {
-        <svg class="thr-heart" [class.thr-heart-lost]="!filled" width="18" height="17" viewBox="0 0 18 17" fill="none">
+        <svg class="thr-heart" [class.thr-heart-lost]="!filled"
+          [class.thr-heart-break]="!filled && $index === (board()?.hearts ?? 0) && !!wrongFlash()" width="18" height="17" viewBox="0 0 18 17" fill="none">
           <path d="M9 15.5C9 15.5 2 11 2 6.5A4 4 0 0 1 9 3.8 4 4 0 0 1 16 6.5C16 11 9 15.5 9 15.5Z"
             [attr.fill]="filled ? 'var(--ion-color-danger)' : 'none'"
             [attr.stroke]="filled ? 'var(--ion-color-danger)' : 'var(--ion-color-medium)'"
@@ -53,6 +54,7 @@
         [class.thr-cat-locked]="c.locked"
         [class.thr-cat-celebrate]="celebrateCat() === ci"
         [class.dly-shake]="shakeCat() === ci"
+        [class.thr-cat-wrong]="wrongFlash()?.ci === ci"
         cdkDropList
         cdkDropListSortingDisabled
         cdkDropListElementContainer=".thr-slots"
@@ -65,13 +67,20 @@
           <span class="thr-cat-name">{{ c.name }}</span>
           @if (c.locked) {
             <span class="thr-cat-check">✓</span>
-          } @else if (isFull(c)) {
-            <button class="thr-lock-btn" (click)="lock(ci, $event)">Lock In</button>
           } @else {
-            <span class="thr-cat-count">{{ c.slots.length }}/{{ c.answer.length }}</span>
+            <span class="thr-cat-count">{{ wrongFlash()?.ci === ci ? wrongFlash()!.tiles.length : c.slots.length }}/{{ c.answer.length }}</span>
           }
         </div>
         <div class="thr-slots">
+          @if (wrongFlash()?.ci === ci) {
+            <!-- The wrong guess, held in red; pinned (hinted) tiles were right. -->
+            @for (t of wrongFlash()!.tiles; track t) {
+              <span class="thr-tile thr-tile-placed"
+                [class.thr-tile-long]="t.length > 9"
+                [class.thr-tile-wrong]="!c.pinned.includes(t)"
+                [class.thr-tile-pinned]="c.pinned.includes(t)">{{ t }}</span>
+            }
+          } @else {
           @for (k of slotIndexes(); track k) {
             @if (c.slots[k]; as t) {
               <button class="thr-tile thr-tile-placed"
@@ -87,7 +96,11 @@
               <span class="thr-slot-empty"></span>
             }
           }
+          }
         </div>
+        @if (!c.locked && isFull(c)) {
+          <button class="thr-lock-btn" (click)="lock(ci, $event)">Lock In</button>
+        }
         @if (celebrateCat() === ci) {
           <span class="thr-sparkle thr-sparkle-a">✦</span>
           <span class="thr-sparkle thr-sparkle-b">✦</span>
@@ -103,6 +116,7 @@
       [cdkDropListData]="-1"
       (cdkDropListDropped)="dropTile($event)">
       @for (t of b.pool; track t) {
+        @if (!heldInWrongRow(t)) {
         <button class="thr-tile"
           [class.thr-tile-long]="t.length > 9"
           [class.thr-tile-selected]="selectedTile() === t"
@@ -111,6 +125,7 @@
           [cdkDragDisabled]="!playable"
           [cdkDragStartDelay]="DRAG_START_DELAY"
           (click)="tapPoolTile(t)">{{ t }}</button>
+        }
       }
     </div>
 

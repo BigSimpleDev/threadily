@@ -92,15 +92,49 @@
 }
 .thr-cat-count { font-size: 11px; font-weight: 700; color: var(--ion-color-medium); }
 
+/* Full-width bar under a full row's slots: a big target, kept clear of the
+   placed tiles (tapping one of those sends it back to the pool). */
 .thr-lock-btn {
-  border: none; border-radius: 999px; cursor: pointer;
-  padding: 2px 12px; font-size: 12px; font-weight: 900;
+  display: block; width: 100%;
+  height: calc(var(--thr-tile-h) * 0.85);
+  margin-top: var(--thr-gap);
+  border: none; border-radius: 10px; cursor: pointer;
+  font-size: 15px; font-weight: 900; letter-spacing: 0.03em;
   background: var(--thr-tone); color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
   animation: thr-pop 0.22s ease-out;
 }
 
 .thr-cat-check { font-weight: 900; color: #fff; }
+
+/* Wrong Lock In: the row turns red and shakes hard while the guess is held on
+   screen, then the tiles go home (WRONG_FLASH_MS). */
+.thr-cat-wrong {
+  border-color: var(--ion-color-danger);
+  background: rgba(var(--ion-color-danger-rgb), 0.16);
+  animation: thr-wrong-shake 0.5s ease;
+  .thr-cat-name { color: var(--ion-color-danger); }
+}
+@keyframes thr-wrong-shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-10px); }
+  30% { transform: translateX(9px); }
+  45% { transform: translateX(-7px); }
+  60% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+}
+.thr-tile.thr-tile-wrong {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--ion-color-danger);
+  border-color: var(--ion-color-danger);
+  color: #fff;
+}
+.thr-heart-break { animation: thr-heart-break 0.6s ease; }
+@keyframes thr-heart-break {
+  0% { transform: scale(1); opacity: 1; }
+  30% { transform: scale(1.6); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
 
 .thr-slots {
   display: grid;

@@ -215,7 +215,7 @@ describe('GameComponent', () => {
     fillAndLock(0, ['a1', 'a2', 'a3', 'b1']);
     expect(toastStub.create).toHaveBeenCalledWith(jasmine.objectContaining({ message: 'One away…' }));
     fillAndLock(0, ['a1', 'b2', 'b3', 'b4']);
-    tick(500);
+    tick(800);
     expect(c.board()!.hearts).toBe(0);
     expect(c.outOfHearts()).toBeTrue();
 
@@ -240,12 +240,24 @@ describe('GameComponent', () => {
     fillAndLock(0, ['a1', 'a2', 'b1', 'b2']);
     fillAndLock(0, ['a1', 'b1', 'b3', 'b4']);
     fillAndLock(0, ['a1', 'b2', 'b3', 'b4']);
-    tick(500);
+    tick(800);
     c.watchAdForHearts();
     tick();
     expect(c.board()!.hearts).toBe(0);
     expect(c.outOfHearts()).toBeTrue();
     flush();
+  }));
+
+  it('a wrong guess is held on screen in its row, then clears', fakeAsync(() => {
+    boot();
+    fillAndLock(0, ['a1', 'a2', 'b1', 'b2']);
+    expect(c.board()!.pool).toContain('a1');
+    expect(c.wrongFlash()).toEqual({ ci: 0, tiles: ['a1', 'a2', 'b1', 'b2'] });
+    expect(c.heldInWrongRow('a1')).toBeTrue();
+    expect(c.heldInWrongRow('a3')).toBeFalse();
+    tick(800);
+    expect(c.wrongFlash()).toBeNull();
+    expect(c.heldInWrongRow('a1')).toBeFalse();
   }));
 
   it('a repeated wrong guess costs no heart', fakeAsync(() => {

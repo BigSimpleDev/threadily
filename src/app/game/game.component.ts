@@ -20,6 +20,10 @@ import { SAMPLE_PUZZLES } from './samples';
 import { HOW_TO_STEPS } from '../entities/how-to';
 import { addHearts, board_state, hint, isFull, isWon, lockIn, newBoard, place, unplace } from './board';
 
+// How long a wrong guess stays on screen (red row, lost heart) before its
+// tiles return to the pool.
+const WRONG_FLASH_MS = 750;
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -57,6 +61,8 @@ export class GameComponent implements OnInit {
   selectedTile = signal<string | null>(null);
   activeCat = signal(-1);
   shakeCat = signal(-1);
+  wrongFlash = signal<{ ci: number; tiles: string[] } | null>(null);
+  private wrongTimer?: ReturnType<typeof setTimeout>;
   celebrateCat = signal(-1);
 
   won = signal(false);
@@ -225,6 +231,7 @@ export class GameComponent implements OnInit {
     ev.stopPropagation();
     const b = this.board();
     if (!b || !this.playable) return;
+    const guessed = b.categories[ci].slots;
     const { state, result } = lockIn(b, ci);
     this.board.set(state);
     this.tutorialAdvance(1);
@@ -239,11 +246,11 @@ export class GameComponent implements OnInit {
         }
         break;
       case 'one-away':
-        this.missed(ci, state);
+        this.missed(ci, state, guessed);
         this.toast('One away…');
         break;
       case 'wrong':
-        this.missed(ci, state);
+        this.missed(ci, state, guessed);
         break;
       case 'already':
         this.toast('Already guessed');
@@ -251,13 +258,27 @@ export class GameComponent implements OnInit {
     }
   }
 
-  private missed(ci: number, state: board_state) {
+  private missed(ci: number, state: board_state, guessed: string[]) {
     this.mistakes.update(m => m + 1);
-    this.flash(ci);
+    this.showWrong(ci, guessed);
     if (state.hearts <= 0) {
       this.selectedTile.set(null);
-      setTimeout(() => this.outOfHearts.set(true), 450);
+      setTimeout(() => this.outOfHearts.set(true), WRONG_FLASH_MS);
     }
+  }
+
+  // The board state has already sent the tiles home; this only holds the
+  // guess on screen, in red, for a beat so the miss reads clearly.
+  private showWrong(ci: number, guessed: string[]) {
+    clearTimeout(this.wrongTimer);
+    this.wrongFlash.set({ ci, tiles: guessed });
+    this.wrongTimer = setTimeout(() => this.wrongFlash.set(null), WRONG_FLASH_MS);
+  }
+
+  // Tiles still showing in a red row are hidden from the pool until it clears.
+  heldInWrongRow(tile: string): boolean {
+    const w = this.wrongFlash();
+    return !!w && w.tiles.includes(tile) && !this.board()!.categories[w.ci].pinned.includes(tile);
   }
 
   // After a correct lock, hop the active row to the next open category.
