@@ -4,7 +4,7 @@
       <ion-icon name="arrow-back-outline"></ion-icon>
     </button>
     <div class="thr-pack-title">
-      <span class="thr-pack-name">Pack {{ pack() }}</span>
+      <span class="thr-pack-name">@if (event(); as e) {{{ e.emoji }} {{ e.name }}} @else {Pack {{ pack() }}}</span>
       <span class="thr-pack-sub">{{ solvedCount() }} / {{ puzzles().length }} solved</span>
     </div>
     <button class="thr-sort-chip" (click)="cycleSort()">{{ sortLabels[sort()] }}</button>
@@ -20,6 +20,22 @@
 </ion-header>
 
 <ion-content>
+  @if (event(); as e) {
+  <div class="thr-event-banner" [style]="eventStyle()">
+    @if (legendary(); as l) {
+    <img [src]="l.img" [alt]="l.name" width="64" height="64">
+    }
+    <div class="thr-event-banner-text">
+      <span class="thr-event-banner-blurb">{{ e.blurb }}</span>
+      @if (legendaryOwned()) {
+      <span class="thr-event-banner-goal">Event complete — {{ legendary()?.name }} is yours!</span>
+      } @else {
+      <span class="thr-event-banner-goal">Solve all {{ puzzles().length }} to earn the legendary {{ legendary()?.name || 'trinket' }}.</span>
+      }
+      <span class="thr-event-banner-meta">Event puzzles cost ⚡{{ eventCost }} · open until {{ endLabel(e) }}</span>
+    </div>
+  </div>
+  }
   <div class="thr-pack-grid">
     @for (c of cells(); track c.puzzle.id) {
       <button class="thr-pack-cell" [class.thr-pack-solved]="isSolved(c.puzzle)" (click)="play(c)"

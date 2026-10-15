@@ -92,3 +92,16 @@
   font-weight: 700;
   padding: 24px 0;
 }
+
+/* ── Seasonal event banner ─────────────────────────────────── */
+.thr-event-banner {
+  display: flex; align-items: center; gap: 12px;
+  width: calc(100% - 20px); max-width: 560px; margin: 10px auto 6px; padding: 12px 14px;
+  border-radius: 16px; color: var(--event-ink);
+  background: linear-gradient(135deg, var(--event-face), var(--event-face-dark));
+  img { flex: none; border-radius: 12px; background: rgba(255, 255, 255, 0.9); }
+}
+.thr-event-banner-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.thr-event-banner-blurb { font-size: 13px; font-weight: 700; opacity: 0.9; }
+.thr-event-banner-goal { font-size: 15px; font-weight: 900; }
+.thr-event-banner-meta { font-size: 11px; font-weight: 800; color: var(--event-accent); }

@@ -264,6 +264,75 @@
         ["Rock Guitar", "🎸", "an electric guitar with a lightning-bolt body"],
         ["Maestro Baton", "🎼", "a conductor's podium with a baton and floating stitched music notes"]
       ]
+    },
+    {
+      "id": "spooky_stitches",
+      "name": "Spooky Stitches",
+      "theme": "Halloween event",
+      "event": "halloween",
+      "emoji": "🎃",
+      "palette": "pumpkin orange, midnight purple, bone white",
+      "ground": "#EDE3F6",
+      "items": [
+        ["Pumpkin Pal", "🎃", "a round crocheted jack-o'-lantern with a stitched toothy smile"],
+        ["Sheet Ghost", "👻", "a little white felt ghost with button eyes and a wavy hem"],
+        ["Black Cat", "🐈‍⬛", "an arched black cat in fuzzy mohair yarn with green bead eyes"],
+        ["Candy Corn", "🍬", "a chunky tri-color candy corn in yellow, orange and white rows"],
+        ["Bat Buddy", "🦇", "a tiny purple bat with felt wings spread wide"],
+        ["Spider Web", "🕸️", "a lacy crocheted web with a fat little spider in the corner"],
+        ["Witch Hat", "🧙", "a pointy knitted witch hat with an orange band and buckle"],
+        ["Cauldron", "🫕", "a black crocheted cauldron bubbling with green pom-pom bubbles"],
+        ["Mummy Wrap", "🧟", "a plush mummy wrapped in loose cream yarn strips with one peeking eye"],
+        ["Haunted House", "🏚️", "a lopsided felt haunted house with glowing yellow windows"],
+        ["Moonlit Owl", "🦉", "a wide-eyed owl on a branch in front of a crocheted full moon"],
+        ["Pumpkin King", "👑", "a regal jack-o'-lantern wearing a gold crown and a velvet cape with sparkle stitches"]
+      ]
+    },
+    {
+      "id": "harvest_knits",
+      "name": "Harvest Knits",
+      "theme": "Thanksgiving event",
+      "event": "thanksgiving",
+      "emoji": "🦃",
+      "palette": "cranberry, golden wheat, cinnamon brown",
+      "ground": "#F7EBD9",
+      "items": [
+        ["Tom Turkey", "🦃", "a plump turkey with a fanned tail of striped yarn feathers"],
+        ["Acorn Cap", "🌰", "a crocheted acorn with a textured bobble-stitch cap"],
+        ["Maple Leaf", "🍁", "a red-orange felt maple leaf with stitched veins"],
+        ["Corn Cob", "🌽", "a yellow bobble-stitch ear of corn with green husk leaves"],
+        ["Cranberry Bowl", "🫐", "a little bowl of bright red bead-like cranberries"],
+        ["Pie Slice", "🥧", "a wedge of pumpkin pie with a crimped crust and a dollop of cream"],
+        ["Cornucopia", "🧺", "a woven horn of plenty spilling tiny felt fruit"],
+        ["Harvest Moon", "🌕", "a big golden crocheted moon over a stitched wheat field"],
+        ["Scarecrow", "🧑‍🌾", "a cheerful scarecrow with a patched hat and straw-yarn hair"],
+        ["Apple Cider", "🍎", "a steaming mug of cider with a cinnamon stick and apple slice"],
+        ["Gourd Trio", "🎃", "three bumpy gourds in squash, green and cream yarn"],
+        ["Golden Gobbler", "👑", "a turkey with gold-thread feathers and a tiny pilgrim hat, surrounded by sparkle stitches"]
+      ]
+    },
+    {
+      "id": "winter_woolens",
+      "name": "Winter Woolens",
+      "theme": "Christmas event",
+      "event": "christmas",
+      "emoji": "🎄",
+      "palette": "holly green, berry red, snow white",
+      "ground": "#E6F0EA",
+      "items": [
+        ["Snowman", "⛄", "a three-ball snowman with a carrot nose and a striped scarf"],
+        ["Candy Cane", "🍬", "a red-and-white twisted yarn candy cane"],
+        ["Mitten Pair", "🧤", "a pair of tiny Fair Isle mittens joined by a string"],
+        ["Gingerbread Kid", "🍪", "a felt gingerbread cookie with white icing stitches"],
+        ["Stocking", "🧦", "a cuffed knitted stocking stuffed with a candy cane"],
+        ["Holly Sprig", "🌿", "two holly leaves with three bobble berries"],
+        ["Polar Bear", "🐻‍❄️", "a fluffy white polar bear cub in a red knit hat"],
+        ["Reindeer", "🦌", "a reindeer with felt antlers and a bright red pom-pom nose"],
+        ["Snow Globe", "🔮", "a crocheted snow globe with a tiny cabin and white seed-bead snow"],
+        ["Cozy Sweater", "🧶", "a miniature ugly Christmas sweater with a stitched tree"],
+        ["Gift Stack", "🎁", "three wrapped presents in plaid, polka-dot and striped yarn"],
+        ["Star Topper", "⭐", "a radiant gold-thread tree-topper star with sparkle stitches all around"]
+      ]
     }
   ]
 }

@@ -9,6 +9,8 @@ import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { GachaService } from '../services/gacha.service';
 import { GameService, pack_summary, puzzle_ref } from '../services/game.service';
+import { EventService, event_progress } from '../services/event.service';
+import { event_config } from '../entities/constants';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +26,7 @@ export class HomeComponent implements ViewWillEnter {
   private adSvc = inject(AdService);
   private gachaSvc = inject(GachaService);
   private gameSvc = inject(GameService);
+  private eventSvc = inject(EventService);
   private toastCtrl = inject(ToastController);
 
   readonly stars = [1, 2, 3, 4, 5];
@@ -35,6 +38,9 @@ export class HomeComponent implements ViewWillEnter {
   packs = signal<pack_summary[]>([]);
   trinketTotal = signal(0);
   addingEnergy = signal(false);
+  // Seasonal events inside their window, each with its solve progress. Empty
+  // (and the card gone) outside every window — no app update needed.
+  liveEvents = signal<{ e: event_config; p: event_progress }[]>([]);
 
   totalPuzzles = computed(() => this.packs().reduce((n, p) => n + p.total, 0));
   totalSolved = computed(() => this.packs().reduce((n, p) => n + p.solved, 0));
@@ -51,6 +57,13 @@ export class HomeComponent implements ViewWillEnter {
       this.loaded.set(true);
     });
     this.gameSvc.summarizeAll(solved).subscribe(list => this.packs.set(list));
+    const live = this.eventSvc.liveEvents();
+    this.liveEvents.set([]);
+    for (const e of live) {
+      this.eventSvc.progress(e).subscribe(p => {
+        if (p.total > 0) this.liveEvents.update(l => [...l.filter(x => x.e.id !== e.id), { e, p }]);
+      });
+    }
     if (this.gachaSvc.catalog().length === 0) {
       this.gachaSvc.loadCatalog().subscribe(c => this.trinketTotal.set(c.length));
     } else {
@@ -65,6 +78,14 @@ export class HomeComponent implements ViewWillEnter {
 
   openPack(pack: number) {
     this.router.navigate(['/pack', pack]);
+  }
+
+  openEvent(e: event_config) {
+    this.router.navigate(['/pack', e.packs[0]]);
+  }
+
+  eventStyle(e: event_config): Record<string, string> {
+    return this.eventSvc.paletteVars(e);
   }
 
   openCollection() {

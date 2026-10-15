@@ -6,8 +6,10 @@ import { addIcons } from 'ionicons';
 import { arrowBackOutline, checkmark } from 'ionicons/icons';
 import { GameService } from '../services/game.service';
 import { LocalstoreService } from '../services/localstore.service';
-import { puzzle } from '../entities/entities';
-import { LOCAL_STORAGE_KEYS } from '../entities/constants';
+import { puzzle, trinket } from '../entities/entities';
+import { EventService } from '../services/event.service';
+import { GachaService } from '../services/gacha.service';
+import { ENERGY_PER_EVENT_GAME, event_config, LOCAL_STORAGE_KEYS } from '../entities/constants';
 
 type sort_mode = 'order' | 'easy' | 'hard';
 
@@ -29,8 +31,11 @@ export class PackComponent implements ViewWillEnter {
   private router = inject(Router);
   private gameSvc = inject(GameService);
   public lstoreSvc = inject(LocalstoreService);
+  private eventSvc = inject(EventService);
+  private gachaSvc = inject(GachaService);
 
   readonly starOptions = [1, 2, 3, 4, 5];
+  readonly eventCost = ENERGY_PER_EVENT_GAME;
   readonly sortLabels: Record<sort_mode, string> = { order: 'In order', easy: 'Easiest first', hard: 'Hardest first' };
 
   pack = signal(1);
@@ -38,6 +43,15 @@ export class PackComponent implements ViewWillEnter {
   // 0 = every rating; 1–5 = only that rating. Remembered across visits.
   starFilter = signal(this.loadFilter());
   sort = signal<sort_mode>('order');
+
+  // Set when this pack is a seasonal event's: header, palette and reward.
+  event = computed(() => this.eventSvc.eventForPack(this.pack()));
+  eventStyle = computed(() => { const e = this.event(); return e ? this.eventSvc.paletteVars(e) : {}; });
+  legendary = signal<trinket | null>(null);
+  legendaryOwned = computed(() => {
+    const l = this.legendary();
+    return !!l && this.lstoreSvc.ownedTrinkets().includes(l.id);
+  });
 
   solvedCount = computed(() => {
     const solved = this.lstoreSvc.solved();
@@ -62,6 +76,16 @@ export class PackComponent implements ViewWillEnter {
   ionViewWillEnter() {
     this.lstoreSvc.setPlayerInfo();
     this.pack.set(+this.aRoute.snapshot.params['pack'] || 1);
+    if (this.eventSvc.isPackBlocked(this.pack())) {
+      this.goHome();
+      return;
+    }
+    const e = this.event();
+    if (e) {
+      const pick = (list: trinket[]) => this.legendary.set(list.find(t => t.id === e.legendaryTrinketId) ?? null);
+      if (this.gachaSvc.catalog().length) pick(this.gachaSvc.catalog());
+      else this.gachaSvc.loadCatalog().subscribe(pick);
+    }
     this.gameSvc.getPack(this.pack()).subscribe(pd => {
       if (!pd) {
         this.goHome();
@@ -90,6 +114,12 @@ export class PackComponent implements ViewWillEnter {
 
   play(c: cell) {
     this.router.navigate(['/play', this.pack(), c.index]);
+  }
+
+  // Last open day, e.g. "Oct 31" for a window that ends Nov 1.
+  endLabel(e: event_config): string {
+    const last = new Date(2001, e.end.month - 1, e.end.day - 1);
+    return last.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
   }
 
   goHome() {

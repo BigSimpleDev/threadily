@@ -1,0 +1,660 @@
+{
+ "pack": 101,
+ "puzzles": [
+  {
+   "id": 10001,
+   "rating": 1,
+   "title": "Trick or Treat",
+   "categories": [
+    {
+     "name": "Trick-or-treat bag",
+     "tiles": [
+      "Lollipop",
+      "Gum",
+      "Raisins",
+      "Toffee"
+     ]
+    },
+    {
+     "name": "Porch decorations",
+     "tiles": [
+      "Pumpkins",
+      "Hay bale",
+      "Cobweb",
+      "Skeleton"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10002,
+   "rating": 1,
+   "title": "Boo Crew",
+   "categories": [
+    {
+     "name": "Night fliers",
+     "tiles": [
+      "Bat",
+      "Owl",
+      "Moth",
+      "Broomstick"
+     ]
+    },
+    {
+     "name": "Things that creep",
+     "tiles": [
+      "Spider",
+      "Centipede",
+      "Fog",
+      "Vine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10003,
+   "rating": 1,
+   "title": "Pumpkin Patch",
+   "categories": [
+    {
+     "name": "Carve a pumpkin",
+     "tiles": [
+      "Scoop",
+      "Knife",
+      "Stencil",
+      "Candle"
+     ]
+    },
+    {
+     "name": "Fall weather",
+     "tiles": [
+      "Crisp",
+      "Breezy",
+      "Chilly",
+      "Frosty"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10004,
+   "rating": 2,
+   "title": "Costume Party",
+   "categories": [
+    {
+     "name": "Superhero costume",
+     "tiles": [
+      "Cape",
+      "Mask",
+      "Emblem",
+      "Boots"
+     ]
+    },
+    {
+     "name": "Pirate costume",
+     "tiles": [
+      "Eyepatch",
+      "Hook hand",
+      "Tricorn",
+      "Parrot"
+     ]
+    },
+    {
+     "name": "Astronaut costume",
+     "tiles": [
+      "Helmet",
+      "Spacesuit",
+      "Moon boots",
+      "Visor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10005,
+   "rating": 2,
+   "title": "Spooky Snacks",
+   "categories": [
+    {
+     "name": "Halloween candy",
+     "tiles": [
+      "Candy corn",
+      "Gummy worms",
+      "Caramels",
+      "Taffy"
+     ]
+    },
+    {
+     "name": "Party food",
+     "tiles": [
+      "Mummy dogs",
+      "Witch hands",
+      "Eyeball pops",
+      "Bloody punch"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10006,
+   "rating": 2,
+   "title": "Monster Mash",
+   "categories": [
+    {
+     "name": "Has fangs",
+     "tiles": [
+      "Vampire",
+      "Werewolf",
+      "Cobra",
+      "Saber-tooth"
+     ]
+    },
+    {
+     "name": "Has bolts",
+     "tiles": [
+      "Frankenstein",
+      "Toolbox",
+      "Lightning",
+      "Crossbow"
+     ]
+    },
+    {
+     "name": "Has bandages",
+     "tiles": [
+      "Mummy",
+      "Medic",
+      "Boxer",
+      "Hospital"
+     ]
+    }
+   ],
+   "herrings": [
+    "Cobra",
+    "Lightning"
+   ]
+  },
+  {
+   "id": 10007,
+   "rating": 2,
+   "title": "Haunted House",
+   "categories": [
+    {
+     "name": "Haunted house sounds",
+     "tiles": [
+      "Creak",
+      "Moan",
+      "Rattle",
+      "Howl"
+     ]
+    },
+    {
+     "name": "Haunted house rooms",
+     "tiles": [
+      "Attic",
+      "Cellar",
+      "Crypt",
+      "Parlor"
+     ]
+    },
+    {
+     "name": "Haunted house things",
+     "tiles": [
+      "Candelabra",
+      "Portrait",
+      "Coffin",
+      "Old clock"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10008,
+   "rating": 2,
+   "title": "Witch's Kitchen",
+   "categories": [
+    {
+     "name": "Potion ingredients",
+     "tiles": [
+      "Eye of newt",
+      "Toadstool",
+      "Bat wing",
+      "Mandrake"
+     ]
+    },
+    {
+     "name": "Witch's tools",
+     "tiles": [
+      "Cauldron",
+      "Broom",
+      "Spellbook",
+      "Crystal ball"
+     ]
+    },
+    {
+     "name": "Witch's pets",
+     "tiles": [
+      "Black cat",
+      "Toad",
+      "Raven",
+      "Owl"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10009,
+   "rating": 3,
+   "title": "Classic Horror",
+   "categories": [
+    {
+     "name": "Dracula",
+     "tiles": [
+      "Count",
+      "Castle",
+      "Transylvania",
+      "Renfield"
+     ]
+    },
+    {
+     "name": "Frankenstein",
+     "tiles": [
+      "Igor",
+      "Lab",
+      "Monster",
+      "Mary Shelley"
+     ]
+    },
+    {
+     "name": "Wolfman",
+     "tiles": [
+      "Full moon",
+      "Silver",
+      "Howl",
+      "Fur"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10010,
+   "rating": 3,
+   "title": "Graveyard Shift",
+   "categories": [
+    {
+     "name": "Graveyard things",
+     "tiles": [
+      "Headstone",
+      "Mausoleum",
+      "Epitaph",
+      "Wreath"
+     ]
+    },
+    {
+     "name": "Ghostly words",
+     "tiles": [
+      "Spirit",
+      "Specter",
+      "Phantom",
+      "Wraith"
+     ]
+    },
+    {
+     "name": "Skeleton parts",
+     "tiles": [
+      "Skull",
+      "Ribcage",
+      "Pelvis",
+      "Femur"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10011,
+   "rating": 3,
+   "title": "Ghost Words",
+   "categories": [
+    {
+     "name": "Ghost ___",
+     "tiles": [
+      "Town",
+      "Writer",
+      "Story",
+      "Pepper"
+     ]
+    },
+    {
+     "name": "Witch ___",
+     "tiles": [
+      "Hazel",
+      "Doctor",
+      "Craft",
+      "Trial"
+     ]
+    },
+    {
+     "name": "Spider ___",
+     "tiles": [
+      "Web",
+      "Monkey",
+      "Plant",
+      "Veins"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10012,
+   "rating": 3,
+   "title": "Spell It Out",
+   "categories": [
+    {
+     "name": "Spell types",
+     "tiles": [
+      "Hex",
+      "Jinx",
+      "Curse",
+      "Charm"
+     ]
+    },
+    {
+     "name": "Witch words",
+     "tiles": [
+      "Coven",
+      "Familiar",
+      "Sabbat",
+      "Grimoire"
+     ]
+    },
+    {
+     "name": "Superstitions",
+     "tiles": [
+      "Ladder",
+      "Mirror",
+      "Spilled salt",
+      "Horseshoe"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10013,
+   "rating": 3,
+   "title": "Creature Comforts",
+   "categories": [
+    {
+     "name": "Bats",
+     "tiles": [
+      "Vampire bat",
+      "Fruit bat",
+      "Flying fox",
+      "Pipistrelle"
+     ]
+    },
+    {
+     "name": "Spiders",
+     "tiles": [
+      "Tarantula",
+      "Black widow",
+      "Wolf spider",
+      "Jumping"
+     ]
+    },
+    {
+     "name": "Owls",
+     "tiles": [
+      "Barn owl",
+      "Snowy owl",
+      "Screech owl",
+      "Great horned"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10014,
+   "rating": 3,
+   "title": "Moonstruck",
+   "categories": [
+    {
+     "name": "Moon phases",
+     "tiles": [
+      "Crescent",
+      "Gibbous",
+      "Waxing",
+      "Waning"
+     ]
+    },
+    {
+     "name": "Full moon names",
+     "tiles": [
+      "Harvest",
+      "Hunter's",
+      "Blood",
+      "Blue"
+     ]
+    },
+    {
+     "name": "Things that howl",
+     "tiles": [
+      "Wolf",
+      "Coyote",
+      "Wind",
+      "Banshee"
+     ]
+    }
+   ],
+   "herrings": [
+    "Blood",
+    "Blue"
+   ]
+  },
+  {
+   "id": 10015,
+   "rating": 4,
+   "title": "Hidden Horrors",
+   "categories": [
+    {
+     "name": "Hides BOO",
+     "tiles": [
+      "Bamboo",
+      "Taboo",
+      "Booth",
+      "Booklet"
+     ]
+    },
+    {
+     "name": "Hides BAT",
+     "tiles": [
+      "Acrobat",
+      "Batch",
+      "Debate",
+      "Combat"
+     ]
+    },
+    {
+     "name": "Hides WITCH",
+     "tiles": [
+      "Switch",
+      "Twitch",
+      "Switchback",
+      "Twitchy"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10016,
+   "rating": 4,
+   "title": "Black and Orange",
+   "categories": [
+    {
+     "name": "Black ___",
+     "tiles": [
+      "Cat",
+      "Widow",
+      "Magic",
+      "Friday"
+     ]
+    },
+    {
+     "name": "Orange ___",
+     "tiles": [
+      "Peel",
+      "Juice",
+      "Zest",
+      "Crush"
+     ]
+    },
+    {
+     "name": "Pumpkin ___",
+     "tiles": [
+      "Pie",
+      "Spice",
+      "Patch",
+      "Seeds"
+     ]
+    }
+   ],
+   "herrings": [
+    "Spice"
+   ]
+  },
+  {
+   "id": 10017,
+   "rating": 4,
+   "title": "Fright Night",
+   "categories": [
+    {
+     "name": "Horror subgenres",
+     "tiles": [
+      "Slasher",
+      "Zombie",
+      "Creature",
+      "Folk"
+     ]
+    },
+    {
+     "name": "Horror settings",
+     "tiles": [
+      "Camp",
+      "Motel",
+      "Cabin",
+      "Asylum"
+     ]
+    },
+    {
+     "name": "Horror props",
+     "tiles": [
+      "Chainsaw",
+      "Hockey mask",
+      "Music box",
+      "Doll"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10018,
+   "rating": 4,
+   "title": "Carve, Bob, Dunk",
+   "categories": [
+    {
+     "name": "Things you carve",
+     "tiles": [
+      "Pumpkin",
+      "Turkey",
+      "Initials",
+      "Totem"
+     ]
+    },
+    {
+     "name": "Things you bob",
+     "tiles": [
+      "Apples",
+      "Hair",
+      "Head",
+      "Float"
+     ]
+    },
+    {
+     "name": "Things you dunk",
+     "tiles": [
+      "Donut",
+      "Basketball",
+      "Biscotti",
+      "Teabag"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10019,
+   "rating": 5,
+   "title": "Gothic Lit",
+   "categories": [
+    {
+     "name": "Poe",
+     "tiles": [
+      "Raven",
+      "Usher",
+      "Amontillado",
+      "Lenore"
+     ]
+    },
+    {
+     "name": "Washington Irving",
+     "tiles": [
+      "Ichabod",
+      "Hollow",
+      "Horseman",
+      "Katrina"
+     ]
+    },
+    {
+     "name": "Shirley Jackson",
+     "tiles": [
+      "Lottery",
+      "Hill House",
+      "Merricat",
+      "Eleanor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10020,
+   "rating": 5,
+   "title": "Creatures of the Night",
+   "categories": [
+    {
+     "name": "Nocturnal birds",
+     "tiles": [
+      "Nightjar",
+      "Potoo",
+      "Kiwi",
+      "Frogmouth"
+     ]
+    },
+    {
+     "name": "Nocturnal mammals",
+     "tiles": [
+      "Kinkajou",
+      "Bushbaby",
+      "Aardwolf",
+      "Pangolin"
+     ]
+    },
+    {
+     "name": "Nocturnal reptiles",
+     "tiles": [
+      "Gecko",
+      "Tuatara",
+      "Boa",
+      "Night lizard"
+     ]
+    }
+   ]
+  }
+ ]
+}

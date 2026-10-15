@@ -56,6 +56,7 @@ COLLECT YARN TRINKETS
 • Earn coins by solving puzzles
 • Spend them on hints, or roll for 144 handmade-style crochet trinkets across 12 sets
 • Common, rare, epic and legendary, with a chase piece in every set
+• Limited-time Halloween, Thanksgiving and Christmas events with their own puzzles and trinket sets
 
 MADE TO RELAX
 • No timers, no account, no sign-in

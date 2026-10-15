@@ -127,9 +127,17 @@
         <span class="thr-win-coins-note">{{ firstClear() ? 'first clear' : 'replay' }}</span>
       </div>
       }
+      @if (eventReward(); as r) {
+      <div class="thr-event-reward">
+        <span class="thr-event-reward-label">{{ event()?.emoji }} {{ event()?.name }} complete!</span>
+        <img [src]="r.img" [alt]="r.name" width="88" height="88">
+        <span class="thr-event-reward-name">{{ r.name }}</span>
+        <span class="thr-event-reward-sub">Legendary trinket added to your collection</span>
+      </div>
+      }
       <div class="thr-modal-actions">
         <button class="thr-btn thr-btn-primary" (click)="nextPuzzle()">Next puzzle</button>
-        <button class="thr-btn thr-btn-ghost" (click)="backToPack()">{{ practice() ? 'Home' : 'Pack ' + pack() }}</button>
+        <button class="thr-btn thr-btn-ghost" (click)="backToPack()">{{ practice() ? 'Home' : event() ? event()!.name : 'Pack ' + pack() }}</button>
       </div>
     </div>
   </div>

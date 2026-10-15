@@ -30,13 +30,29 @@
 
 <ion-content class="ion-padding">
 
-  <!-- Featured trinket + (from #14) seasonal event buttons -->
+  <!-- Featured trinket -->
   @if (lstoreSvc.featuredTrinket(); as ft) {
   <button class="thr-featured" (click)="openCollection()" [attr.aria-label]="'Featured trinket: ' + ft.name">
     <span class="thr-featured-ring">
       <img [src]="ft.img" [alt]="ft.name">
     </span>
     <span class="thr-featured-name">{{ ft.name }}</span>
+  </button>
+  }
+
+  <!-- Seasonal events (only while their window is open) -->
+  @for (le of liveEvents(); track le.e.id) {
+  <button class="thr-event-card" [style]="eventStyle(le.e)" (click)="openEvent(le.e)">
+    <span class="thr-event-emoji" aria-hidden="true">{{ le.e.emoji }}</span>
+    <span class="thr-event-text">
+      <span class="thr-event-label">Limited-time event</span>
+      <span class="thr-event-name">{{ le.e.name }}</span>
+      <span class="thr-event-blurb">{{ le.e.blurb }}</span>
+      <span class="thr-event-meter" aria-hidden="true">
+        <span class="thr-event-fill" [style.width.%]="pct(le.p.solved, le.p.total)"></span>
+      </span>
+    </span>
+    <span class="thr-event-count">{{ le.p.solved }}/{{ le.p.total }}</span>
   </button>
   }
 

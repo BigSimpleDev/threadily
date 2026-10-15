@@ -4,15 +4,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController, IonContent, IonHeader, IonIcon, ToastController } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { arrowBackOutline, informationCircleOutline, bulbOutline } from 'ionicons/icons';
-import { puzzle } from '../entities/entities';
+import { puzzle, trinket } from '../entities/entities';
 import {
-  STARTING_HEARTS, AD_HEARTS_GRANT, HINT_COST, ENERGY_PER_GAME, LOCAL_STORAGE_KEYS,
+  STARTING_HEARTS, AD_HEARTS_GRANT, HINT_COST, ENERGY_PER_GAME, ENERGY_PER_EVENT_GAME, LOCAL_STORAGE_KEYS,
   COINS_FIRST_CLEAR, REPLAY_COIN_MULTIPLIER
 } from '../entities/constants';
 import { GameService } from '../services/game.service';
 import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
+import { EventService } from '../services/event.service';
+import { GachaService } from '../services/gacha.service';
 import { SAMPLE_PUZZLES } from './samples';
 import { HOW_TO_STEPS } from '../entities/how-to';
 import { addHearts, board_state, hint, isFull, isWon, lockIn, newBoard, place, unplace } from './board';
@@ -31,6 +33,8 @@ export class GameComponent implements OnInit {
   public lstoreSvc = inject(LocalstoreService);
   public energySvc = inject(EnergyService);
   private adSvc = inject(AdService);
+  private eventSvc = inject(EventService);
+  private gachaSvc = inject(GachaService);
   private alertCtrl = inject(AlertController);
   private toastCtrl = inject(ToastController);
   private destroyRef = inject(DestroyRef);
@@ -64,6 +68,11 @@ export class GameComponent implements OnInit {
   // Pack 0 is the hardcoded layout-test set: free practice — no energy, coins,
   // or progress.
   practice = computed(() => this.pack() === 0);
+  // The seasonal event this pack belongs to, if any.
+  event = computed(() => this.eventSvc.eventForPack(this.pack()));
+  energyCost = computed(() => this.event() ? ENERGY_PER_EVENT_GAME : ENERGY_PER_GAME);
+  // Set on the solve that finishes an event: its legendary trinket.
+  eventReward = signal<trinket | null>(null);
 
   hearts = computed(() => {
     const n = this.board()?.hearts ?? 0;
@@ -93,7 +102,14 @@ export class GameComponent implements OnInit {
     this.board.set(null);
     this.won.set(false);
     this.outOfHearts.set(false);
+    this.eventReward.set(null);
     this.lstoreSvc.setPlayerInfo();
+
+    // Event puzzles exist only while their window is open.
+    if (this.eventSvc.isPackBlocked(pack)) {
+      this.goHome();
+      return;
+    }
 
     if (this.practice()) {
       const p = SAMPLE_PUZZLES[this.index()];
@@ -107,12 +123,13 @@ export class GameComponent implements OnInit {
         return;
       }
       // Charge energy to begin; block if the player can't afford it.
-      if (!this.energySvc.spendForGame(ENERGY_PER_GAME)) {
+      if (!this.energySvc.spendForGame(this.energyCost())) {
         this.puzzle.set(p);
         this.promptOutOfEnergy();
         return;
       }
-      this.lstoreSvc.setCurrent(this.pack(), this.index());
+      // Event packs never become the remembered position — they vanish after the window.
+      if (!this.event()) this.lstoreSvc.setCurrent(this.pack(), this.index());
       // Interstitials run as a puzzle starts, never over the win moment.
       await this.adSvc.maybeShowInterstitial();
       this.start(p);
@@ -263,6 +280,15 @@ export class GameComponent implements OnInit {
     this.coinsAwarded.set(coins);
     this.lstoreSvc.addCoins(coins);
     this.lstoreSvc.markSolved(p.id);
+    const e = this.event();
+    if (e) {
+      this.eventSvc.claimIfComplete(e).subscribe(id => {
+        if (!id) return;
+        const show = (list: trinket[]) => this.eventReward.set(list.find(t => t.id === id) ?? null);
+        if (this.gachaSvc.catalog().length) show(this.gachaSvc.catalog());
+        else this.gachaSvc.loadCatalog().subscribe(show);
+      });
+    }
   }
 
   nextPuzzle() {
@@ -274,7 +300,8 @@ export class GameComponent implements OnInit {
     }
     this.gameSvc.nextAfter(this.pack(), this.index()).subscribe(r => {
       if (!r) {
-        this.goHome();
+        // Last puzzle of an event pack: back to the event, not out of it.
+        if (this.event()) this.backToPack(); else this.goHome();
         return;
       }
       this.router.navigate(['/play', r.pack, r.index], { replaceUrl: true });
@@ -342,10 +369,10 @@ export class GameComponent implements OnInit {
       });
     }
     buttons.push({ text: 'Back', role: 'cancel', handler: () => { this.backToPack(); } });
-    const wait = this.energySvc.timeToAfford(ENERGY_PER_GAME);
+    const wait = this.energySvc.timeToAfford(this.energyCost());
     const alert = await this.alertCtrl.create({
       header: 'Out of energy',
-      message: `A puzzle costs ${ENERGY_PER_GAME} energy; you have ${this.energySvc.energy()}.` +
+      message: `A puzzle costs ${this.energyCost()} energy; you have ${this.energySvc.energy()}.` +
         (wait ? ` Enough refills in ${wait}.` : ''),
       backdropDismiss: false,
       buttons

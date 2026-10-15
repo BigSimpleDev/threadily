@@ -1,0 +1,659 @@
+{
+ "pack": 103,
+ "puzzles": [
+  {
+   "id": 10201,
+   "rating": 1,
+   "title": "Tree or Stocking",
+   "categories": [
+    {
+     "name": "On the tree",
+     "tiles": [
+      "Tinsel",
+      "Ornament",
+      "Garland",
+      "Star"
+     ]
+    },
+    {
+     "name": "In the stocking",
+     "tiles": [
+      "Orange",
+      "Candy cane",
+      "Socks",
+      "Coal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10202,
+   "rating": 1,
+   "title": "Elf or Reindeer",
+   "categories": [
+    {
+     "name": "Elf",
+     "tiles": [
+      "Workshop",
+      "Pointy ears",
+      "Toys",
+      "Curly shoes"
+     ]
+    },
+    {
+     "name": "Reindeer",
+     "tiles": [
+      "Antlers",
+      "Sleigh",
+      "Hooves",
+      "Red nose"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10203,
+   "rating": 1,
+   "title": "Cookie Swap",
+   "categories": [
+    {
+     "name": "Christmas cookies",
+     "tiles": [
+      "Spritz",
+      "Thumbprint",
+      "Pizzelle",
+      "Shortbread"
+     ]
+    },
+    {
+     "name": "Cookie decorating",
+     "tiles": [
+      "Sprinkles",
+      "Royal icing",
+      "Cutters",
+      "Rolling pin"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10204,
+   "rating": 2,
+   "title": "Holiday Music",
+   "categories": [
+    {
+     "name": "Carols",
+     "tiles": [
+      "Silent Night",
+      "Jingle Bells",
+      "O Holy Night",
+      "Noel"
+     ]
+    },
+    {
+     "name": "Nutcracker",
+     "tiles": [
+      "Sugar Plum",
+      "Mouse King",
+      "Clara",
+      "Drosselmeyer"
+     ]
+    },
+    {
+     "name": "Christmas sounds",
+     "tiles": [
+      "Sleigh bells",
+      "Handbells",
+      "Organ",
+      "Celesta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10205,
+   "rating": 2,
+   "title": "Santa's Workshop",
+   "categories": [
+    {
+     "name": "Reindeer names",
+     "tiles": [
+      "Dasher",
+      "Prancer",
+      "Donner",
+      "Blitzen"
+     ]
+    },
+    {
+     "name": "Santa's things",
+     "tiles": [
+      "Sleigh",
+      "Naughty list",
+      "Sack",
+      "Chimney"
+     ]
+    },
+    {
+     "name": "Santa's snacks",
+     "tiles": [
+      "Cookies",
+      "Milk",
+      "Carrots",
+      "Fudge"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10206,
+   "rating": 2,
+   "title": "Christmas Dinner",
+   "categories": [
+    {
+     "name": "Christmas mains",
+     "tiles": [
+      "Prime rib",
+      "Goose",
+      "Ham",
+      "Lutefisk"
+     ]
+    },
+    {
+     "name": "Christmas drinks",
+     "tiles": [
+      "Eggnog",
+      "Mulled wine",
+      "Wassail",
+      "Hot toddy"
+     ]
+    },
+    {
+     "name": "Christmas desserts",
+     "tiles": [
+      "Plum pudding",
+      "Stollen",
+      "Trifle",
+      "Buche"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10207,
+   "rating": 2,
+   "title": "Twelve Days",
+   "categories": [
+    {
+     "name": "Twelve Days gifts",
+     "tiles": [
+      "Partridge",
+      "Turtle doves",
+      "Gold rings",
+      "Swans"
+     ]
+    },
+    {
+     "name": "Advent things",
+     "tiles": [
+      "Calendar",
+      "Wreath",
+      "Candles",
+      "Sunday"
+     ]
+    },
+    {
+     "name": "Nativity figures",
+     "tiles": [
+      "Shepherd",
+      "Magi",
+      "Angel",
+      "Donkey"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10208,
+   "rating": 2,
+   "title": "Naughty or Nice",
+   "categories": [
+    {
+     "name": "Naughty",
+     "tiles": [
+      "Mischievous",
+      "Impish",
+      "Rascally",
+      "Cheeky"
+     ]
+    },
+    {
+     "name": "Nice",
+     "tiles": [
+      "Kindly",
+      "Gracious",
+      "Amiable",
+      "Gentle"
+     ]
+    },
+    {
+     "name": "Cold",
+     "tiles": [
+      "Frigid",
+      "Glacial",
+      "Nippy",
+      "Wintry"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10209,
+   "rating": 3,
+   "title": "Around the World",
+   "categories": [
+    {
+     "name": "Mexico",
+     "tiles": [
+      "Posadas",
+      "Pinata",
+      "Tamales",
+      "Bunuelos"
+     ]
+    },
+    {
+     "name": "Philippines",
+     "tiles": [
+      "Parol",
+      "Simbang Gabi",
+      "Noche Buena",
+      "Lechon"
+     ]
+    },
+    {
+     "name": "Italy",
+     "tiles": [
+      "Befana",
+      "Presepio",
+      "Zampone",
+      "Tombola"
+     ]
+    },
+    {
+     "name": "Sweden",
+     "tiles": [
+      "Lucia",
+      "Julbord",
+      "Glogg",
+      "Tomte"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10210,
+   "rating": 3,
+   "title": "'Tis the Season",
+   "categories": [
+    {
+     "name": "Christmas ___",
+     "tiles": [
+      "Tree",
+      "Cracker",
+      "Carol",
+      "Eve"
+     ]
+    },
+    {
+     "name": "Holiday ___",
+     "tiles": [
+      "Inn",
+      "Weekend",
+      "Pay",
+      "Rental"
+     ]
+    },
+    {
+     "name": "Winter ___",
+     "tiles": [
+      "Solstice",
+      "Olympics",
+      "Squash",
+      "Garden"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10211,
+   "rating": 3,
+   "title": "Holiday Tales",
+   "categories": [
+    {
+     "name": "A Christmas Carol",
+     "tiles": [
+      "Scrooge",
+      "Marley",
+      "Tiny Tim",
+      "Fezziwig"
+     ]
+    },
+    {
+     "name": "Gift of the Magi",
+     "tiles": [
+      "Della",
+      "Jim",
+      "Combs",
+      "Watch chain"
+     ]
+    },
+    {
+     "name": "The Night Before",
+     "tiles": [
+      "Kerchief",
+      "Rooftop",
+      "Clatter",
+      "Nightcap"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10212,
+   "rating": 3,
+   "title": "Winter Celebrations",
+   "categories": [
+    {
+     "name": "Solstice festivals",
+     "tiles": [
+      "Yule",
+      "Saturnalia",
+      "Dongzhi",
+      "Yalda"
+     ]
+    },
+    {
+     "name": "New Year customs",
+     "tiles": [
+      "Hogmanay",
+      "Grapes",
+      "Ball drop",
+      "Resolutions"
+     ]
+    },
+    {
+     "name": "Ice festival cities",
+     "tiles": [
+      "Harbin",
+      "Sapporo",
+      "Quebec",
+      "St. Paul"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10213,
+   "rating": 3,
+   "title": "Deck the Halls",
+   "categories": [
+    {
+     "name": "Christmas trees",
+     "tiles": [
+      "Fraser fir",
+      "Douglas fir",
+      "Blue spruce",
+      "Scotch pine"
+     ]
+    },
+    {
+     "name": "Greenery",
+     "tiles": [
+      "Holly",
+      "Mistletoe",
+      "Ivy",
+      "Poinsettia"
+     ]
+    },
+    {
+     "name": "Wreath parts",
+     "tiles": [
+      "Pinecone",
+      "Bow",
+      "Wire frame",
+      "Berries"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10214,
+   "rating": 3,
+   "title": "Bright Lights",
+   "categories": [
+    {
+     "name": "Christmas lights",
+     "tiles": [
+      "String",
+      "Icicle",
+      "Net",
+      "Projector"
+     ]
+    },
+    {
+     "name": "Stars",
+     "tiles": [
+      "North",
+      "Shooting",
+      "Falling",
+      "Morning"
+     ]
+    },
+    {
+     "name": "Lantern types",
+     "tiles": [
+      "Paper",
+      "Storm",
+      "Hurricane",
+      "Sky"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10215,
+   "rating": 4,
+   "title": "Silver and Gold",
+   "categories": [
+    {
+     "name": "Silver ___",
+     "tiles": [
+      "Bells",
+      "Lining",
+      "Screen",
+      "Spoon"
+     ]
+    },
+    {
+     "name": "Gold ___",
+     "tiles": [
+      "Rush",
+      "Finch",
+      "Digger",
+      "Coast"
+     ]
+    },
+    {
+     "name": "Green ___",
+     "tiles": [
+      "Room",
+      "Thumb",
+      "Card",
+      "Bean"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10216,
+   "rating": 4,
+   "title": "Hidden Christmas",
+   "categories": [
+    {
+     "name": "Hides ELF",
+     "tiles": [
+      "Shelf",
+      "Selfish",
+      "Delft",
+      "Itself"
+     ]
+    },
+    {
+     "name": "Hides STAR",
+     "tiles": [
+      "Starve",
+      "Mustard",
+      "Upstart",
+      "Startle"
+     ]
+    },
+    {
+     "name": "Hides TREE",
+     "tiles": [
+      "Street",
+      "Retreat",
+      "Treaty",
+      "Entree"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10217,
+   "rating": 4,
+   "title": "Joy to the World",
+   "categories": [
+    {
+     "name": "Santa abroad",
+     "tiles": [
+      "Pere Noel",
+      "Sinterklaas",
+      "Ded Moroz",
+      "Joulupukki"
+     ]
+    },
+    {
+     "name": "Merry Christmas",
+     "tiles": [
+      "Joyeux Noel",
+      "Buon Natale",
+      "God Jul",
+      "Feliz Natal"
+     ]
+    },
+    {
+     "name": "Christmas markets",
+     "tiles": [
+      "Nuremberg",
+      "Strasbourg",
+      "Vienna",
+      "Dresden"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10218,
+   "rating": 4,
+   "title": "Jingle All the Way",
+   "categories": [
+    {
+     "name": "___bell",
+     "tiles": [
+      "Blue",
+      "Cow",
+      "Dumb",
+      "Door"
+     ]
+    },
+    {
+     "name": "___ball",
+     "tiles": [
+      "Snow",
+      "Disco",
+      "Eye",
+      "Meat"
+     ]
+    },
+    {
+     "name": "___ flakes",
+     "tiles": [
+      "Soap",
+      "Bran",
+      "Chili",
+      "Oat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10219,
+   "rating": 5,
+   "title": "Word Origins",
+   "categories": [
+    {
+     "name": "Old Norse or English",
+     "tiles": [
+      "Yule",
+      "Wassail",
+      "Mistletoe",
+      "Holly"
+     ]
+    },
+    {
+     "name": "Latin or French",
+     "tiles": [
+      "Noel",
+      "Carol",
+      "Advent",
+      "Nativity"
+     ]
+    }
+   ],
+   "note": "Yule from jól, wassail from ves heill, mistletoe from mistiltan, holly from holegn; Noel from natalis, carol from carole (a ring dance), advent from adventus, nativity from nativitas"
+  },
+  {
+   "id": 10220,
+   "rating": 5,
+   "title": "Snow Science",
+   "categories": [
+    {
+     "name": "Snow crystals",
+     "tiles": [
+      "Dendrite",
+      "Plate",
+      "Column",
+      "Needle"
+     ]
+    },
+    {
+     "name": "Sea ice",
+     "tiles": [
+      "Frazil",
+      "Nilas",
+      "Pancake",
+      "Floe"
+     ]
+    },
+    {
+     "name": "Snowpack layers",
+     "tiles": [
+      "Depth hoar",
+      "Wind slab",
+      "Crust",
+      "Firn"
+     ]
+    }
+   ]
+  }
+ ]
+}

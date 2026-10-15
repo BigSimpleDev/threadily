@@ -54,6 +54,14 @@ localStorage prefix `bsd.thr.*` (see `LOCAL_STORAGE_KEYS`).
 - `pack/:pack` — pack select (numbered grid, stars, filter)
 - `play/:pack/:index` — the board (`GameComponent`)
 - `collection` — trinket album + gacha rolling
+
+**Seasonal events**: `EVENTS` in `constants.ts` (month/day window, pack number
+above `MAX_PACK`, legendary trinket id). `EventService` gates them off the device
+clock: outside the window the home card disappears and `pack/:n` / `play/:n/:i`
+redirect home. Event puzzles cost `ENERGY_PER_EVENT_GAME`; the event set's
+legendary is withheld from gacha while live and awarded for solving the whole
+event pack. Event content lives in `content/pack101.txt` (Halloween), `102`
+(Thanksgiving), `103` (Christmas).
 - `settings` — dark mode, purchases, how to play, privacy
 
 **Vocabulary**:
@@ -115,7 +123,7 @@ frequency caps. Change values there rather than at the call sites.
 
 **Threadily style: crochet / amigurumi / felt plush** with visible stitches and
 yarn texture (Decryptly = emoji, Trivily = claymation, Threadily = yarn).
-12 sets × 12 = 144. Every set holds a fixed 6 common / 3 rare / 2 epic /
+12 core sets × 12 = 144, plus one 12-piece set per seasonal event. Every set holds a fixed 6 common / 3 rare / 2 epic /
 1 legendary spread; position 12 is the chase piece.
 `src/assets/trinkets/catalog.json` is the manifest of `{ id, name, rarity, set, img }`.
 See `TRINKETS.md` and `trinketart/ART_PROMPT.md`; regenerate with

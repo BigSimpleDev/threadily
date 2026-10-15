@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { rarity, trinket } from '../entities/entities';
 import { LocalstoreService } from './localstore.service';
+import { EventService } from './event.service';
 import { ROLL_COST, DUPLICATE_REFUND, RARITY_WEIGHTS, DUPLICATE_ROLL_CHANCE } from '../entities/constants';
 
 export interface rollResult {
@@ -16,6 +17,7 @@ export interface rollResult {
 export class GachaService {
   private httpClient = inject(HttpClient);
   private lstoreSvc = inject(LocalstoreService);
+  private eventSvc = inject(EventService);
 
   catalog = signal<trinket[]>([]);
 
@@ -49,10 +51,12 @@ export class GachaService {
     return from[Math.floor(Math.random() * from.length)];
   }
 
-  // Catalog minus anything withheld from the general roll. Seasonal events
-  // (post-launch, #14) will withhold their legendary here while live.
+  // Catalog minus anything withheld from the general roll: the legendary of
+  // each live seasonal event, which must be earned by finishing the event.
+  // Once the window closes it rejoins the pool.
   rollableCatalog(): trinket[] {
-    return this.catalog();
+    const locked = this.eventSvc.lockedTrinketIds();
+    return locked.length ? this.catalog().filter(t => !locked.includes(t.id)) : this.catalog();
   }
 
   private rollRarity(items: trinket[]): rarity {

@@ -1006,5 +1006,257 @@
     "rarity": "legendary",
     "set": "Music Makers",
     "img": "assets/trinkets/music_makers/music_makers_12.svg"
+  },
+  {
+    "id": "spooky_stitches-01",
+    "name": "Pumpkin Pal",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_01.svg"
+  },
+  {
+    "id": "spooky_stitches-02",
+    "name": "Sheet Ghost",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_02.svg"
+  },
+  {
+    "id": "spooky_stitches-03",
+    "name": "Black Cat",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_03.svg"
+  },
+  {
+    "id": "spooky_stitches-04",
+    "name": "Candy Corn",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_04.svg"
+  },
+  {
+    "id": "spooky_stitches-05",
+    "name": "Bat Buddy",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_05.svg"
+  },
+  {
+    "id": "spooky_stitches-06",
+    "name": "Spider Web",
+    "rarity": "common",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_06.svg"
+  },
+  {
+    "id": "spooky_stitches-07",
+    "name": "Witch Hat",
+    "rarity": "rare",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_07.svg"
+  },
+  {
+    "id": "spooky_stitches-08",
+    "name": "Cauldron",
+    "rarity": "rare",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_08.svg"
+  },
+  {
+    "id": "spooky_stitches-09",
+    "name": "Mummy Wrap",
+    "rarity": "rare",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_09.svg"
+  },
+  {
+    "id": "spooky_stitches-10",
+    "name": "Haunted House",
+    "rarity": "epic",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_10.svg"
+  },
+  {
+    "id": "spooky_stitches-11",
+    "name": "Moonlit Owl",
+    "rarity": "epic",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_11.svg"
+  },
+  {
+    "id": "spooky_stitches-12",
+    "name": "Pumpkin King",
+    "rarity": "legendary",
+    "set": "Spooky Stitches",
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_12.svg"
+  },
+  {
+    "id": "harvest_knits-01",
+    "name": "Tom Turkey",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_01.svg"
+  },
+  {
+    "id": "harvest_knits-02",
+    "name": "Acorn Cap",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_02.svg"
+  },
+  {
+    "id": "harvest_knits-03",
+    "name": "Maple Leaf",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_03.svg"
+  },
+  {
+    "id": "harvest_knits-04",
+    "name": "Corn Cob",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_04.svg"
+  },
+  {
+    "id": "harvest_knits-05",
+    "name": "Cranberry Bowl",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_05.svg"
+  },
+  {
+    "id": "harvest_knits-06",
+    "name": "Pie Slice",
+    "rarity": "common",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_06.svg"
+  },
+  {
+    "id": "harvest_knits-07",
+    "name": "Cornucopia",
+    "rarity": "rare",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_07.svg"
+  },
+  {
+    "id": "harvest_knits-08",
+    "name": "Harvest Moon",
+    "rarity": "rare",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_08.svg"
+  },
+  {
+    "id": "harvest_knits-09",
+    "name": "Scarecrow",
+    "rarity": "rare",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_09.svg"
+  },
+  {
+    "id": "harvest_knits-10",
+    "name": "Apple Cider",
+    "rarity": "epic",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_10.svg"
+  },
+  {
+    "id": "harvest_knits-11",
+    "name": "Gourd Trio",
+    "rarity": "epic",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_11.svg"
+  },
+  {
+    "id": "harvest_knits-12",
+    "name": "Golden Gobbler",
+    "rarity": "legendary",
+    "set": "Harvest Knits",
+    "img": "assets/trinkets/harvest_knits/harvest_knits_12.svg"
+  },
+  {
+    "id": "winter_woolens-01",
+    "name": "Snowman",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_01.svg"
+  },
+  {
+    "id": "winter_woolens-02",
+    "name": "Candy Cane",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_02.svg"
+  },
+  {
+    "id": "winter_woolens-03",
+    "name": "Mitten Pair",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_03.svg"
+  },
+  {
+    "id": "winter_woolens-04",
+    "name": "Gingerbread Kid",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_04.svg"
+  },
+  {
+    "id": "winter_woolens-05",
+    "name": "Stocking",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_05.svg"
+  },
+  {
+    "id": "winter_woolens-06",
+    "name": "Holly Sprig",
+    "rarity": "common",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_06.svg"
+  },
+  {
+    "id": "winter_woolens-07",
+    "name": "Polar Bear",
+    "rarity": "rare",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_07.svg"
+  },
+  {
+    "id": "winter_woolens-08",
+    "name": "Reindeer",
+    "rarity": "rare",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_08.svg"
+  },
+  {
+    "id": "winter_woolens-09",
+    "name": "Snow Globe",
+    "rarity": "rare",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_09.svg"
+  },
+  {
+    "id": "winter_woolens-10",
+    "name": "Cozy Sweater",
+    "rarity": "epic",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_10.svg"
+  },
+  {
+    "id": "winter_woolens-11",
+    "name": "Gift Stack",
+    "rarity": "epic",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_11.svg"
+  },
+  {
+    "id": "winter_woolens-12",
+    "name": "Star Topper",
+    "rarity": "legendary",
+    "set": "Winter Woolens",
+    "img": "assets/trinkets/winter_woolens/winter_woolens_12.svg"
   }
 ]

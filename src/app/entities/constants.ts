@@ -36,41 +36,76 @@ export const PUZZLES_PER_PACK = 100;
 export interface event_config {
     id: string;
     name: string;
+    emoji: string;
+    // One line for the home card and the event's pack screen.
+    blurb: string;
     // Pack numbers (JSON files under src/assets/puzzles) belonging to the event.
     packs: number[];
     // Inclusive first day the event is visible.
     start: { month: number; day: number };
     // Exclusive — on this day the event and all its puzzles are hidden again.
+    // An end before the start wraps the new year.
     end: { month: number; day: number };
-    // Awarded for completing every event puzzle; blocked from the general
-    // gacha roll while the event is live, and rollable like any other item after.
+    // Awarded for solving every event puzzle; blocked from the general gacha
+    // roll while the event is live, and rollable like any other item after.
     legendaryTrinketId: string;
-    // A missing art file falls back to `emoji`.
-    icon: string;
-    iconComplete: string;
-    emoji: string;
-    // Home-screen button palette; pick from EVENT_COLORS.
     colors: event_colors;
 }
 
-// Home-screen event button palette: an outer ring, a radial-gradient inner
-// face, and the name pill. Plain hex/rgba rather than color-mix() — the app
-// ships back to an iOS 13 deployment target.
+// Event card palette: a gradient face with readable ink and an accent for the
+// progress bar and button. Plain hex — no color-mix() on older WebViews.
 export interface event_colors {
-    ring: string;
-    faceLight: string;
     face: string;
     faceDark: string;
-    // Inset glow at the bottom of the face, usually the ring color at ~30%.
-    faceGlow: string;
-    pill: string;
+    ink: string;
+    accent: string;
 }
 
-export const EVENT_COLORS = {} satisfies Record<string, event_colors>;
+export const EVENT_COLORS = {
+    halloween: { face: '#7C3AED', faceDark: '#3B1A6E', ink: '#FFFFFF', accent: '#F97316' },
+    thanksgiving: { face: '#B45309', faceDark: '#7C2D12', ink: '#FFFFFF', accent: '#FACC15' },
+    christmas: { face: '#15803D', faceDark: '#14532D', ink: '#FFFFFF', accent: '#EF4444' }
+} satisfies Record<string, event_colors>;
+
+export const HALLOWEEN_EVENT: event_config = {
+    id: 'halloween',
+    name: 'Halloween',
+    emoji: '🎃',
+    blurb: 'Spooky word groups for spooky season.',
+    packs: [101],
+    start: { month: 10, day: 1 },   // Oct 1
+    end: { month: 11, day: 1 },     // Nov 1 — puzzles hidden, trinkets kept
+    legendaryTrinketId: 'spooky_stitches-12',
+    colors: EVENT_COLORS.halloween
+};
+
+export const THANKSGIVING_EVENT: event_config = {
+    id: 'thanksgiving',
+    name: 'Thanksgiving',
+    emoji: '🦃',
+    blurb: 'A harvest table full of word groups.',
+    packs: [102],
+    start: { month: 11, day: 1 },   // Nov 1, the day Halloween closes
+    end: { month: 12, day: 1 },     // Dec 1
+    legendaryTrinketId: 'harvest_knits-12',
+    colors: EVENT_COLORS.thanksgiving
+};
+
+export const CHRISTMAS_EVENT: event_config = {
+    id: 'christmas',
+    name: 'Christmas',
+    emoji: '🎄',
+    blurb: 'Unwrap a stocking full of word groups.',
+    packs: [103],
+    start: { month: 12, day: 1 },   // Dec 1
+    end: { month: 1, day: 1 },      // Jan 1 (wraps the new year)
+    legendaryTrinketId: 'winter_woolens-12',
+    colors: EVENT_COLORS.christmas
+};
 
 // Every configured event. Add future events here; the rest of the app reads
-// this list, so nothing else needs to change. (Events arrive post-launch, #14.)
-export const EVENTS: event_config[] = [];
+// this list, so nothing else needs to change.
+export const EVENTS: event_config[] = [HALLOWEEN_EVENT, THANKSGIVING_EVENT, CHRISTMAS_EVENT];
 
 // ── Puzzle loop ──────────────────────────────────────────────
 export const STARTING_HEARTS = 3;        // wrong lock-in costs one heart

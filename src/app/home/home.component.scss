@@ -134,3 +134,20 @@
   font-size: 10px; font-weight: 800; padding: 1px 6px; border-radius: 999px;
   background: var(--ion-color-light); color: var(--ion-color-medium);
 }
+
+/* ── Seasonal event card ───────────────────────────────────── */
+.thr-event-card {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  margin: 0 0 14px; padding: 14px 16px; border: none; border-radius: 20px;
+  text-align: left; cursor: pointer; color: var(--event-ink);
+  background: linear-gradient(135deg, var(--event-face), var(--event-face-dark));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.thr-event-emoji { flex: none; font-size: 40px; line-height: 1; }
+.thr-event-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.thr-event-label { font-size: 11px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: var(--event-accent); }
+.thr-event-name { font-size: 20px; font-weight: 900; }
+.thr-event-blurb { font-size: 13px; font-weight: 700; opacity: 0.9; }
+.thr-event-meter { display: block; height: 6px; margin-top: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.25); overflow: hidden; }
+.thr-event-fill { display: block; height: 100%; border-radius: inherit; background: var(--event-accent); }
+.thr-event-count { flex: none; font-size: 16px; font-weight: 900; }

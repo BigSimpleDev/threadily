@@ -1,0 +1,672 @@
+{
+ "pack": 102,
+ "puzzles": [
+  {
+   "id": 10101,
+   "rating": 1,
+   "title": "Feast or Football",
+   "categories": [
+    {
+     "name": "On the table",
+     "tiles": [
+      "Gravy boat",
+      "Platter",
+      "Napkins",
+      "Centerpiece"
+     ]
+    },
+    {
+     "name": "On TV",
+     "tiles": [
+      "Kickoff",
+      "Halftime",
+      "Parade",
+      "Touchdown"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10102,
+   "rating": 1,
+   "title": "Leaf Pile",
+   "categories": [
+    {
+     "name": "Fall leaf colors",
+     "tiles": [
+      "Crimson",
+      "Amber",
+      "Rust",
+      "Gold"
+     ]
+    },
+    {
+     "name": "Fall chores",
+     "tiles": [
+      "Raking",
+      "Gutters",
+      "Leaf blowing",
+      "Mulching"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10103,
+   "rating": 1,
+   "title": "Sides and Sweets",
+   "categories": [
+    {
+     "name": "Thanksgiving sides",
+     "tiles": [
+      "Stuffing",
+      "Green beans",
+      "Rolls",
+      "Yams"
+     ]
+    },
+    {
+     "name": "Thanksgiving desserts",
+     "tiles": [
+      "Pecan pie",
+      "Apple crisp",
+      "Pumpkin roll",
+      "Cobbler"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10104,
+   "rating": 2,
+   "title": "Plenty to Go Around",
+   "categories": [
+    {
+     "name": "Pies",
+     "tiles": [
+      "Pumpkin",
+      "Pecan",
+      "Sweet potato",
+      "Mincemeat"
+     ]
+    },
+    {
+     "name": "Stuffing add-ins",
+     "tiles": [
+      "Sage",
+      "Celery",
+      "Sausage",
+      "Chestnut"
+     ]
+    },
+    {
+     "name": "Gravy words",
+     "tiles": [
+      "Drippings",
+      "Roux",
+      "Giblet",
+      "Ladle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10105,
+   "rating": 2,
+   "title": "Harvest Time",
+   "categories": [
+    {
+     "name": "Harvest crops",
+     "tiles": [
+      "Wheat",
+      "Barley",
+      "Hay",
+      "Soybeans"
+     ]
+    },
+    {
+     "name": "Harvest tools",
+     "tiles": [
+      "Sickle",
+      "Scythe",
+      "Pitchfork",
+      "Combine"
+     ]
+    },
+    {
+     "name": "Harvest festivals",
+     "tiles": [
+      "Sukkot",
+      "Chuseok",
+      "Lammas",
+      "Pongal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10106,
+   "rating": 2,
+   "title": "Turkey Talk",
+   "categories": [
+    {
+     "name": "Turkey parts",
+     "tiles": [
+      "Wattle",
+      "Snood",
+      "Wishbone",
+      "Drumstick"
+     ]
+    },
+    {
+     "name": "Turkey sounds",
+     "tiles": [
+      "Gobble",
+      "Cluck",
+      "Purr",
+      "Yelp"
+     ]
+    },
+    {
+     "name": "Turkey cooking",
+     "tiles": [
+      "Brine",
+      "Baste",
+      "Truss",
+      "Rest"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10107,
+   "rating": 2,
+   "title": "Family Table",
+   "categories": [
+    {
+     "name": "Kids' table",
+     "tiles": [
+      "Sippy cup",
+      "Crayons",
+      "Booster seat",
+      "Paper hat"
+     ]
+    },
+    {
+     "name": "Grown-ups' table",
+     "tiles": [
+      "Wine glass",
+      "Cloth napkin",
+      "Candles",
+      "Place card"
+     ]
+    },
+    {
+     "name": "After dinner",
+     "tiles": [
+      "Nap",
+      "Leftovers",
+      "Dishes",
+      "Board game"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10108,
+   "rating": 2,
+   "title": "Mayflower Voyage",
+   "categories": [
+    {
+     "name": "Ship words",
+     "tiles": [
+      "Hold",
+      "Deck",
+      "Mast",
+      "Rigging"
+     ]
+    },
+    {
+     "name": "Colony words",
+     "tiles": [
+      "Plymouth",
+      "Settlers",
+      "Compact",
+      "Harvest"
+     ]
+    },
+    {
+     "name": "Native nations",
+     "tiles": [
+      "Wampanoag",
+      "Narragansett",
+      "Pequot",
+      "Nipmuc"
+     ]
+    }
+   ],
+   "herrings": [
+    "Harvest"
+   ]
+  },
+  {
+   "id": 10109,
+   "rating": 3,
+   "title": "Gratitude List",
+   "categories": [
+    {
+     "name": "Thankful for",
+     "tiles": [
+      "Family",
+      "Health",
+      "Friends",
+      "Home"
+     ]
+    },
+    {
+     "name": "Ways to say thanks",
+     "tiles": [
+      "Cheers",
+      "Ta",
+      "Much obliged",
+      "Kudos"
+     ]
+    },
+    {
+     "name": "Thank-you gifts",
+     "tiles": [
+      "Flowers",
+      "Card",
+      "Chocolates",
+      "Fruit basket"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10110,
+   "rating": 3,
+   "title": "Black Friday",
+   "categories": [
+    {
+     "name": "Shopping words",
+     "tiles": [
+      "Doorbuster",
+      "Markdown",
+      "Clearance",
+      "Rebate"
+     ]
+    },
+    {
+     "name": "Store sections",
+     "tiles": [
+      "Electronics",
+      "Housewares",
+      "Toys",
+      "Apparel"
+     ]
+    },
+    {
+     "name": "Checkout words",
+     "tiles": [
+      "Receipt",
+      "Coupon",
+      "Register",
+      "Bagger"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10111,
+   "rating": 3,
+   "title": "Squash Court",
+   "categories": [
+    {
+     "name": "Winter squash",
+     "tiles": [
+      "Butternut",
+      "Acorn",
+      "Delicata",
+      "Kabocha"
+     ]
+    },
+    {
+     "name": "Summer squash",
+     "tiles": [
+      "Zucchini",
+      "Pattypan",
+      "Crookneck",
+      "Cousa"
+     ]
+    },
+    {
+     "name": "Wall-ball sports",
+     "tiles": [
+      "Squash",
+      "Racquetball",
+      "Handball",
+      "Jai alai"
+     ]
+    }
+   ],
+   "herrings": [
+    "Squash",
+    "Acorn"
+   ]
+  },
+  {
+   "id": 10112,
+   "rating": 3,
+   "title": "Corn Maze",
+   "categories": [
+    {
+     "name": "Corn dishes",
+     "tiles": [
+      "Cornbread",
+      "Spoonbread",
+      "Hominy",
+      "Polenta"
+     ]
+    },
+    {
+     "name": "Corn parts",
+     "tiles": [
+      "Husk",
+      "Silk",
+      "Kernel",
+      "Cob"
+     ]
+    },
+    {
+     "name": "Corn ___",
+     "tiles": [
+      "Dog",
+      "Flakes",
+      "Starch",
+      "Rows"
+     ]
+    }
+   ],
+   "herrings": [
+    "Silk"
+   ]
+  },
+  {
+   "id": 10113,
+   "rating": 3,
+   "title": "Cranberry Bog",
+   "categories": [
+    {
+     "name": "Red foods",
+     "tiles": [
+      "Tomato",
+      "Beet",
+      "Radish",
+      "Pomegranate"
+     ]
+    },
+    {
+     "name": "Tart foods",
+     "tiles": [
+      "Rhubarb",
+      "Gooseberry",
+      "Tamarind",
+      "Lemon"
+     ]
+    },
+    {
+     "name": "Bog plants",
+     "tiles": [
+      "Sphagnum",
+      "Pitcher",
+      "Sundew",
+      "Bog rosemary"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10114,
+   "rating": 3,
+   "title": "Parade Route",
+   "categories": [
+    {
+     "name": "Parade things",
+     "tiles": [
+      "Float",
+      "Balloon",
+      "Drumline",
+      "Confetti"
+     ]
+    },
+    {
+     "name": "Parade jobs",
+     "tiles": [
+      "Marshal",
+      "Drum major",
+      "Twirler",
+      "Handler"
+     ]
+    },
+    {
+     "name": "Parade cities",
+     "tiles": [
+      "Pasadena",
+      "New Orleans",
+      "Rio",
+      "Philadelphia"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10115,
+   "rating": 4,
+   "title": "Gobble Gobble",
+   "categories": [
+    {
+     "name": "Turkey ___",
+     "tiles": [
+      "Trot",
+      "Baster",
+      "Vulture",
+      "Club"
+     ]
+    },
+    {
+     "name": "Cranberry ___",
+     "tiles": [
+      "Juice",
+      "Bog",
+      "Relish",
+      "Muffin"
+     ]
+    },
+    {
+     "name": "Apple ___",
+     "tiles": [
+      "Cart",
+      "Turnover",
+      "Sauce",
+      "Jack"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10116,
+   "rating": 4,
+   "title": "Pass the Plate",
+   "categories": [
+    {
+     "name": "___ plate",
+     "tiles": [
+      "Home",
+      "License",
+      "Name",
+      "Tectonic"
+     ]
+    },
+    {
+     "name": "___ bowl",
+     "tiles": [
+      "Super",
+      "Dust",
+      "Goldfish",
+      "Toilet"
+     ]
+    },
+    {
+     "name": "___ dish",
+     "tiles": [
+      "Petri",
+      "Satellite",
+      "Butter",
+      "Soap"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10117,
+   "rating": 4,
+   "title": "Thanks Abroad",
+   "categories": [
+    {
+     "name": "Thank you in Asia",
+     "tiles": [
+      "Xie xie",
+      "Kamsahamnida",
+      "Khop khun",
+      "Salamat"
+     ]
+    },
+    {
+     "name": "Thank you in Europe",
+     "tiles": [
+      "Grazie",
+      "Dziekuje",
+      "Obrigado",
+      "Takk"
+     ]
+    },
+    {
+     "name": "Thank you in Africa",
+     "tiles": [
+      "Asante",
+      "Ngiyabonga",
+      "Medaase",
+      "Ese"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10118,
+   "rating": 4,
+   "title": "Wishbone",
+   "categories": [
+    {
+     "name": "Things you pull",
+     "tiles": [
+      "Wishbone",
+      "Cracker",
+      "Muscle",
+      "Rank"
+     ]
+    },
+    {
+     "name": "Things you stuff",
+     "tiles": [
+      "Stocking",
+      "Envelope",
+      "Mushroom",
+      "Pepper"
+     ]
+    },
+    {
+     "name": "Things you baste",
+     "tiles": [
+      "Hem",
+      "Seam",
+      "Quilt",
+      "Brisket"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10119,
+   "rating": 5,
+   "title": "First Thanksgiving",
+   "categories": [
+    {
+     "name": "Mayflower passengers",
+     "tiles": [
+      "Bradford",
+      "Standish",
+      "Alden",
+      "Brewster"
+     ]
+    },
+    {
+     "name": "Wampanoag figures",
+     "tiles": [
+      "Massasoit",
+      "Squanto",
+      "Hobbamock",
+      "Metacom"
+     ]
+    },
+    {
+     "name": "Plymouth ships",
+     "tiles": [
+      "Speedwell",
+      "Fortune",
+      "Anne",
+      "Little James"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10120,
+   "rating": 5,
+   "title": "Heirloom Harvest",
+   "categories": [
+    {
+     "name": "Heritage turkeys",
+     "tiles": [
+      "Bourbon Red",
+      "Royal Palm",
+      "Bronze",
+      "Midget White"
+     ]
+    },
+    {
+     "name": "Heirloom apples",
+     "tiles": [
+      "Northern Spy",
+      "Baldwin",
+      "Winesap",
+      "Pippin"
+     ]
+    },
+    {
+     "name": "Cranberry varieties",
+     "tiles": [
+      "Stevens",
+      "Ben Lear",
+      "Early Black",
+      "Howes"
+     ]
+    }
+   ],
+   "herrings": [
+    "Bourbon Red",
+    "Early Black"
+   ]
+  }
+ ]
+}
