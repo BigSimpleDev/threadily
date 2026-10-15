@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect x="20" y="20" width="216" height="216" rx="48" fill="#4F3AF4"/>
+  <!-- 2×2 tiles: the white "T" tile and three translucent ones -->
+  <rect x="58" y="62" width="64" height="64" rx="15" fill="#FFFFFF"/>
+  <rect x="130" y="62" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <rect x="58" y="134" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <rect x="130" y="134" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <!-- T drawn as shapes so it renders the same inside <img> without web fonts -->
+  <rect x="70" y="75" width="40" height="11" rx="3" fill="#4F3AF4"/>
+  <rect x="84.5" y="75" width="11" height="39" rx="3" fill="#4F3AF4"/>
+  <!-- Running-stitch thread weaving through the tiles to the needle -->
+  <path d="M38 204 C50 184 62 176 78 178 C96 180 110 182 118 168 C126 154 122 140 134 132 C146 124 160 118 170 104 C178 92 186 84 198 76"
+    fill="none" stroke="#F5BE2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="11 9"/>
+  <!-- Needle -->
+  <path d="M187 98 L208 45 C211 37 220 39 217 47 L191 100 Z" fill="#E6E8F0"/>
+  <ellipse cx="212.3" cy="46.5" rx="1.7" ry="4.6" transform="rotate(22 212.3 46.5)" fill="#4F3AF4"/>
+  <!-- Sparkles: gold upper right, orange lower left -->
+  <path d="M206 132 L210 144 L222 148 L210 152 L206 164 L202 152 L190 148 L202 144 Z" fill="#F5BE2E"/>
+  <path d="M38 116 L41 125 L50 128 L41 131 L38 140 L35 131 L26 128 L35 125 Z" fill="#F25C2E"/>
+</svg>

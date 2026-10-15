@@ -82,36 +82,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
-## #3 — Logo & app icon
-
-Brand family: **indigo rounded-square base, white heavy rounded sans glyph, gold / orange four-point sparkles.**
-- Trivily = indigo gradient square + white "?" + gold and orange sparkles + faint hexagons.
-- Decryptly = dark navy ground + two stacked indigo tiles + white "D" + "17".
-- Threadily should read as the third sibling.
-
-- [x] Brian generates the icon in ChatGPT with this prompt. Attach `../trivily/resources/icon.png` and `../decodergame/decryptly/resources/icon.png` as style references.
-
-  > Create a 1024×1024 mobile app icon for a word-grouping puzzle game called "Threadily". It must match the attached two icons from the same app family exactly in style: flat vector, crisp geometric shapes, no 3D, no photo texture, no drop shadows except very subtle ones, bold and readable at small sizes.
-  >
-  > Background: full-bleed square in vibrant indigo with a very subtle diagonal gradient (#5B45F7 top-left to #4F3AF4 bottom-right). Do not draw rounded corners or a border; the OS applies the mask.
-  >
-  > Subject: a 2×2 grid of four rounded-square tiles, centered, filling about 60% of the canvas, with small even gaps. The top-left tile is solid white with a bold, heavy, rounded sans-serif capital "T" in indigo (#4F3AF4), in the same font weight as the white "?" and "D" in the references. The other three tiles are lighter translucent indigo (#7B6BFF at ~60% opacity).
-  >
-  > A single golden-yellow thread (#F5BE2E) weaves through all four tiles in a running stitch: it dips under and over each tile, so dashed stitch segments show on the tiles. It ends in a small silver sewing needle poking out at the upper right.
-  >
-  > Accents: one gold four-point sparkle (#F5BE2E) at the upper right and one smaller orange four-point sparkle (#F25C2E) at the lower left, the same shapes as in the Trivily reference. Optionally add two faint, low-opacity rounded tiles in the background, like Trivily's faint hexagons.
-  >
-  > No other text, no letters besides the single "T", no watermark.
-
-- [x] A second ChatGPT prompt (same style) for the **Play feature graphic**, 1024×500:
-  - the same tile + thread motif on the left
-  - the wordmark "Threadily" in white heavy rounded sans on the right
-  - a small subtitle "Word Groups"
-  - indigo background
-- [ ] Session: trace or hand-build `src/assets/threadily-logo.svg` in the same SVG style as `trivily-logo.svg` / `decryptly-logo.svg` (256×256 viewBox, `#4F3AF4`, Nunito/Archivo 800–900, `#F5BE2E` sparkle) for the splash and header.
-- [ ] Drop `resources/icon.png` + `resources/feature-graphic.png`, then run `npx @capacitor/assets generate`.
-- [ ] Swap Trivily branding on the splash and home header. Commit.
-
 ## #4 — Trinkets: 12 sets × 12 in Threadily (yarn) style, emoji placeholders first
 
 **144 trinkets.** Each set holds 12 with a fixed spread: 6 common / 3 rare / 2 epic / 1 legendary, and position 12 is the chase piece. The session writes all names, rarities, and placeholder emoji now. Brian generates the art later.

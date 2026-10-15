@@ -9,13 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./splash.component.scss']
 })
 export class SplashComponent implements AfterViewInit {
-  @ViewChild('hexBg', { static: true }) hexBgRef!: ElementRef<SVGElement>;
+  @ViewChild('tileBg', { static: true }) tileBgRef!: ElementRef<SVGElement>;
   @Output() dismissed = new EventEmitter<void>();
 
   fadingOut = false;
 
   ngAfterViewInit() {
-    const el = this.hexBgRef.nativeElement;
+    const el = this.tileBgRef.nativeElement;
     const w = el.closest('.splash')?.clientWidth ?? 390;
     const h = el.closest('.splash')?.clientHeight ?? 844;
     this.buildGrid(el, w, h, Math.round(w * 0.097), 7919);
@@ -34,36 +34,23 @@ export class SplashComponent implements AfterViewInit {
     };
   }
 
-  private hexPath(cx: number, cy: number, r: number): string {
-    let d = '';
-    for (let i = 0; i < 6; i++) {
-      const a = (Math.PI / 3) * i;
-      d += (i === 0 ? 'M' : ' L') +
-        (cx + r * Math.cos(a)).toFixed(2) + ',' +
-        (cy + r * Math.sin(a)).toFixed(2);
-    }
-    return d + ' Z';
-  }
-
   private buildGrid(svgEl: SVGElement, W: number, H: number, R: number, seed: number) {
     const rng = this.mkRng(seed);
-    const gap = 4;
-    const r = R - gap / 2;
-    const stepX = R * 1.5;
-    const stepY = R * Math.sqrt(3);
-    const halfY = stepY * 0.5;
-    const cols = Math.ceil(W / stepX) + 3;
-    const rows = Math.ceil(H / stepY) + 3;
-    const ox = -R * 0.75;
-    const oy = -stepY * 0.5;
+    // Threadily's motif: a loose grid of rounded word tiles (Trivily used hexes).
+    const size = R * 1.15;
+    const step = R * 1.4;
+    const cols = Math.ceil(W / step) + 2;
+    const rows = Math.ceil(H / step) + 2;
+    const ox = -step * 0.5;
+    const oy = -step * 0.5;
     const CX = W * 0.5;
     const CY = H * 0.5;
     const parts: string[] = [];
 
     for (let ci = 0; ci < cols; ci++) {
       for (let ri = 0; ri < rows; ri++) {
-        const hx = ox + ci * stepX;
-        const hy = oy + ri * stepY + (ci % 2 === 0 ? 0 : halfY);
+        const hx = ox + ci * step;
+        const hy = oy + ri * step;
         const ndx = (hx - CX) / (W * 0.52);
         const ndy = (hy - CY) / (H * 0.40);
         const dist = Math.sqrt(ndx * ndx + ndy * ndy);
@@ -125,7 +112,7 @@ export class SplashComponent implements AfterViewInit {
         }
 
         parts.push(
-          `<path d="${this.hexPath(hx, hy, r)}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`
+          `<rect x="${(hx - size / 2).toFixed(1)}" y="${(hy - size / 2).toFixed(1)}" width="${size.toFixed(1)}" height="${size.toFixed(1)}" rx="${(size * 0.24).toFixed(1)}" fill="${fill}" stroke="${stroke}" stroke-width="${sw}"/>`
         );
       }
     }

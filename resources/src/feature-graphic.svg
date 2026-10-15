@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5B45F7"/>
+      <stop offset="1" stop-color="#4F3AF4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <!-- faint background tiles -->
+  <rect x="-30" y="330" width="150" height="150" rx="34" fill="#FFFFFF" fill-opacity="0.06" transform="rotate(-14 45 405)"/>
+  <rect x="880" y="-40" width="170" height="170" rx="38" fill="#FFFFFF" fill-opacity="0.06" transform="rotate(12 965 45)"/>
+  <rect x="640" y="390" width="110" height="110" rx="26" fill="#FFFFFF" fill-opacity="0.05" transform="rotate(-8 695 445)"/>
+  <g transform="translate(40 58) scale(1.5)">  <!-- 2×2 tiles: the white "T" tile and three translucent ones -->
+  <rect x="58" y="62" width="64" height="64" rx="15" fill="#FFFFFF"/>
+  <rect x="130" y="62" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <rect x="58" y="134" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <rect x="130" y="134" width="64" height="64" rx="15" fill="#8C7DFF" fill-opacity="0.75"/>
+  <!-- T drawn as shapes so it renders the same inside <img> without web fonts -->
+  <rect x="70" y="75" width="40" height="11" rx="3" fill="#4F3AF4"/>
+  <rect x="84.5" y="75" width="11" height="39" rx="3" fill="#4F3AF4"/>
+  <!-- Running-stitch thread weaving through the tiles to the needle -->
+  <path d="M38 204 C50 184 62 176 78 178 C96 180 110 182 118 168 C126 154 122 140 134 132 C146 124 160 118 170 104 C178 92 186 84 198 76"
+    fill="none" stroke="#F5BE2E" stroke-width="7" stroke-linecap="round" stroke-dasharray="11 9"/>
+  <!-- Needle -->
+  <path d="M187 98 L208 45 C211 37 220 39 217 47 L191 100 Z" fill="#E6E8F0"/>
+  <ellipse cx="212.3" cy="46.5" rx="1.7" ry="4.6" transform="rotate(22 212.3 46.5)" fill="#4F3AF4"/>
+  <!-- Sparkles: gold upper right, orange lower left -->
+  <path d="M206 132 L210 144 L222 148 L210 152 L206 164 L202 152 L190 148 L202 144 Z" fill="#F5BE2E"/>
+  <path d="M38 116 L41 125 L50 128 L41 131 L38 140 L35 131 L26 128 L35 125 Z" fill="#F25C2E"/>
+
+</g>
+  <text x="420" y="262" font-family="Nunito" font-weight="900" font-size="118" fill="#FFFFFF" letter-spacing="-2">Threadily</text>
+  <text x="426" y="330" font-family="Nunito" font-weight="800" font-size="46" fill="#F5BE2E">Word Groups</text>
+  <text x="426" y="382" font-family="Nunito" font-weight="700" font-size="30" fill="#FFFFFF" fill-opacity="0.82">Find the thread. Sort every word.</text>
+</svg>

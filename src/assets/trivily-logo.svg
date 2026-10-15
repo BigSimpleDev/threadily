@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <rect x="20" y="20" width="216" height="216" rx="48" fill="#4F3AF4"/>
-  <text x="128" y="178" font-family="Archivo, 'Nunito', sans-serif" font-weight="800"
-    font-size="150" fill="white" text-anchor="middle">?</text>
-  <path d="M196,144 L201,159 L216,164 L201,169 L196,184 L191,169 L176,164 L191,159 Z" fill="#F5BE2E"/>
-</svg>
