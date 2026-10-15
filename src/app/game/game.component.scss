@@ -162,6 +162,25 @@
   gap: var(--thr-gap);
 }
 
+/* ── Drag and drop ─────────────────────────────────────── */
+/* The preview is a clone in <body>, so it can't see --thr-tile-h or the row's
+   tone; the CDK sizes it inline and it takes the "picked up" look. */
+.cdk-drag-preview {
+  background: var(--ion-color-primary);
+  border-color: var(--ion-color-primary);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(79, 58, 244, 0.4);
+  opacity: 0.95;
+}
+/* A drop always appends, so a placeholder inside a row's slot grid would only
+   push a fifth cell onto a new line. In the pool it marks where the tile was. */
+.thr-slots .cdk-drag-placeholder { display: none; }
+.thr-pool .cdk-drag-placeholder { opacity: 0.3; border-style: dashed; box-shadow: none; }
+.thr-cat.cdk-drop-list-dragging:not(.thr-cat-locked) {
+  border-color: var(--thr-tone);
+  box-shadow: 0 0 0 3px var(--thr-tone-soft);
+}
+
 @keyframes thr-pop {
   from { transform: scale(0.92); }
   to   { transform: scale(1); }

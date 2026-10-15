@@ -3,6 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { ActivatedRoute, convertToParamMap, ParamMap, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular/standalone';
 import { BehaviorSubject } from 'rxjs';
+import { CdkDrag, CdkDragDrop, CdkDropList } from '@angular/cdk/drag-drop';
 
 import { GameComponent } from './game.component';
 import { LocalstoreService } from '../services/localstore.service';
@@ -138,6 +139,53 @@ describe('GameComponent', () => {
     expect(c.board()!.categories[1].slots).toEqual(['a1']);
     c.tapPlacedTile('a1', ev);
     expect(c.board()!.pool).toContain('a1');
+  }));
+
+  // A CdkDragDrop stand-in: lists carry a category index, -1 = the pool.
+  function drop(tile: string, from: number, to: number, over = true): CdkDragDrop<number, number, string> {
+    return {
+      item: { data: tile }, container: { data: to }, previousContainer: { data: from },
+      isPointerOverContainer: over
+    } as unknown as CdkDragDrop<number, number, string>;
+  }
+
+  it('dragging a pool tile onto a category appends it and makes that row active', fakeAsync(() => {
+    boot();
+    c.dropTile(drop('b2', -1, 1));
+    c.dropTile(drop('a1', -1, 1));
+    expect(c.board()!.categories[1].slots).toEqual(['b2', 'a1']);
+    expect(c.activeCat()).toBe(1);
+  }));
+
+  it('dragging a placed tile moves it between rows or back to the pool', fakeAsync(() => {
+    boot();
+    c.dropTile(drop('a1', -1, 1));
+    c.dropTile(drop('a1', 1, 0));
+    expect(c.board()!.categories[1].slots).toEqual([]);
+    expect(c.board()!.categories[0].slots).toEqual(['a1']);
+    c.dropTile(drop('a1', 0, -1));
+    expect(c.board()!.categories[0].slots).toEqual([]);
+    expect(c.board()!.pool).toContain('a1');
+  }));
+
+  it('a drop released away from the last row entered changes nothing', fakeAsync(() => {
+    boot();
+    c.dropTile(drop('a1', -1, 1, false));
+    expect(c.board()!.categories[1].slots).toEqual([]);
+    expect(c.board()!.pool).toContain('a1');
+  }));
+
+  it('full and locked rows refuse to receive a dragged tile', fakeAsync(() => {
+    boot();
+    const enter = (tile: string, ci: number) =>
+      c.canEnter({ data: tile } as CdkDrag<string>, { data: ci } as CdkDropList<number>);
+    ['b1', 'b2', 'b3', 'b4'].forEach(t => c.dropTile(drop(t, -1, 1)));
+    expect(enter('a1', 1)).toBeFalse();
+    expect(enter('b1', 1)).toBeTrue();
+    expect(enter('a1', 0)).toBeTrue();
+    c.lock(1, ev);
+    expect(c.board()!.categories[1].locked).toBeTrue();
+    expect(enter('a1', 1)).toBeFalse();
   }));
 
   it('winning awards first-clear coins and marks the puzzle solved', fakeAsync(() => {

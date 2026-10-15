@@ -9,6 +9,9 @@ Each puzzle shows **Y named categories** up front and a pool of **X tiles**; the
 player sorts every tile into its category. The challenge is wordplay: tiles with
 a dual meaning that look like they fit more than one category.
 
+- **Placing.** Drag a tile onto a category (Angular CDK drag-drop; a drop
+  always appends as the row's next tile), or tap: tile then row, or row then
+  tiles. Drag or tap a placed tile to send it back.
 - **Lock In.** The player fills a category's slots and taps Lock In. Correct →
   the category locks and its tiles freeze. Wrong → −1 heart, tiles return to the
   pool. Exactly one wrong tile → a "One away…" toast (still costs the heart).

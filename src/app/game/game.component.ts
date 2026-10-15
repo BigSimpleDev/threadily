@@ -1,6 +1,7 @@
 import { Component, DestroyRef, OnInit, computed, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CdkDrag, CdkDragDrop, CdkDropList, CdkDropListGroup } from '@angular/cdk/drag-drop';
 import { AlertController, IonContent, IonHeader, IonIcon, ToastController } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { arrowBackOutline, informationCircleOutline, bulbOutline } from 'ionicons/icons';
@@ -24,7 +25,7 @@ import { addHearts, board_state, hint, isFull, isWon, lockIn, newBoard, place, u
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss'],
   standalone: true,
-  imports: [IonHeader, IonContent, IonIcon]
+  imports: [IonHeader, IonContent, IonIcon, CdkDropListGroup, CdkDropList, CdkDrag]
 })
 export class GameComponent implements OnInit {
   private aRoute = inject(ActivatedRoute);
@@ -42,6 +43,9 @@ export class GameComponent implements OnInit {
   readonly HINT_COST = HINT_COST;
   readonly AD_HEARTS_GRANT = AD_HEARTS_GRANT;
   readonly tutorialSteps = HOW_TO_STEPS;
+  // A touch must rest briefly on a tile before it lifts, so a swipe that starts
+  // on a tile still scrolls the board and a quick tap still taps.
+  readonly DRAG_START_DELAY = { touch: 150, mouse: 0 };
 
   pack = signal(0);
   index = signal(0);
@@ -148,7 +152,7 @@ export class GameComponent implements OnInit {
     this.mistakes.set(0);
   }
 
-  private get playable(): boolean {
+  get playable(): boolean {
     return !!this.board() && !this.won() && !this.outOfHearts();
   }
 
@@ -189,6 +193,31 @@ export class GameComponent implements OnInit {
     const b = this.board();
     if (!b || !this.playable) return;
     this.board.set(unplace(b, tile));
+  }
+
+  // ── Drag and drop ───────────────────────────────────────────
+  // Lists carry a category index (-1 = pool). Where in the list the tile lands
+  // doesn't matter: a drop always appends it as the category's next tile.
+  canEnter = (drag: CdkDrag<string>, drop: CdkDropList<number>): boolean => {
+    const c = this.board()?.categories[drop.data];
+    return !!c && !c.locked && (!isFull(c) || c.slots.includes(drag.data));
+  };
+
+  dropTile(e: CdkDragDrop<number, number, string>) {
+    const b = this.board();
+    const to = e.container.data;
+    // The CDK hands the drop to the last list the tile entered, even if the
+    // finger has since moved on (e.g. over a full row), so require the pointer
+    // to still be over it; otherwise the tile just snaps back.
+    if (!b || !this.playable || !e.isPointerOverContainer || to === e.previousContainer.data) return;
+    if (to < 0) {
+      this.board.set(unplace(b, e.item.data));
+      return;
+    }
+    this.board.set(place(b, e.item.data, to));
+    this.selectedTile.set(null);
+    this.activeCat.set(to);
+    this.tutorialAdvance(0);
   }
 
   // ── Lock In ─────────────────────────────────────────────────

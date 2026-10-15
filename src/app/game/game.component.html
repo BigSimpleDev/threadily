@@ -41,7 +41,7 @@
 
 <ion-content [scrollY]="true">
   @if (board(); as b) {
-  <div class="thr-board">
+  <div class="thr-board" cdkDropListGroup>
     <div class="thr-cats">
       @for (c of b.categories; track c.name; let ci = $index) {
       <div class="thr-cat thr-tone-{{ ci }}"
@@ -49,6 +49,13 @@
         [class.thr-cat-locked]="c.locked"
         [class.thr-cat-celebrate]="celebrateCat() === ci"
         [class.dly-shake]="shakeCat() === ci"
+        cdkDropList
+        cdkDropListSortingDisabled
+        cdkDropListElementContainer=".thr-slots"
+        [cdkDropListData]="ci"
+        [cdkDropListDisabled]="c.locked"
+        [cdkDropListEnterPredicate]="canEnter"
+        (cdkDropListDropped)="dropTile($event)"
         (click)="tapCategory(ci)">
         <div class="thr-cat-head">
           <span class="thr-cat-name">{{ c.name }}</span>
@@ -67,6 +74,10 @@
                 [class.thr-tile-long]="t.length > 9"
                 [class.thr-tile-pinned]="c.pinned.includes(t)"
                 [disabled]="c.locked"
+                cdkDrag
+                [cdkDragData]="t"
+                [cdkDragDisabled]="c.locked || c.pinned.includes(t) || !playable"
+                [cdkDragStartDelay]="DRAG_START_DELAY"
                 (click)="tapPlacedTile(t, $event)">{{ t }}</button>
             } @else {
               <span class="thr-slot-empty"></span>
@@ -82,11 +93,19 @@
       }
     </div>
 
-    <div class="thr-pool">
+    <div class="thr-pool"
+      cdkDropList
+      cdkDropListSortingDisabled
+      [cdkDropListData]="-1"
+      (cdkDropListDropped)="dropTile($event)">
       @for (t of b.pool; track t) {
         <button class="thr-tile"
           [class.thr-tile-long]="t.length > 9"
           [class.thr-tile-selected]="selectedTile() === t"
+          cdkDrag
+          [cdkDragData]="t"
+          [cdkDragDisabled]="!playable"
+          [cdkDragStartDelay]="DRAG_START_DELAY"
           (click)="tapPoolTile(t)">{{ t }}</button>
       }
     </div>

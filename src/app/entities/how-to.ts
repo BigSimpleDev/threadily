@@ -12,7 +12,7 @@ export const HOW_TO_STEPS: how_to_step[] = [
     {
         icon: '👆',
         title: 'Place tiles',
-        body: 'Tap a tile, then tap a category to drop it in. Or tap a category first, then tap tiles. Tap a placed tile to send it back.'
+        body: 'Drag a tile onto a category to drop it in. Prefer tapping? Tap a tile, then a category — or tap a category first, then tiles. Tap a placed tile (or drag it out) to send it back.'
     },
     {
         icon: '🔒',
