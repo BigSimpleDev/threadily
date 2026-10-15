@@ -21,6 +21,10 @@
         <ion-icon name="information-circle-outline"></ion-icon>
       </button>
     }
+    <span class="thr-hdr-coins" [class.thr-hdr-coins-short]="lstoreSvc.coins() < HINT_COST"
+      role="status" [attr.aria-label]="lstoreSvc.coins() + ' coins'">
+      <span class="thr-coin-dot">¢</span>{{ lstoreSvc.coins() }}
+    </span>
     <button class="thr-hint-btn" (click)="buyHint()" [disabled]="!board() || won() || outOfHearts()"
       [attr.aria-label]="'Hint: place one correct tile for ' + HINT_COST + ' coins. You have ' + lstoreSvc.coins()">
       <ion-icon name="bulb-outline"></ion-icon>

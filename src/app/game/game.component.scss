@@ -37,6 +37,15 @@
   ion-icon { font-size: 16px; }
 }
 .thr-hint-btn:disabled { opacity: 0.45; cursor: default; }
+
+/* Coin balance beside the hint, so the player can see whether a hint is
+   affordable before tapping it. Red when it isn't. */
+.thr-hdr-coins {
+  display: inline-flex; align-items: center; gap: 3px;
+  font-size: 13px; font-weight: 800; white-space: nowrap;
+  .thr-coin-dot { width: 16px; height: 16px; font-size: 11px; }
+}
+.thr-hdr-coins-short { color: var(--ion-color-danger); }
 .thr-star-on { color: var(--ion-color-warning); }
 
 .thr-hearts { display: flex; gap: 2px; }
