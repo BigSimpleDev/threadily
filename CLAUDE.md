@@ -84,10 +84,10 @@ localStorage prefix `bsd.thr.*` (see `LOCAL_STORAGE_KEYS`).
 ```
 Authored order is the answer key; tiles shuffle at runtime.
 
-**Authoring**: never hand-edit the JSON. Puzzles are written in 
-(format documented at the top of : an  line,
-one  line per category, optional ),
-then  compiles and validates. Ids come from pack + position.
+**Authoring**: never hand-edit the JSON. Puzzles are written in `content/packNN.txt`
+(format documented at the top of `build-puzzles.mjs`: an `@ <rating> | title` line,
+one `Category: tile, tile, tile, tile` line per category, optional `~ herrings`),
+then `npm run puzzles` compiles and validates. Ids come from pack + position.
 Every tile must belong to exactly one category of its puzzle — a herring may
 *look* like another category but must never genuinely be a member of it.
 
