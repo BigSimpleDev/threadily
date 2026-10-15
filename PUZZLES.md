@@ -55,3 +55,78 @@ Every tile has **exactly one** correct category on its board.
   naming the rights-holder(s) for the no-affiliation disclaimer.
 - Tiles ≤ 12 characters, 4 per category, 2–5 categories.
 - Never use the word "Connections" anywhere in content.
+
+## Per-pack recipe (packs 2–10)
+
+Pack 1 skews easy (18/37/28/13/4 %). To land the 1,000-puzzle mix, packs 2–10
+each aim for roughly:
+
+| Rating | Count | Grids |
+|---|---|---|
+| 1★ | 15 | 2×4 ×11, 3×4 ×4 |
+| 2★ | 23 | 3×4 ×14, 2×4 ×3, 4×4 ×6 |
+| 3★ | 30 | 4×4 ×20, 3×4 ×6 (wordplay), 5×4 ×4 |
+| 4★ | 21 | 5×4 ×8, 4×4 ×6, 3×4 ×7 (small-but-hard) |
+| 5★ | 11 | 5×4 ×5, 4×4 ×1, 3×4 ×4, 2×4 ×1 (small-but-hard) |
+
+That gives ~12 small-but-hard per pack (~117 overall).
+
+## Seed bank
+
+Categories by domain. *Italics* mark tiles with a second meaning that make
+good herrings — but only on boards where that second meaning is **not** one
+of the categories.
+
+**Food & drink** — fruits, vegetables, berries, citrus, nuts, grains, beans,
+herbs, spices, cheeses, breads, pasta shapes, desserts by country, candy,
+cookies, soups, sauces, sandwiches, salads, breakfast foods, coffee drinks,
+teas, wines, cocktails, cuts of beef, cooking methods, knife cuts, kitchen
+tools, pizza styles. Herrings: *Date*, *Kiwi* (bird), *Turkey* (country),
+*Java* (island), *Mocha* (city), *Cobbler* (job), *Trifle*, *Fudge* (verb),
+*Squash* (sport), *Mint* (coin factory), *Sage* (wise person), *Pepper*.
+
+**Animals** — pets, farm, zoo, birds of prey, songbirds, waterbirds, insects,
+fish, sharks, whales, shellfish, reptiles, big cats, primates, dog / cat /
+horse / chicken / cattle breeds, baby animals, animal groups, homes, sounds.
+Herrings: *Boxer*, *Pointer*, *Jersey*, *Persian*, *Mustang*, *Bengal*,
+*Jaguar* (car), *Crane*, *Swallow*, *Duck*, *Seal*, *Bat*, *Mole*, *Kid*.
+
+**Places** — capitals by continent, US states, US / Canadian / Mexican cities,
+rivers, mountains, lakes, deserts, islands, oceans, landmarks, bridges,
+palaces, temples. Herrings: *Jordan*, *Georgia*, *Turkey*, *Chile*, *Nice*,
+*Reading*, *Bath*, *Split*, *Mobile*, *Phoenix*, *Victoria*.
+
+**Sports & games** — terms by sport, equipment, venues, card / board / dice /
+party games, chess pieces, poker hands, yoga poses, dances, martial arts,
+Olympic events. Herrings: *Love*, *Ace*, *Eagle*, *Birdie*, *Bishop*,
+*Knight*, *Bridge*, *Hearts*, *Go*, *Pitch*, *Court*, *Net*.
+
+**Arts & culture** — instruments by family, music genres, music terms,
+painters, composers, writers, Shakespeare, fairy tales, mythology (Greek,
+Roman, Norse, Egyptian), mythical creatures, movie genres, theater, film crew.
+Herrings: *Grip*, *Wings*, *Bach* (sounds like "batch"), *Thor*, *Apollo*.
+
+**Science & nature** — planets, moons, constellations, elements, metals,
+gemstones, weather, clouds, rocks, bones, organs, muscles, teeth, trees,
+flowers. Herrings: *Mercury*, *Iris* (eye), *Lily*, *Ruby*, *Amber*, *Jade*,
+*Canine*, *Colon*, *Palm*.
+
+**Everyday life** — clothing by type, shoes, hats, fabrics, patterns, rooms,
+furniture, tools, office supplies, school subjects, punctuation, units of
+measure, vehicles, car / bike parts, road signs, jobs, emotions.
+
+**Wordplay (category name is the riddle)**
+- Sounds like a letter: Bee, Sea, Tea, Queue, Why, Eye, Pea, Jay, You, Are, Owe, Ex
+- Sounds like a number: Won, Too, Fore, Ate, Tin? (no), Sicks? (avoid forced ones)
+- Hidden words (animals, colors, numbers, body parts, birds, fish, insects)
+- `___ball`, `___fly`, `___cake`, `___man`, `___board`, `___book`, `___light`,
+  `___house`, `___fish`, `___bird`, `___stone`, `Fire___`, `Sun___`, `Cat___`,
+  `Jack___`, `Back___`, `Head___`, `Water___`, `Butter___`
+- Palindromes; words that spell another word backward; anagram sets
+- Animals that are also verbs; names that are also words (Bill, Mark, Rob,
+  Pat, Sue, Frank, Grant, Will, Art, Peg, Jack, Bob)
+- Currencies that are words (Won, Real, Rand, Mark, Pound — mind the weight unit)
+- "Things with ___" (keys, shells, bark, needles, rings, trunks, teeth,
+  scales, hands, faces, eyes, tongues, necks, beds, banks, crowns, heads,
+  stems, wings, chips, plates) — the richest herring source, and the easiest
+  to make ambiguous: check every tile against every "things with" on the board.

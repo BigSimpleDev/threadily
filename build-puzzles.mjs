@@ -15,7 +15,8 @@
 //
 // `@ <rating>` starts a puzzle; title, warning= and note= are optional.
 // Each `Name: tile, tile, tile, tile` line is a category in authored order.
-// `~` lists deliberate red-herring tiles. Lines starting with # are comments.
+// `~` lists deliberate red-herring tiles; `note=` / `warning=` may also sit on
+// their own lines. Lines starting with # are comments.
 import { readFileSync, readdirSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -53,6 +54,8 @@ for (const f of files) {
             return;
         }
         if (!cur) { console.error(`${where}: content before the first @`); failed = true; return; }
+        if (line.startsWith('note=')) { cur.note = line.slice(5).trim(); return; }
+        if (line.startsWith('warning=')) { cur.warning = line.slice(8).trim(); return; }
         if (line.startsWith('~')) {
             cur.herrings = line.slice(1).split(',').map(s => s.trim()).filter(Boolean);
             return;

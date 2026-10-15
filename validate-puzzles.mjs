@@ -24,6 +24,7 @@ const TILE_MAX_CHARS = constant('TILE_MAX_CHARS');
 const PUZZLES_PER_PACK = constant('PUZZLES_PER_PACK');
 const MAX_PACK = constant('MAX_PACK');
 const MIN_CATEGORIES = 2;
+const CATEGORY_NAME_MAX = 22;
 
 const errors = [];
 const warnings = [];
@@ -96,6 +97,8 @@ for (const file of files) {
             const cw = `${where} cat ${ci}`;
             if (!c || typeof c.name !== 'string' || !c.name.trim()) { err(cw, 'needs a non-empty "name"'); return; }
             if (c.name !== c.name.trim()) err(cw, `name has stray whitespace: "${c.name}"`);
+            // The row header shares its line with the Lock In pill at 360px.
+            if (c.name.length > CATEGORY_NAME_MAX) warn(cw, `category name "${c.name}" is ${c.name.length} chars (aim for ≤ ${CATEGORY_NAME_MAX})`);
             if (catNames.has(norm(c.name))) err(cw, `duplicate category name "${c.name}"`);
             catNames.add(norm(c.name));
             Object.keys(c).filter(k => k !== 'name' && k !== 'tiles').forEach(k => err(cw, `unknown field "${k}"`));
