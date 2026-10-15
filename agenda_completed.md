@@ -420,3 +420,33 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 - Screenshots: `store-screenshots.mjs` → `resources/store/{play-phone,play-tablet,ios-6.9,ios-ipad-13}/` with 7 shots each. They use the brand-free "Find the Thread" puzzle; the first pick showed MLB/NBA team names. **No trinket-album shot yet:** the art is still placeholder SVGs. Reshoot after the ChatGPT art lands.
 - Tablet fix found while shooting: on iPad the phone-sized board left about 60% of the screen empty. A `(min-width: 700px) and (min-height: 900px)` breakpoint now scales tiles (6.4vh), type, and the header. Checked: a 5×4 board fits at 800×1280 and 1032×1376. Phones are unchanged.
 - Release checklist in `MONETIZATION_INSTRUCTIONS.md` updated (SPM, STORE_LISTING step). Tagged **`v1.0.0-rc1`**. The final `v1.0.0` tag should go on the commit that swaps in the real AdMob and RevenueCat ids.
+
+---
+
+## #14 — Seasonal events (post-launch)
+
+- [x] Port `EVENTS` / `EventService` / `EventComponent` from Trivily:
+  - month/day window, no app update to remove
+  - legendary withheld from the gacha while live
+  - `ENERGY_PER_EVENT_GAME`
+- [x] Event puzzles live in pack files numbered above the main range.
+- [x] Each event gets a 12-trinket yarn-style set.
+- [x] Candidates: Halloween, Thanksgiving, and Christmas.
+
+**Session notes (#14):** built pre-launch, since everything else is waiting on Brian.
+- `EVENTS` in `constants.ts`, all on a month/day window off the device clock, so no app update is needed to take them down. **Halloween** runs Oct 1 – Oct 31 (pack 101), **Thanksgiving** Nov 1 – Nov 30 (102), **Christmas** Dec 1 – Dec 31 (103, window wraps the new year).
+- `EventService` (ported from Trivily, now keyed on packs instead of groups):
+  - `isLive`, with new-year wrap.
+  - `isPackBlocked`: `pack/:n` and `play/:n/:i` redirect home outside the window.
+  - `progress`, `lockedTrinketIds`, and `claimIfComplete`. The claim persists in `bsd.thr.event_legendary_awarded`, so a later gacha duplicate can't re-trigger it.
+  - Unit tested in `event.service.spec.ts` (97 tests total).
+- Gacha: `rollableCatalog()` drops each live event's legendary.
+- UI:
+  - Home shows an event card (palette per event, X/Y progress bar) only while the event is live.
+  - The pack screen gets an emoji title and a banner showing the legendary prize, the ⚡8 cost, and the last open day.
+  - Event puzzles cost `ENERGY_PER_EVENT_GAME` (8) and never become the remembered "current" puzzle.
+  - The win card shows the legendary on the solve that completes the event. "Next puzzle" after the last event puzzle goes back to the event pack.
+- Content: 20 puzzles per event (3/5/6/4/2 by star), validated and checked for duplicates against all 1,000 main puzzles (only 3-tile single-category overlaps remain).
+- Trinkets: 3 yarn event sets (`spooky_stitches`, `harvest_knits`, `winter_woolens`; legendaries Pumpkin King, Golden Gobbler, Star Topper) added to `trinketart/sets.json`. The catalog is now 180 items, using placeholder cards. **Brian: generate their art in ChatGPT with the updated `trinketart/ART_PROMPT.md`.**
+- Played in Chrome: the home card showed 19/20, the pack banner and energy went 120 → 112, and solving the 20th puzzle awarded Pumpkin King on the win card. `/pack/102`, `/play/102/0`, and `/pack/103` all redirect home today (Oct 15). No console errors.
+- **Heads-up:** Halloween is live *now*, so a launch this month opens with the event.

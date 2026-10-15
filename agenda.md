@@ -87,16 +87,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
 - [ ] Brian: say "go" on the bigsimple.dev edits (Part 5). A session then copies `site-drafts/games/threadily/privacy.html`, adds the game card, footer, legal, and sitemap entries, and commits in the site repo. Brian deploys.
 
-## #14 — Seasonal events (post-launch)
-
-- [ ] Port `EVENTS` / `EventService` / `EventComponent` from Trivily:
-  - month/day window, no app update to remove
-  - legendary withheld from the gacha while live
-  - `ENERGY_PER_EVENT_GAME`
-- [ ] Event puzzles live in pack files numbered above the main range.
-- [ ] Each event gets a 12-trinket yarn-style set.
-- [ ] Candidates: Halloween, Thanksgiving, and Christmas.
-
 ---
 
 ## Decisions log
