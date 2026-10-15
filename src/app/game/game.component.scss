@@ -231,3 +231,23 @@
 .thr-btn-primary { background: var(--ion-color-primary); color: #fff; box-shadow: var(--dly-shadow-btn); }
 .thr-btn-ghost { background: transparent; color: var(--ion-color-primary); }
 @keyframes thr-fade { from { opacity: 0; } to { opacity: 1; } }
+
+/* ── First-launch tutorial card ───────────────────────────── */
+.thr-tutorial {
+  border-radius: 16px;
+  padding: 12px 14px 10px;
+  background: var(--dly-primary-tint);
+  box-shadow: inset 0 0 0 2px var(--dly-primary-tint), inset 0 0 0 3px rgba(79, 58, 244, 0.4);
+  animation: thr-pop 0.25s ease-out;
+}
+.thr-tutorial-head { display: flex; align-items: center; gap: 8px; font-size: 15px; }
+.thr-tutorial-icon { font-size: 20px; }
+.thr-tutorial-count { margin-left: auto; font-size: 11px; font-weight: 800; color: var(--ion-color-medium); }
+.thr-tutorial-body { margin: 6px 0 8px; font-size: 13px; font-weight: 600; line-height: 1.4; }
+.thr-tutorial-actions { display: flex; align-items: center; justify-content: space-between; }
+.thr-tutorial-skip { border: none; background: none; color: var(--ion-color-medium); font-weight: 800; font-size: 13px; cursor: pointer; }
+.thr-tutorial-hint { font-size: 12px; font-weight: 800; color: var(--ion-color-primary); }
+.thr-tutorial-next {
+  height: 34px; padding: 0 16px; border-radius: 10px; border: none; cursor: pointer;
+  background: var(--ion-color-primary); color: #fff; font-weight: 900;
+}

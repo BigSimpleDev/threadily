@@ -6,7 +6,7 @@ import { addIcons } from 'ionicons';
 import { arrowBackOutline, informationCircleOutline, bulbOutline } from 'ionicons/icons';
 import { puzzle } from '../entities/entities';
 import {
-  STARTING_HEARTS, AD_HEARTS_GRANT, HINT_COST, ENERGY_PER_GAME,
+  STARTING_HEARTS, AD_HEARTS_GRANT, HINT_COST, ENERGY_PER_GAME, LOCAL_STORAGE_KEYS,
   COINS_FIRST_CLEAR, REPLAY_COIN_MULTIPLIER
 } from '../entities/constants';
 import { GameService } from '../services/game.service';
@@ -14,6 +14,7 @@ import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { SAMPLE_PUZZLES } from './samples';
+import { HOW_TO_STEPS } from '../entities/how-to';
 import { addHearts, board_state, hint, isFull, isWon, lockIn, newBoard, place, unplace } from './board';
 
 @Component({
@@ -36,6 +37,7 @@ export class GameComponent implements OnInit {
 
   readonly HINT_COST = HINT_COST;
   readonly AD_HEARTS_GRANT = AD_HEARTS_GRANT;
+  readonly tutorialSteps = HOW_TO_STEPS;
 
   pack = signal(0);
   index = signal(0);
@@ -55,6 +57,9 @@ export class GameComponent implements OnInit {
   mistakes = signal(0);
   outOfHearts = signal(false);
   watchingAd = signal(false);
+  // First-launch walkthrough on pack 1 #1: index into HOW_TO_STEPS, -1 = off.
+  // Steps 0 (place) and 1 (lock in) advance on the real action.
+  tutorial = signal(-1);
 
   // Pack 0 is the hardcoded layout-test set: free practice — no energy, coins,
   // or progress.
@@ -116,6 +121,8 @@ export class GameComponent implements OnInit {
 
   private start(p: puzzle) {
     this.puzzle.set(p);
+    const first = this.pack() === 1 && this.index() === 0;
+    this.tutorial.set(first && !this.lstoreSvc.get(LOCAL_STORAGE_KEYS.TutorialSeen) ? 0 : -1);
     this.board.set(newBoard(p, STARTING_HEARTS));
     this.selectedTile.set(null);
     this.activeCat.set(-1);
@@ -136,6 +143,7 @@ export class GameComponent implements OnInit {
     if (ac >= 0 && !b.categories[ac].locked && !isFull(b.categories[ac])) {
       this.board.set(place(b, tile, ac));
       this.selectedTile.set(null);
+      this.tutorialAdvance(0);
       return;
     }
     this.selectedTile.set(this.selectedTile() === tile ? null : tile);
@@ -153,6 +161,7 @@ export class GameComponent implements OnInit {
       this.board.set(place(b, tile, ci));
       this.selectedTile.set(null);
       this.activeCat.set(ci);
+      this.tutorialAdvance(0);
       return;
     }
     this.activeCat.set(this.activeCat() === ci ? -1 : ci);
@@ -172,6 +181,7 @@ export class GameComponent implements OnInit {
     if (!b || !this.playable) return;
     const { state, result } = lockIn(b, ci);
     this.board.set(state);
+    this.tutorialAdvance(1);
     switch (result) {
       case 'correct':
         this.celebrate(ci);
@@ -224,11 +234,28 @@ export class GameComponent implements OnInit {
     setTimeout(() => this.celebrateCat.set(-1), 900);
   }
 
+  // ── Tutorial ────────────────────────────────────────────────
+  private tutorialAdvance(from: number) {
+    if (this.tutorial() === from) this.tutorial.set(from + 1);
+  }
+
+  tutorialNext() {
+    const next = this.tutorial() + 1;
+    if (next >= HOW_TO_STEPS.length) this.tutorialDone();
+    else this.tutorial.set(next);
+  }
+
+  tutorialDone() {
+    this.tutorial.set(-1);
+    this.lstoreSvc.set(LOCAL_STORAGE_KEYS.TutorialSeen, 'true');
+  }
+
   // ── Win ─────────────────────────────────────────────────────
   private userWon() {
     const p = this.puzzle();
     if (!p) return;
     this.won.set(true);
+    if (this.tutorial() >= 0) this.tutorialDone();
     if (this.practice()) return;
     const first = !this.lstoreSvc.isSolved(p.id);
     const coins = first ? COINS_FIRST_CLEAR : Math.max(1, Math.floor(COINS_FIRST_CLEAR * REPLAY_COIN_MULTIPLIER));

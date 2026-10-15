@@ -79,45 +79,13 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 
 - [ ] Brian: on the phone, turn on Wireless debugging → **Pair device with pairing code**, then on the PC run `adb pair <ip>:<pairPort> <code>`.
 - [ ] Brian: run `DEVICE_IP=<ip> PORT=<connectPort> ./debug_android_wireless.sh` (or the `.ps1`) from the repo root. It builds, installs, and launches Threadily.
-- [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
+- [ ] Brian: open **Settings → Board size test** (starts on the first 5×4; "Next puzzle" goes to the second) and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
 ## #9b — Brian: store/console setup + OK the site edits
 
 - [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
 - [ ] Brian: say "go" on the bigsimple.dev edits (Part 5). A session then copies `site-drafts/games/threadily/privacy.html`, adds the game card, footer, legal, and sitemap entries, and commits in the site repo. Brian deploys.
-
-## #10 — Coins, gacha, collection (port)
-
-- [ ] Port `GachaService`, the collection screen, and the featured trinket on home.
-- [ ] Economy:
-  - first clear 25
-  - replay 5%
-  - roll 50 + multi-roll
-  - dupe refund 5
-  - dupe chance 35%
-  - rarity 78 / 14 / 6 / 2
-- [ ] Hint cost **25 coins** (`HINT_COST`). Retune after playtest. Commit.
-
-## #11 — Screens
-
-- [ ] **Home:**
-  - "Continue" hero (next unsolved puzzle)
-  - pack cards with progress
-  - energy, coins, featured trinket
-  - event row (empty until #14)
-- [ ] **Pack select:** a numbered grid with star rating and cleared state, plus a star filter.
-- [ ] **Game** (#7) and **Win** screens.
-- [ ] **Collection:** port from Trivily.
-- [ ] **Settings:**
-  - dark mode
-  - restore purchases
-  - remove ads
-  - how to play
-  - privacy link
-- [ ] **First-launch tutorial** on puzzle 1: place → lock in → one away → hearts.
-- [ ] Palette: keep the family indigo `#4F3AF4` as primary. Category-lock fill colors (yarn tones) are the session's call: coral, mustard, sage, sky, and plum, one per category slot up to 5.
-- [ ] 360px width check: no horizontal scroll. Commit.
 
 ## #12 — Content: 1,000 puzzles
 

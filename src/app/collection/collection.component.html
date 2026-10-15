@@ -17,7 +17,7 @@
       </div>
       <div class="dly-roll-actions">
         <button type="button" class="dly-mult-chip" (click)="cycleMultiplier()">{{ multiplier() }}×</button>
-        <ion-button class="dly-roll-btn" [disabled]="!canRoll()" (click)="roll()">
+        <ion-button class="dly-roll-btn" color="primary" fill="solid" [disabled]="!canRoll()" (click)="roll()">
           Roll · {{ rollCost() }}¢
         </ion-button>
       </div>

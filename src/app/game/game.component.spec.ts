@@ -9,7 +9,7 @@ import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { pack_data } from '../entities/entities';
-import { COINS_FIRST_CLEAR, HINT_COST, STARTING_HEARTS, AD_HEARTS_GRANT, ENERGY_PER_GAME } from '../entities/constants';
+import { COINS_FIRST_CLEAR, HINT_COST, STARTING_HEARTS, AD_HEARTS_GRANT, ENERGY_PER_GAME, LOCAL_STORAGE_KEYS } from '../entities/constants';
 
 const PACK: pack_data = {
   pack: 1,
@@ -257,4 +257,37 @@ describe('GameComponent', () => {
     expect(c.practice()).toBeTrue();
     expect(c.board()).not.toBeNull();
   }));
+
+  describe('first-launch tutorial (pack 1 #1)', () => {
+    it('advances on a real placement and a real lock, then on Next, then finishes', fakeAsync(() => {
+      boot();
+      expect(c.tutorial()).toBe(0);
+      c.tapPoolTile('a1');
+      c.tapCategory(0);
+      expect(c.tutorial()).toBe(1);
+      fillAndLock(0, ['a2', 'a3', 'a4']);
+      expect(c.tutorial()).toBe(2);
+      c.tutorialNext();
+      expect(c.tutorial()).toBe(3);
+      c.tutorialNext();
+      expect(c.tutorial()).toBe(-1);
+      expect(lstore.get(LOCAL_STORAGE_KEYS.TutorialSeen)).toBe('true');
+      flush();
+    }));
+
+    it('stays off once seen, and on other puzzles', fakeAsync(() => {
+      lstore.set(LOCAL_STORAGE_KEYS.TutorialSeen, 'true');
+      boot();
+      expect(c.tutorial()).toBe(-1);
+    }));
+
+    it('winning marks it seen even if skipped mid-way', fakeAsync(() => {
+      boot();
+      fillAndLock(0, PACK.puzzles[0].categories[0].tiles);
+      fillAndLock(1, PACK.puzzles[0].categories[1].tiles);
+      tick(700);
+      expect(c.tutorial()).toBe(-1);
+      expect(lstore.get(LOCAL_STORAGE_KEYS.TutorialSeen)).toBe('true');
+    }));
+  });
 });

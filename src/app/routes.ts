@@ -17,5 +17,9 @@ export const routes: Routes = [
     path: 'collection',
     loadComponent: () => import('./collection/collection.component').then(m => m.CollectionComponent)
   },
+  {
+    path: 'settings',
+    loadComponent: () => import('./settings/settings.component').then(m => m.SettingsComponent)
+  },
   { path: '**', redirectTo: '' }
 ];

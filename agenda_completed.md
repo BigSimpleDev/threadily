@@ -325,3 +325,55 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 - Pre-setup safety: Google **test** ad units in `ad.service.ts`, Google **sample** AdMob app id in the Android manifest, and `TODO_…` RevenueCat keys that keep RevenueCat unconfigured, so nothing hits Trivily's AdMob units or RevenueCat project.
 - `MONETIZATION_INSTRUCTIONS.md` written: AdMob (2 apps, 1 interstitial + 1 shared rewarded unit each), the `threadily_remove_ads` IAP on both stores, RevenueCat (`ad_free` / `remove_ads`), Small Business Program (account-level, so likely already covered), app-ads.txt (no new line), the marketing-site steps, a release checklist, and a value-location table.
 - **Site edits not made** (needs Brian's go-ahead — see "#9b" in agenda.md). A ready privacy page is drafted at `site-drafts/games/threadily/privacy.html`.
+
+---
+
+## #10 — Coins, gacha, collection (port)
+
+- [x] Port `GachaService`, the collection screen, and the featured trinket on home.
+- [x] Economy:
+  - first clear 25
+  - replay 5%
+  - roll 50 + multi-roll
+  - dupe refund 5
+  - dupe chance 35%
+  - rarity 78 / 14 / 6 / 2
+- [x] Hint cost **25 coins** (`HINT_COST`). Retune after playtest. Commit.
+
+**Session notes (#10):**
+- `GachaService` ported (weighted rarity, 35% intentional-dupe chance, otherwise prefers unowned, multi-roll stops when coins run out). Its event-legendary lock is a stub until #14.
+- Economy constants all in `constants.ts` and matching the spec: `COINS_FIRST_CLEAR = 25`, `REPLAY_COIN_MULTIPLIER = 0.05` (→ 1 coin), `ROLL_COST = 50`, `ROLL_MULTIPLIERS = [1,2,3,5,10]`, `DUPLICATE_REFUND = 5`, `DUPLICATE_ROLL_CHANCE = 0.35`, rarity 78/14/6/2, `HINT_COST = 25`.
+- Collection screen: cells are now square (Threadily art is 1:1), and the Roll button is explicitly primary (inside an `ion-toolbar` it was inheriting the toolbar's dark color).
+- Featured trinket: set from the collection's inspect card; home shows it in a dashed gold "stitch" ring (#11).
+- Browser check: 5× roll from 260¢ → 5 reveals, dupes redeemed, featured trinket persisted and shown on home.
+
+---
+
+## #11 — Screens
+
+- [x] **Home:**
+  - "Continue" hero (next unsolved puzzle)
+  - pack cards with progress
+  - energy, coins, featured trinket
+  - event row (empty until #14)
+- [x] **Pack select:** a numbered grid with star rating and cleared state, plus a star filter.
+- [x] **Game** (#7) and **Win** screens.
+- [x] **Collection:** port from Trivily.
+- [x] **Settings:**
+  - dark mode
+  - restore purchases
+  - remove ads
+  - how to play
+  - privacy link
+- [x] **First-launch tutorial** on puzzle 1: place → lock in → one away → hearts.
+- [x] Palette: keep the family indigo `#4F3AF4` as primary. Category-lock fill colors (yarn tones) are the session's call: coral, mustard, sage, sky, and plum, one per category slot up to 5.
+- [x] 360px width check: no horizontal scroll. Commit.
+
+**Session notes (#11):**
+- **Home:** logo + wordmark; coins chip (→ trinkets) and settings gear; energy row with value/120, "+1 in M:SS", a gold meter, and "▶ +5 · N/5" ad button; featured trinket; Continue hero (pack · #, title, stars, grid size, Play ⚡10, Pack N); all-solved card; Trinkets row (owned / 144); pack cards with progress bar and per-rating counts. Event row comes with #14.
+- **Pack select** (#6), **Game + Win** (#7), **Collection** (#10).
+- **Settings** (`/settings`): dark mode switch, How to play (modal; shares copy with the tutorial via `entities/how-to.ts`, plus "Replay the tutorial"), Remove ads (price from RevenueCat; shows "Ads removed" when ad-free), Restore purchases, Privacy policy (`bigsimple.dev/games/threadily/privacy`), and **Board size test** (the #2 practice boards, for Brian's #2b phone check).
+- **First-launch tutorial** on pack 1 #1: a card under the pool. Steps 1 (place) and 2 (lock in) advance on the real action; 3 (one away) and 4 (hearts, ads, hint) on Next / Got it. Skip anytime; winning also marks it seen (`bsd.thr.tutorial_seen`). Unit-tested and played in the browser.
+- **Palette:** family indigo `#4F3AF4` primary. Category yarn tones in slot order: coral `#E9765B`, mustard `#D9A21F`, sage `#6FA07B`, sky `#4F9BD1`, plum `#9A62B3`. Solved-puzzle sage fill reuses the stitched ring.
+- **Fix:** component-level `html.dark …` selectors never matched under view encapsulation; now `:host-context(.dark)`.
+- **360px check:** home, settings, pack, collection, tutorial board, and 4×4 board, in light and dark — no horizontal overflow, no console errors.

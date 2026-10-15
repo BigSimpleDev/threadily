@@ -90,6 +90,25 @@
           (click)="tapPoolTile(t)">{{ t }}</button>
       }
     </div>
+
+    @if (tutorialSteps[tutorial()]; as step) {
+    <div class="thr-tutorial" role="status" aria-live="polite">
+      <div class="thr-tutorial-head">
+        <span class="thr-tutorial-icon">{{ step.icon }}</span>
+        <strong>{{ step.title }}</strong>
+        <span class="thr-tutorial-count">{{ tutorial() + 1 }}/{{ tutorialSteps.length }}</span>
+      </div>
+      <p class="thr-tutorial-body">{{ step.body }}</p>
+      <div class="thr-tutorial-actions">
+        <button class="thr-tutorial-skip" (click)="tutorialDone()">Skip</button>
+        @if (tutorial() >= 2) {
+          <button class="thr-tutorial-next" (click)="tutorialNext()">{{ tutorial() === tutorialSteps.length - 1 ? 'Got it' : 'Next' }}</button>
+        } @else {
+          <span class="thr-tutorial-hint">{{ tutorial() === 0 ? 'Try it now' : 'Fill a row, then Lock In' }}</span>
+        }
+      </div>
+    </div>
+    }
   </div>
   }
 

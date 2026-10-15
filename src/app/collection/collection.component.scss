@@ -75,12 +75,12 @@
   border: 2px solid var(--ion-border-color);
   background: var(--ion-color-light);
 
-  img { width: 100%; border-radius: 10px; aspect-ratio: 3 / 4; object-fit: cover; }
+  img { width: 100%; border-radius: 10px; aspect-ratio: 1; object-fit: cover; }
 }
 .dly-trinket-cell.owned { border-color: currentColor; }
 
 .dly-trinket-locked {
-  width: 100%; aspect-ratio: 3 / 4; border-radius: 10px;
+  width: 100%; aspect-ratio: 1; border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   background: #E2E8F0; color: #94A3B8;
   font-size: 40px; font-weight: 900;

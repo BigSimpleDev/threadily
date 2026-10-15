@@ -1,0 +1,72 @@
+.thr-set-hdr {
+  display: flex; align-items: center; gap: 8px;
+  padding: max(8px, env(safe-area-inset-top)) 12px 6px 6px;
+}
+.thr-icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border: none; border-radius: 10px;
+  background: transparent; color: var(--ion-color-primary); cursor: pointer;
+  ion-icon { font-size: 22px; }
+}
+.thr-set-title { font-size: 18px; font-weight: 900; }
+
+.thr-set-group {
+  border-radius: 16px;
+  border: 1px solid var(--ion-border-color);
+  background: var(--ion-card-background);
+  overflow: hidden;
+  margin-bottom: 14px;
+  box-shadow: var(--dly-shadow-card);
+}
+.thr-set-row {
+  display: flex; align-items: center; gap: 12px;
+  width: 100%; min-height: 52px; padding: 10px 14px;
+  border: none; background: transparent; color: var(--ion-text-color);
+  text-align: left; cursor: pointer; font-size: 15px; font-weight: 800;
+}
+.thr-set-row + .thr-set-row { border-top: 1px solid var(--ion-border-color); }
+.thr-set-row:disabled { opacity: 0.5; }
+.thr-set-static { cursor: default; }
+.thr-set-icon { font-size: 22px; color: var(--ion-color-primary); flex: 0 0 auto; }
+:host-context(.dark) .thr-set-icon { color: #B3A9FF; }
+.thr-set-ok { color: #16A34A; }
+.thr-set-danger { color: var(--ion-color-danger); }
+.thr-set-text { flex: 1; display: flex; flex-direction: column; }
+.thr-set-sub { font-size: 12px; font-weight: 700; color: var(--ion-color-medium); }
+.thr-set-price { font-weight: 900; color: var(--ion-color-primary); }
+.thr-set-chev { color: var(--ion-color-medium); font-size: 18px; }
+
+.thr-toggle {
+  flex: 0 0 auto; width: 46px; height: 28px; border-radius: 14px;
+  background: var(--ion-color-light-shade); position: relative; transition: background 0.2s ease;
+}
+.thr-toggle-on { background: var(--ion-color-primary); }
+.thr-toggle-knob {
+  position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%;
+  background: #fff; transition: transform 0.2s ease;
+}
+.thr-toggle-on .thr-toggle-knob { transform: translateX(18px); }
+
+.thr-set-footer { text-align: center; color: var(--ion-color-medium); font-size: 12px; font-weight: 700; margin-top: 18px; }
+
+/* How to play */
+.thr-howto-backdrop {
+  position: fixed; inset: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px; background: rgba(20, 19, 32, 0.62);
+}
+.thr-howto {
+  width: 100%; max-width: 360px; max-height: 90vh; overflow-y: auto;
+  padding: 20px 18px 14px; border-radius: 22px;
+  background: var(--dly-card-surface);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4), inset 0 0 0 3px var(--dly-card-surface), inset 0 0 0 4px rgba(79, 58, 244, 0.28);
+}
+.thr-howto-title { margin: 0 0 4px; font-size: 20px; font-weight: 900; text-align: center; }
+.thr-howto-lede { margin: 0 0 12px; text-align: center; font-size: 13px; font-weight: 700; color: var(--ion-color-medium); }
+.thr-howto-step { display: flex; gap: 10px; margin-bottom: 10px; font-size: 14px; line-height: 1.35; }
+.thr-howto-icon { font-size: 22px; flex: 0 0 28px; text-align: center; }
+.thr-howto-body { display: block; color: var(--ion-color-medium); font-weight: 600; }
+.thr-howto-actions { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+.thr-btn { height: 44px; border-radius: 14px; border: none; cursor: pointer; font-size: 15px; font-weight: 900; }
+.thr-btn-primary { background: var(--ion-color-primary); color: #fff; }
+.thr-btn-ghost { background: transparent; color: var(--ion-color-primary); }

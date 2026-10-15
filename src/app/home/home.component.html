@@ -1,47 +1,98 @@
 <ion-header class="ion-no-border">
-  <div class="dly-home-logo">
-    <img src="assets/threadily-logo.svg" width="36" height="36" alt="logo">
-    <span class="dly-wordmark"><span class="primary">Thread</span>ily</span>
-    <div class="dly-home-right">
-      <div class="dly-home-row">
-        <span class="dly-home-coins" (click)="openCollection()" title="Your coins">
-          <span class="dly-coin-dot">¢</span>{{ lstoreSvc.coins() }}
-        </span>
-        <button class="dly-theme-chip" (click)="toggleTheme()"
-          [title]="lstoreSvc.darkMode() ? 'Switch to light mode' : 'Switch to dark mode'">
-          <ion-icon [name]="lstoreSvc.darkMode() ? 'sunny-outline' : 'moon-outline'"></ion-icon>
-        </button>
-      </div>
-      <div class="dly-home-row">
-        <span class="dly-home-energy" title="Energy">
-          ⚡@if (energySvc.overridden()) {∞} @else {{{ energySvc.energy() }}@if (energySvc.countdown()) {<span class="trv-energy-timer">{{ energySvc.countdown() }}</span>}}
-        </span>
-        <button class="trv-energy-btn" (click)="addEnergy()"
-          [disabled]="addingEnergy() || !energySvc.canWatchAdForEnergy() || energySvc.overridden()">
-          ⚡<span class="trv-energy-plus">+</span>
-          <span class="trv-energy-count">{{ energySvc.adsLeftToday() }}/{{ energySvc.adMaxPerDay }}</span>
-        </button>
-      </div>
+  <div class="thr-home-hdr">
+    <img src="assets/threadily-logo.svg" width="34" height="34" alt="">
+    <span class="thr-wordmark"><span class="thr-wordmark-a">Thread</span>ily</span>
+    <div class="thr-hdr-chips">
+      <button class="thr-chip thr-chip-coins" (click)="openCollection()" [attr.aria-label]="lstoreSvc.coins() + ' coins — open trinkets'">
+        <span class="thr-coin-dot">¢</span>{{ lstoreSvc.coins() }}
+      </button>
+      <button class="thr-icon-chip" (click)="openSettings()" aria-label="Settings">
+        <ion-icon name="settings-outline"></ion-icon>
+      </button>
     </div>
+  </div>
+  <div class="thr-energy-row">
+    <span class="thr-chip thr-chip-energy" [attr.aria-label]="'Energy ' + energySvc.energy() + ' of ' + energySvc.max">
+      ⚡@if (energySvc.overridden()) {∞} @else {{{ energySvc.energy() }}<span class="thr-energy-max">/{{ energySvc.max }}</span>}
+      @if (energySvc.countdown()) {<span class="thr-energy-timer">+1 in {{ energySvc.countdown() }}</span>}
+    </span>
+    <span class="thr-energy-meter" aria-hidden="true">
+      <span class="thr-energy-fill" [style.width.%]="pct(energySvc.energy(), energySvc.max)"></span>
+    </span>
+    <button class="thr-chip thr-chip-ad" (click)="addEnergy()"
+      [disabled]="addingEnergy() || !energySvc.canWatchAdForEnergy() || energySvc.overridden()"
+      [attr.aria-label]="'Watch an ad for ' + energySvc.adGrant + ' energy, ' + energySvc.adsLeftToday() + ' of ' + energySvc.adMaxPerDay + ' left today'">
+      ▶ +{{ energySvc.adGrant }}
+      <span class="thr-ad-left">{{ energySvc.adsLeftToday() }}/{{ energySvc.adMaxPerDay }}</span>
+    </button>
   </div>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="dly-hero-card">
-    <h2 class="dly-hero-title">Threadily</h2>
-    <div class="dly-hero-actions">
-      <ion-button (click)="play()" class="dly-btn-hero-primary" [disabled]="!next()">Continue{{ next() ? ' · #' + (next()!.index + 1) : '' }}</ion-button>
-      <ion-button fill="outline" (click)="openPack(next()?.pack ?? 1)" class="dly-btn-hero-outline">Pack {{ next()?.pack ?? 1 }}</ion-button>
+
+  <!-- Featured trinket + (from #14) seasonal event buttons -->
+  @if (lstoreSvc.featuredTrinket(); as ft) {
+  <button class="thr-featured" (click)="openCollection()" [attr.aria-label]="'Featured trinket: ' + ft.name">
+    <span class="thr-featured-ring">
+      <img [src]="ft.img" [alt]="ft.name">
+    </span>
+    <span class="thr-featured-name">{{ ft.name }}</span>
+  </button>
+  }
+
+  <!-- Continue -->
+  @if (next(); as n) {
+  <div class="thr-hero">
+    <div class="thr-hero-top">
+      <span class="thr-hero-label">Continue · Pack {{ n.pack }} · #{{ n.index + 1 }}</span>
+      <span class="thr-hero-size">{{ n.puzzle.categories.length }}×4</span>
+    </div>
+    <h2 class="thr-hero-title">{{ n.puzzle.title || 'Puzzle ' + (n.index + 1) }}</h2>
+    <div class="thr-hero-stars" [attr.aria-label]="n.puzzle.rating + ' stars'">
+      @for (s of stars; track s) {<span [class.thr-star-on]="s <= n.puzzle.rating">★</span>}
+    </div>
+    <div class="thr-hero-actions">
+      <button class="thr-hero-play" (click)="play()">Play <span class="thr-hero-cost">⚡{{ energySvc.perGame }}</span></button>
+      <button class="thr-hero-pack" (click)="openPack(n.pack)">Pack {{ n.pack }}</button>
     </div>
   </div>
-
-  <ion-button expand="block" color="primary" fill="outline"
-    class="dly-completed-btn" (click)="openCollection()">
-    <ion-icon slot="start" name="sparkles-outline"></ion-icon>
-    Trinkets
-  </ion-button>
-  <p class="dly-section-label">Layout test (#2)</p>
-  @for (p of samples; track p.id; let i = $index) {
-  <ion-button expand="block" fill="outline" (click)="playSample(i)">{{ p.title }}</ion-button>
+  } @else if (loaded()) {
+  <div class="thr-hero thr-alldone">
+    <ion-icon name="trophy-outline" class="thr-alldone-icon"></ion-icon>
+    <h2 class="thr-hero-title">Every puzzle solved!</h2>
+    <p class="thr-alldone-sub">You found every thread. Replay any puzzle from a pack, or roll for trinkets while new packs are on the way.</p>
+  </div>
   }
+
+  <!-- Trinkets -->
+  <button class="thr-row-btn" (click)="openCollection()">
+    <ion-icon name="sparkles-outline" class="thr-row-icon"></ion-icon>
+    <span class="thr-row-text">
+      <span class="thr-row-title">Trinkets</span>
+      <span class="thr-row-sub">{{ lstoreSvc.ownedTrinkets().length }} / {{ trinketTotal() }} collected</span>
+    </span>
+    <ion-icon name="chevron-forward" class="thr-row-chev"></ion-icon>
+  </button>
+
+  <!-- Packs -->
+  <p class="thr-section-label">Packs · {{ totalSolved() }} / {{ totalPuzzles() }} solved</p>
+  @for (p of packs(); track p.pack) {
+  <button class="thr-pack-card" (click)="openPack(p.pack)">
+    <span class="thr-pack-badge">{{ p.pack }}</span>
+    <span class="thr-pack-body">
+      <span class="thr-pack-line">
+        <span class="thr-pack-name">Pack {{ p.pack }}</span>
+        <span class="thr-pack-count">{{ p.solved }} / {{ p.total }}</span>
+      </span>
+      <span class="thr-pack-bar"><span class="thr-pack-fill" [style.width.%]="pct(p.solved, p.total)"></span></span>
+      <span class="thr-pack-mix">
+        @for (s of stars; track s) {
+          @if (p.byRating[s]) {<span class="thr-mix-chip">{{ s }}★ {{ p.byRating[s] }}</span>}
+        }
+      </span>
+    </span>
+    <ion-icon name="chevron-forward" class="thr-row-chev"></ion-icon>
+  </button>
+  }
+
 </ion-content>
