@@ -14,13 +14,15 @@ import {
   INTERSTITIAL_MIN_SECONDS
 } from '../entities/constants';
 
+// Google's public test ad units until the Threadily AdMob app exists. Swap in
+// the live ids before release — see MONETIZATION_INSTRUCTIONS.md.
 const INTERSTITIAL_AD = {
-  android: 'ca-app-pub-5241648641136523/2724543287',
-  ios: 'ca-app-pub-5241648641136523/5134938414'
+  android: 'ca-app-pub-3940256099942544/1033173712',
+  ios: 'ca-app-pub-3940256099942544/4411468910'
 };
 const REWARDED_AD = {
-  android: 'ca-app-pub-5241648641136523/5713522913',
-  ios: 'ca-app-pub-5241648641136523/2508775073'
+  android: 'ca-app-pub-3940256099942544/5224354917',
+  ios: 'ca-app-pub-3940256099942544/1712485313'
 };
 
 @Injectable({ providedIn: 'root' })

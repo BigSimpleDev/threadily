@@ -11,8 +11,8 @@ import { ENTITLEMENT_AD_FREE } from '../entities/constants';
 // RevenueCat public SDK API keys (safe to ship; not secrets). Fill in from the
 // RevenueCat dashboard per platform before release.
 const REVENUECAT_API_KEY = {
-  android: 'goog_LeINqBHYfnVfwsJRvMdGAwlRyFV',
-  ios: 'appl_oCHxjpSkzESjbgFHMeNtoyJyWkG'
+  android: 'TODO_THREADILY_GOOGLE_KEY',
+  ios: 'TODO_THREADILY_APPLE_KEY'
 };
 
 // Identifier of the package in the current offering that grants ad-free.
@@ -36,6 +36,9 @@ export class PurchaseService {
   // entitlement into local cache. Never throws — store failures must not block play.
   async configure(): Promise<void> {
     if (!this.native || this.configured) return;
+    // Keys not filled in yet (pre-RevenueCat setup): stay unconfigured so the
+    // Remove Ads / Restore paths fail soft instead of hitting the wrong project.
+    if (REVENUECAT_API_KEY[this.platform].startsWith('TODO')) return;
     try {
       await Purchases.setLogLevel({ level: LOG_LEVEL.ERROR });
       await Purchases.configure({ apiKey: REVENUECAT_API_KEY[this.platform] });

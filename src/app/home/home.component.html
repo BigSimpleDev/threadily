@@ -39,4 +39,8 @@
     <ion-icon slot="start" name="sparkles-outline"></ion-icon>
     Trinkets
   </ion-button>
+  <p class="dly-section-label">Layout test (#2)</p>
+  @for (p of samples; track p.id; let i = $index) {
+  <ion-button expand="block" fill="outline" (click)="playSample(i)">{{ p.title }}</ion-button>
+  }
 </ion-content>

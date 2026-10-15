@@ -73,24 +73,14 @@ Brian runs these outside the session; the session gives him step-by-step instruc
 
 ---
 
-## #2 — Board layout prototype (5×4 phone test) — do early
+## #2b — Brian: phone check of the 5×4 board
 
-Find out what fits on a phone before writing 1,000 puzzles around a grid size.
+The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's hands.
 
-- [ ] Build a throwaway-quality but real `GameComponent` board with hardcoded sample puzzles at **2×4, 3×4, 4×4, and 5×4** (categories × tiles). Include at least two real 5×4 designs with long-ish tiles ("San Antonio", "Yellowstone").
-- [ ] Layout:
-  - category rows (name + 4 slots) on top
-  - shuffled tile pool below
-  - hearts
-  - Lock In
-- [ ] Interaction: tap-to-place (more reliable than drag on small phones).
-- [ ] Test at 360×640, 390×844, and 430×932 in the browser. Then install on Brian's phone via `debug_android_wireless` and have him try the 5×4.
-- [ ] Decide with Brian (record the answer here):
-  - Does 5×4 fit without scrolling?
-  - Max tile text length?
-  - Font size?
-  - Does the tile pool shrink as categories lock?
-- [ ] Set `MAX_CATEGORIES` and `TILE_MAX_CHARS` in `constants.ts` from the result.
+- [ ] Brian: on the phone, turn on Wireless debugging → **Pair device with pairing code**, then on the PC run `adb pair <ip>:<pairPort> <code>`.
+- [ ] Brian: run `DEVICE_IP=<ip> PORT=<connectPort> ./debug_android_wireless.sh` (or the `.ps1`) from the repo root. It builds, installs, and launches Threadily.
+- [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
+- [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
 ## #3 — Logo & app icon
 
@@ -361,7 +351,7 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 | Unlocks | All puzzles open from the start |
 | Difficulty | Authored 1–5★: size sets the floor, wordplay raises it; 100+ small-but-hard puzzles |
 | Heart ads | +3 hearts per ad, no cap |
-| Grid max | **TBD in #2** after the 5×4 phone test |
+| Grid max | **5×4** (provisional: fits 360×640 in the browser; Brian to confirm on phone, #2b). Tiles ≤ 12 chars |
 | Logo | Brian generates in ChatGPT with the #3 prompt; session builds the SVG |
 | Ads / IAP | Same as Trivily / Decryptly. Step-by-step + site marketing doc in #9 |
 | Session permissions | Commit, or commit + push; run and play the app |

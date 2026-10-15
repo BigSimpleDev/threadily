@@ -108,3 +108,20 @@ ion-badge { border-radius: 20px; font-weight: 700; font-size: 11px; }
   75%      { transform: translateX(4px); }
 }
 .dly-shake { animation: dly-shake 0.35s ease; }
+
+/* Board feedback toasts ("One away…", "Already guessed") — short, centered pill. */
+ion-toast.thr-toast {
+  --background: #1A1928;
+  --color: #fff;
+  --border-radius: 999px;
+  --width: auto;
+  --min-width: 0;
+  --max-width: 80%;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-weight: 800;
+}
+html.dark ion-toast.thr-toast {
+  --background: #F5F4F0;
+  --color: #1A1928;
+}

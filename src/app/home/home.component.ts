@@ -9,6 +9,7 @@ import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { signal } from '@angular/core';
+import { SAMPLE_PUZZLES } from '../game/samples';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +26,7 @@ export class HomeComponent implements ViewWillEnter {
   private toastCtrl = inject(ToastController);
 
   addingEnergy = signal(false);
+  samples = SAMPLE_PUZZLES;
 
   constructor() {
     addIcons({ sparklesOutline, moonOutline, sunnyOutline });
@@ -36,6 +38,10 @@ export class HomeComponent implements ViewWillEnter {
 
   play() {
     this.router.navigate(['/play', 1, 0]);
+  }
+
+  playSample(i: number) {
+    this.router.navigate(['/play', 0, i]);
   }
 
   openCollection() {

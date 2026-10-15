@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Threadily</string>
+    <string name="title_activity_main">Threadily</string>
+    <string name="package_name">com.bigsimple.threadily</string>
+    <string name="custom_url_scheme">com.bigsimple.threadily</string>
+</resources>

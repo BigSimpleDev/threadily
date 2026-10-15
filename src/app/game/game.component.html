@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <div class="thr-game-hdr">
+    <button class="thr-icon-btn" (click)="goHome()" aria-label="Back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <div class="thr-game-title">
+      <span class="thr-game-name">{{ puzzle()?.title || ('Puzzle ' + (index() + 1)) }}</span>
+      <span class="thr-game-stars" [attr.aria-label]="(puzzle()?.rating ?? 0) + ' stars'">
+        @for (s of [1, 2, 3, 4, 5]; track s) {
+          <span [class.thr-star-on]="s <= (puzzle()?.rating ?? 0)">★</span>
+        }
+      </span>
+    </div>
+    <div class="thr-hearts" aria-label="Hearts">
+      @for (filled of hearts(); track $index) {
+        <svg class="thr-heart" [class.thr-heart-lost]="!filled" width="18" height="17" viewBox="0 0 18 17" fill="none">
+          <path d="M9 15.5C9 15.5 2 11 2 6.5A4 4 0 0 1 9 3.8 4 4 0 0 1 16 6.5C16 11 9 15.5 9 15.5Z"
+            [attr.fill]="filled ? 'var(--ion-color-danger)' : 'none'"
+            [attr.stroke]="filled ? 'var(--ion-color-danger)' : 'var(--ion-color-medium)'"
+            stroke-width="1.5"/>
+        </svg>
+      }
+    </div>
+  </div>
+</ion-header>
+
+<ion-content [scrollY]="true">
+  @if (board(); as b) {
+  <div class="thr-board">
+    <div class="thr-cats">
+      @for (c of b.categories; track c.name; let ci = $index) {
+      <div class="thr-cat thr-tone-{{ ci }}"
+        [class.thr-cat-active]="activeCat() === ci && !c.locked"
+        [class.thr-cat-locked]="c.locked"
+        [class.dly-shake]="shakeCat() === ci"
+        (click)="tapCategory(ci)">
+        <div class="thr-cat-head">
+          <span class="thr-cat-name">{{ c.name }}</span>
+          @if (c.locked) {
+            <span class="thr-cat-check">✓</span>
+          } @else if (isFull(c)) {
+            <button class="thr-lock-btn" (click)="lock(ci, $event)">Lock In</button>
+          } @else {
+            <span class="thr-cat-count">{{ c.slots.length }}/{{ c.answer.length }}</span>
+          }
+        </div>
+        <div class="thr-slots">
+          @for (k of slotIndexes(); track k) {
+            @if (c.slots[k]; as t) {
+              <button class="thr-tile thr-tile-placed"
+                [class.thr-tile-long]="t.length > 9"
+                [class.thr-tile-pinned]="c.pinned.includes(t)"
+                [disabled]="c.locked"
+                (click)="tapPlacedTile(t, $event)">{{ t }}</button>
+            } @else {
+              <span class="thr-slot-empty"></span>
+            }
+          }
+        </div>
+      </div>
+      }
+    </div>
+
+    <div class="thr-pool">
+      @for (t of b.pool; track t) {
+        <button class="thr-tile"
+          [class.thr-tile-long]="t.length > 9"
+          [class.thr-tile-selected]="selectedTile() === t"
+          (click)="tapPoolTile(t)">{{ t }}</button>
+      }
+    </div>
+  </div>
+  }
+</ion-content>
