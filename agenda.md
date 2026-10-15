@@ -82,43 +82,10 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
-## #9 — Ads, Remove Ads, and marketing site
+## #9b — Brian: store/console setup + OK the site edits
 
-The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, interstitial caps), so port `AdService` + `PurchaseService`. Wire two rewarded flows: **+3 hearts** and **+5 energy**. Ad-free behaves exactly as it does in Trivily.
-
-- [ ] Write **`MONETIZATION_INSTRUCTIONS.md`** for Threadily: a fresh step-by-step copy of Trivily's, with every id swapped to `com.bigsimple.threadily`.
-  1. **AdMob:**
-     - register the Threadily app on iOS + Android
-     - create the ad units (interstitial, rewarded-hearts, rewarded-energy, or one shared rewarded unit as Trivily does)
-     - say exactly where to paste each id in `constants.ts`
-  2. **Store IAP:** the "Remove Ads" non-consumable in App Store Connect and Play Console (product id, price tier, review screenshot).
-  3. **RevenueCat:**
-     - new project + both apps
-     - API keys
-     - `ad_free` entitlement
-     - attach products
-     - offering / package
-     - where to paste the keys
-  4. **Small Business Program** for both stores (check whether existing enrollment already covers the new app).
-  5. **app-ads.txt:** `bigsimple.dev/app-ads.txt` already has `google.com, pub-5241648641136523, DIRECT, f08c47fec0942fa0`. Same AdMob account, so no new line is needed. Steps: verify it in AdMob for the new app, and set the store listing "Website" to `bigsimple.dev`.
-  6. **Final release checklist:** live ids in, test ids out, test devices removed.
-- [ ] Add a **Marketing site updates** section to the same doc. Repo: `apex_apps/bigsimplesite/bigsimpledev`.
-  - `games/threadily/privacy.html`: copy `games/trivily/privacy.html` and swap name / app id / data practices.
-  - `images/games/threadily/threadily-icon.png`: drop the app icon.
-  - `index.html` games section:
-    - add a Threadily game card (copy the Trivily card around line 964)
-    - add a `.logo-threadily` style (around line 928)
-    - App Store link (fill in once the Apple id exists)
-    - Google Play link `https://play.google.com/store/apps/details?id=com.bigsimple.threadily`
-    - Privacy link
-  - `index.html` footer link list (around line 1049): add "Threadily · Privacy".
-  - `legal.html`:
-    - add Threadily to the meta description and the intro paragraph (lines 6 and 116)
-    - add the privacy link (around line 140)
-  - `sitemap.xml`: add `https://bigsimple.dev/games/threadily/privacy`.
-  - Deploy with the site's `deploy.sh` / Vercel, then check that the URLs resolve.
-  - Store listings: set the privacy policy URL to `https://bigsimple.dev/games/threadily/privacy` in both consoles.
-- [ ] The session may make the site edits itself in that repo and commit there, but only once Brian confirms. Store links stay `TODO` until the apps exist.
+- [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
+- [ ] Brian: say "go" on the bigsimple.dev edits (Part 5). A session then copies `site-drafts/games/threadily/privacy.html`, adds the game card, footer, legal, and sitemap entries, and commits in the site repo. Brian deploys.
 
 ## #10 — Coins, gacha, collection (port)
 

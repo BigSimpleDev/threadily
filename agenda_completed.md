@@ -279,3 +279,49 @@ All puzzles are open, so the rating tells players what they're getting into.
 - Pack 0 (layout-test boards) is free practice: no energy, coins, or progress.
 - Unit tests: board rules (lock-in, one-away, duplicate guess, heart decrement, ad refill, hint placement + bounce, win, shuffle) in `board.spec.ts`; component flows in `game.component.spec.ts` (energy charge/block, place/unplace, win coins, replay coins, out-of-hearts → ad, failed ad, already-guessed, hint spend/cancel/insufficient, next puzzle, practice).
 - Browser playthrough at 360×640 (Playwright): solved #1 (+25, solved [1]); #2 wrong → one-away (toast) → repeat (no heart) → 3rd miss → out-of-hearts → ad (+3) → hint (−25, 1 pinned) → solved; replay #1 (+1); reload → coins 26, energy 90, Continue · #3. No console errors.
+
+---
+
+## #9 — Ads, Remove Ads, and marketing site
+
+The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, interstitial caps), so port `AdService` + `PurchaseService`. Wire two rewarded flows: **+3 hearts** and **+5 energy**. Ad-free behaves exactly as it does in Trivily.
+
+- [x] Write **`MONETIZATION_INSTRUCTIONS.md`** for Threadily: a fresh step-by-step copy of Trivily's, with every id swapped to `com.bigsimple.threadily`.
+  1. **AdMob:**
+     - register the Threadily app on iOS + Android
+     - create the ad units (interstitial, rewarded-hearts, rewarded-energy, or one shared rewarded unit as Trivily does)
+     - say exactly where to paste each id in `constants.ts`
+  2. **Store IAP:** the "Remove Ads" non-consumable in App Store Connect and Play Console (product id, price tier, review screenshot).
+  3. **RevenueCat:**
+     - new project + both apps
+     - API keys
+     - `ad_free` entitlement
+     - attach products
+     - offering / package
+     - where to paste the keys
+  4. **Small Business Program** for both stores (check whether existing enrollment already covers the new app).
+  5. **app-ads.txt:** `bigsimple.dev/app-ads.txt` already has `google.com, pub-5241648641136523, DIRECT, f08c47fec0942fa0`. Same AdMob account, so no new line is needed. Steps: verify it in AdMob for the new app, and set the store listing "Website" to `bigsimple.dev`.
+  6. **Final release checklist:** live ids in, test ids out, test devices removed.
+- [x] Add a **Marketing site updates** section to the same doc. Repo: `apex_apps/bigsimplesite/bigsimpledev`.
+  - `games/threadily/privacy.html`: copy `games/trivily/privacy.html` and swap name / app id / data practices.
+  - `images/games/threadily/threadily-icon.png`: drop the app icon.
+  - `index.html` games section:
+    - add a Threadily game card (copy the Trivily card around line 964)
+    - add a `.logo-threadily` style (around line 928)
+    - App Store link (fill in once the Apple id exists)
+    - Google Play link `https://play.google.com/store/apps/details?id=com.bigsimple.threadily`
+    - Privacy link
+  - `index.html` footer link list (around line 1049): add "Threadily · Privacy".
+  - `legal.html`:
+    - add Threadily to the meta description and the intro paragraph (lines 6 and 116)
+    - add the privacy link (around line 140)
+  - `sitemap.xml`: add `https://bigsimple.dev/games/threadily/privacy`.
+  - Deploy with the site's `deploy.sh` / Vercel, then check that the URLs resolve.
+  - Store listings: set the privacy policy URL to `https://bigsimple.dev/games/threadily/privacy` in both consoles.
+- [x] The session may make the site edits itself in that repo and commit there, but only once Brian confirms. Store links stay `TODO` until the apps exist.
+
+**Session notes (#9):**
+- `AdService` + `PurchaseService` ported unchanged in behavior (ad-free skips interstitials only; rewarded stays for everyone). Rewarded flows wired: **+3 hearts** (game, no cap) and **+5 energy** (home button + out-of-energy prompt, 5/day).
+- Pre-setup safety: Google **test** ad units in `ad.service.ts`, Google **sample** AdMob app id in the Android manifest, and `TODO_…` RevenueCat keys that keep RevenueCat unconfigured, so nothing hits Trivily's AdMob units or RevenueCat project.
+- `MONETIZATION_INSTRUCTIONS.md` written: AdMob (2 apps, 1 interstitial + 1 shared rewarded unit each), the `threadily_remove_ads` IAP on both stores, RevenueCat (`ad_free` / `remove_ads`), Small Business Program (account-level, so likely already covered), app-ads.txt (no new line), the marketing-site steps, a release checklist, and a value-location table.
+- **Site edits not made** (needs Brian's go-ahead — see "#9b" in agenda.md). A ready privacy page is drafted at `site-drafts/games/threadily/privacy.html`.
