@@ -41,7 +41,7 @@ export const SAMPLE_PUZZLES: puzzle[] = [
         id: -5, rating: 5, title: '5×4 · Double Duty',
         categories: [
             { name: 'Card games', tiles: ['Hearts', 'Spades', 'Rummy', 'Solitaire'] },
-            { name: 'Yoga poses', tiles: ['Cobra', 'Warrior', 'Tree', 'Downward Dog'] },
+            { name: 'Yoga poses', tiles: ['Lotus', 'Warrior', 'Tree', 'Downward Dog'] },
             { name: 'Golf terms', tiles: ['Eagle', 'Birdie', 'Bogey', 'Mulligan'] },
             { name: 'Snakes', tiles: ['Python', 'Viper', 'Mamba', 'Boa'] },
             { name: 'Tree parts', tiles: ['Trunk', 'Bark', 'Branch', 'Root'] }

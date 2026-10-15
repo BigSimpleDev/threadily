@@ -36,7 +36,8 @@ npm start        # dev server at localhost:8100 (ionic serve)
 npm run build    # production build
 npm test         # Karma/Jasmine unit tests (single headless run)
 npm run lint     # ESLint (flat config in eslint.config.js)
-node validate-puzzles.mjs   # puzzle content validator — run after every content edit
+npm run puzzles  # compile content/packNN.txt → src/assets/puzzles/<n>.json, then validate
+npm run trinkets # rebuild trinket placeholders/catalog/docs from trinketart/sets.json
 ```
 
 ## Architecture
@@ -83,6 +84,13 @@ localStorage prefix `bsd.thr.*` (see `LOCAL_STORAGE_KEYS`).
 ```
 Authored order is the answer key; tiles shuffle at runtime.
 
+**Authoring**: never hand-edit the JSON. Puzzles are written in 
+(format documented at the top of : an  line,
+one  line per category, optional ),
+then  compiles and validates. Ids come from pack + position.
+Every tile must belong to exactly one category of its puzzle — a herring may
+*look* like another category but must never genuinely be a member of it.
+
 **Key services** (`src/app/services/`):
 - `GameService` — fetches + caches pack JSON, exposes the current pack.
 - `LocalstoreService` — `localStorage` wrapper with signals mirroring persisted
@@ -93,8 +101,8 @@ Authored order is the answer key; tiles shuffle at runtime.
 - `AdService` / `PurchaseService` — AdMob + RevenueCat; native no-ops on web
   (`showRewarded()` resolves true on web so reward flows are testable).
 
-**Adding content**: add `src/assets/puzzles/<n>.json`, raise `MAX_PACK` in
-`src/app/entities/constants.ts`, then run `node validate-puzzles.mjs`.
+**Adding content**: add `content/packNN.txt`, raise `MAX_PACK` in
+`src/app/entities/constants.ts`, then run `npm run puzzles`.
 
 ## Tuning
 

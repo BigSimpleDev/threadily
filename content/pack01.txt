@@ -1,0 +1,59 @@
+# Pack 1 — starts easy, trends upward, always mixed. See PUZZLES.md for the seed bank.
+
+@ 1 | Breakfast or Dessert
+Breakfast: Pancake, Waffle, Omelet, Cereal
+Dessert: Brownie, Cupcake, Sundae, Pie
+
+@ 1 | Sky or Sea
+In the sky: Cloud, Rainbow, Comet, Kite
+In the sea: Coral, Wave, Seaweed, Jellyfish
+
+@ 1 | Farm or Zoo
+Farm animals: Cow, Goat, Pig, Hen
+Zoo animals: Lion, Zebra, Giraffe, Panda
+
+@ 2 | Kitchen Drawer
+Utensils: Fork, Ladle, Whisk, Spatula
+Appliances: Toaster, Blender, Oven, Microwave
+Dishes: Plate, Bowl, Mug, Saucer
+
+@ 1 | Colors & Shapes
+Colors: Purple, Teal, Maroon, Beige
+Shapes: Circle, Oval, Hexagon, Triangle
+
+@ 2 | Game Day
+Baseball: Inning, Bunt, Shortstop, Dugout
+Basketball: Dunk, Rebound, Free Throw, Layup
+Soccer: Header, Corner Kick, Striker, Bicycle Kick
+
+@ 2 | Music Room
+Strings: Violin, Cello, Harp, Banjo
+Brass: Trumpet, Tuba, Trombone, Bugle
+Percussion: Cymbal, Xylophone, Bongo, Triangle
+
+@ 1 | Hot or Cold
+Hot weather: Heat Wave, Sunburn, Drought, Humid
+Cold weather: Blizzard, Frost, Sleet, Icicle
+
+@ 2 | Stargazing
+Planets: Mars, Venus, Saturn, Neptune
+Greek letters: Alpha, Delta, Omega, Sigma
+Zodiac signs: Leo, Virgo, Aries, Gemini
+
+@ 2 | Garage Sale
+Tools: Hammer, Wrench, Pliers, Drill
+Car parts: Bumper, Muffler, Axle, Wiper
+Camping gear: Tent, Lantern, Sleeping Bag, Canteen
+
+@ 3 | Lone Star & Friends | warning=MLB, NFL, or NBA
+Texas: Austin, Alamo, Big Bend, Rangers
+Ohio: Columbus, Cedar Point, Cuyahoga, Browns
+Florida: Tampa, Everglades, Key West, Marlins
+Arizona: Phoenix, Sedona, Grand Canyon, Suns
+~ Key West, Phoenix
+
+@ 3 | Keys, Shells & Bark
+Things with keys: Piano, Map, Typewriter, Florida
+Things with shells: Turtle, Egg, Taco, Snail
+Things that bark: Dog, Tree, Seal, Fox
+~ Florida, Tree, Seal

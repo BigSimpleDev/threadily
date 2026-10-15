@@ -1,0 +1,387 @@
+{
+ "pack": 1,
+ "puzzles": [
+  {
+   "id": 1,
+   "rating": 1,
+   "title": "Breakfast or Dessert",
+   "categories": [
+    {
+     "name": "Breakfast",
+     "tiles": [
+      "Pancake",
+      "Waffle",
+      "Omelet",
+      "Cereal"
+     ]
+    },
+    {
+     "name": "Dessert",
+     "tiles": [
+      "Brownie",
+      "Cupcake",
+      "Sundae",
+      "Pie"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "rating": 1,
+   "title": "Sky or Sea",
+   "categories": [
+    {
+     "name": "In the sky",
+     "tiles": [
+      "Cloud",
+      "Rainbow",
+      "Comet",
+      "Kite"
+     ]
+    },
+    {
+     "name": "In the sea",
+     "tiles": [
+      "Coral",
+      "Wave",
+      "Seaweed",
+      "Jellyfish"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "rating": 1,
+   "title": "Farm or Zoo",
+   "categories": [
+    {
+     "name": "Farm animals",
+     "tiles": [
+      "Cow",
+      "Goat",
+      "Pig",
+      "Hen"
+     ]
+    },
+    {
+     "name": "Zoo animals",
+     "tiles": [
+      "Lion",
+      "Zebra",
+      "Giraffe",
+      "Panda"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "rating": 2,
+   "title": "Kitchen Drawer",
+   "categories": [
+    {
+     "name": "Utensils",
+     "tiles": [
+      "Fork",
+      "Ladle",
+      "Whisk",
+      "Spatula"
+     ]
+    },
+    {
+     "name": "Appliances",
+     "tiles": [
+      "Toaster",
+      "Blender",
+      "Oven",
+      "Microwave"
+     ]
+    },
+    {
+     "name": "Dishes",
+     "tiles": [
+      "Plate",
+      "Bowl",
+      "Mug",
+      "Saucer"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "rating": 1,
+   "title": "Colors & Shapes",
+   "categories": [
+    {
+     "name": "Colors",
+     "tiles": [
+      "Purple",
+      "Teal",
+      "Maroon",
+      "Beige"
+     ]
+    },
+    {
+     "name": "Shapes",
+     "tiles": [
+      "Circle",
+      "Oval",
+      "Hexagon",
+      "Triangle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "rating": 2,
+   "title": "Game Day",
+   "categories": [
+    {
+     "name": "Baseball",
+     "tiles": [
+      "Inning",
+      "Bunt",
+      "Shortstop",
+      "Dugout"
+     ]
+    },
+    {
+     "name": "Basketball",
+     "tiles": [
+      "Dunk",
+      "Rebound",
+      "Free Throw",
+      "Layup"
+     ]
+    },
+    {
+     "name": "Soccer",
+     "tiles": [
+      "Header",
+      "Corner Kick",
+      "Striker",
+      "Bicycle Kick"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "rating": 2,
+   "title": "Music Room",
+   "categories": [
+    {
+     "name": "Strings",
+     "tiles": [
+      "Violin",
+      "Cello",
+      "Harp",
+      "Banjo"
+     ]
+    },
+    {
+     "name": "Brass",
+     "tiles": [
+      "Trumpet",
+      "Tuba",
+      "Trombone",
+      "Bugle"
+     ]
+    },
+    {
+     "name": "Percussion",
+     "tiles": [
+      "Cymbal",
+      "Xylophone",
+      "Bongo",
+      "Triangle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "rating": 1,
+   "title": "Hot or Cold",
+   "categories": [
+    {
+     "name": "Hot weather",
+     "tiles": [
+      "Heat Wave",
+      "Sunburn",
+      "Drought",
+      "Humid"
+     ]
+    },
+    {
+     "name": "Cold weather",
+     "tiles": [
+      "Blizzard",
+      "Frost",
+      "Sleet",
+      "Icicle"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "rating": 2,
+   "title": "Stargazing",
+   "categories": [
+    {
+     "name": "Planets",
+     "tiles": [
+      "Mars",
+      "Venus",
+      "Saturn",
+      "Neptune"
+     ]
+    },
+    {
+     "name": "Greek letters",
+     "tiles": [
+      "Alpha",
+      "Delta",
+      "Omega",
+      "Sigma"
+     ]
+    },
+    {
+     "name": "Zodiac signs",
+     "tiles": [
+      "Leo",
+      "Virgo",
+      "Aries",
+      "Gemini"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "rating": 2,
+   "title": "Garage Sale",
+   "categories": [
+    {
+     "name": "Tools",
+     "tiles": [
+      "Hammer",
+      "Wrench",
+      "Pliers",
+      "Drill"
+     ]
+    },
+    {
+     "name": "Car parts",
+     "tiles": [
+      "Bumper",
+      "Muffler",
+      "Axle",
+      "Wiper"
+     ]
+    },
+    {
+     "name": "Camping gear",
+     "tiles": [
+      "Tent",
+      "Lantern",
+      "Sleeping Bag",
+      "Canteen"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "rating": 3,
+   "title": "Lone Star & Friends",
+   "categories": [
+    {
+     "name": "Texas",
+     "tiles": [
+      "Austin",
+      "Alamo",
+      "Big Bend",
+      "Rangers"
+     ]
+    },
+    {
+     "name": "Ohio",
+     "tiles": [
+      "Columbus",
+      "Cedar Point",
+      "Cuyahoga",
+      "Browns"
+     ]
+    },
+    {
+     "name": "Florida",
+     "tiles": [
+      "Tampa",
+      "Everglades",
+      "Key West",
+      "Marlins"
+     ]
+    },
+    {
+     "name": "Arizona",
+     "tiles": [
+      "Phoenix",
+      "Sedona",
+      "Grand Canyon",
+      "Suns"
+     ]
+    }
+   ],
+   "herrings": [
+    "Key West",
+    "Phoenix"
+   ],
+   "warning": "MLB, NFL, or NBA"
+  },
+  {
+   "id": 12,
+   "rating": 3,
+   "title": "Keys, Shells & Bark",
+   "categories": [
+    {
+     "name": "Things with keys",
+     "tiles": [
+      "Piano",
+      "Map",
+      "Typewriter",
+      "Florida"
+     ]
+    },
+    {
+     "name": "Things with shells",
+     "tiles": [
+      "Turtle",
+      "Egg",
+      "Taco",
+      "Snail"
+     ]
+    },
+    {
+     "name": "Things that bark",
+     "tiles": [
+      "Dog",
+      "Tree",
+      "Seal",
+      "Fox"
+     ]
+    }
+   ],
+   "herrings": [
+    "Florida",
+    "Tree",
+    "Seal"
+   ]
+  }
+ ]
+}

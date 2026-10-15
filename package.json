@@ -10,7 +10,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "puzzles": "node build-puzzles.mjs && node validate-puzzles.mjs",
+    "trinkets": "node generate-trinkets.mjs"
   },
   "private": true,
   "dependencies": {

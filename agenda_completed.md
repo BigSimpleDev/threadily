@@ -155,3 +155,46 @@ Brand family: **indigo rounded-square base, white heavy rounded sans glyph, gold
 - Set names kept from the agenda list; Fable Folk is all originals / public-domain tale types (no Disney echoes).
 - `slice_trinkets.py` (Trivily's 4×3 grid slicer) removed — Threadily art is one PNG per trinket.
 - Collection screen renders the placeholders (checked in the browser).
+
+---
+
+## #5 — Puzzle data format + validator
+
+- [x] Packs of 100 puzzles per file at `src/assets/puzzles/<n>.json`:
+  ```jsonc
+  {
+    "pack": 1,
+    "puzzles": [
+      {
+        "id": 1,
+        "rating": 2,                           // 1–5 stars, authored (see #6)
+        "title": "Lone Star & Friends",        // optional
+        "categories": [
+          { "name": "Texas", "tiles": ["Austin", "Alamo", "Big Bend", "Rangers"] },
+          { "name": "Ohio",  "tiles": ["Columbus", "Cedar Point", "Cuyahoga", "Browns"] }
+        ],
+        "herrings": ["Austin"],                // optional: deliberate dual-meaning tiles
+        "note": "Austin is also a first name", // optional: author note, never shown
+        "warning": "MLB"                       // optional: rights-holder disclaimer
+      }
+    ]
+  }
+  ```
+- [x] Authored order is the answer key. Tiles shuffle at runtime.
+- [x] `validate-puzzles.mjs`:
+  - schema check
+  - unique tiles within a puzzle
+  - unique puzzle ids
+  - tiles-per-category consistent
+  - no duplicate puzzles across packs
+  - tile length ≤ `TILE_MAX_CHARS` (from #2)
+  - categories ≤ `MAX_CATEGORIES`
+  - `rating` present
+- [x] Re-run after every content edit.
+
+**Session notes (#5):**
+- Format exactly as specified above; types in `src/app/entities/entities.ts` (`puzzle`, `category`, `pack_data`).
+- Authoring is in `content/packNN.txt` (compact text DSL) and `node build-puzzles.mjs` compiles it to `src/assets/puzzles/<n>.json`, assigning ids from pack + position. `npm run puzzles` = build + validate.
+- `validate-puzzles.mjs` reads `MAX_CATEGORIES`, `TILES_PER_CATEGORY`, `TILE_MAX_CHARS`, `PUZZLES_PER_PACK`, `MAX_PACK` straight from `constants.ts`. Checks: schema + unknown fields, rating 1–5, id range/order per pack, unique ids, 2–`MAX_CATEGORIES` categories, exactly `TILES_PER_CATEGORY` tiles each, tile length, stray whitespace, duplicate tiles and category names (case-insensitive), herrings must be real tiles, duplicate boards across packs, missing pack files. Prints rating mix, grid sizes, and the small-but-hard count against the #6 targets. Negative-tested (11 seeded errors all caught, exit 1).
+- Pack 1 seeded with 12 puzzles; filled to 100 in #12.
+- Fixed a real ambiguity in the #2 sample board: "Cobra" was in Yoga poses alongside a Snakes category → now "Lotus".

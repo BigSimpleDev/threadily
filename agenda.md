@@ -82,40 +82,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
-## #5 — Puzzle data format + validator
-
-- [ ] Packs of 100 puzzles per file at `src/assets/puzzles/<n>.json`:
-  ```jsonc
-  {
-    "pack": 1,
-    "puzzles": [
-      {
-        "id": 1,
-        "rating": 2,                           // 1–5 stars, authored (see #6)
-        "title": "Lone Star & Friends",        // optional
-        "categories": [
-          { "name": "Texas", "tiles": ["Austin", "Alamo", "Big Bend", "Rangers"] },
-          { "name": "Ohio",  "tiles": ["Columbus", "Cedar Point", "Cuyahoga", "Browns"] }
-        ],
-        "herrings": ["Austin"],                // optional: deliberate dual-meaning tiles
-        "note": "Austin is also a first name", // optional: author note, never shown
-        "warning": "MLB"                       // optional: rights-holder disclaimer
-      }
-    ]
-  }
-  ```
-- [ ] Authored order is the answer key. Tiles shuffle at runtime.
-- [ ] `validate-puzzles.mjs`:
-  - schema check
-  - unique tiles within a puzzle
-  - unique puzzle ids
-  - tiles-per-category consistent
-  - no duplicate puzzles across packs
-  - tile length ≤ `TILE_MAX_CHARS` (from #2)
-  - categories ≤ `MAX_CATEGORIES`
-  - `rating` present
-- [ ] Re-run after every content edit.
-
 ## #6 — Difficulty rating
 
 All puzzles are open, so the rating tells players what they're getting into.
