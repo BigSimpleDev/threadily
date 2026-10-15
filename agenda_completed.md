@@ -242,3 +242,40 @@ All puzzles are open, so the rating tells players what they're getting into.
 - Energy-continue path and its constants removed (#1).
 - New `adsLeftToday()` and `timeToAfford(cost)`. Home header meter shows energy + countdown + an ad button with "N/5" left today. The out-of-energy alert (when starting a puzzle) shows "Enough refills in M:SS" and "Watch ad +5 (N/5 left today)", hidden once today's ads are used.
 - Tests: daily cap, ads-left countdown, persistence shape, reset after a stored "yesterday", rollover while open across midnight, override bypass, time-to-afford, plus the ported offline-refill / clamp / countdown tests.
+
+---
+
+## #7 — Game loop (full build on top of the #2 prototype)
+
+- [x] Tap tile → tap category to place. Tap a placed tile to return it.
+- [x] Lock In is enabled only when the category is full.
+- [x] Correct: color-fill lock + small celebration.
+- [x] Wrong: −1 heart + shake; tiles return to the pool.
+- [x] **One away:** when exactly 1 tile is wrong, show a "One away…" toast (still costs the heart).
+- [x] Remember wrong combinations already tried, so locking in the same set again shows "Already guessed" and costs no heart (NYT behavior).
+- [x] All locked → win screen (coins, "Next puzzle") → interstitial check.
+- [x] 0 hearts → modal:
+  - **Watch ad: +3 hearts** (board kept, no cap)
+  - **Give up** (energy already spent)
+- [x] Hint button (coins): auto-place one correct tile.
+- [x] Unit tests:
+  - lock-in correctness
+  - one-away detection
+  - duplicate-guess detection
+  - heart decrement
+  - ad refill
+  - hint placement
+  - win detection
+  - shuffle
+- [x] Play it end to end in the browser. Commit.
+
+**Session notes (#7):**
+- Built on the #2 board. Start: `paramMap` subscription (so "Next puzzle" works whether Ionic reuses the page or makes a new one — the first version double-charged energy; caught in the browser playthrough and fixed), charge `ENERGY_PER_GAME`, set the Continue pointer, interstitial check, deal a shuffled board.
+- Correct lock: row fills with its yarn tone + stitched border, pop animation, three sparkles; the active row hops to the next open category. Wrong: −1 heart + shake, tiles back to the pool. One away toast; "Already guessed" for a repeated wrong set (keyed by category + sorted tiles) costs nothing.
+- Win: 🧶 card with mistakes count, coins (+25 first clear / +1 replay), "Next puzzle" (crosses into the next pack) and "Pack N". The interstitial check runs as the next puzzle starts, never over the win card.
+- 0 hearts: "Out of hearts" card — **Watch ad · +3 hearts** (board kept, no cap; an unfinished ad grants nothing) or **Give up** (back to the pack; energy already spent). Input is frozen while the card is up.
+- Hint (💡 25¢ in the header): confirm alert, then auto-places one correct tile and pins it (double border, can't be removed). Not enough coins → a toast with the cost and balance.
+- Trademark ⓘ disclaimer in the header when a puzzle has `warning`.
+- Pack 0 (layout-test boards) is free practice: no energy, coins, or progress.
+- Unit tests: board rules (lock-in, one-away, duplicate guess, heart decrement, ad refill, hint placement + bounce, win, shuffle) in `board.spec.ts`; component flows in `game.component.spec.ts` (energy charge/block, place/unplace, win coins, replay coins, out-of-hearts → ad, failed ad, already-guessed, hint spend/cancel/insufficient, next puzzle, practice).
+- Browser playthrough at 360×640 (Playwright): solved #1 (+25, solved [1]); #2 wrong → one-away (toast) → repeat (no heart) → 3rd miss → out-of-hearts → ad (+3) → hint (−25, 1 pinned) → solved; replay #1 (+1); reload → coins 26, energy 90, Continue · #3. No console errors.

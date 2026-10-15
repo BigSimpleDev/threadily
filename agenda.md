@@ -82,30 +82,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
-## #7 — Game loop (full build on top of the #2 prototype)
-
-- [ ] Tap tile → tap category to place. Tap a placed tile to return it.
-- [ ] Lock In is enabled only when the category is full.
-- [ ] Correct: color-fill lock + small celebration.
-- [ ] Wrong: −1 heart + shake; tiles return to the pool.
-- [ ] **One away:** when exactly 1 tile is wrong, show a "One away…" toast (still costs the heart).
-- [ ] Remember wrong combinations already tried, so locking in the same set again shows "Already guessed" and costs no heart (NYT behavior).
-- [ ] All locked → win screen (coins, "Next puzzle") → interstitial check.
-- [ ] 0 hearts → modal:
-  - **Watch ad: +3 hearts** (board kept, no cap)
-  - **Give up** (energy already spent)
-- [ ] Hint button (coins): auto-place one correct tile.
-- [ ] Unit tests:
-  - lock-in correctness
-  - one-away detection
-  - duplicate-guess detection
-  - heart decrement
-  - ad refill
-  - hint placement
-  - win detection
-  - shuffle
-- [ ] Play it end to end in the browser. Commit.
-
 ## #9 — Ads, Remove Ads, and marketing site
 
 The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, interstitial caps), so port `AdService` + `PurchaseService`. Wire two rewarded flows: **+3 hearts** and **+5 energy**. Ad-free behaves exactly as it does in Trivily.
