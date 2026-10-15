@@ -198,3 +198,26 @@ Brand family: **indigo rounded-square base, white heavy rounded sans glyph, gold
 - `validate-puzzles.mjs` reads `MAX_CATEGORIES`, `TILES_PER_CATEGORY`, `TILE_MAX_CHARS`, `PUZZLES_PER_PACK`, `MAX_PACK` straight from `constants.ts`. Checks: schema + unknown fields, rating 1–5, id range/order per pack, unique ids, 2–`MAX_CATEGORIES` categories, exactly `TILES_PER_CATEGORY` tiles each, tile length, stray whitespace, duplicate tiles and category names (case-insensitive), herrings must be real tiles, duplicate boards across packs, missing pack files. Prints rating mix, grid sizes, and the small-but-hard count against the #6 targets. Negative-tested (11 seeded errors all caught, exit 1).
 - Pack 1 seeded with 12 puzzles; filled to 100 in #12.
 - Fixed a real ambiguity in the #2 sample board: "Cobra" was in Yoga poses alongside a Snakes category → now "Lotus".
+
+---
+
+## #6 — Difficulty rating
+
+All puzzles are open, so the rating tells players what they're getting into.
+
+- [x] **Rating = authored 1–5 stars**, not derived purely from grid size. Rough guide:
+  - **Size sets the floor:** 2×4 ≈ 1★, 3×4 ≈ 2★, 4×4 ≈ 3★, 5×4 ≈ 4★.
+  - **Wordplay raises it:** each strong red herring or tight overlap adds stars.
+  - **Small grids can be hard:** a 3×4 built on pure wordplay (homophones, hidden words, words with 3 meanings) can be 4–5★. Brian wants a real share of these.
+- [x] Target mix across the 1,000: ~15% 1★, 25% 2★, 30% 3★, 20% 4★, 10% 5★. At least 100 puzzles must be "small grid, hard wordplay" (≤ 3×4 at ≥ 4★).
+- [x] Ordering: pack 1 starts easy and ratings trend upward, but every pack mixes ratings so players always have choices.
+- [x] UI:
+  - stars on each puzzle in the pack select
+  - a star filter / sort on pack select
+  - "Continue" = next unsolved puzzle in order
+
+**Session notes (#6):**
+- Rating rubric, ambiguity rule, target mix, and ordering written up in `PUZZLES.md` (the #12 seed bank goes in the same file). The mix and the small-but-hard count are tracked by `validate-puzzles.mjs`; actually hitting the targets is #12's content work.
+- Pack select (`pack/:pack`, `src/app/pack/`): numbered grid with stars, grid size, and solved state (sage fill + stitched ring + check badge); star filter chips (All / 1★–5★, remembered under `bsd.thr.pack_star_filter`); sort chip cycles In order → Easiest first → Hardest first.
+- "Continue" = `GameService.nextUnsolved()`: first unsolved puzzle in authored order across packs, loading packs lazily and stopping at the first hit. `nextAfter()` powers "Next puzzle" (#7). Both unit-tested.
+- Home hero now shows "Continue · #N" + a Pack button (full home layout in #11).

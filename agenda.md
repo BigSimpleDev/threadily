@@ -82,21 +82,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: on home, scroll to **Layout test (#2)** and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
 - [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
 
-## #6 — Difficulty rating
-
-All puzzles are open, so the rating tells players what they're getting into.
-
-- [ ] **Rating = authored 1–5 stars**, not derived purely from grid size. Rough guide:
-  - **Size sets the floor:** 2×4 ≈ 1★, 3×4 ≈ 2★, 4×4 ≈ 3★, 5×4 ≈ 4★.
-  - **Wordplay raises it:** each strong red herring or tight overlap adds stars.
-  - **Small grids can be hard:** a 3×4 built on pure wordplay (homophones, hidden words, words with 3 meanings) can be 4–5★. Brian wants a real share of these.
-- [ ] Target mix across the 1,000: ~15% 1★, 25% 2★, 30% 3★, 20% 4★, 10% 5★. At least 100 puzzles must be "small grid, hard wordplay" (≤ 3×4 at ≥ 4★).
-- [ ] Ordering: pack 1 starts easy and ratings trend upward, but every pack mixes ratings so players always have choices.
-- [ ] UI:
-  - stars on each puzzle in the pack select
-  - a star filter / sort on pack select
-  - "Continue" = next unsolved puzzle in order
-
 ## #7 — Game loop (full build on top of the #2 prototype)
 
 - [ ] Tap tile → tap category to place. Tap a placed tile to return it.

@@ -10,6 +10,7 @@ import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { signal } from '@angular/core';
 import { SAMPLE_PUZZLES } from '../game/samples';
+import { GameService, puzzle_ref } from '../services/game.service';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,9 @@ export class HomeComponent implements ViewWillEnter {
   public energySvc = inject(EnergyService);
   private adSvc = inject(AdService);
   private toastCtrl = inject(ToastController);
+  private gameSvc = inject(GameService);
+
+  next = signal<puzzle_ref | null>(null);
 
   addingEnergy = signal(false);
   samples = SAMPLE_PUZZLES;
@@ -34,10 +38,16 @@ export class HomeComponent implements ViewWillEnter {
 
   ionViewWillEnter() {
     this.lstoreSvc.setPlayerInfo();
+    this.gameSvc.nextUnsolved(id => this.lstoreSvc.isSolved(id)).subscribe(r => this.next.set(r));
   }
 
   play() {
-    this.router.navigate(['/play', 1, 0]);
+    const n = this.next();
+    if (n) this.router.navigate(['/play', n.pack, n.index]);
+  }
+
+  openPack(pack: number) {
+    this.router.navigate(['/pack', pack]);
   }
 
   playSample(i: number) {

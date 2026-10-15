@@ -30,7 +30,8 @@
   <div class="dly-hero-card">
     <h2 class="dly-hero-title">Threadily</h2>
     <div class="dly-hero-actions">
-      <ion-button (click)="play()" class="dly-btn-hero-primary">Play</ion-button>
+      <ion-button (click)="play()" class="dly-btn-hero-primary" [disabled]="!next()">Continue{{ next() ? ' · #' + (next()!.index + 1) : '' }}</ion-button>
+      <ion-button fill="outline" (click)="openPack(next()?.pack ?? 1)" class="dly-btn-hero-outline">Pack {{ next()?.pack ?? 1 }}</ion-button>
     </div>
   </div>
 

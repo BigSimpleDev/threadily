@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+  <div class="thr-pack-hdr">
+    <button class="thr-icon-btn" (click)="goHome()" aria-label="Back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <div class="thr-pack-title">
+      <span class="thr-pack-name">Pack {{ pack() }}</span>
+      <span class="thr-pack-sub">{{ solvedCount() }} / {{ puzzles().length }} solved</span>
+    </div>
+    <button class="thr-sort-chip" (click)="cycleSort()">{{ sortLabels[sort()] }}</button>
+  </div>
+  <div class="thr-filter-row" role="group" aria-label="Filter by difficulty">
+    <button class="thr-filter-chip" [class.thr-filter-on]="starFilter() === 0" (click)="setFilter(0)">All</button>
+    @for (s of starOptions; track s) {
+      <button class="thr-filter-chip" [class.thr-filter-on]="starFilter() === s" (click)="setFilter(s)">
+        {{ s }}<span class="thr-filter-star">★</span>
+      </button>
+    }
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="thr-pack-grid">
+    @for (c of cells(); track c.puzzle.id) {
+      <button class="thr-pack-cell" [class.thr-pack-solved]="isSolved(c.puzzle)" (click)="play(c)"
+        [attr.aria-label]="'Puzzle ' + (c.index + 1) + ', ' + c.puzzle.rating + ' stars' + (isSolved(c.puzzle) ? ', solved' : '')">
+        <span class="thr-pack-num">{{ c.index + 1 }}</span>
+        <span class="thr-pack-stars">
+          @for (s of starOptions; track s) {
+            <span [class.thr-star-on]="s <= c.puzzle.rating">★</span>
+          }
+        </span>
+        <span class="thr-pack-size">{{ c.puzzle.categories.length }}×4</span>
+        @if (isSolved(c.puzzle)) {
+          <span class="thr-pack-check"><ion-icon name="checkmark"></ion-icon></span>
+        }
+      </button>
+    } @empty {
+      <p class="thr-pack-empty">No {{ starFilter() }}★ puzzles in this pack.</p>
+    }
+  </div>
+</ion-content>
