@@ -450,3 +450,16 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 - Trinkets: 3 yarn event sets (`spooky_stitches`, `harvest_knits`, `winter_woolens`; legendaries Pumpkin King, Golden Gobbler, Star Topper) added to `trinketart/sets.json`. The catalog is now 180 items, using placeholder cards. **Brian: generate their art in ChatGPT with the updated `trinketart/ART_PROMPT.md`.**
 - Played in Chrome: the home card showed 19/20, the pack banner and energy went 120 → 112, and solving the 20th puzzle awarded Pumpkin King on the win card. `/pack/102`, `/play/102/0`, and `/pack/103` all redirect home today (Oct 15). No console errors.
 - **Heads-up:** Halloween is live *now*, so a launch this month opens with the event.
+
+---
+
+## #2b — Brian: phone check of the 5×4 board
+
+The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's hands.
+
+- [x] Brian: on the phone, turn on Wireless debugging → **Pair device with pairing code**, then on the PC run `adb pair <ip>:<pairPort> <code>`.
+- [x] Brian: run `DEVICE_IP=<ip> PORT=<connectPort> ./debug_android_wireless.sh` (or the `.ps1`) from the repo root. It builds, installs, and launches Threadily.
+- [x] Brian: open **Settings → Board size test** (starts on the first 5×4; "Next puzzle" goes to the second) and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
+- [x] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
+
+**Notes (#2b):** Brian checked the 5×4 boards on his Android phone on 2026-10-15 and said they look good. The provisional answers stand: 5×4 max, 12-character tiles, 14px / 11.5px tile font. He also tried the new drag-and-drop on the phone: he lowered the touch hold to 25 ms, and a preview that flew to the top-left corner after each drop is now fixed. **Still to do:** check different screen sizes in the iOS simulator once he's on the Mac.

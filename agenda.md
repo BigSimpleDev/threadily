@@ -73,15 +73,6 @@ Brian runs these outside the session; the session gives him step-by-step instruc
 
 ---
 
-## #2b — Brian: phone check of the 5×4 board
-
-The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's hands.
-
-- [ ] Brian: on the phone, turn on Wireless debugging → **Pair device with pairing code**, then on the PC run `adb pair <ip>:<pairPort> <code>`.
-- [ ] Brian: run `DEVICE_IP=<ip> PORT=<connectPort> ./debug_android_wireless.sh` (or the `.ps1`) from the repo root. It builds, installs, and launches Threadily.
-- [ ] Brian: open **Settings → Board size test** (starts on the first 5×4; "Next puzzle" goes to the second) and play both 5×4 boards (Road Trip, Double Duty). Check: no scrolling, tiles readable, Lock In easy to hit, one-away toast visible.
-- [ ] Confirm or change the provisional answers (5×4 max, 12-char tiles, 14px / 11.5px font, pool shrinks, rows don't collapse).
-
 ## #9b — Brian: store/console setup + OK the site edits
 
 - [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
@@ -101,7 +92,7 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 | Unlocks | All puzzles open from the start |
 | Difficulty | Authored 1–5★: size sets the floor, wordplay raises it; 100+ small-but-hard puzzles |
 | Heart ads | +3 hearts per ad, no cap |
-| Grid max | **5×4** (provisional: fits 360×640 in the browser; Brian to confirm on phone, #2b). Tiles ≤ 12 chars |
+| Grid max | **5×4**, confirmed on Brian's phone (#2b). Tiles ≤ 12 chars |
 | Logo | Brian generates in ChatGPT with the #3 prompt; session builds the SVG |
 | Ads / IAP | Same as Trivily / Decryptly. Step-by-step + site marketing doc in #9 |
 | Session permissions | Commit, or commit + push; run and play the app |
