@@ -87,14 +87,6 @@ The browser test passed (notes in `agenda_completed.md` #2); this needs Brian's 
 - [ ] Brian: follow `MONETIZATION_INSTRUCTIONS.md` Parts 1–4 (AdMob, IAP, RevenueCat, Small Business check) and paste the ids where it says.
 - [ ] Brian: say "go" on the bigsimple.dev edits (Part 5). A session then copies `site-drafts/games/threadily/privacy.html`, adds the game card, footer, legal, and sitemap entries, and commits in the site repo. Brian deploys.
 
-## #13 — Release config
-
-- [ ] Run `npx cap add android` and `npx cap add ios`. Verify `com.bigsimple.threadily` in Gradle and in Xcode. Display name `Threadily`.
-- [ ] Store listing title **`Threadily: Word Groups`**.
-- [ ] Store assets: screenshots (phone + tablet), feature graphic, short and full description (keywords: word groups, word puzzle, categories, sort, brain teaser — no "Connections").
-- [ ] Data safety / App Privacy forms (AdMob device identifiers). Privacy URL from #9.
-- [ ] Portrait lock + status bar (Trivily bootstrap). Release checklist from `MONETIZATION_INSTRUCTIONS.md`. Commit and tag.
-
 ## #14 — Seasonal events (post-launch)
 
 - [ ] Port `EVENTS` / `EventService` / `EventComponent` from Trivily:

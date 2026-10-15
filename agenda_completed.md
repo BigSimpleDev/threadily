@@ -399,3 +399,24 @@ The code is identical to Trivily (AdMob + RevenueCat, `ad_free` entitlement, int
 - Brand-heavy puzzles carry `warning=` (car makers, consoles, toy makers, verbs from brands).
 - Playtest: `rateplay.mjs` (Playwright, 390px mobile) played 10 puzzles per star level. Each run did one deliberate wrong lock-in using a herring where one exists: the heart dropped and the tiles went back to the pool. Then it did a full solve: 50/50 won, no console errors. Dense 5×4 boards with 12-character tiles were checked at 360px and fit; long tiles shrink their font.
 - Fixed the sloppy "Sounds like a number" seed line in PUZZLES.md.
+
+---
+
+## #13 — Release config
+
+- [x] Run `npx cap add android` and `npx cap add ios`. Verify `com.bigsimple.threadily` in Gradle and in Xcode. Display name `Threadily`.
+- [x] Store listing title **`Threadily: Word Groups`**.
+- [x] Store assets: screenshots (phone + tablet), feature graphic, short and full description (keywords: word groups, word puzzle, categories, sort, brain teaser — no "Connections").
+- [x] Data safety / App Privacy forms (AdMob device identifiers). Privacy URL from #9.
+- [x] Portrait lock + status bar (Trivily bootstrap). Release checklist from `MONETIZATION_INSTRUCTIONS.md`. Commit and tag.
+
+**Session notes (#13):**
+- `npx cap add ios` ran on Windows. Capacitor 8 uses Swift Package Manager, so there's no CocoaPods and no `pod install` on the Mac. The bundle id is `com.bigsimple.threadily` in both Gradle and `project.pbxproj`, and the display name is `Threadily` on both platforms.
+- iOS `Info.plist`: iPhone is portrait only (iPad keeps all four orientations, which iPad multitasking needs). Added `NSUserTrackingUsageDescription`, `SKAdNetworkItems`, and `GADApplicationIdentifier`. That last one is **Google's sample id with a TODO** until Brian creates the iOS AdMob app.
+- ATT: Capacitor 8's template is scene-based, so `applicationDidBecomeActive` never fires. Trivily's native ATT request was ported into `SceneDelegate.sceneDidBecomeActive` instead. **Not compiled yet (no Mac here). Brian: build once in Xcode.**
+- iOS icon and light/dark splash generated with `@capacitor/assets`.
+- Portrait lock and status bar were already in `app.component.ts` from the Trivily bootstrap.
+- `STORE_LISTING.md`: title, subtitle, short and full description, keywords (length-checked, no "Connections"), content-rating answers, Play data safety and App Store App Privacy tables, export compliance, and release steps.
+- Screenshots: `store-screenshots.mjs` → `resources/store/{play-phone,play-tablet,ios-6.9,ios-ipad-13}/` with 7 shots each. They use the brand-free "Find the Thread" puzzle; the first pick showed MLB/NBA team names. **No trinket-album shot yet:** the art is still placeholder SVGs. Reshoot after the ChatGPT art lands.
+- Tablet fix found while shooting: on iPad the phone-sized board left about 60% of the screen empty. A `(min-width: 700px) and (min-height: 900px)` breakpoint now scales tiles (6.4vh), type, and the header. Checked: a 5×4 board fits at 800×1280 and 1032×1376. Phones are unchanged.
+- Release checklist in `MONETIZATION_INSTRUCTIONS.md` updated (SPM, STORE_LISTING step). Tagged **`v1.0.0-rc1`**. The final `v1.0.0` tag should go on the commit that swaps in the real AdMob and RevenueCat ids.
