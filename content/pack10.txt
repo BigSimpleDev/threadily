@@ -1,21 +1,21 @@
 # Pack 10
 
-@ 1 | Wet or Dry
-Wet places: Swamp, Marsh, Bog, Lagoon
-Dry places: Desert, Dune, Mesa, Canyon
+@ 1 | Island or Station
+Desert island: Palm tree, Coconut, Castaway, Message
+Space station: Airlock, Zero-g, Spacewalk, Docking
 
-@ 1 | Hot Drinks, Cold Drinks
-Hot drinks: Cocoa, Tea, Coffee, Mulled wine
-Cold drinks: Lemonade, Iced tea, Soda, Milkshake
+@ 1 | Wizard or Vampire
+Wizard: Spellbook, Potion, Pointy hat, Staff
+Vampire: Fangs, Cape, Coffin, Garlic
 
-@ 2 | In the Cupboard
-Spices: Cumin, Paprika, Nutmeg, Turmeric
-Baking aisle: Flour, Sugar, Vanilla, Cocoa
-Condiments: Ketchup, Mustard, Relish, Mayo
+@ 2 | Grocery Run
+Dairy aisle: Kefir, Sour cream, Ghee, Buttermilk
+Deli counter: Salami, Ham, Potato salad, Coleslaw
+Bakery counter: Bagels, Rolls, Sheet cake, Croissants
 
-@ 1 | Wheels or Wings
-Has wheels: Bicycle, Skateboard, Wagon, Scooter
-Has wings: Eagle, Butterfly, Bat, Dragonfly
+@ 1 | Lighthouse or Windmill
+Lighthouse: Beacon, Keeper, Foghorn, Lamp room
+Windmill: Blades, Millstone, Grain, Holland
 
 @ 1 | Sing or Dance
 Singers: Tenor, Choir, Soloist, Crooner
@@ -60,28 +60,27 @@ Drama terms: Monologue, Soliloquy, Aside, Cue
 Rainy day: Puddle, Umbrella, Rain boots, Thunder
 Snowy day: Snowflake, Sled, Igloo, Snow angel
 
-@ 3 | Grand Tour
-Paris sights: Louvre, Eiffel, Sacre-Coeur, Notre-Dame
-Rome sights: Colosseum, Trevi, Forum, Vatican
-London sights: Big Ben, Tower, Westminster, Tate
-Athens sights: Acropolis, Parthenon, Agora, Plaka
+@ 3 | Nicknames
+US city nicknames: Big Apple, Windy City, Big Easy, Motor City
+World city nicknames: Eternal City, Big Smoke, Holy City, Lion City
+Country nicknames: Emerald Isle, Rising Sun, Old Blighty, Down Under
+Planet nicknames: Red Planet, Blue Marble, Evening Star, Morning Star
 
-@ 2 | Kitchen Drawer
-Utensils: Ladle, Tongs, Spatula, Whisk
-Gadgets: Peeler, Zester, Garlic press, Can opener
-Linens: Apron, Oven mitt, Dish towel, Pot holder
+@ 2 | Party Planning
+Decorations: Streamers, Banner, Balloon arch, Centerpiece
+Paper goods: Napkins, Paper plates, Straws, Plastic cups
+Rentals: Bounce house, Chairs, Tent, Dance floor
 
-@ 4 | Heads and Hands
-Head___: Start, Light, Line, Quarters
-Heart___: Burn, Beat, Throb, Felt
-Hand___: Shake, Book, Cuff, Rail
+@ 4 | Idiom Fill
+In a ___: Pickle, Jam, Stew, Nutshell
+Out of the ___: Woods, Blue, Loop, Box
+Under the ___: Weather, Radar, Wire, Knife
 
-@ 3 | Barnyard Babies
-Baby mammals: Calf, Foal, Kid, Lamb
-Baby birds: Chick, Gosling, Cygnet, Eaglet
-Baby fish: Fry, Fingerling, Smolt, Elver
-Baby insects: Larva, Nymph, Grub, Maggot
-~ Kid
+@ 3 | Wonders of the World
+Ancient wonders: Colossus, Pharos, Mausoleum, Giza Pyramid
+New wonders: Petra, Machu Picchu, Chichen Itza, Great Wall
+Natural wonders: Aurora, Paricutin, Grand Canyon, Ha Long Bay
+Modern marvels: Panama Canal, Chunnel, Hoover Dam, CN Tower
 
 @ 4 | Shakespeare's Folk
 Hamlet: Ophelia, Polonius, Laertes, Horatio
@@ -100,12 +99,11 @@ Pop___: Quiz, Art, Corn, Star
 Snap___: Back, Dragon, Pea, Chat
 Crack___: Pot, Down, Head, Whip
 
-@ 3 | Dessert Cart
-Pies: Key lime, Pecan, Pumpkin, Cherry
-Cakes: Angel food, Bundt, Red velvet, Carrot
-Cookies: Macaroon, Shortbread, Gingersnap, Biscotti
-Puddings: Bread, Rice, Tapioca, Figgy
-~ Cherry, Carrot
+@ 3 | Toppings Bar
+Dessert sauces: Caramel, Butterscotch, Ganache, Hot fudge
+Crunchy toppings: Praline, Brittle, Streusel, Crumble
+Creamy toppings: Mascarpone, Whipped, Custard, Chantilly
+Fruit toppings: Compote, Candied peel, Coulis, Zest
 
 @ 3 | Number Crunch
 Primes: 7, 11, 13, 19
@@ -123,47 +121,45 @@ Colonial painters: Copley, Peale, Stuart, Trumbull
 Poets: Frost, Whitman, Dickinson, Poe
 ~ Stuart, Pierce
 
-@ 2 | Toy Box
-Building toys: Lego, Lincoln Logs, Tinkertoy, K'Nex
-Dolls: Barbie, Raggedy Ann, Polly Pocket, Bratz
-Ride-on toys: Tricycle, Hobbyhorse, Big Wheel, Wagon
+@ 2 | Kite Day
+Kite parts: Spar, Bridle, Tail, Line
+Kite types: Box, Delta, Diamond, Stunt
+Kite words: Lift, Wind, Launch, Tangle
 
-@ 3 | Cheese Board
-Soft cheeses: Brie, Camembert, Burrata, Chevre
-Hard cheeses: Parmesan, Manchego, Gouda, Gruyere
-Blue cheeses: Gorgonzola, Stilton, Roquefort, Cambozola
-Accompaniments: Fig jam, Quince paste, Honeycomb, Cornichon
+@ 3 | Antipasto
+Olives: Kalamata, Gaeta, Nicoise, Manzanilla
+Pickles: Cornichon, Dill spear, Half-sour, Gherkin
+Mustards: Dijon, Whole grain, Honey, Spicy brown
+Spreads: Tapenade, Pate, Rillettes, Hummus
 
 @ 4 | Keep the Change
 Change___: Room, Over, Ling, Able
 Coin ___: Toss, Flip, Op, Laundry
 Cash ___: Cow, Flow, Back, Register
 
-@ 4 | Never Never Land
-Real places: Timbuktu, Walla Walla, Ouagadougou, Kalamazoo
-Fictional places: Narnia, Shangri-La, Brigadoon, Lilliput
-Lost legends: Atlantis, El Dorado, Avalon, Lemuria
-~ Timbuktu, Kalamazoo
+@ 4 | Fictional Places
+Fictional countries: Genovia, Latveria, Freedonia, Ruritania
+Fictional cities: Gotham, Metropolis, Bedrock, Emerald City
+Fictional islands: Skull Island, Amity, Sodor, Neverland
 
 @ 2 | Road Trip
 Car games: I Spy, Plate game, 20 Questions, Slug bug
 Road snacks: Beef jerky, Trail mix, Pretzels, Gummy worms
 Road stops: Rest stop, Diner, Motel, Gas station
 
-@ 3 | Music Notes
-Tempos: Allegro, Andante, Adagio, Presto
-Dynamics: Forte, Piano, Crescendo, Pianissimo
-Note values: Whole, Half, Quarter, Eighth
-~ Piano, Presto
+@ 3 | Song Forms
+Song types: Lullaby, Anthem, Ballad, Dirge
+Choral works: Mass, Requiem, Cantata, Oratorio
+Instrumental forms: Sonata, Concerto, Symphony, Etude
 
-@ 4 | Odd Jobs
-Bygone city jobs: Lamplighter, Pinsetter, Iceman, Town crier
-Medieval trades: Fletcher, Cooper, Chandler, Tanner
-Ship jobs: Purser, Bosun, Stoker, Cabin boy
+@ 4 | Behind the Scenes
+Courtroom roles: Bailiff, Stenographer, Clerk, Foreperson
+Newsroom roles: Stringer, Anchor, Copy editor, Columnist
+Hospital roles: Phlebotomist, Triage nurse, Intern, Chaplain
 
-@ 1 | Cat or Dog
-Cat things: Meow, Purr, Litter box, Hairball
-Dog things: Bark, Fetch, Leash, Kennel
+@ 1 | Owl or Moth
+Owl: Hoot, Talons, Feathers, Wise
+Moth: Cocoon, Porch light, Antennae, Mothball
 
 @ 1 | Sun or Moon
 Sun: Sunscreen, Sunrise, Solar panel, Sunflower
@@ -192,29 +188,29 @@ Burger toppings: Pickle, Onion, Lettuce, Tomato
 Taco fillings: Carnitas, Barbacoa, Al pastor, Chorizo
 Hot dog toppings: Sauerkraut, Relish, Chili, Mustard
 
-@ 2 | First Responders
-Firefighter gear: Hose, Ladder, Axe, Turnout coat
-Police gear: Badge, Handcuffs, Nightstick, Whistle
+@ 2 | Keepers
+Zookeeper: Enclosure, Feeding time, Habitat, Exhibit
+Beekeeper: Veil, Smoker, Hive tool, Frame
 
-@ 2 | Around the House
-Bedroom: Dresser, Nightstand, Headboard, Wardrobe
-Bathroom: Vanity, Shower, Bath mat, Towel rack
-Living room: Sofa, Ottoman, Coffee table, Recliner
+@ 2 | Curb Appeal
+Front porch: Rocker, Porch swing, Welcome mat, Doorbell
+Front yard: Mailbox, Flower bed, Driveway, Lamppost
+Backyard: Grill, Fire pit, Swing set, Patio
 
-@ 2 | Animal Classes
-Mammals: Whale, Bat, Dolphin, Platypus
-Reptiles: Turtle, Snake, Lizard, Crocodile
-Amphibians: Frog, Toad, Newt, Salamander
+@ 2 | Animal Diets
+Herbivores: Giraffe, Koala, Panda, Manatee
+Carnivores: Lion, Shark, Eagle, Orca
+Omnivores: Bear, Raccoon, Pig, Crow
 
 @ 2 | Weather Extremes
 Hot weather: Heatwave, Drought, Scorcher, Swelter
 Cold weather: Blizzard, Frost, Cold snap, Freeze
 Wet weather: Downpour, Monsoon, Drizzle, Flood
 
-@ 2 | School Day
-Playground: Swings, Seesaw, Monkey bars, Sandbox
-Classroom: Whiteboard, Desk, Globe, Chalk
-Cafeteria: Tray, Lunch lady, Milk carton, Hairnet
+@ 2 | Field Trip
+Field trip spots: Museum, Aquarium, Planetarium, Farm
+Bring along: Name tag, Bag lunch, Water, Clipboard
+Chaperone jobs: Head count, Roll call, Buddy system, First aid
 
 @ 2 | Shoe Store
 Boots: Cowboy, Rain, Hiking, Snow
@@ -226,101 +222,101 @@ Donuts: Glazed, Jelly, Cruller, Boston cream
 Bagels: Everything, Poppy seed, Onion, Sesame
 Breads: Sourdough, Rye, Wheat, Multigrain
 
-@ 2 | Getting There
-By air: Jet, Blimp, Glider, Helicopter
-By sea: Ferry, Submarine, Tugboat, Catamaran
-By land: Tram, Bus, Truck, Taxi
+@ 2 | Drive Time
+Traffic: Gridlock, Rush hour, Jam, Backup
+Parking: Meter, Valet, Garage, Parallel
+Car trouble: Flat tire, Dead battery, Overheat, Stall
 
-@ 2 | Closet Check
-Tops: Blouse, Tank top, Polo, Cardigan
-Bottoms: Jeans, Shorts, Leggings, Culottes
-Outerwear: Parka, Blazer, Trench, Windbreaker
+@ 2 | Packing List
+Toiletry bag: Toothbrush, Razor, Deodorant, Floss
+Carry-on: Passport, Charger, Neck pillow, Snacks
+Ski bag: Goggles, Hand warmers, Lift ticket, Ski socks
 
-@ 3 | Body Basics
-Bones: Femur, Tibia, Ulna, Radius
-Muscles: Biceps, Deltoid, Gluteus, Soleus
-Organs: Spleen, Pancreas, Liver, Kidney
-~ Radius
+@ 3 | Hand and Foot
+Fingers: Thumb, Index, Ring, Pinky
+Hand parts: Palm, Knuckle, Wrist, Cuticle
+Foot parts: Heel, Arch, Sole, Instep
+~ Ring, Palm, Sole
 
-@ 3 | Coffee House
-Cocktails: Negroni, Mojito, Daiquiri, Sidecar
-Coffee drinks: Cortado, Macchiato, Flat white, Americano
-Teas: Matcha, Oolong, Chai, Sencha
+@ 3 | Brunch Menu
+Egg dishes: Benedict, Florentine, Royale, Sardou
+Brunch drinks: Mimosa, Bellini, Bloody Mary, Michelada
+Brunch sides: Hash, Grits, Home fries, Biscuits
 
 @ 3 | Fifty Nifty
 State nicknames: Sunshine, Lone Star, Golden, Empire
 State capitals: Albany, Austin, Sacramento, Tallahassee
 State birds: Cardinal, Mockingbird, Robin, Bluebird
 
-@ 3 | Dance Floor
-Ballroom dances: Foxtrot, Quickstep, Rumba, Cha-cha
-Folk dances: Hora, Jig, Reel, Morris
-Street dances: Breakdance, Popping, Krumping, Voguing
+@ 3 | Slang Sports
+Surf slang: Gnarly, Goofy foot, Kook, Shaka
+Ski slang: Mogul, Powder, Bunny hill, Apres-ski
+Climbing slang: Belay, Crimp, Crag, Send
 
-@ 3 | World Desserts
-Italian desserts: Tiramisu, Panna cotta, Gelato, Cannoli
-French desserts: Creme brulee, Clafoutis, Souffle, Madeleine
-Spanish desserts: Flan, Churros, Turron, Polvoron
-Greek desserts: Baklava, Loukoumades, Kataifi, Halva
+@ 3 | Asian Sweets
+Japanese sweets: Mochi, Dorayaki, Dango, Yokan
+Korean sweets: Hotteok, Bingsu, Yakgwa, Tteok
+Chinese sweets: Mooncake, Tangyuan, Egg tart, Sesame ball
+Filipino sweets: Halo-halo, Bibingka, Leche flan, Ube jam
 
-@ 3 | Tool Kit
-Weather tools: Barometer, Anemometer, Hygrometer, Rain gauge
-Navigation tools: Sextant, Astrolabe, GPS, Chronometer
-Drawing tools: Protractor, T-square, Stencil, French curve
+@ 3 | Lens Cap
+Lens types: Convex, Concave, Fisheye, Telephoto
+Telescope types: Refractor, Reflector, Radio, Dobsonian
+Eyewear: Readers, Progressives, Contacts, Shades
 
 @ 3 | Game On
 Game genres: Platformer, Shooter, RPG, Puzzle
 Game consoles: Switch, Xbox, PlayStation, Game Boy
 Controller parts: D-pad, Trigger, Joystick, Bumper
+warning=the console makers named
 
 @ 3 | House Tour
 Rooms: Attic, Basement, Pantry, Foyer
 House styles: Ranch, Colonial, Bungalow, Victorian
 Roof parts: Eave, Gable, Ridge, Soffit
 
-@ 3 | Sauce Boss
-Mother sauces: Hollandaise, Bechamel, Veloute, Espagnole
-Asian sauces: Hoisin, Teriyaki, Sriracha, Ponzu
-Mexican sauces: Mole, Salsa verde, Pico, Adobo
+@ 3 | Small Plates
+Tapas: Croquetas, Gambas, Pimientos, Albondigas
+Dim sum: Har gow, Siu mai, Char siu bao, Cheung fun
+Meze: Dolma, Falafel, Tzatziki, Kibbeh
 
-@ 3 | Olympic Spirit
-Summer sports: Fencing, Rowing, Archery, Diving
-Winter sports: Luge, Skeleton, Curling, Biathlon
-Track events: Hurdles, Relay, Steeplechase, Sprint
+@ 3 | Endurance
+Running: Taper, Bib, Fartlek, Stride
+Cycling: Peloton, Domestique, Breakaway, Velodrome
+Triathlon: Transition, Wetsuit, Aero bars, Ironman
 
 @ 3 | Masterpieces
 Paintings: Mona Lisa, Scream, Starry Night, Guernica
 Sculptures: David, Thinker, Pieta, Discobolus
 Buildings: Taj Mahal, Parthenon, Alhambra, Kremlin
 
-@ 3 | Fashion Details
-Necklines: V-neck, Crew, Halter, Boat
-Sleeves: Cap, Bell, Raglan, Puff
-Skirts: Pencil, A-line, Pleated, Maxi
+@ 3 | Bag Check
+Handbags: Clutch, Satchel, Hobo, Crossbody
+Luggage: Duffel, Garment bag, Spinner, Hardshell
+Packs: Rucksack, Daypack, Fanny pack, Knapsack
 
-@ 3 | Bread World
-Italian breads: Focaccia, Ciabatta, Grissini, Panettone
-Indian breads: Naan, Roti, Paratha, Kulcha
-French breads: Brioche, Baguette, Fougasse, Boule
-Middle Eastern: Pita, Lavash, Barbari, Ka'ak
-German breads: Pretzel, Pumpernickel, Stollen, Zopf
+@ 3 | World Kitchen
+Japanese dishes: Ramen, Tempura, Sukiyaki, Tonkatsu
+Indian dishes: Biryani, Korma, Dosa, Vindaloo
+Thai dishes: Pad thai, Green curry, Tom yum, Massaman
+Spanish dishes: Paella, Gazpacho, Fabada, Pisto
+Korean dishes: Tteokbokki, Galbi, Japchae, Samgyetang
 
 @ 3 | Primate Pals
 Apes: Gorilla, Chimp, Bonobo, Gibbon
 Monkeys: Capuchin, Macaque, Baboon, Mandrill
 Prosimians: Lemur, Loris, Tarsier, Aye-aye
 
-@ 3 | Cold Blooded
-Lizards: Gecko, Iguana, Skink, Monitor
-Snakes: Python, Cobra, Mamba, Adder
-Turtles: Snapping, Box, Leatherback, Loggerhead
-Crocodilians: Caiman, Gharial, Alligator, Crocodile
-~ Monitor, Box
+@ 3 | Hoofed Herds
+Camelids: Llama, Alpaca, Vicuna, Guanaco
+Wild cattle: Bison, Yak, Gaur, Banteng
+Wild swine: Babirusa, Boar, Bushpig, Forest hog
+Wild equids: Zebra, Onager, Kiang, Brumby
 
-@ 3 | Wedding Bells
-Wedding party: Bridesmaid, Groomsman, Flower girl, Ring bearer
-Wedding attire: Veil, Garter, Tuxedo, Boutonniere
-Reception: Toast, First dance, Buffet, DJ
+@ 3 | Milestones
+Baby shower: Diaper cake, Onesies, Registry, Bassinet
+Housewarming: Potted plant, Doormat, House tour, New keys
+Retirement: Gold watch, Pension, Send-off, Golf clubs
 
 @ 3 | Sea Change
 Tides: Spring, Neap, Ebb, Flood
@@ -333,12 +329,12 @@ Kitchen stations: Grill, Fry, Saute, Pastry
 Front of house: Host, Server, Busser, Sommelier
 Menu terms: Prix fixe, A la carte, Special, Entree
 
-@ 3 | Bird Watch
-Birds of prey: Hawk, Falcon, Osprey, Kite
-Waterfowl: Mallard, Teal, Merganser, Wigeon
-Songbirds: Warbler, Thrush, Wren, Lark
-Shorebirds: Plover, Sandpiper, Avocet, Curlew
-~ Kite, Teal
+@ 3 | Bird Families
+Corvids: Raven, Magpie, Jackdaw, Rook
+Herons: Egret, Bittern, Night heron, Boatbill
+Gamebirds: Pheasant, Grouse, Quail, Partridge
+Hummingbirds: Ruby-throat, Anna's, Rufous, Calliope
+~ Rook
 
 @ 3 | Green Thumb
 Wildflowers: Buttercup, Clover, Thistle, Foxglove
@@ -350,21 +346,20 @@ Arctic animals: Narwhal, Walrus, Lemming, Ptarmigan
 Savanna animals: Wildebeest, Warthog, Meerkat, Hyena
 Jungle animals: Okapi, Tapir, Capybara, Jaguar
 
-@ 3 | Math Class
-Geometry: Angle, Vertex, Radius, Tangent
-Algebra: Variable, Equation, Exponent, Coefficient
-Statistics: Mean, Median, Mode, Outlier
+@ 3 | Powers of Ten
+Small prefixes: Milli, Nano, Pico, Femto
+Big prefixes: Kilo, Giga, Tera, Peta
+Big numbers: Million, Billion, Googol, Zillion
 
-@ 3 | Tech Talk
-Keyboard keys: Shift, Escape, Tab, Delete
-Programming: Loop, Bug, Function, Compiler
-Internet: Browser, Cookie, Firewall, Router
-~ Bug, Cookie
+@ 3 | Office Suite
+Spreadsheet: Cell, Row, Column, Formula
+Word processor: Font, Margin, Indent, Header
+Slideshow: Slide, Animation, Presenter, Template
 
-@ 3 | Fruit Stand
-Apples: Fuji, Gala, Honeycrisp, Granny Smith
-Pears: Bartlett, Bosc, Anjou, Comice
-Oranges: Navel, Valencia, Blood, Cara Cara
+@ 3 | Orchard Varieties
+Cherries: Bing, Rainier, Morello, Maraschino
+Plums: Damson, Greengage, Mirabelle, Santa Rosa
+Peaches: Freestone, Clingstone, White, Donut
 
 @ 4 | Dynamic Duos
 Comedy duos: Abbott, Costello, Laurel, Hardy
@@ -372,37 +367,35 @@ Music duos: Simon, Garfunkel, Sonny, Cher
 Explorer duos: Lewis, Clark, Burke, Wills
 Puppet duos: Bert, Ernie, Statler, Waldorf
 
-@ 4 | River Run
-European rivers: Danube, Volga, Rhine, Seine
-Asian rivers: Ganges, Mekong, Yangtze, Indus
-African rivers: Niger, Congo, Zambezi, Limpopo
-American rivers: Orinoco, Parana, Yukon, Rio Grande
-Australian rivers: Murray, Darling, Swan, Snowy
-~ Niger, Congo
+@ 4 | Language Families
+Romance languages: Catalan, Romanian, Galician, Occitan
+Germanic languages: Icelandic, Frisian, Faroese, Afrikaans
+Slavic languages: Polish, Czech, Serbian, Slovak
+Celtic languages: Breton, Cornish, Manx, Gaelic
+Semitic languages: Arabic, Hebrew, Amharic, Maltese
+~ Polish
 
-@ 4 | Peak Season
-Alps: Matterhorn, Mont Blanc, Eiger, Jungfrau
-Himalayas: Everest, Lhotse, Makalu, Annapurna
-Andes: Aconcagua, Chimborazo, Huascaran, Illimani
-Rockies: Elbert, Pikes Peak, Longs Peak, Robson
+@ 4 | Landforms
+Desert landforms: Hoodoo, Butte, Inselberg, Yardang
+Volcanic landforms: Lava tube, Maar, Cinder cone, Tuff ring
+Coastal landforms: Sea stack, Tombolo, Sea arch, Barrier isle
+River landforms: Oxbow, Levee, Meander, Braid
 
-@ 4 | Building Blocks
-Column orders: Doric, Ionic, Corinthian, Tuscan
-Arch types: Ogee, Lancet, Horseshoe, Corbel
-Roof types: Gable, Hip, Mansard, Gambrel
-~ Horseshoe
+@ 4 | Sacred Spaces
+Cathedral parts: Nave, Apse, Transept, Crypt
+Mosque parts: Minaret, Mihrab, Minbar, Qibla
+Buddhist temple: Stupa, Pagoda, Prayer wheel, Bodhi tree
 
-@ 4 | En Garde
-Fencing: Foil, Epee, Sabre, Parry
-Archery: Fletching, Nock, Quiver, Bullseye
-Riding: Dressage, Canter, Gallop, Stirrup
-~ Foil
+@ 4 | Fight Night
+Wrestling moves: Suplex, Piledriver, Headlock, Full nelson
+Judo terms: Ippon, Tatami, Judogi, Waza-ari
+Karate terms: Kata, Kumite, Kiai, Shotokan
 
-@ 4 | Famous Animals
-Famous horses: Secretariat, Seabiscuit, Man o' War, Black Beauty
-Famous dogs: Laika, Balto, Hachiko, Rin Tin Tin
-Famous cats: Garfield, Grumpy Cat, Felix, Tom
-~ Black Beauty, Tom
+@ 4 | Storybook Animals
+Storybook bears: Paddington, Corduroy, Fozzie, Pooh
+Storybook pigs: Wilbur, Babe, Piglet, Peppa
+Storybook mice: Despereaux, Reepicheep, Frisby, Angelina
+~ Piglet
 
 @ 4 | Calendar Words
 ___ day: Groundhog, Boxing, Labor, Pay
@@ -428,18 +421,18 @@ Famous Johns: Lennon, Adams, Wayne, Grisham
 Famous Pauls: McCartney, Revere, Newman, Rudd
 Famous Marys: Shelley, Poppins, Berry, Tudor
 
-@ 4 | Made Where?
-Italian cars: Ferrari, Fiat, Alfa Romeo, Lancia
-German cars: Audi, Opel, Porsche, BMW
-Japanese cars: Mazda, Subaru, Lexus, Suzuki
-Swedish cars: Volvo, Saab, Koenigsegg, Polestar
-Korean cars: Hyundai, Kia, Genesis, SsangYong
+@ 4 | World Music
+Indian instruments: Sitar, Tabla, Sarod, Veena
+Japanese instruments: Koto, Shamisen, Shakuhachi, Taiko
+Chinese instruments: Erhu, Pipa, Guzheng, Dizi
+Irish instruments: Bodhran, Uilleann, Tin whistle, Concertina
+Andean instruments: Charango, Quena, Zampona, Bombo
 
-@ 4 | Famous Craft
-Famous ships: Titanic, Mayflower, Bounty, Beagle
-Spacecraft: Apollo, Voyager, Sputnik, Hubble
-Famous planes: Enola Gay, Concorde, Spruce Goose, Wright Flyer
-~ Beagle
+@ 4 | Famous Rides
+Movie cars: Herbie, KITT, Batmobile, DeLorean
+Famous trains: Shinkansen, Eurostar, Acela, Rocket
+Movie boats: Orca, Kon-Tiki, Black Pearl, Minnow
+~ Rocket
 
 @ 4 | Undercover
 Detectives: Poirot, Marple, Holmes, Columbo
@@ -447,21 +440,21 @@ Hero alter egos: Wayne, Kent, Parker, Banner
 Spies: Bond, Bourne, Smiley, Hunt
 ~ Banner, Hunt
 
-@ 4 | Finishing Touches
-Paint finishes: Matte, Gloss, Satin, Eggshell
-Wood finishes: Stain, Varnish, Lacquer, Shellac
-Metal finishes: Brushed, Chrome, Anodized, Patina
+@ 4 | Surface Level
+Glass types: Tempered, Stained, Leaded, Crown
+Stone finishes: Honed, Polished, Tumbled, Flamed
+Wood cuts: Quartersawn, Rift, Plainsawn, Burl
 
-@ 4 | Good Boy
-Dog commands: Sit, Stay, Heel, Fetch
-Horse commands: Giddyup, Whoa, Gee, Haw
-Sheepdog calls: Come bye, Away, Walk up, That'll do
+@ 4 | Say the Word
+Square dance calls: Do-si-do, Allemande, Promenade, Sashay
+Military commands: At ease, Attention, About face, Dismissed
+Radio talk: Roger, Wilco, Over, Copy
 
-@ 5 | Foreign Phrases
-French phrases: Deja vu, Faux pas, Cul-de-sac, En route
-German loanwords: Angst, Wanderlust, Zeitgeist, Kitsch
-Latin phrases: Ad hoc, Bona fide, Status quo, Et cetera
-Italian phrases: Al fresco, Fiasco, Bravo, Ciao
+@ 5 | Bon Mots
+Kitchen French: Sous vide, Amuse-bouche, Au jus, Flambe
+Diplomatic French: Detente, Attache, Communique, Demarche
+Fashion French: Couture, Chic, Boutique, Atelier
+Military French: Corps, Coup, Sortie, Barrage
 
 @ 5 | Opening Moves
 Chess openings: Sicilian, Ruy Lopez, French, Caro-Kann
@@ -485,12 +478,12 @@ Heraldic colors: Gules, Azure, Vert, Sable
 Heraldic beasts: Wyvern, Griffin, Lion, Unicorn
 Heraldic poses: Rampant, Passant, Couchant, Sejant
 
-@ 5 | By the Numbers
-Groups of three: Musketeers, Wise men, Stooges, Graces
-Groups of seven: Dwarfs, Sins, Wonders, Seas
-Groups of nine: Muses, Innings, Lives, Worthies
-Groups of twelve: Apostles, Months, Zodiac, Jurors
-Groups of ten: Commandments, Pins, Plagues, Lords
+@ 5 | Card Tables of the World
+Italian card games: Scopa, Briscola, Tressette, Burraco
+Spanish card games: Mus, Tute, Brisca, Chinchon
+German card games: Skat, Doppelkopf, Schafkopf, Sixty-six
+French card games: Belote, Tarot, Piquet, Bezique
+Japanese card games: Hanafuda, Karuta, Koi-Koi, Daifugo
 
 @ 5 | Deep Time
 Geologic periods: Jurassic, Triassic, Cambrian, Permian
@@ -508,10 +501,10 @@ Old length units: Furlong, League, Fathom, Cubit
 Old volume units: Gill, Peck, Bushel, Hogshead
 ~ League
 
-@ 5 | Verse and Meter
-Poetry forms: Haiku, Sonnet, Limerick, Villanelle
-Meters: Iambic, Trochaic, Dactylic, Anapestic
-Rhyme types: Slant, Internal, Eye, Feminine
+@ 5 | Rhetoric
+Rhetorical devices: Anaphora, Chiasmus, Litotes, Zeugma
+Fallacies: Strawman, Ad hominem, Red herring, Tu quoque
+Plot devices: Flashback, MacGuffin, Cliffhanger, Plot twist
 
 @ 5 | Wine List
 Red grapes: Merlot, Malbec, Syrah, Pinot noir
@@ -523,11 +516,11 @@ Major arcana: Fool, Hermit, Lovers, Hanged Man
 Tarot suits: Cups, Wands, Swords, Pentacles
 Mahjong tiles: Bamboo, Circles, Dragons, Winds
 
-@ 5 | Letter Perfect
-Roman-numeral words: Mix, Civil, Livid, Vivid
-Hex-digit words: Facade, Decade, Faded, Accede
-Letters in order: Almost, Biopsy, Chintz, Ghost
-note=All letters are Roman numerals / all letters are A–F / letters run in alphabetical order
+@ 5 | Schools of Thought
+Stoics: Seneca, Epictetus, Zeno, Chrysippus
+Existentialists: Sartre, Kierkegaard, de Beauvoir, Heidegger
+Empiricists: Locke, Hume, Berkeley, Bacon
+~ Bacon
 
 @ 3 | Camera Bag
 Camera parts: Lens, Shutter, Aperture, Viewfinder

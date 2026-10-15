@@ -479,8 +479,8 @@ Fine dining: Caviar, Foie gras, Truffle oil, Tasting menu
 Classic novels: Moby-Dick, Dracula, Ulysses, Middlemarch
 Poets: Frost, Dickinson, Whitman, Keats
 Playwrights: Ibsen, Chekhov, Miller, Wilde
-Novelists: Bronte, Hardy, Orwell, Woolf
-~ Frost, Hardy, Woolf, Miller
+Novelists: Bronte, Austen, Orwell, Woolf
+~ Frost, Woolf, Miller
 
 @ 5 | Hold Your Horses
 Ride ___: Shotgun, Coattails, Wave, Herd

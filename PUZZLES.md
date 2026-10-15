@@ -117,7 +117,7 @@ measure, vehicles, car / bike parts, road signs, jobs, emotions.
 
 **Wordplay (category name is the riddle)**
 - Sounds like a letter: Bee, Sea, Tea, Queue, Why, Eye, Pea, Jay, You, Are, Owe, Ex
-- Sounds like a number: Won, Too, Fore, Ate, Tin? (no), Sicks? (avoid forced ones)
+- Sounds like a number: Won, Too, Fore, Ate (skip forced ones like Sicks)
 - Hidden words (animals, colors, numbers, body parts, birds, fish, insects)
 - `___ball`, `___fly`, `___cake`, `___man`, `___board`, `___book`, `___light`,
   `___house`, `___fish`, `___bird`, `___stone`, `Fire___`, `Sun___`, `Cat___`,

@@ -3218,7 +3218,7 @@
      "name": "Novelists",
      "tiles": [
       "Bronte",
-      "Hardy",
+      "Austen",
       "Orwell",
       "Woolf"
      ]
@@ -3226,7 +3226,6 @@
    ],
    "herrings": [
     "Frost",
-    "Hardy",
     "Woolf",
     "Miller"
    ]
