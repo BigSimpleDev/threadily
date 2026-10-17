@@ -58,7 +58,8 @@ export class CollectionComponent implements OnInit {
   // Remembered on this device only.
   expanded = signal<Set<string>>(this.loadExpanded());
 
-  ownedCount = computed(() => this.lstoreSvc.ownedTrinkets().length);
+  // Counted against the catalog so owned-but-unreleased ids can't push past the total.
+  ownedCount = computed(() => this.gachaSvc.catalog().filter(t => this.owns(t.id)).length);
   totalCount = computed(() => this.gachaSvc.catalog().length);
 
   constructor() {

@@ -7,8 +7,8 @@ import { event_config, EVENT_COLORS } from '../entities/constants';
 import { trinket } from '../entities/entities';
 
 const OCT: event_config = {
-  id: 'oct', name: 'Oct', emoji: '🎃', blurb: '', packs: [101],
-  start: { month: 10, day: 1 }, end: { month: 11, day: 1 },
+  id: 'oct', name: 'Oct', icon: '', blurb: '', packs: [101],
+  start: { month: 10, day: 1 }, end: { month: 11, day: 1 }, startYear: 2025,
   legendaryTrinketId: 'oct-12', colors: EVENT_COLORS.halloween
 };
 const DEC: event_config = {
@@ -64,6 +64,32 @@ describe('EventService', () => {
     expect(svc.lockedTrinketIds(day(7, 4))).toEqual([]);
   });
 
+  it('stays dark before its first run, then repeats every year', () => {
+    const NOV: event_config = {
+      ...OCT, id: 'nov', packs: [102], legendaryTrinketId: 'nov-12',
+      start: { month: 11, day: 1 }, end: { month: 12, day: 1 }, startYear: 2026
+    };
+    expect(svc.isLive(NOV, new Date(2025, 10, 15))).toBeFalse();
+    expect(svc.isLive(NOV, day(11, 1))).toBeTrue();
+    expect(svc.isLive(NOV, new Date(2027, 10, 15))).toBeTrue();
+
+    // A wrapping window's January tail from the year before doesn't count.
+    const DEC26 = { ...DEC, startYear: 2026 };
+    expect(svc.isLive(DEC26, day(1, 1))).toBeFalse();
+    expect(svc.isLive(DEC26, day(12, 1))).toBeTrue();
+    expect(svc.isLive(DEC26, new Date(2027, 0, 15))).toBeFalse();
+  });
+
+  it('hides an event trinket set until its first run opens, then keeps it', () => {
+    svc.events = [OCT, { ...DEC, startYear: 2026 }];
+    expect(svc.isTrinketReleased('dec-03', day(11, 30))).toBeFalse();
+    expect(svc.isTrinketReleased('dec-12', day(11, 30))).toBeFalse();
+    expect(svc.isTrinketReleased('dec-03', day(12, 1))).toBeTrue();
+    expect(svc.isTrinketReleased('dec-03', new Date(2027, 6, 4))).toBeTrue();
+    expect(svc.isTrinketReleased('oct-03', day(7, 4))).toBeTrue();
+    expect(svc.isTrinketReleased('cozy-01', day(7, 4))).toBeTrue();
+  });
+
   function flushPack(ids: number[]) {
     http.expectOne('assets/puzzles/101.json').flush({
       pack: 101,
@@ -86,6 +112,17 @@ describe('EventService', () => {
 
     svc.claimIfComplete(OCT).subscribe(id => got = id);
     expect(got).toBeNull();
+  });
+
+  it('drops unreleased event sets from the loaded catalog', () => {
+    const gacha = TestBed.inject(GachaService);
+    spyOn(svc, 'isTrinketReleased').and.callFake(id => !id.startsWith('dec-'));
+    gacha.loadCatalog().subscribe();
+    http.expectOne('assets/trinkets/catalog.json').flush([
+      { id: 'a-01', name: 'A', rarity: 'common', set: 'S', img: 'a.png' },
+      { id: 'dec-01', name: 'D', rarity: 'common', set: 'D', img: 'd.png' }
+    ]);
+    expect(gacha.catalog().map(t => t.id)).toEqual(['a-01']);
   });
 
   it('keeps a live event legendary out of gacha rolls', () => {

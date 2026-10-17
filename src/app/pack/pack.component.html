@@ -4,7 +4,7 @@
       <ion-icon name="arrow-back-outline"></ion-icon>
     </button>
     <div class="thr-pack-title">
-      <span class="thr-pack-name">@if (event(); as e) {{{ e.emoji }} {{ e.name }}} @else {Pack {{ pack() }}}</span>
+      <span class="thr-pack-name">@if (event(); as e) {<img class="thr-pack-icon" [src]="e.icon" alt="" aria-hidden="true">{{ e.name }}} @else {Pack {{ pack() }}}</span>
       <span class="thr-pack-sub">{{ solvedCount() }} / {{ puzzles().length }} solved</span>
     </div>
     <button class="thr-sort-chip" (click)="cycleSort()">{{ sortLabels[sort()] }}</button>

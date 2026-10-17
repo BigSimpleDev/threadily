@@ -143,7 +143,7 @@
   background: linear-gradient(135deg, var(--event-face), var(--event-face-dark));
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
-.thr-event-emoji { flex: none; font-size: 40px; line-height: 1; }
+.thr-event-icon { flex: none; width: 56px; height: 56px; object-fit: contain; }
 .thr-event-text { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .thr-event-label { font-size: 11px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: var(--event-accent); }
 .thr-event-name { font-size: 20px; font-weight: 900; }

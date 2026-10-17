@@ -26,7 +26,9 @@ export class GachaService {
   loadCatalog(): Observable<trinket[]> {
     return this.httpClient.get<trinket[]>('assets/trinkets/catalog.json').pipe(
       map((items) => {
-        this.catalog.set(items ?? []);
+        // Unreleased event sets are dropped here so rolls, the album, and every
+        // collected/total count agree without each checking separately.
+        this.catalog.set((items ?? []).filter(t => this.eventSvc.isTrinketReleased(t.id)));
         return this.catalog();
       })
     );

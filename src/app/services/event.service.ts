@@ -31,6 +31,7 @@ export class EventService {
   }
 
   isLive(e: event_config, now: Date = new Date()): boolean {
+    if (!this.hasDebuted(e, now)) return false;
     const stamp = (month: number, day: number) => month * 100 + day;
     const today = stamp(now.getMonth() + 1, now.getDate());
     const start = stamp(e.start.month, e.start.day);
@@ -38,6 +39,19 @@ export class EventService {
     // End is exclusive. A window that wraps the new year (start > end) is
     // live outside the [end, start) gap instead of inside it.
     return start <= end ? (today >= start && today < end) : (today >= start || today < end);
+  }
+
+  // True from the first start day of the event's first run onward, whether or
+  // not the window is open right now.
+  hasDebuted(e: event_config, now: Date = new Date()): boolean {
+    return now >= new Date(e.startYear, e.start.month - 1, e.start.day);
+  }
+
+  // Event trinket sets stay hidden until their event first opens. Sets are
+  // keyed by id prefix (`spooky_stitches-12` → `spooky_stitches`).
+  isTrinketReleased(id: string, now: Date = new Date()): boolean {
+    const set = id.split('-')[0];
+    return !this.events.some(e => e.legendaryTrinketId.split('-')[0] === set && !this.hasDebuted(e, now));
   }
 
   // The event a pack belongs to, whether or not that event is live.

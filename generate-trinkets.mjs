@@ -160,5 +160,33 @@ for (const s of SETS) {
   });
   prompt.push('');
 }
+// The home-screen event card shows an icon at ~48px on the event's colored
+// face, so these are cut-out stickers, not the trinkets' full-bleed dioramas.
+const EVENT_ICONS = [
+  ['halloween', 'Halloween', 'pumpkin orange, midnight purple, bone white', '#7C3AED', 'a round jack-o\'-lantern with a stitched toothy grin and a curly green yarn stem'],
+  ['thanksgiving', 'Thanksgiving', 'cranberry, golden wheat, cinnamon brown', '#B45309', 'a plump front-facing turkey with a fanned tail of striped yarn feathers'],
+  ['christmas', 'Christmas', 'holly green, berry red, snow white, star gold', '#15803D', 'a small evergreen tree in chunky green knit with bobble ornaments and a gold felt star on top']
+];
+prompt.push(
+  '## Event card icons',
+  '',
+  'The home screen\'s "Limited-time event" card currently shows an emoji (`emoji` in `EVENTS`, `src/app/entities/constants.ts`). These icons replace it. Same yarn style as the trinkets, but built to read at ~48px on the card\'s solid colored face.',
+  '',
+  '1. Generate in ChatGPT with the finished first trinket attached as the style reference.',
+  '2. Paste the template, filling in `{EVENT}`, `{PALETTE}`, `{CARD COLOR}`, and `{SUBJECT}` from the table.',
+  '3. Save as `src/assets/events/<id>/icon.png` (same layout as Trivily) — square 1024×1024 PNG with a **transparent** background.',
+  '4. Check it shrunk to 48px on the card color: the silhouette should still be obvious.',
+  '',
+  '> A single handmade crochet amigurumi plush in the style of the attached reference image, presented as a die-cut sticker icon. Everything is made of yarn and felt: visible crochet stitches, soft fuzzy fibers, embroidered details, felt accents. Front-facing, centered, filling about 85% of the frame, bold simple silhouette that stays readable when shrunk to 48 pixels: chunky shapes, high contrast, few small details. Even soft front lighting, no cast shadow, no coaster base, no backdrop, no scene. Transparent background (PNG with alpha), with a thin cream yarn outline around the whole silhouette so it pops on a solid {CARD COLOR} background. **{EVENT}** theme. Palette: {PALETTE}. Square 1:1, 1024×1024. No text, no border, no watermark.',
+  '>',
+  '> Subject: **{SUBJECT}**',
+  '',
+  '| file | {EVENT} | {PALETTE} | {CARD COLOR} | {SUBJECT} |',
+  '|---|---|---|---|---|'
+);
+for (const [id, name, palette, color, subject] of EVENT_ICONS) {
+  prompt.push(`| \`src/assets/events/${id}/icon.png\` | ${name} | ${palette} | \`${color}\` | ${subject} |`);
+}
+prompt.push('');
 writeFileSync(join(ART_DIR, 'ART_PROMPT.md'), prompt.join('\n'));
 console.log('Wrote TRINKETS.md and trinketart/ART_PROMPT.md.');

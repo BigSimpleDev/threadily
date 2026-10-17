@@ -37,6 +37,8 @@ export class HomeComponent implements ViewWillEnter {
   loaded = signal(false);
   packs = signal<pack_summary[]>([]);
   trinketTotal = signal(0);
+  // Counted against the released catalog, matching trinketTotal.
+  trinketOwned = computed(() => this.gachaSvc.catalog().filter(t => this.lstoreSvc.ownsTrinket(t.id)).length);
   addingEnergy = signal(false);
   // Seasonal events inside their window, each with its solve progress. Empty
   // (and the card gone) outside every window — no app update needed.

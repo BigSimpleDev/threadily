@@ -36,13 +36,19 @@ export const PUZZLES_PER_PACK = 100;
 export interface event_config {
     id: string;
     name: string;
-    emoji: string;
+    // Square art at src/assets/events/<id>/icon.png (see generate-trinkets.mjs).
+    icon: string;
     // One line for the home card and the event's pack screen.
     blurb: string;
     // Pack numbers (JSON files under src/assets/puzzles) belonging to the event.
     packs: number[];
     // Inclusive first day the event is visible.
     start: { month: number; day: number };
+    // Year of the event's first run. Before its first start day the event never
+    // goes live and its trinket set (the legendary's id prefix) stays out of the
+    // catalog entirely — no rolls, no album section — so a set can ship in a
+    // release ahead of its debut. Every later year it opens off month/day alone.
+    startYear: number;
     // Exclusive — on this day the event and all its puzzles are hidden again.
     // An end before the start wraps the new year.
     end: { month: number; day: number };
@@ -70,10 +76,11 @@ export const EVENT_COLORS = {
 export const HALLOWEEN_EVENT: event_config = {
     id: 'halloween',
     name: 'Halloween',
-    emoji: '🎃',
+    icon: 'assets/events/halloween/icon.png',
     blurb: 'Spooky word groups for spooky season.',
     packs: [101],
     start: { month: 10, day: 1 },   // Oct 1
+    startYear: 2026,
     end: { month: 11, day: 1 },     // Nov 1 — puzzles hidden, trinkets kept
     legendaryTrinketId: 'spooky_stitches-12',
     colors: EVENT_COLORS.halloween
@@ -82,10 +89,11 @@ export const HALLOWEEN_EVENT: event_config = {
 export const THANKSGIVING_EVENT: event_config = {
     id: 'thanksgiving',
     name: 'Thanksgiving',
-    emoji: '🦃',
+    icon: 'assets/events/thanksgiving/icon.png',
     blurb: 'A harvest table full of word groups.',
     packs: [102],
     start: { month: 11, day: 1 },   // Nov 1, the day Halloween closes
+    startYear: 2026,
     end: { month: 12, day: 1 },     // Dec 1
     legendaryTrinketId: 'harvest_knits-12',
     colors: EVENT_COLORS.thanksgiving
@@ -94,10 +102,11 @@ export const THANKSGIVING_EVENT: event_config = {
 export const CHRISTMAS_EVENT: event_config = {
     id: 'christmas',
     name: 'Christmas',
-    emoji: '🎄',
+    icon: 'assets/events/christmas/icon.png',
     blurb: 'Unwrap a stocking full of word groups.',
     packs: [103],
     start: { month: 12, day: 1 },   // Dec 1
+    startYear: 2026,
     end: { month: 1, day: 1 },      // Jan 1 (wraps the new year)
     legendaryTrinketId: 'winter_woolens-12',
     colors: EVENT_COLORS.christmas
