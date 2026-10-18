@@ -18,11 +18,11 @@ import {
 // the live ids before release — see MONETIZATION_INSTRUCTIONS.md.
 const INTERSTITIAL_AD = {
   android: 'ca-app-pub-5241648641136523/6353268232',
-  ios: 'ca-app-pub-3940256099942544/4411468910'
+  ios: 'ca-app-pub-5241648641136523/8105333601'
 };
 const REWARDED_AD = {
   android: 'ca-app-pub-5241648641136523/3727104897',
-  ios: 'ca-app-pub-3940256099942544/1712485313'
+  ios: 'ca-app-pub-5241648641136523/3918676583'
 };
 
 @Injectable({ providedIn: 'root' })

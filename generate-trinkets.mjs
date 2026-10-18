@@ -1,5 +1,5 @@
 // Builds every trinket set from trinketart/sets.json:
-//   - src/assets/trinkets/<set>/<set>_NN.(png|svg)  — art or a placeholder card
+//   - src/assets/trinkets/<set>/<set>_NN.(webp|svg) — art or a placeholder card
 //   - src/assets/trinkets/catalog.json              — { id, name, rarity, set, img }
 //   - TRINKETS.md and trinketart/ART_PROMPT.md       — regenerated docs
 //
@@ -13,16 +13,29 @@
 // Per slot: a freshly dropped PNG wins; otherwise art already in the set's asset
 // folder is kept (the drop folders are scratch space and may be emptied after a
 // run); otherwise a placeholder SVG is written. Safe to re-run on partial drops.
+// Art ships as a downscaled WebP: the ~1200px, ~3 MB source PNGs made the iOS
+// bundle ~490 MB. ART_PX covers the largest view (the ~360px inspect card) at
+// roughly 2x density.
 // Catalog entries for sets this script doesn't know about (e.g. seasonal event
 // sets) are left untouched.
-import { writeFileSync, readFileSync, readdirSync, copyFileSync, mkdirSync, existsSync, rmSync } from 'fs';
+import { writeFileSync, readFileSync, readdirSync, mkdirSync, existsSync, rmSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import sharp from 'sharp';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const TRINKET_DIR = join(__dirname, 'src/assets/trinkets');
 const ART_DIR = join(__dirname, 'trinketart');
 const { sets: SETS } = JSON.parse(readFileSync(join(ART_DIR, 'sets.json'), 'utf8'));
+const ART_PX = 768;
+const WEBP_QUALITY = 80;
+
+function toWebp(src, dest) {
+  return sharp(src)
+    .resize(ART_PX, ART_PX, { fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: WEBP_QUALITY, effort: 6 })
+    .toFile(dest);
+}
 
 // Rarity by 1-based position: the fixed 6 / 3 / 2 / 1 spread. Position 12 is
 // the set's legendary chase piece.
@@ -68,36 +81,39 @@ for (const s of targets) {
   const dropped = existsSync(dropDir) ? readdirSync(dropDir).filter(f => f.toLowerCase().endsWith('.png')) : [];
 
   let fresh = 0, kept = 0, placeholders = 0;
-  s.items.forEach(([name, emoji], i) => {
+  for (const [i, [name, emoji]] of s.items.entries()) {
     const pos = i + 1;
     const num = String(pos).padStart(2, '0');
     const id = `${s.id}-${num}`;
     const base = `${s.id}_${num}`;
-    const png = join(outDir, `${base}.png`);
+    const webp = join(outDir, `${base}.webp`);
+    // Full-size PNGs shipped before the WebP switch; convert any still there.
+    const legacyPng = join(outDir, `${base}.png`);
     const rarity = rarityFor(pos);
 
-    // Only one file per slot ever ships, so clear the other form.
+    // Only one file per slot ever ships, so clear the other forms.
     const src = dropped.find(f => f.toLowerCase() === `${base}.png`);
-    let rel;
+    let rel = `assets/trinkets/${s.id}/${base}.webp`;
     if (src) {
-      copyFileSync(join(dropDir, src), png);
-      rmSync(join(outDir, `${base}.svg`), { force: true });
-      rel = `assets/trinkets/${s.id}/${base}.png`;
+      await toWebp(join(dropDir, src), webp);
       fresh++;
-    } else if (existsSync(png)) {
-      rmSync(join(outDir, `${base}.svg`), { force: true });
-      rel = `assets/trinkets/${s.id}/${base}.png`;
+    } else if (existsSync(webp)) {
+      kept++;
+    } else if (existsSync(legacyPng)) {
+      await toWebp(legacyPng, webp);
       kept++;
     } else {
       writeFileSync(join(outDir, `${base}.svg`), placeholderSvg(emoji, s.ground, rarity));
       rel = `assets/trinkets/${s.id}/${base}.svg`;
       placeholders++;
     }
+    rmSync(legacyPng, { force: true });
+    if (!rel.endsWith('.svg')) rmSync(join(outDir, `${base}.svg`), { force: true });
 
     const entry = { id, name, rarity, set: s.name, img: rel };
     const at = catalog.findIndex(t => t.id === id);
     if (at >= 0) catalog[at] = entry; else catalog.push(entry);
-  });
+  }
   console.log(`${s.id}: ${fresh} new art, ${kept} kept, ${placeholders} placeholder(s).`);
 }
 

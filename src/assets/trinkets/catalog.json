@@ -4,1259 +4,1259 @@
     "name": "Tabby Kitten",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_01.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_01.webp"
   },
   {
     "id": "cozy_critters-02",
     "name": "Beagle Puppy",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_02.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_02.webp"
   },
   {
     "id": "cozy_critters-03",
     "name": "Button Bunny",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_03.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_03.webp"
   },
   {
     "id": "cozy_critters-04",
     "name": "Hammy Hamster",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_04.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_04.webp"
   },
   {
     "id": "cozy_critters-05",
     "name": "Bowl Goldfish",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_05.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_05.webp"
   },
   {
     "id": "cozy_critters-06",
     "name": "Backyard Robin",
     "rarity": "common",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_06.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_06.webp"
   },
   {
     "id": "cozy_critters-07",
     "name": "Hedgehog Hugs",
     "rarity": "rare",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_07.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_07.webp"
   },
   {
     "id": "cozy_critters-08",
     "name": "Patchwork Tortoise",
     "rarity": "rare",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_08.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_08.webp"
   },
   {
     "id": "cozy_critters-09",
     "name": "Perch Parrot",
     "rarity": "rare",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_09.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_09.webp"
   },
   {
     "id": "cozy_critters-10",
     "name": "Royal Corgi",
     "rarity": "epic",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_10.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_10.webp"
   },
   {
     "id": "cozy_critters-11",
     "name": "Cat Nap",
     "rarity": "epic",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_11.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_11.webp"
   },
   {
     "id": "cozy_critters-12",
     "name": "Sunny the Golden Retriever",
     "rarity": "legendary",
     "set": "Cozy Critters",
-    "img": "assets/trinkets/cozy_critters/cozy_critters_12.png"
+    "img": "assets/trinkets/cozy_critters/cozy_critters_12.webp"
   },
   {
     "id": "woodland_wanderers-01",
     "name": "Fox Kit",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_01.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_01.webp"
   },
   {
     "id": "woodland_wanderers-02",
     "name": "Sleepy Owl",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_02.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_02.webp"
   },
   {
     "id": "woodland_wanderers-03",
     "name": "Raccoon Bandit",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_03.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_03.webp"
   },
   {
     "id": "woodland_wanderers-04",
     "name": "Acorn Squirrel",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_04.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_04.webp"
   },
   {
     "id": "woodland_wanderers-05",
     "name": "Spotted Fawn",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_05.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_05.webp"
   },
   {
     "id": "woodland_wanderers-06",
     "name": "Toadstool Frog",
     "rarity": "common",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_06.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_06.webp"
   },
   {
     "id": "woodland_wanderers-07",
     "name": "Badger Baker",
     "rarity": "rare",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_07.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_07.webp"
   },
   {
     "id": "woodland_wanderers-08",
     "name": "Beaver Builder",
     "rarity": "rare",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_08.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_08.webp"
   },
   {
     "id": "woodland_wanderers-09",
     "name": "Bear Cub",
     "rarity": "rare",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_09.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_09.webp"
   },
   {
     "id": "woodland_wanderers-10",
     "name": "Moose Mountaineer",
     "rarity": "epic",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_10.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_10.webp"
   },
   {
     "id": "woodland_wanderers-11",
     "name": "Hedgerow Hare",
     "rarity": "epic",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_11.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_11.webp"
   },
   {
     "id": "woodland_wanderers-12",
     "name": "Ancient Forest Stag",
     "rarity": "legendary",
     "set": "Woodland Wanderers",
-    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_12.png"
+    "img": "assets/trinkets/woodland_wanderers/woodland_wanderers_12.webp"
   },
   {
     "id": "ocean_knits-01",
     "name": "Octopus Pal",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_01.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_01.webp"
   },
   {
     "id": "ocean_knits-02",
     "name": "Clownfish",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_02.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_02.webp"
   },
   {
     "id": "ocean_knits-03",
     "name": "Hermit Crab",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_03.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_03.webp"
   },
   {
     "id": "ocean_knits-04",
     "name": "Starfish",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_04.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_04.webp"
   },
   {
     "id": "ocean_knits-05",
     "name": "Moon Jelly",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_05.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_05.webp"
   },
   {
     "id": "ocean_knits-06",
     "name": "Seal Pup",
     "rarity": "common",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_06.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_06.webp"
   },
   {
     "id": "ocean_knits-07",
     "name": "Pufferfish",
     "rarity": "rare",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_07.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_07.webp"
   },
   {
     "id": "ocean_knits-08",
     "name": "Sea Turtle",
     "rarity": "rare",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_08.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_08.webp"
   },
   {
     "id": "ocean_knits-09",
     "name": "Friendly Shark",
     "rarity": "rare",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_09.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_09.webp"
   },
   {
     "id": "ocean_knits-10",
     "name": "Humpback Whale",
     "rarity": "epic",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_10.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_10.webp"
   },
   {
     "id": "ocean_knits-11",
     "name": "Narwhal",
     "rarity": "epic",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_11.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_11.webp"
   },
   {
     "id": "ocean_knits-12",
     "name": "Gentle Kraken",
     "rarity": "legendary",
     "set": "Ocean Knits",
-    "img": "assets/trinkets/ocean_knits/ocean_knits_12.png"
+    "img": "assets/trinkets/ocean_knits/ocean_knits_12.webp"
   },
   {
     "id": "dino_stitch-01",
     "name": "Tiny T-Rex",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_01.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_01.webp"
   },
   {
     "id": "dino_stitch-02",
     "name": "Long-Neck Bronto",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_02.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_02.webp"
   },
   {
     "id": "dino_stitch-03",
     "name": "Hatching Egg",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_03.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_03.webp"
   },
   {
     "id": "dino_stitch-04",
     "name": "Fossil Bone",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_04.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_04.webp"
   },
   {
     "id": "dino_stitch-05",
     "name": "Fern Muncher Trike",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_05.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_05.webp"
   },
   {
     "id": "dino_stitch-06",
     "name": "Amber Bug",
     "rarity": "common",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_06.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_06.webp"
   },
   {
     "id": "dino_stitch-07",
     "name": "Pterodactyl",
     "rarity": "rare",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_07.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_07.webp"
   },
   {
     "id": "dino_stitch-08",
     "name": "Armored Anky",
     "rarity": "rare",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_08.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_08.webp"
   },
   {
     "id": "dino_stitch-09",
     "name": "Woolly Mammoth",
     "rarity": "rare",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_09.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_09.webp"
   },
   {
     "id": "dino_stitch-10",
     "name": "Spino Surfer",
     "rarity": "epic",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_10.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_10.webp"
   },
   {
     "id": "dino_stitch-11",
     "name": "Bubbling Volcano",
     "rarity": "epic",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_11.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_11.webp"
   },
   {
     "id": "dino_stitch-12",
     "name": "Rex the Great",
     "rarity": "legendary",
     "set": "Dino Stitch",
-    "img": "assets/trinkets/dino_stitch/dino_stitch_12.png"
+    "img": "assets/trinkets/dino_stitch/dino_stitch_12.webp"
   },
   {
     "id": "sweet_skeins-01",
     "name": "Cupcake",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_01.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_01.webp"
   },
   {
     "id": "sweet_skeins-02",
     "name": "Sprinkle Donut",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_02.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_02.webp"
   },
   {
     "id": "sweet_skeins-03",
     "name": "Chip Cookie",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_03.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_03.webp"
   },
   {
     "id": "sweet_skeins-04",
     "name": "Swirl Lollipop",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_04.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_04.webp"
   },
   {
     "id": "sweet_skeins-05",
     "name": "Ice Cream Cone",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_05.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_05.webp"
   },
   {
     "id": "sweet_skeins-06",
     "name": "Wrapped Candy",
     "rarity": "common",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_06.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_06.webp"
   },
   {
     "id": "sweet_skeins-07",
     "name": "Cherry Pie Slice",
     "rarity": "rare",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_07.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_07.webp"
   },
   {
     "id": "sweet_skeins-08",
     "name": "Chocolate Bar",
     "rarity": "rare",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_08.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_08.webp"
   },
   {
     "id": "sweet_skeins-09",
     "name": "Caramel Pudding",
     "rarity": "rare",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_09.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_09.webp"
   },
   {
     "id": "sweet_skeins-10",
     "name": "Birthday Cake",
     "rarity": "epic",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_10.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_10.webp"
   },
   {
     "id": "sweet_skeins-11",
     "name": "Honey Pot",
     "rarity": "epic",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_11.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_11.webp"
   },
   {
     "id": "sweet_skeins-12",
     "name": "Gingerbread Castle",
     "rarity": "legendary",
     "set": "Sweet Skeins",
-    "img": "assets/trinkets/sweet_skeins/sweet_skeins_12.png"
+    "img": "assets/trinkets/sweet_skeins/sweet_skeins_12.webp"
   },
   {
     "id": "garden_patch-01",
     "name": "Sunflower",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_01.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_01.webp"
   },
   {
     "id": "garden_patch-02",
     "name": "Strawberry",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_02.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_02.webp"
   },
   {
     "id": "garden_patch-03",
     "name": "Carrot",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_03.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_03.webp"
   },
   {
     "id": "garden_patch-04",
     "name": "Tulip",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_04.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_04.webp"
   },
   {
     "id": "garden_patch-05",
     "name": "Pea Pod",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_05.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_05.webp"
   },
   {
     "id": "garden_patch-06",
     "name": "Toadstool",
     "rarity": "common",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_06.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_06.webp"
   },
   {
     "id": "garden_patch-07",
     "name": "Ladybug",
     "rarity": "rare",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_07.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_07.webp"
   },
   {
     "id": "garden_patch-08",
     "name": "Bumblebee",
     "rarity": "rare",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_08.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_08.webp"
   },
   {
     "id": "garden_patch-09",
     "name": "Garden Snail",
     "rarity": "rare",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_09.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_09.webp"
   },
   {
     "id": "garden_patch-10",
     "name": "Scarecrow",
     "rarity": "epic",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_10.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_10.webp"
   },
   {
     "id": "garden_patch-11",
     "name": "Prize Pumpkin",
     "rarity": "epic",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_11.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_11.webp"
   },
   {
     "id": "garden_patch-12",
     "name": "Rainbow Rose",
     "rarity": "legendary",
     "set": "Garden Patch",
-    "img": "assets/trinkets/garden_patch/garden_patch_12.png"
+    "img": "assets/trinkets/garden_patch/garden_patch_12.webp"
   },
   {
     "id": "cosmic_crochet-01",
     "name": "Little Rocket",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_01.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_01.webp"
   },
   {
     "id": "cosmic_crochet-02",
     "name": "Crescent Moon",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_02.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_02.webp"
   },
   {
     "id": "cosmic_crochet-03",
     "name": "Shooting Star",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_03.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_03.webp"
   },
   {
     "id": "cosmic_crochet-04",
     "name": "Satellite",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_04.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_04.webp"
   },
   {
     "id": "cosmic_crochet-05",
     "name": "Ringed Planet",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_05.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_05.webp"
   },
   {
     "id": "cosmic_crochet-06",
     "name": "Comet",
     "rarity": "common",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_06.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_06.webp"
   },
   {
     "id": "cosmic_crochet-07",
     "name": "Astronaut",
     "rarity": "rare",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_07.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_07.webp"
   },
   {
     "id": "cosmic_crochet-08",
     "name": "Flying Saucer",
     "rarity": "rare",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_08.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_08.webp"
   },
   {
     "id": "cosmic_crochet-09",
     "name": "Moon Rover",
     "rarity": "rare",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_09.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_09.webp"
   },
   {
     "id": "cosmic_crochet-10",
     "name": "Smiling Sun",
     "rarity": "epic",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_10.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_10.webp"
   },
   {
     "id": "cosmic_crochet-11",
     "name": "Galaxy Swirl",
     "rarity": "epic",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_11.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_11.webp"
   },
   {
     "id": "cosmic_crochet-12",
     "name": "Star Whale",
     "rarity": "legendary",
     "set": "Cosmic Crochet",
-    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_12.png"
+    "img": "assets/trinkets/cosmic_crochet/cosmic_crochet_12.webp"
   },
   {
     "id": "fable_folk-01",
     "name": "Pocket Fairy",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_01.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_01.webp"
   },
   {
     "id": "fable_folk-02",
     "name": "Mushroom Gnome",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_02.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_02.webp"
   },
   {
     "id": "fable_folk-03",
     "name": "Little Knight",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_03.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_03.webp"
   },
   {
     "id": "fable_folk-04",
     "name": "Frog Prince",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_04.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_04.webp"
   },
   {
     "id": "fable_folk-05",
     "name": "Gingerbread Runner",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_05.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_05.webp"
   },
   {
     "id": "fable_folk-06",
     "name": "Goose Girl",
     "rarity": "common",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_06.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_06.webp"
   },
   {
     "id": "fable_folk-07",
     "name": "Kind Hedge Witch",
     "rarity": "rare",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_07.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_07.webp"
   },
   {
     "id": "fable_folk-08",
     "name": "Clockwork Mouse",
     "rarity": "rare",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_08.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_08.webp"
   },
   {
     "id": "fable_folk-09",
     "name": "Beanstalk Sprout",
     "rarity": "rare",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_09.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_09.webp"
   },
   {
     "id": "fable_folk-10",
     "name": "Tower Princess",
     "rarity": "epic",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_10.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_10.webp"
   },
   {
     "id": "fable_folk-11",
     "name": "Old Wizard",
     "rarity": "epic",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_11.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_11.webp"
   },
   {
     "id": "fable_folk-12",
     "name": "Enchanted Storybook",
     "rarity": "legendary",
     "set": "Fable Folk",
-    "img": "assets/trinkets/fable_folk/fable_folk_12.png"
+    "img": "assets/trinkets/fable_folk/fable_folk_12.webp"
   },
   {
     "id": "myth_menagerie-01",
     "name": "Baby Dragon",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_01.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_01.webp"
   },
   {
     "id": "myth_menagerie-02",
     "name": "Unicorn Foal",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_02.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_02.webp"
   },
   {
     "id": "myth_menagerie-03",
     "name": "Little Yeti",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_03.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_03.webp"
   },
   {
     "id": "myth_menagerie-04",
     "name": "Pegasus Pony",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_04.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_04.webp"
   },
   {
     "id": "myth_menagerie-05",
     "name": "Sea Serpent",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_05.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_05.webp"
   },
   {
     "id": "myth_menagerie-06",
     "name": "Gryphon Chick",
     "rarity": "common",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_06.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_06.webp"
   },
   {
     "id": "myth_menagerie-07",
     "name": "Phoenix Hatchling",
     "rarity": "rare",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_07.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_07.webp"
   },
   {
     "id": "myth_menagerie-08",
     "name": "Kitsune",
     "rarity": "rare",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_08.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_08.webp"
   },
   {
     "id": "myth_menagerie-09",
     "name": "Jackalope",
     "rarity": "rare",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_09.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_09.webp"
   },
   {
     "id": "myth_menagerie-10",
     "name": "Thunderbird",
     "rarity": "epic",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_10.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_10.webp"
   },
   {
     "id": "myth_menagerie-11",
     "name": "Moon Rabbit",
     "rarity": "epic",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_11.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_11.webp"
   },
   {
     "id": "myth_menagerie-12",
     "name": "Elder Dragon",
     "rarity": "legendary",
     "set": "Myth Menagerie",
-    "img": "assets/trinkets/myth_menagerie/myth_menagerie_12.png"
+    "img": "assets/trinkets/myth_menagerie/myth_menagerie_12.webp"
   },
   {
     "id": "things_that_go-01",
     "name": "Choo-Choo Train",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_01.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_01.webp"
   },
   {
     "id": "things_that_go-02",
     "name": "School Bus",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_02.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_02.webp"
   },
   {
     "id": "things_that_go-03",
     "name": "Taxi Cab",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_03.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_03.webp"
   },
   {
     "id": "things_that_go-04",
     "name": "Bicycle",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_04.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_04.webp"
   },
   {
     "id": "things_that_go-05",
     "name": "Sailboat",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_05.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_05.webp"
   },
   {
     "id": "things_that_go-06",
     "name": "Tractor",
     "rarity": "common",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_06.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_06.webp"
   },
   {
     "id": "things_that_go-07",
     "name": "Fire Engine",
     "rarity": "rare",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_07.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_07.webp"
   },
   {
     "id": "things_that_go-08",
     "name": "Hot Air Balloon",
     "rarity": "rare",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_08.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_08.webp"
   },
   {
     "id": "things_that_go-09",
     "name": "Helicopter",
     "rarity": "rare",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_09.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_09.webp"
   },
   {
     "id": "things_that_go-10",
     "name": "Biplane",
     "rarity": "epic",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_10.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_10.webp"
   },
   {
     "id": "things_that_go-11",
     "name": "Ice Cream Truck",
     "rarity": "epic",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_11.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_11.webp"
   },
   {
     "id": "things_that_go-12",
     "name": "Golden Express",
     "rarity": "legendary",
     "set": "Things That Go",
-    "img": "assets/trinkets/things_that_go/things_that_go_12.png"
+    "img": "assets/trinkets/things_that_go/things_that_go_12.webp"
   },
   {
     "id": "world_wonders-01",
     "name": "Eiffel Tower",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_01.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_01.webp"
   },
   {
     "id": "world_wonders-02",
     "name": "Statue of Liberty",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_02.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_02.webp"
   },
   {
     "id": "world_wonders-03",
     "name": "Big Ben",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_03.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_03.webp"
   },
   {
     "id": "world_wonders-04",
     "name": "Leaning Tower",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_04.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_04.webp"
   },
   {
     "id": "world_wonders-05",
     "name": "Mount Fuji",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_05.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_05.webp"
   },
   {
     "id": "world_wonders-06",
     "name": "Dutch Windmill",
     "rarity": "common",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_06.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_06.webp"
   },
   {
     "id": "world_wonders-07",
     "name": "Colosseum",
     "rarity": "rare",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_07.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_07.webp"
   },
   {
     "id": "world_wonders-08",
     "name": "Great Wall",
     "rarity": "rare",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_08.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_08.webp"
   },
   {
     "id": "world_wonders-09",
     "name": "Taj Mahal",
     "rarity": "rare",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_09.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_09.webp"
   },
   {
     "id": "world_wonders-10",
     "name": "Pyramids of Giza",
     "rarity": "epic",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_10.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_10.webp"
   },
   {
     "id": "world_wonders-11",
     "name": "Machu Picchu",
     "rarity": "epic",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_11.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_11.webp"
   },
   {
     "id": "world_wonders-12",
     "name": "Hanging Gardens",
     "rarity": "legendary",
     "set": "World Wonders",
-    "img": "assets/trinkets/world_wonders/world_wonders_12.png"
+    "img": "assets/trinkets/world_wonders/world_wonders_12.webp"
   },
   {
     "id": "music_makers-01",
     "name": "Banjo",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_01.png"
+    "img": "assets/trinkets/music_makers/music_makers_01.webp"
   },
   {
     "id": "music_makers-02",
     "name": "Snare Drum",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_02.png"
+    "img": "assets/trinkets/music_makers/music_makers_02.webp"
   },
   {
     "id": "music_makers-03",
     "name": "Maracas",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_03.png"
+    "img": "assets/trinkets/music_makers/music_makers_03.webp"
   },
   {
     "id": "music_makers-04",
     "name": "Hand Drum",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_04.png"
+    "img": "assets/trinkets/music_makers/music_makers_04.webp"
   },
   {
     "id": "music_makers-05",
     "name": "Trumpet",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_05.png"
+    "img": "assets/trinkets/music_makers/music_makers_05.webp"
   },
   {
     "id": "music_makers-06",
     "name": "Microphone",
     "rarity": "common",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_06.png"
+    "img": "assets/trinkets/music_makers/music_makers_06.webp"
   },
   {
     "id": "music_makers-07",
     "name": "Violin",
     "rarity": "rare",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_07.png"
+    "img": "assets/trinkets/music_makers/music_makers_07.webp"
   },
   {
     "id": "music_makers-08",
     "name": "Saxophone",
     "rarity": "rare",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_08.png"
+    "img": "assets/trinkets/music_makers/music_makers_08.webp"
   },
   {
     "id": "music_makers-09",
     "name": "Accordion",
     "rarity": "rare",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_09.png"
+    "img": "assets/trinkets/music_makers/music_makers_09.webp"
   },
   {
     "id": "music_makers-10",
     "name": "Grand Piano",
     "rarity": "epic",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_10.png"
+    "img": "assets/trinkets/music_makers/music_makers_10.webp"
   },
   {
     "id": "music_makers-11",
     "name": "Rock Guitar",
     "rarity": "epic",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_11.png"
+    "img": "assets/trinkets/music_makers/music_makers_11.webp"
   },
   {
     "id": "music_makers-12",
     "name": "Maestro Baton",
     "rarity": "legendary",
     "set": "Music Makers",
-    "img": "assets/trinkets/music_makers/music_makers_12.png"
+    "img": "assets/trinkets/music_makers/music_makers_12.webp"
   },
   {
     "id": "spooky_stitches-01",
     "name": "Pumpkin Pal",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_01.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_01.webp"
   },
   {
     "id": "spooky_stitches-02",
     "name": "Sheet Ghost",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_02.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_02.webp"
   },
   {
     "id": "spooky_stitches-03",
     "name": "Black Cat",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_03.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_03.webp"
   },
   {
     "id": "spooky_stitches-04",
     "name": "Candy Corn",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_04.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_04.webp"
   },
   {
     "id": "spooky_stitches-05",
     "name": "Bat Buddy",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_05.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_05.webp"
   },
   {
     "id": "spooky_stitches-06",
     "name": "Spider Web",
     "rarity": "common",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_06.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_06.webp"
   },
   {
     "id": "spooky_stitches-07",
     "name": "Witch Hat",
     "rarity": "rare",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_07.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_07.webp"
   },
   {
     "id": "spooky_stitches-08",
     "name": "Cauldron",
     "rarity": "rare",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_08.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_08.webp"
   },
   {
     "id": "spooky_stitches-09",
     "name": "Mummy Wrap",
     "rarity": "rare",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_09.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_09.webp"
   },
   {
     "id": "spooky_stitches-10",
     "name": "Haunted House",
     "rarity": "epic",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_10.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_10.webp"
   },
   {
     "id": "spooky_stitches-11",
     "name": "Moonlit Owl",
     "rarity": "epic",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_11.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_11.webp"
   },
   {
     "id": "spooky_stitches-12",
     "name": "Pumpkin King",
     "rarity": "legendary",
     "set": "Spooky Stitches",
-    "img": "assets/trinkets/spooky_stitches/spooky_stitches_12.png"
+    "img": "assets/trinkets/spooky_stitches/spooky_stitches_12.webp"
   },
   {
     "id": "harvest_knits-01",
     "name": "Tom Turkey",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_01.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_01.webp"
   },
   {
     "id": "harvest_knits-02",
     "name": "Acorn Cap",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_02.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_02.webp"
   },
   {
     "id": "harvest_knits-03",
     "name": "Maple Leaf",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_03.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_03.webp"
   },
   {
     "id": "harvest_knits-04",
     "name": "Corn Cob",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_04.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_04.webp"
   },
   {
     "id": "harvest_knits-05",
     "name": "Cranberry Bowl",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_05.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_05.webp"
   },
   {
     "id": "harvest_knits-06",
     "name": "Pie Slice",
     "rarity": "common",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_06.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_06.webp"
   },
   {
     "id": "harvest_knits-07",
     "name": "Cornucopia",
     "rarity": "rare",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_07.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_07.webp"
   },
   {
     "id": "harvest_knits-08",
     "name": "Harvest Moon",
     "rarity": "rare",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_08.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_08.webp"
   },
   {
     "id": "harvest_knits-09",
     "name": "Scarecrow",
     "rarity": "rare",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_09.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_09.webp"
   },
   {
     "id": "harvest_knits-10",
     "name": "Apple Cider",
     "rarity": "epic",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_10.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_10.webp"
   },
   {
     "id": "harvest_knits-11",
     "name": "Gourd Trio",
     "rarity": "epic",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_11.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_11.webp"
   },
   {
     "id": "harvest_knits-12",
     "name": "Golden Gobbler",
     "rarity": "legendary",
     "set": "Harvest Knits",
-    "img": "assets/trinkets/harvest_knits/harvest_knits_12.png"
+    "img": "assets/trinkets/harvest_knits/harvest_knits_12.webp"
   },
   {
     "id": "winter_woolens-01",
     "name": "Snowman",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_01.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_01.webp"
   },
   {
     "id": "winter_woolens-02",
     "name": "Candy Cane",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_02.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_02.webp"
   },
   {
     "id": "winter_woolens-03",
     "name": "Mitten Pair",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_03.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_03.webp"
   },
   {
     "id": "winter_woolens-04",
     "name": "Gingerbread Kid",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_04.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_04.webp"
   },
   {
     "id": "winter_woolens-05",
     "name": "Stocking",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_05.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_05.webp"
   },
   {
     "id": "winter_woolens-06",
     "name": "Holly Sprig",
     "rarity": "common",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_06.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_06.webp"
   },
   {
     "id": "winter_woolens-07",
     "name": "Polar Bear",
     "rarity": "rare",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_07.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_07.webp"
   },
   {
     "id": "winter_woolens-08",
     "name": "Reindeer",
     "rarity": "rare",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_08.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_08.webp"
   },
   {
     "id": "winter_woolens-09",
     "name": "Snow Globe",
     "rarity": "rare",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_09.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_09.webp"
   },
   {
     "id": "winter_woolens-10",
     "name": "Cozy Sweater",
     "rarity": "epic",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_10.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_10.webp"
   },
   {
     "id": "winter_woolens-11",
     "name": "Gift Stack",
     "rarity": "epic",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_11.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_11.webp"
   },
   {
     "id": "winter_woolens-12",
     "name": "Star Topper",
     "rarity": "legendary",
     "set": "Winter Woolens",
-    "img": "assets/trinkets/winter_woolens/winter_woolens_12.png"
+    "img": "assets/trinkets/winter_woolens/winter_woolens_12.webp"
   }
 ]

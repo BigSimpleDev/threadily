@@ -31,7 +31,7 @@
 <ion-content class="ion-padding">
 
   <!-- Featured trinket -->
-  @if (lstoreSvc.featuredTrinket(); as ft) {
+  @if (featured(); as ft) {
   <button class="thr-featured" (click)="openCollection()" [attr.aria-label]="'Featured trinket: ' + ft.name">
     <span class="thr-featured-ring">
       <img [src]="ft.img" [alt]="ft.name">

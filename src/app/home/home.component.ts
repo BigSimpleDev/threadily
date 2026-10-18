@@ -39,6 +39,12 @@ export class HomeComponent implements ViewWillEnter {
   trinketTotal = signal(0);
   // Counted against the released catalog, matching trinketTotal.
   trinketOwned = computed(() => this.gachaSvc.catalog().filter(t => this.lstoreSvc.ownsTrinket(t.id)).length);
+  // The saved copy can carry a stale img path (art moved from PNG to WebP, or a
+  // placeholder replaced by art since it was featured), so prefer the catalog's.
+  featured = computed(() => {
+    const ft = this.lstoreSvc.featuredTrinket();
+    return ft ? this.gachaSvc.catalog().find(t => t.id === ft.id) ?? ft : null;
+  });
   addingEnergy = signal(false);
   // Seasonal events inside their window, each with its solve progress. Empty
   // (and the card gone) outside every window — no app update needed.
