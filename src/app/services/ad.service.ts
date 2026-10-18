@@ -17,11 +17,11 @@ import {
 // Google's public test ad units until the Threadily AdMob app exists. Swap in
 // the live ids before release — see MONETIZATION_INSTRUCTIONS.md.
 const INTERSTITIAL_AD = {
-  android: 'ca-app-pub-3940256099942544/1033173712',
+  android: 'ca-app-pub-5241648641136523/6353268232',
   ios: 'ca-app-pub-3940256099942544/4411468910'
 };
 const REWARDED_AD = {
-  android: 'ca-app-pub-3940256099942544/5224354917',
+  android: 'ca-app-pub-5241648641136523/3727104897',
   ios: 'ca-app-pub-3940256099942544/1712485313'
 };
 
