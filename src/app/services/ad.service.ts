@@ -14,8 +14,7 @@ import {
   INTERSTITIAL_MIN_SECONDS
 } from '../entities/constants';
 
-// Google's public test ad units until the Threadily AdMob app exists. Swap in
-// the live ids before release — see MONETIZATION_INSTRUCTIONS.md.
+// Live Threadily AdMob units. App id lives in AndroidManifest.xml / Info.plist.
 const INTERSTITIAL_AD = {
   android: 'ca-app-pub-5241648641136523/6353268232',
   ios: 'ca-app-pub-5241648641136523/8105333601'
