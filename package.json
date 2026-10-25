@@ -8,6 +8,7 @@
     "start": "ionic serve",
     "build": "ionic build",
     "build:android-release": "node scripts/build-android-release.mjs",
+    "build:ios-release": "node scripts/build-ios-release.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
