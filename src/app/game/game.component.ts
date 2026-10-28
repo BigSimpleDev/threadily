@@ -71,6 +71,11 @@ export class GameComponent implements OnInit {
   mistakes = signal(0);
   outOfHearts = signal(false);
   watchingAd = signal(false);
+  // Back arrow mid-puzzle asks first: the energy spent to start is forfeit.
+  confirmLeave = signal(false);
+  // Couldn't afford to start; the modal offers an ad or a way out.
+  outOfEnergy = signal(false);
+  energyWait = signal('');
   // First-launch walkthrough on pack 1 #1: index into HOW_TO_STEPS, -1 = off.
   // Steps 0 (place) and 1 (lock in) advance on the real action.
   tutorial = signal(-1);
@@ -112,6 +117,8 @@ export class GameComponent implements OnInit {
     this.board.set(null);
     this.won.set(false);
     this.outOfHearts.set(false);
+    this.outOfEnergy.set(false);
+    this.confirmLeave.set(false);
     this.eventReward.set(null);
     this.lstoreSvc.setPlayerInfo();
 
@@ -409,29 +416,16 @@ export class GameComponent implements OnInit {
   }
 
   // ── Energy ──────────────────────────────────────────────────
-  private async promptOutOfEnergy() {
-    const canWatch = this.energySvc.canWatchAdForEnergy();
-    const buttons: { text: string; role?: string; handler: () => void }[] = [];
-    if (canWatch) {
-      buttons.push({
-        text: `Watch ad +${this.energySvc.adGrant} (${this.energySvc.adsLeftToday()}/${this.energySvc.adMaxPerDay} left today)`,
-        handler: () => { this.watchAdForEnergy(); }
-      });
-    }
-    buttons.push({ text: 'Back', role: 'cancel', handler: () => { this.backToPack(); } });
-    const wait = this.energySvc.timeToAfford(this.energyCost());
-    const alert = await this.alertCtrl.create({
-      header: 'Out of energy',
-      message: `A puzzle costs ${this.energyCost()} energy; you have ${this.energySvc.energy()}.` +
-        (wait ? ` Enough refills in ${wait}.` : ''),
-      backdropDismiss: false,
-      buttons
-    });
-    await alert.present();
+  private promptOutOfEnergy() {
+    this.energyWait.set(this.energySvc.timeToAfford(this.energyCost()));
+    this.outOfEnergy.set(true);
   }
 
-  private async watchAdForEnergy() {
+  async watchAdForEnergy() {
+    if (this.watchingAd()) return;
+    this.watchingAd.set(true);
     const rewarded = await this.adSvc.showRewarded();
+    this.watchingAd.set(false);
     if (!rewarded) {
       this.toast('No energy earned — ad not completed.');
       this.backToPack();
@@ -453,6 +447,16 @@ export class GameComponent implements OnInit {
       buttons: ['OK']
     });
     await alert.present();
+  }
+
+  // Header back arrow. Practice and finished boards leave straight away;
+  // otherwise confirm, since leaving forfeits the energy already spent.
+  tapBack() {
+    if (this.board() && !this.won() && !this.practice()) {
+      this.confirmLeave.set(true);
+      return;
+    }
+    this.backToPack();
   }
 
   backToPack() {

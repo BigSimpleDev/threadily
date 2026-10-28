@@ -128,7 +128,25 @@ describe('GameComponent', () => {
     energyStub.spendForGame.and.returnValue(false);
     boot();
     expect(c.board()).toBeNull();
-    expect(alertStub.create).toHaveBeenCalledWith(jasmine.objectContaining({ header: 'Out of energy' }));
+    expect(c.outOfEnergy()).toBeTrue();
+    expect(c.energyWait()).toBe('59:00');
+  }));
+
+  it('back arrow mid-puzzle asks before leaving; Keep playing stays', fakeAsync(() => {
+    boot();
+    c.tapBack();
+    expect(c.confirmLeave()).toBeTrue();
+    expect(routerSpy.navigate).not.toHaveBeenCalled();
+    c.confirmLeave.set(false);
+    expect(c.board()).not.toBeNull();
+  }));
+
+  it('back arrow leaves straight away once the puzzle is won', fakeAsync(() => {
+    boot();
+    c.won.set(true);
+    c.tapBack();
+    expect(c.confirmLeave()).toBeFalse();
+    expect(routerSpy.navigate).toHaveBeenCalledWith(['/pack', 1], { replaceUrl: true });
   }));
 
   it('tap tile then tap category places it; tapping a placed tile returns it', fakeAsync(() => {

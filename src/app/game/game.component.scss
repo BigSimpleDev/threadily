@@ -252,7 +252,7 @@
   100% { transform: scale(0.6) rotate(70deg) translateY(-14px); opacity: 0; }
 }
 
-/* ── Modals (win, out of hearts) ─────────────────────────── */
+/* ── Modals (win, out of hearts/energy, leave) ─────────────────────────── */
 .thr-modal-backdrop {
   position: fixed;
   inset: 0;
@@ -289,6 +289,7 @@
   background: var(--ion-color-warning); color: #fff; font-size: 12px; font-weight: 900;
 }
 .thr-modal-actions { display: flex; flex-direction: column; gap: 8px; }
+.thr-modal-note { margin-top: -4px; color: var(--ion-color-medium); font-size: 12px; font-weight: 700; }
 .thr-btn {
   height: 46px; border-radius: 14px; border: none; cursor: pointer;
   font-size: 16px; font-weight: 900;

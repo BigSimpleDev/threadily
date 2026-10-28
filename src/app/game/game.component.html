@@ -1,6 +1,6 @@
 <ion-header class="ion-no-border">
   <div class="thr-game-hdr">
-    <button class="thr-icon-btn" (click)="backToPack()" aria-label="Back">
+    <button class="thr-icon-btn" (click)="tapBack()" aria-label="Back">
       <ion-icon name="arrow-back-outline"></ion-icon>
     </button>
     <div class="thr-game-title">
@@ -193,6 +193,44 @@
           Watch ad · +{{ AD_HEARTS_GRANT }} hearts
         </button>
         <button class="thr-btn thr-btn-ghost" (click)="giveUp()">Give up</button>
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Out of energy -->
+  @if (outOfEnergy()) {
+  <div class="thr-modal-backdrop">
+    <div class="thr-modal" role="dialog" aria-label="Out of energy">
+      <div class="thr-win-emoji">⚡</div>
+      <h2 class="thr-modal-title">Out of energy</h2>
+      <p class="thr-modal-sub">
+        A puzzle costs {{ energyCost() }} energy; you have {{ energySvc.energy() }}.
+        @if (energyWait()) { Enough refills in {{ energyWait() }}. }
+      </p>
+      <div class="thr-modal-actions">
+        @if (energySvc.canWatchAdForEnergy()) {
+        <button class="thr-btn thr-btn-primary" (click)="watchAdForEnergy()" [disabled]="watchingAd()">
+          Watch ad · +{{ energySvc.adGrant }} energy
+        </button>
+        <span class="thr-modal-note">{{ energySvc.adsLeftToday() }}/{{ energySvc.adMaxPerDay }} ads left today</span>
+        }
+        <button class="thr-btn thr-btn-ghost" (click)="backToPack()">Back</button>
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Leave mid-puzzle -->
+  @if (confirmLeave()) {
+  <div class="thr-modal-backdrop">
+    <div class="thr-modal" role="dialog" aria-label="Leave puzzle">
+      <div class="thr-win-emoji">🧵</div>
+      <h2 class="thr-modal-title">Leave puzzle?</h2>
+      <p class="thr-modal-sub">You'll lose the {{ energyCost() }} energy spent to start it.</p>
+      <div class="thr-modal-actions">
+        <button class="thr-btn thr-btn-primary" (click)="confirmLeave.set(false)">Keep playing</button>
+        <button class="thr-btn thr-btn-ghost" (click)="backToPack()">Leave</button>
       </div>
     </div>
   </div>
