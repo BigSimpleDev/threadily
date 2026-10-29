@@ -291,18 +291,19 @@ describe('GameComponent', () => {
     lstore.addCoins(HINT_COST);
     boot();
     c.buyHint();
-    tick();
+    expect(c.confirmHint()).toBeTrue();
+    c.useHint();
+    expect(c.confirmHint()).toBeFalse();
     expect(lstore.coins()).toBe(0);
     const pinned = c.board()!.categories.flatMap(cat => cat.pinned);
     expect(pinned.length).toBe(1);
   }));
 
   it('a cancelled hint spends nothing', fakeAsync(() => {
-    alertRole = 'cancel';
     lstore.addCoins(HINT_COST);
     boot();
     c.buyHint();
-    tick();
+    c.confirmHint.set(false);
     expect(lstore.coins()).toBe(HINT_COST);
     expect(c.board()!.categories.flatMap(cat => cat.pinned).length).toBe(0);
   }));
@@ -311,7 +312,7 @@ describe('GameComponent', () => {
     boot();
     c.buyHint();
     tick();
-    expect(alertStub.create).not.toHaveBeenCalled();
+    expect(c.confirmHint()).toBeFalse();
     expect(toastStub.create).toHaveBeenCalled();
   }));
 

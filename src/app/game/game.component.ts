@@ -73,6 +73,7 @@ export class GameComponent implements OnInit {
   watchingAd = signal(false);
   // Back arrow mid-puzzle asks first: the energy spent to start is forfeit.
   confirmLeave = signal(false);
+  confirmHint = signal(false);
   // Couldn't afford to start; the modal offers an ad or a way out.
   outOfEnergy = signal(false);
   energyWait = signal('');
@@ -119,6 +120,7 @@ export class GameComponent implements OnInit {
     this.outOfHearts.set(false);
     this.outOfEnergy.set(false);
     this.confirmLeave.set(false);
+    this.confirmHint.set(false);
     this.eventReward.set(null);
     this.lstoreSvc.setPlayerInfo();
 
@@ -387,24 +389,18 @@ export class GameComponent implements OnInit {
   }
 
   // ── Hint ────────────────────────────────────────────────────
-  async buyHint() {
+  buyHint() {
     const b = this.board();
     if (!b || !this.playable) return;
     if (this.lstoreSvc.coins() < HINT_COST) {
       this.toast(`A hint costs ${HINT_COST} coins — you have ${this.lstoreSvc.coins()}.`);
       return;
     }
-    const alert = await this.alertCtrl.create({
-      header: 'Use a hint?',
-      message: `Place one correct tile for ${HINT_COST} coins. You have ${this.lstoreSvc.coins()}.`,
-      buttons: [
-        { text: 'Cancel', role: 'cancel' },
-        { text: `Use (${HINT_COST}¢)`, role: 'confirm' }
-      ]
-    });
-    await alert.present();
-    const { role } = await alert.onDidDismiss();
-    if (role !== 'confirm') return;
+    this.confirmHint.set(true);
+  }
+
+  useHint() {
+    this.confirmHint.set(false);
     const current = this.board();
     if (!current) return;
     const r = hint(current);

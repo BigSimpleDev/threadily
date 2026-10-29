@@ -221,6 +221,21 @@
   </div>
   }
 
+  <!-- Hint -->
+  @if (confirmHint()) {
+  <div class="thr-modal-backdrop">
+    <div class="thr-modal" role="dialog" aria-label="Use a hint">
+      <div class="thr-win-emoji">💡</div>
+      <h2 class="thr-modal-title">Use a hint?</h2>
+      <p class="thr-modal-sub">Place one correct tile for {{ HINT_COST }} coins. You have {{ lstoreSvc.coins() }}.</p>
+      <div class="thr-modal-actions">
+        <button class="thr-btn thr-btn-primary" (click)="useHint()">Use · {{ HINT_COST }}¢</button>
+        <button class="thr-btn thr-btn-ghost" (click)="confirmHint.set(false)">Cancel</button>
+      </div>
+    </div>
+  </div>
+  }
+
   <!-- Leave mid-puzzle -->
   @if (confirmLeave()) {
   <div class="thr-modal-backdrop">
