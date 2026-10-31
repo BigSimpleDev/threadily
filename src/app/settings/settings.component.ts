@@ -9,7 +9,7 @@ import {
 import { LocalstoreService } from '../services/localstore.service';
 import { PurchaseService } from '../services/purchase.service';
 import { HOW_TO_STEPS } from '../entities/how-to';
-import { LOCAL_STORAGE_KEYS } from '../entities/constants';
+import { IAP_ENABLED, LOCAL_STORAGE_KEYS } from '../entities/constants';
 
 export const PRIVACY_URL = 'https://bigsimple.dev/games/threadily/privacy';
 
@@ -27,6 +27,7 @@ export class SettingsComponent {
   private toastCtrl = inject(ToastController);
 
   readonly steps = HOW_TO_STEPS;
+  readonly iapEnabled = IAP_ENABLED;
   purchasing = signal(false);
   showHowTo = signal(false);
 

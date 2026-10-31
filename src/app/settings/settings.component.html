@@ -21,6 +21,7 @@
     </button>
   </div>
 
+  @if (iapEnabled) {
   <div class="thr-set-group">
     @if (lstoreSvc.adFree()) {
     <div class="thr-set-row thr-set-static">
@@ -42,6 +43,7 @@
       <span class="thr-set-text">Restore purchases</span>
     </button>
   </div>
+  }
 
   <div class="thr-set-group">
     <button class="thr-set-row" (click)="openPrivacy()">

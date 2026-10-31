@@ -165,6 +165,8 @@ export const INTERSTITIAL_MIN_SECONDS = 90;
 
 // RevenueCat entitlement id that grants the ad-free experience.
 export const ENTITLEMENT_AD_FREE = 'ad_free';
+// Hides Remove ads / Restore purchases until the store product exists.
+export const IAP_ENABLED = false;
 
 import { rarity } from './entities';
 
