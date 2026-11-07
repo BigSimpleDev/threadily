@@ -10,11 +10,13 @@
     "build:android-release": "node scripts/build-android-release.mjs",
     "build:ios-release": "node scripts/build-ios-release.mjs",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "test": "ng test --watch=false --browsers=ChromeHeadless && npm run test:scripts",
+    "test:scripts": "node --test \"scripts/*.test.mjs\"",
     "lint": "ng lint",
     "postinstall": "patch-package",
     "puzzles": "node build-puzzles.mjs && node validate-puzzles.mjs",
-    "trinkets": "node generate-trinkets.mjs"
+    "trinkets": "node generate-trinkets.mjs",
+    "daily": "node scripts/build-daily.mjs"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,7 @@
     "@capacitor/core": "^8.4.0",
     "@capacitor/ios": "^8.4.0",
     "@capacitor/screen-orientation": "^8.0.1",
+    "@capacitor/share": "^8.0.3",
     "@capacitor/status-bar": "^8.0.2",
     "@ionic/angular": "^8.8.10",
     "@revenuecat/purchases-capacitor": "^13.2.0",

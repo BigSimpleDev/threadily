@@ -17,7 +17,12 @@ export enum LOCAL_STORAGE_KEYS {
     EventLegendaryAwarded = 'bsd.thr.event_legendary_awarded',
     ExpandedSets = 'bsd.thr.expanded_sets',
     TutorialSeen = 'bsd.thr.tutorial_seen',
-    PackStarFilter = 'bsd.thr.pack_star_filter'
+    PackStarFilter = 'bsd.thr.pack_star_filter',
+    // Daily puzzle: per-day results (last DAILY_RESULTS_KEPT days) and streak.
+    DailyResults = 'bsd.thr.daily_results',
+    DailyStreak = 'bsd.thr.daily_streak',
+    DailyStreakBest = 'bsd.thr.daily_streak_best',
+    DailyLastWon = 'bsd.thr.daily_last_won'
 }
 
 // Highest main pack file that exists under src/assets/puzzles. Packs hold
@@ -124,6 +129,21 @@ export const AD_HEARTS_GRANT = 3;        // rewarded ad refills this many; no ca
 export const MAX_CATEGORIES = 5;
 export const TILES_PER_CATEGORY = 4;
 export const TILE_MAX_CHARS = 12;
+
+// ── Daily puzzle ─────────────────────────────────────────────
+// Daily #1 is this local calendar date; every player's day N is the same
+// puzzle (src/assets/daily/schedule.json, index N-1). scripts/build-daily.mjs
+// reads this value to line the weekday difficulty ramp up with real dates, so
+// moving it means deleting and regenerating the schedule — only before launch.
+export const DAILY_EPOCH = '2026-11-07';
+// Paid on top of the normal clear coins for solving the daily.
+export const DAILY_BONUS_COINS = 25;
+// One-time coin bonus the moment a win streak reaches each length. A broken
+// streak can earn them again on the way back up.
+export const DAILY_STREAK_REWARDS: Record<number, number> = { 3: 50, 7: 100, 30: 300, 100: 1000 };
+export const DAILY_RESULTS_KEPT = 60;
+// Landing page in every share; it routes to the right store per device.
+export const SHARE_URL = 'bigsimple.dev/games/threadily';
 
 // ── Coin economy ─────────────────────────────────────────────
 // A first clear pays COINS_FIRST_CLEAR; replaying a solved puzzle pays
