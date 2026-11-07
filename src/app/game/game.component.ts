@@ -8,7 +8,7 @@ import { arrowBackOutline, informationCircleOutline, bulbOutline } from 'ionicon
 import { puzzle, trinket } from '../entities/entities';
 import {
   STARTING_HEARTS, AD_HEARTS_GRANT, HINT_COST, ENERGY_PER_GAME, ENERGY_PER_EVENT_GAME, LOCAL_STORAGE_KEYS,
-  COINS_FIRST_CLEAR, REPLAY_COIN_MULTIPLIER
+  COINS_FIRST_CLEAR, REPLAY_COIN_MULTIPLIER, DAILY_BONUS_COINS
 } from '../entities/constants';
 import { GameService } from '../services/game.service';
 import { LocalstoreService } from '../services/localstore.service';
@@ -16,6 +16,8 @@ import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { EventService } from '../services/event.service';
 import { GachaService } from '../services/gacha.service';
+import { DailyService, daily_result } from '../services/daily.service';
+import { ShareService, attempt, buildShareText, dailyShareHeader, puzzleShareHeader, share_result } from '../services/share.service';
 import { SAMPLE_PUZZLES } from './samples';
 import { HOW_TO_STEPS } from '../entities/how-to';
 import { addHearts, board_state, hint, isFull, isWon, lockIn, newBoard, place, unplace } from './board';
@@ -40,6 +42,8 @@ export class GameComponent implements OnInit {
   private adSvc = inject(AdService);
   private eventSvc = inject(EventService);
   private gachaSvc = inject(GachaService);
+  public dailySvc = inject(DailyService);
+  private shareSvc = inject(ShareService);
   private alertCtrl = inject(AlertController);
   private toastCtrl = inject(ToastController);
   private destroyRef = inject(DestroyRef);
@@ -90,6 +94,25 @@ export class GameComponent implements OnInit {
   // Set on the solve that finishes an event: its legendary trinket.
   eventReward = signal<trinket | null>(null);
 
+  // What this attempt shares: one entry per charged Lock In, plus hints used
+  // and rewarded-ad heart refills.
+  attempts = signal<attempt[]>([]);
+  hintsUsed = signal(0);
+  adContinues = signal(0);
+
+  // Daily mode (route `daily`): free to start, recorded once per day. The day
+  // is fixed when the board loads, so a solve just past midnight still counts
+  // for the daily it started as.
+  daily = signal(false);
+  dailyDay = signal(0);
+  // Set once today's daily is finished (now or earlier): shows the result card
+  // instead of a board.
+  dailyResult = signal<daily_result | null>(null);
+  // True when dailyResult was finished on this visit (coins line shows).
+  dailyJustFinished = signal(false);
+  dailyBonus = signal(0);
+  streakReward = signal(0);
+
   hearts = computed(() => {
     const n = this.board()?.hearts ?? 0;
     return Array.from({ length: Math.max(STARTING_HEARTS, n) }, (_, i) => i < n);
@@ -106,15 +129,17 @@ export class GameComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.aRoute.snapshot?.data?.['daily']) {
+      this.loadDaily();
+      return;
+    }
     // Params, not the snapshot: "Next puzzle" may land on this same instance.
     this.aRoute.paramMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(pm => {
       this.load(+(pm.get('pack') ?? 0), +(pm.get('index') ?? 0));
     });
   }
 
-  private load(pack: number, index: number) {
-    this.pack.set(pack);
-    this.index.set(index);
+  private reset() {
     this.board.set(null);
     this.won.set(false);
     this.outOfHearts.set(false);
@@ -123,6 +148,12 @@ export class GameComponent implements OnInit {
     this.confirmHint.set(false);
     this.eventReward.set(null);
     this.lstoreSvc.setPlayerInfo();
+  }
+
+  private load(pack: number, index: number) {
+    this.pack.set(pack);
+    this.index.set(index);
+    this.reset();
 
     // Event puzzles exist only while their window is open.
     if (this.eventSvc.isPackBlocked(pack)) {
@@ -155,16 +186,45 @@ export class GameComponent implements OnInit {
     });
   }
 
+  private loadDaily() {
+    this.daily.set(true);
+    this.reset();
+    this.dailySvc.refresh();
+    const day = this.dailySvc.today();
+    this.dailyDay.set(day);
+    this.dailySvc.refFor(day).subscribe(async ref => {
+      if (!ref) {
+        this.goHome();
+        return;
+      }
+      this.pack.set(ref.pack);
+      this.index.set(ref.index);
+      this.puzzle.set(ref.puzzle);
+      // Already played today: the result, never a replay.
+      const done = this.dailySvc.resultFor(day);
+      if (done) {
+        this.dailyResult.set(done);
+        return;
+      }
+      // Free to start — no energy, and it never moves the Continue pointer.
+      await this.adSvc.maybeShowInterstitial();
+      this.start(ref.puzzle);
+    });
+  }
+
   private start(p: puzzle) {
     this.puzzle.set(p);
     const first = this.pack() === 1 && this.index() === 0;
-    this.tutorial.set(first && !this.lstoreSvc.get(LOCAL_STORAGE_KEYS.TutorialSeen) ? 0 : -1);
+    this.tutorial.set(first && !this.daily() && !this.lstoreSvc.get(LOCAL_STORAGE_KEYS.TutorialSeen) ? 0 : -1);
     this.board.set(newBoard(p, STARTING_HEARTS));
     this.selectedTile.set(null);
     this.activeCat.set(-1);
     this.won.set(false);
     this.outOfHearts.set(false);
     this.mistakes.set(0);
+    this.attempts.set([]);
+    this.hintsUsed.set(0);
+    this.adContinues.set(0);
   }
 
   get playable(): boolean {
@@ -246,6 +306,7 @@ export class GameComponent implements OnInit {
     this.tutorialAdvance(1);
     switch (result) {
       case 'correct':
+        this.attempts.update(a => [...a, 'hit']);
         this.celebrate(ci);
         if (isWon(state)) {
           this.activeCat.set(-1);
@@ -255,10 +316,12 @@ export class GameComponent implements OnInit {
         }
         break;
       case 'one-away':
+        this.attempts.update(a => [...a, 'oneAway']);
         this.missed(ci, state, guessed);
         this.toast('One away…');
         break;
       case 'wrong':
+        this.attempts.update(a => [...a, 'miss']);
         this.missed(ci, state, guessed);
         break;
       case 'already':
@@ -339,6 +402,11 @@ export class GameComponent implements OnInit {
     this.coinsAwarded.set(coins);
     this.lstoreSvc.addCoins(coins);
     this.lstoreSvc.markSolved(p.id);
+    if (this.daily()) {
+      this.dailyBonus.set(DAILY_BONUS_COINS);
+      this.lstoreSvc.addCoins(DAILY_BONUS_COINS);
+      this.finishDaily('won');
+    }
     const e = this.event();
     if (e) {
       this.eventSvc.claimIfComplete(e).subscribe(id => {
@@ -380,12 +448,48 @@ export class GameComponent implements OnInit {
       return;
     }
     this.board.set(addHearts(b, AD_HEARTS_GRANT));
+    this.adContinues.update(n => n + 1);
     this.outOfHearts.set(false);
   }
 
-  // Energy was spent at the start, so giving up just leaves.
+  // Energy was spent at the start, so giving up just leaves. Giving up the
+  // daily records the loss and shows its result card.
   giveUp() {
+    if (this.daily()) {
+      this.outOfHearts.set(false);
+      this.finishDaily('lost');
+      return;
+    }
     this.backToPack();
+  }
+
+  // ── Daily / share ───────────────────────────────────────────
+  private shareResult(status: 'won' | 'lost'): share_result {
+    return {
+      status,
+      attempts: this.attempts(),
+      heartsLeft: this.board()?.hearts ?? 0,
+      hints: this.hintsUsed(),
+      adContinues: this.adContinues()
+    };
+  }
+
+  private finishDaily(status: 'won' | 'lost') {
+    const result: daily_result = { day: this.dailyDay(), ...this.shareResult(status) };
+    this.streakReward.set(this.dailySvc.record(result));
+    // The stored copy wins if this day was somehow already recorded.
+    this.dailyResult.set(this.dailySvc.resultFor(result.day) ?? result);
+    this.dailyJustFinished.set(true);
+  }
+
+  share() {
+    const p = this.puzzle();
+    const daily = this.dailyResult();
+    if (daily) {
+      this.shareSvc.shareText(buildShareText(dailyShareHeader(daily.day), daily));
+    } else if (p && this.won()) {
+      this.shareSvc.shareText(buildShareText(puzzleShareHeader(p.id, p.rating), this.shareResult('won')));
+    }
   }
 
   // ── Hint ────────────────────────────────────────────────────
@@ -407,6 +511,7 @@ export class GameComponent implements OnInit {
     if (!r) return;
     if (!this.lstoreSvc.spendCoins(HINT_COST)) return;
     this.board.set(r.state);
+    this.hintsUsed.update(n => n + 1);
     this.selectedTile.set(null);
     this.activeCat.set(r.category);
   }
@@ -448,6 +553,13 @@ export class GameComponent implements OnInit {
   // Header back arrow. Practice and finished boards leave straight away;
   // otherwise confirm, since leaving forfeits the energy already spent.
   tapBack() {
+    if (this.daily()) {
+      // Leaving after a charged guess forfeits the daily (no free retries);
+      // before any guess there's nothing to lose.
+      if (this.board() && !this.won() && !this.dailyResult() && this.attempts().length) this.confirmLeave.set(true);
+      else this.goHome();
+      return;
+    }
     if (this.board() && !this.won() && !this.practice()) {
       this.confirmLeave.set(true);
       return;
@@ -455,8 +567,19 @@ export class GameComponent implements OnInit {
     this.backToPack();
   }
 
+  // Confirmed "Leave" from the mid-puzzle prompt.
+  leave() {
+    if (this.daily()) {
+      this.confirmLeave.set(false);
+      this.finishDaily('lost');
+      this.goHome();
+      return;
+    }
+    this.backToPack();
+  }
+
   backToPack() {
-    if (this.practice()) {
+    if (this.practice() || this.daily()) {
       this.goHome();
       return;
     }

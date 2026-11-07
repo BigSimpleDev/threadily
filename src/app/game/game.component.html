@@ -11,7 +11,9 @@
             <span [class.thr-star-on]="s <= (puzzle()?.rating ?? 0)">★</span>
           }
         </span>
-        @if (!practice()) {
+        @if (daily()) {
+          <span class="thr-game-num">Daily #{{ dailyDay() }}</span>
+        } @else if (!practice()) {
           <span class="thr-game-num">#{{ index() + 1 }}</span>
         }
       </span>
@@ -25,7 +27,7 @@
       role="status" [attr.aria-label]="lstoreSvc.coins() + ' coins'">
       <span class="thr-coin-dot">¢</span>{{ lstoreSvc.coins() }}
     </span>
-    <button class="thr-hint-btn" (click)="buyHint()" [disabled]="!board() || won() || outOfHearts()"
+    <button class="thr-hint-btn" (click)="buyHint()" [disabled]="!board() || won() || outOfHearts() || !!dailyResult()"
       [attr.aria-label]="'Hint: place one correct tile for ' + HINT_COST + ' coins. You have ' + lstoreSvc.coins()">
       <ion-icon name="bulb-outline"></ion-icon>
       <span class="thr-hint-cost">{{ HINT_COST }}¢</span>
@@ -151,7 +153,7 @@
   }
 
   <!-- Win -->
-  @if (won()) {
+  @if (won() && !daily()) {
   <div class="thr-modal-backdrop">
     <div class="thr-modal thr-win-card" role="dialog" aria-label="Puzzle solved">
       <div class="thr-win-emoji">🧶</div>
@@ -175,7 +177,39 @@
       }
       <div class="thr-modal-actions">
         <button class="thr-btn thr-btn-primary" (click)="nextPuzzle()">Next puzzle</button>
+        @if (!practice()) {
+          <button class="thr-btn thr-btn-ghost" (click)="share()">Share</button>
+        }
         <button class="thr-btn thr-btn-ghost" (click)="backToPack()">{{ practice() ? 'Home' : event() ? event()!.name : 'Pack ' + pack() }}</button>
+      </div>
+    </div>
+  </div>
+  }
+
+  <!-- Daily result: just finished, or reopened later the same day -->
+  @if (dailyResult(); as r) {
+  <div class="thr-modal-backdrop">
+    <div class="thr-modal thr-win-card" role="dialog" [attr.aria-label]="'Daily ' + r.day + ' result'">
+      <div class="thr-win-emoji">{{ r.status === 'won' ? '🧶' : '🪡' }}</div>
+      <h2 class="thr-modal-title">{{ r.status === 'won' ? 'Daily solved!' : 'Out of thread' }}</h2>
+      <p class="thr-modal-sub">Daily #{{ r.day }}</p>
+      <div class="thr-daily-grid" aria-hidden="true">
+        @for (a of r.attempts; track $index) {
+          <span class="thr-daily-sq thr-daily-sq-{{ a }}"></span>
+        }
+      </div>
+      <p class="thr-daily-streak">🔥 {{ dailySvc.streak().current }} day streak
+        <span class="thr-daily-best">· best {{ dailySvc.streak().best }}</span></p>
+      @if (dailyJustFinished() && r.status === 'won') {
+      <div class="thr-win-coins">
+        <span class="thr-coin-dot">¢</span>+{{ coinsAwarded() + dailyBonus() + streakReward() }}
+        <span class="thr-win-coins-note">@if (streakReward()) {streak bonus!} @else {daily bonus}</span>
+      </div>
+      }
+      <p class="thr-modal-note">Next daily in {{ dailySvc.countdown() }}</p>
+      <div class="thr-modal-actions">
+        <button class="thr-btn thr-btn-primary" (click)="share()">Share</button>
+        <button class="thr-btn thr-btn-ghost" (click)="goHome()">Home</button>
       </div>
     </div>
   </div>
@@ -242,10 +276,10 @@
     <div class="thr-modal" role="dialog" aria-label="Leave puzzle">
       <div class="thr-win-emoji">🧵</div>
       <h2 class="thr-modal-title">Leave puzzle?</h2>
-      <p class="thr-modal-sub">You'll lose the {{ energyCost() }} energy spent to start it.</p>
+      <p class="thr-modal-sub">@if (daily()) {Leaving now counts as a loss for today's daily.} @else {You'll lose the {{ energyCost() }} energy spent to start it.}</p>
       <div class="thr-modal-actions">
         <button class="thr-btn thr-btn-primary" (click)="confirmLeave.set(false)">Keep playing</button>
-        <button class="thr-btn thr-btn-ghost" (click)="backToPack()">Leave</button>
+        <button class="thr-btn thr-btn-ghost" (click)="leave()">Leave</button>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@ export function localDay(t: number): string {
   return `${d.getFullYear()}-${mm}-${dd}`;
 }
 
-function formatDuration(ms: number): string {
+export function formatDuration(ms: number): string {
   const total = Math.ceil(ms / 1000);
   const h = Math.floor(total / 3600);
   const m = Math.floor((total % 3600) / 60);

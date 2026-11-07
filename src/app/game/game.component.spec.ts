@@ -10,7 +10,9 @@ import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
 import { pack_data } from '../entities/entities';
-import { COINS_FIRST_CLEAR, HINT_COST, STARTING_HEARTS, AD_HEARTS_GRANT, ENERGY_PER_GAME, LOCAL_STORAGE_KEYS } from '../entities/constants';
+import { COINS_FIRST_CLEAR, HINT_COST, STARTING_HEARTS, AD_HEARTS_GRANT, ENERGY_PER_GAME, LOCAL_STORAGE_KEYS, DAILY_BONUS_COINS } from '../entities/constants';
+import { DailyService } from '../services/daily.service';
+import { ShareService } from '../services/share.service';
 
 const PACK: pack_data = {
   pack: 1,
@@ -44,12 +46,16 @@ describe('GameComponent', () => {
   let alertStub: any;
   let toastStub: any;
   let alertRole: string;
+  let routeData: Record<string, unknown>;
+  let shareStub: any;
 
   const ev = { stopPropagation: () => {} } as Event;
 
   beforeEach(() => {
     localStorage.clear();
     alertRole = 'confirm';
+    routeData = {};
+    shareStub = { shareText: jasmine.createSpy('shareText').and.resolveTo(undefined) };
     params = new BehaviorSubject(convertToParamMap({ pack: '1', index: '0' }));
     routerSpy = jasmine.createSpyObj('Router', ['navigate']);
     routerSpy.navigate.and.returnValue(Promise.resolve(true));
@@ -81,7 +87,8 @@ describe('GameComponent', () => {
       imports: [GameComponent, HttpClientTestingModule],
       providers: [
         { provide: Router, useValue: routerSpy },
-        { provide: ActivatedRoute, useValue: { paramMap: params } },
+        { provide: ActivatedRoute, useValue: { paramMap: params, snapshot: { get data() { return routeData; } } } },
+        { provide: ShareService, useValue: shareStub },
         { provide: EnergyService, useValue: energyStub },
         { provide: AdService, useValue: adStub },
         { provide: AlertController, useValue: alertStub },
@@ -367,6 +374,110 @@ describe('GameComponent', () => {
       tick(700);
       expect(c.tutorial()).toBe(-1);
       expect(lstore.get(LOCAL_STORAGE_KEYS.TutorialSeen)).toBe('true');
+    }));
+  });
+
+  it('the win screen shares a spoiler-free card', fakeAsync(() => {
+    boot();
+    fillAndLock(0, ['a1', 'a2', 'a3', 'b1']);
+    fillAndLock(0, PACK.puzzles[0].categories[0].tiles);
+    fillAndLock(1, PACK.puzzles[0].categories[1].tiles);
+    tick(800);
+    c.share();
+    expect(shareStub.shareText).toHaveBeenCalledOnceWith(
+      'Threadily #1 ★\n🟨🟩🟩\n❤️❤️🖤\nbigsimple.dev/games/threadily');
+    flush();
+  }));
+
+  describe('daily mode', () => {
+    let daily: DailyService;
+
+    // The schedule and pack are cached after the first boot of a test.
+    function bootDaily(cached = false) {
+      routeData = { daily: true };
+      daily = TestBed.inject(DailyService);
+      fixture = TestBed.createComponent(GameComponent);
+      c = fixture.componentInstance;
+      fixture.detectChanges();
+      if (!cached) {
+        // Every day maps to puzzle 2 (pack 1, index 1).
+        http.expectOne('assets/daily/schedule.json').flush(Array(5000).fill(2));
+        http.expectOne('assets/puzzles/1.json').flush(PACK);
+      }
+      tick();
+    }
+
+    it('is free and leaves the Continue pointer alone', fakeAsync(() => {
+      lstore.setCurrent(3, 7);
+      bootDaily();
+      expect(c.daily()).toBeTrue();
+      expect(energyStub.spendForGame).not.toHaveBeenCalled();
+      expect(c.puzzle()!.id).toBe(2);
+      expect(c.board()).not.toBeNull();
+      expect(lstore.currentPack()).toBe(3);
+    }));
+
+    it('a win pays the daily bonus, records the day, and starts a streak', fakeAsync(() => {
+      bootDaily();
+      fillAndLock(0, PACK.puzzles[1].categories[0].tiles);
+      fillAndLock(1, PACK.puzzles[1].categories[1].tiles);
+      tick(700);
+      expect(lstore.coins()).toBe(COINS_FIRST_CLEAR + DAILY_BONUS_COINS);
+      expect(lstore.isSolved(2)).toBeTrue();
+      const r = daily.resultFor(daily.today())!;
+      expect(r.status).toBe('won');
+      expect(r.attempts).toEqual(['hit', 'hit']);
+      expect(daily.streak().current).toBe(1);
+      expect(c.dailyResult()).toEqual(r);
+      c.share();
+      expect(shareStub.shareText.calls.mostRecent().args[0]).toContain(`Threadily Daily #${r.day} 🧵`);
+    }));
+
+    it('reopening a finished daily shows the result, not a replay', fakeAsync(() => {
+      bootDaily();
+      fillAndLock(0, PACK.puzzles[1].categories[0].tiles);
+      fillAndLock(1, PACK.puzzles[1].categories[1].tiles);
+      tick(700);
+      fixture.destroy();
+      bootDaily(true);
+      expect(c.board()).toBeNull();
+      expect(c.dailyResult()!.status).toBe('won');
+      expect(c.dailyJustFinished()).toBeFalse();
+    }));
+
+    it('giving up records a loss; an ad continue is counted', fakeAsync(() => {
+      bootDaily();
+      for (let i = 0; i < 3; i++) fillAndLock(0, ['c1', 'c2', 'd' + (i + 1), 'd4']);
+      tick(800);
+      c.watchAdForHearts();
+      tick();
+      fillAndLock(0, ['c1', 'c2', 'c3', 'd1']);
+      fillAndLock(0, ['c1', 'c2', 'd2', 'd1']);
+      fillAndLock(0, ['c1', 'c2', 'c3', 'd2']);
+      tick(800);
+      expect(c.outOfHearts()).toBeTrue();
+      c.giveUp();
+      const r = daily.resultFor(daily.today())!;
+      expect(r.status).toBe('lost');
+      expect(r.adContinues).toBe(1);
+      expect(r.attempts.length).toBe(6);
+      expect(daily.streak().current).toBe(0);
+      flush();
+    }));
+
+    it('leaving after a guess counts as a loss; before any guess it just leaves', fakeAsync(() => {
+      bootDaily();
+      c.tapBack();
+      expect(c.confirmLeave()).toBeFalse();
+      expect(routerSpy.navigate).toHaveBeenCalledWith(['/'], jasmine.anything());
+      fixture.destroy();
+      bootDaily(true);
+      fillAndLock(0, ['c1', 'c2', 'c3', 'd1']);
+      c.tapBack();
+      expect(c.confirmLeave()).toBeTrue();
+      c.leave();
+      expect(daily.resultFor(daily.today())!.status).toBe('lost');
+      flush();
     }));
   });
 });

@@ -14,6 +14,12 @@ export const routes: Routes = [
     loadComponent: () => import('./game/game.component').then(m => m.GameComponent)
   },
   {
+    // Today's daily: the same board, in daily mode (free, recorded, shareable).
+    path: 'daily',
+    data: { daily: true },
+    loadComponent: () => import('./game/game.component').then(m => m.GameComponent)
+  },
+  {
     path: 'collection',
     loadComponent: () => import('./collection/collection.component').then(m => m.CollectionComponent)
   },

@@ -40,6 +40,34 @@
   </button>
   }
 
+  <!-- Daily -->
+  @if (dailyDay()) {
+  <div class="thr-daily-card" [class.thr-daily-card-done]="!!dailyDone()">
+    <div class="thr-daily-head">
+      <span class="thr-daily-label">Daily #{{ dailyDay() }}</span>
+      <span class="thr-daily-streak" [attr.aria-label]="dailySvc.streak().current + ' day streak'">🔥 {{ dailySvc.streak().current }}</span>
+    </div>
+    @if (dailyDone(); as r) {
+      <div class="thr-daily-done">
+        <span class="thr-daily-mark" [class.thr-daily-mark-lost]="r.status === 'lost'">{{ r.status === 'won' ? '✓' : '✖' }}</span>
+        <span class="thr-daily-text">
+          <span class="thr-daily-title">{{ r.status === 'won' ? 'Solved today' : 'Better luck tomorrow' }}</span>
+          <span class="thr-daily-next">Next in {{ dailySvc.countdown() }}</span>
+        </span>
+        <button class="thr-daily-share" (click)="shareDaily()">Share</button>
+      </div>
+    } @else {
+      <div class="thr-daily-done">
+        <span class="thr-daily-text">
+          <span class="thr-daily-title">Today's puzzle</span>
+          <span class="thr-daily-next">Same board for everyone · free</span>
+        </span>
+        <button class="thr-daily-play" (click)="playDaily()">Play</button>
+      </div>
+    }
+  </div>
+  }
+
   <!-- Seasonal events (only while their window is open) -->
   @for (le of liveEvents(); track le.e.id) {
   <button class="thr-event-card" [style]="eventStyle(le.e)" (click)="openEvent(le.e)">

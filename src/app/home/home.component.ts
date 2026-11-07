@@ -11,6 +11,8 @@ import { GachaService } from '../services/gacha.service';
 import { GameService, pack_summary, puzzle_ref } from '../services/game.service';
 import { EventService, event_progress } from '../services/event.service';
 import { event_config } from '../entities/constants';
+import { DailyService } from '../services/daily.service';
+import { ShareService, buildShareText, dailyShareHeader } from '../services/share.service';
 
 @Component({
   selector: 'app-home',
@@ -28,6 +30,8 @@ export class HomeComponent implements ViewWillEnter {
   private gameSvc = inject(GameService);
   private eventSvc = inject(EventService);
   private toastCtrl = inject(ToastController);
+  public dailySvc = inject(DailyService);
+  private shareSvc = inject(ShareService);
 
   readonly stars = [1, 2, 3, 4, 5];
 
@@ -46,6 +50,10 @@ export class HomeComponent implements ViewWillEnter {
     return ft ? this.gachaSvc.catalog().find(t => t.id === ft.id) ?? ft : null;
   });
   addingEnergy = signal(false);
+  // Today's daily number once its puzzle is known to exist; 0 hides the card
+  // (before the epoch, or no schedule).
+  dailyDay = signal(0);
+  dailyDone = computed(() => this.dailyDay() ? this.dailySvc.resultFor(this.dailyDay()) : null);
   // Seasonal events inside their window, each with its solve progress. Empty
   // (and the card gone) outside every window — no app update needed.
   liveEvents = signal<{ e: event_config; p: event_progress }[]>([]);
@@ -59,6 +67,9 @@ export class HomeComponent implements ViewWillEnter {
 
   ionViewWillEnter() {
     this.lstoreSvc.setPlayerInfo();
+    this.dailySvc.refresh();
+    const today = this.dailySvc.today();
+    this.dailySvc.refFor(today).subscribe(r => this.dailyDay.set(r ? today : 0));
     const solved = (id: number) => this.lstoreSvc.isSolved(id);
     this.gameSvc.nextUnsolved(solved).subscribe(r => {
       this.next.set(r);
@@ -82,6 +93,15 @@ export class HomeComponent implements ViewWillEnter {
   play() {
     const n = this.next();
     if (n) this.router.navigate(['/play', n.pack, n.index]);
+  }
+
+  playDaily() {
+    this.router.navigate(['/daily']);
+  }
+
+  shareDaily() {
+    const r = this.dailyDone();
+    if (r) this.shareSvc.shareText(buildShareText(dailyShareHeader(r.day), r));
   }
 
   openPack(pack: number) {

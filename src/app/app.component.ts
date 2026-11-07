@@ -9,6 +9,7 @@ import { AdService } from './services/ad.service';
 import { PurchaseService } from './services/purchase.service';
 import { LocalstoreService } from './services/localstore.service';
 import { EnergyService } from './services/energy.service';
+import { DailyService } from './services/daily.service';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ export class AppComponent {
   private purchaseSvc = inject(PurchaseService);
   private lstoreSvc = inject(LocalstoreService);
   private energySvc = inject(EnergyService);
+  private dailySvc = inject(DailyService);
 
   showSplash = signal(true);
 
@@ -33,6 +35,8 @@ export class AppComponent {
 
     // Start energy accrual (applies any offline refill, then ticks each second).
     this.energySvc.init();
+    // Daily clock: rolls the card over at midnight and clears broken streaks.
+    this.dailySvc.init();
 
     // Lock to portrait on all native platforms. No-op / rejects harmlessly on web.
     ScreenOrientation.lock({ orientation: 'portrait' }).catch(() => { /* web: unsupported */ });

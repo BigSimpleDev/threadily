@@ -151,3 +151,33 @@
 .thr-event-meter { display: block; height: 6px; margin-top: 6px; border-radius: 999px; background: rgba(255, 255, 255, 0.25); overflow: hidden; }
 .thr-event-fill { display: block; height: 100%; border-radius: inherit; background: var(--event-accent); }
 .thr-event-count { flex: none; font-size: 16px; font-weight: 900; }
+
+// ── Daily card ──────────────────────────────────────────────
+// Warm yarn-orange so it reads apart from the purple Continue hero below.
+.thr-daily-card {
+  border-radius: 18px; padding: 12px 14px; margin-bottom: 14px;
+  background: linear-gradient(138deg, #F97316 0%, #EA580C 100%); color: #fff;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.32);
+}
+.thr-daily-card-done {
+  background: var(--ion-card-background); color: var(--ion-text-color);
+  border: 1px solid var(--ion-border-color); box-shadow: var(--dly-shadow-card);
+}
+.thr-daily-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.thr-daily-label { font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; opacity: .9; }
+.thr-daily-streak { font-size: 15px; font-weight: 900; }
+.thr-daily-done { display: flex; align-items: center; gap: 12px; }
+.thr-daily-mark {
+  flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: #22C55E; color: #fff; font-size: 18px; font-weight: 900;
+}
+.thr-daily-mark-lost { background: var(--ion-color-medium); }
+.thr-daily-text { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.thr-daily-title { font-size: 17px; font-weight: 900; }
+.thr-daily-next { font-size: 12px; font-weight: 700; opacity: .8; }
+.thr-daily-play, .thr-daily-share {
+  flex: none; height: 40px; padding: 0 20px; border: none; border-radius: 12px;
+  font-size: 15px; font-weight: 900; cursor: pointer;
+}
+.thr-daily-play { background: #fff; color: #EA580C; }
+.thr-daily-share { background: var(--ion-color-primary); color: #fff; }
