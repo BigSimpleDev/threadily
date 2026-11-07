@@ -2,6 +2,7 @@
 //   - src/assets/trinkets/<set>/<set>_NN.(webp|svg) — art or a placeholder card
 //   - src/assets/trinkets/catalog.json              — { id, name, rarity, set, img }
 //   - TRINKETS.md and trinketart/ART_PROMPT.md       — regenerated docs
+//   - src/assets/events/<id>/icon.webp               — from trinketart/events/<id>.png
 //
 // Art workflow (prompts in trinketart/ART_PROMPT.md):
 //   1. Generate a PNG per trinket.
@@ -30,9 +31,13 @@ const { sets: SETS } = JSON.parse(readFileSync(join(ART_DIR, 'sets.json'), 'utf8
 const ART_PX = 768;
 const WEBP_QUALITY = 80;
 
-function toWebp(src, dest) {
+// Event icons render at most 56px (home card); 192px covers 3x screens. The
+// ~2 MB 1024px source PNGs stay in trinketart/events/, out of the app bundle.
+const EVENT_ICON_PX = 192;
+
+function toWebp(src, dest, px = ART_PX) {
   return sharp(src)
-    .resize(ART_PX, ART_PX, { fit: 'inside', withoutEnlargement: true })
+    .resize(px, px, { fit: 'inside', withoutEnlargement: true })
     .webp({ quality: WEBP_QUALITY, effort: 6 })
     .toFile(dest);
 }
@@ -190,7 +195,7 @@ prompt.push(
   '',
   '1. Generate in ChatGPT with the finished first trinket attached as the style reference.',
   '2. Paste the template, filling in `{EVENT}`, `{PALETTE}`, `{CARD COLOR}`, and `{SUBJECT}` from the table.',
-  '3. Save as `src/assets/events/<id>/icon.png` (same layout as Trivily) — square 1024×1024 PNG with a **transparent** background.',
+  '3. Save as `trinketart/events/<id>.png` — square 1024×1024 PNG with a **transparent** background — then run `node generate-trinkets.mjs` to write the small `src/assets/events/<id>/icon.webp` the app loads.',
   '4. Check it shrunk to 48px on the card color: the silhouette should still be obvious.',
   '',
   '> A single handmade crochet amigurumi plush in the style of the attached reference image, presented as a die-cut sticker icon. Everything is made of yarn and felt: visible crochet stitches, soft fuzzy fibers, embroidered details, felt accents. Front-facing, centered, filling about 85% of the frame, bold simple silhouette that stays readable when shrunk to 48 pixels: chunky shapes, high contrast, few small details. Even soft front lighting, no cast shadow, no coaster base, no backdrop, no scene. Transparent background (PNG with alpha), with a thin cream yarn outline around the whole silhouette so it pops on a solid {CARD COLOR} background. **{EVENT}** theme. Palette: {PALETTE}. Square 1:1, 1024×1024. No text, no border, no watermark.',
@@ -201,7 +206,15 @@ prompt.push(
   '|---|---|---|---|---|'
 );
 for (const [id, name, palette, color, subject] of EVENT_ICONS) {
-  prompt.push(`| \`src/assets/events/${id}/icon.png\` | ${name} | ${palette} | \`${color}\` | ${subject} |`);
+  prompt.push(`| \`trinketart/events/${id}.png\` | ${name} | ${palette} | \`${color}\` | ${subject} |`);
+}
+
+for (const [id] of EVENT_ICONS) {
+  const src = join(ART_DIR, 'events', `${id}.png`);
+  if (!existsSync(src)) continue;
+  const outDir = join(__dirname, 'src/assets/events', id);
+  mkdirSync(outDir, { recursive: true });
+  await toWebp(src, join(outDir, 'icon.webp'), EVENT_ICON_PX);
 }
 prompt.push('');
 writeFileSync(join(ART_DIR, 'ART_PROMPT.md'), prompt.join('\n'));

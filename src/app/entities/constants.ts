@@ -36,7 +36,7 @@ export const PUZZLES_PER_PACK = 100;
 export interface event_config {
     id: string;
     name: string;
-    // Square art at src/assets/events/<id>/icon.png (see generate-trinkets.mjs).
+    // Small WebP built from trinketart/events/<id>.png by generate-trinkets.mjs.
     icon: string;
     // One line for the home card and the event's pack screen.
     blurb: string;
@@ -76,7 +76,7 @@ export const EVENT_COLORS = {
 export const HALLOWEEN_EVENT: event_config = {
     id: 'halloween',
     name: 'Halloween',
-    icon: 'assets/events/halloween/icon.png',
+    icon: 'assets/events/halloween/icon.webp',
     blurb: 'Spooky word groups for spooky season.',
     packs: [101],
     start: { month: 10, day: 1 },   // Oct 1
@@ -89,7 +89,7 @@ export const HALLOWEEN_EVENT: event_config = {
 export const THANKSGIVING_EVENT: event_config = {
     id: 'thanksgiving',
     name: 'Thanksgiving',
-    icon: 'assets/events/thanksgiving/icon.png',
+    icon: 'assets/events/thanksgiving/icon.webp',
     blurb: 'A harvest table full of word groups.',
     packs: [102],
     start: { month: 11, day: 1 },   // Nov 1, the day Halloween closes
@@ -102,7 +102,7 @@ export const THANKSGIVING_EVENT: event_config = {
 export const CHRISTMAS_EVENT: event_config = {
     id: 'christmas',
     name: 'Christmas',
-    icon: 'assets/events/christmas/icon.png',
+    icon: 'assets/events/christmas/icon.webp',
     blurb: 'Unwrap a stocking full of word groups.',
     packs: [103],
     start: { month: 12, day: 1 },   // Dec 1
