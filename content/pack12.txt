@@ -1,0 +1,630 @@
+# Pack 12 — second season. Each star tier runs a notch harder than packs 1–10;
+# 5★ boards use purple-tier wordplay (hidden words, homophones, anagrams).
+
+@ 1 | Car or Bike
+Car parts: Windshield, Trunk, Seatbelt, Hood
+Bike parts: Pedal, Kickstand, Handlebar, Chain
+
+@ 2 | Zoo Map
+Big cats: Lion, Tiger, Jaguar, Leopard
+Bears: Grizzly, Panda, Polar, Sloth bear
+Monkeys: Baboon, Capuchin, Howler, Macaque
+~ Jaguar
+
+@ 1 | Mountain, Ocean or Desert
+Mountain: Peak, Avalanche, Yodel, Chairlift
+Ocean: Wave, Reef, Current, Riptide
+Desert: Dune, Oasis, Cactus, Mirage
+
+@ 2 | Picnic Basket
+Sandwiches: Club, Reuben, BLT, Cuban
+Salads: Caesar, Cobb, Waldorf, Greek
+Picnic gear: Blanket, Cooler, Thermos, Hamper
+~ Caesar, Club
+
+@ 1 | Tea Party or Pub
+Tea party: Scone, Crumpet, Teapot, Doily
+Pub: Pint, Darts, Bar stool, Jukebox
+
+@ 2 | Weekend Chores
+Laundry: Fold, Iron, Starch, Line-dry
+Yard work: Mow, Rake, Weed, Prune
+Cleaning: Dust, Mop, Vacuum, Polish
+~ Iron, Prune, Polish
+
+@ 1 | Who Uses It?
+Teacher: Chalkboard, Lesson plan, Homework, Report card
+Doctor: Stethoscope, Checkup, Clinic, Bandage
+Chef: Apron, Whisk, Recipe, Toque
+
+@ 2 | Toy Box
+Outdoor toys: Hula hoop, Jump rope, Pogo stick, Kite
+Puzzles: Jigsaw, Crossword, Sudoku, Maze
+Kids' card games: Go Fish, Old Maid, War, Snap
+~ War
+
+@ 5 | Hear Here
+Sounds like a tree: Fur, Beach, You, Plain
+Sounds like an insect: Might, Aunt, Tic, Be
+Sounds like a flower: Flocks, Two lips, Rows, Lilly
+Sounds like a mammal: Bare, Bore, Links, Dough
+note=fir, beech, yew, plane / mite, ant, tick, bee / phlox, tulips, rose, lily / bear, boar, lynx, doe
+
+@ 3 | Opera House
+Operas: Carmen, Tosca, Aida, Turandot
+Voice types: Soprano, Mezzo, Baritone, Countertenor
+Opera terms: Bel canto, Recitative, Overture, Leitmotif
+Opera composers: Verdi, Puccini, Wagner, Bizet
+~ Carmen
+
+@ 4 | Ring, Stick, Bake, Kick
+___bell: Cow, Door, Dumb, Jingle
+___stick: Lip, Joy, Chop, Drum
+___cake: Pan, Cup, Fruit, Pound
+___ball: Foot, Snow, Meat, Pin
+
+@ 5 | Under Cover
+Hides a tool: Shawl, Brake, Advise, Shoe
+Hides a fruit: Configure, Appear, Update, Sublime
+Hides a sport: Apology, Deluge, Asking, Spool
+Hides a dance: Freely, Staple, Discount, Chorale
+note=awl, rake, vise, hoe / fig, pear, date, lime / polo, luge, ski, pool / reel, tap, disco, hora
+
+@ 1 | Spring or Fall
+Spring: Blossom, Tulips, Robin, Easter
+Fall: Acorn, Pumpkin, Harvest, Raking
+
+@ 3 | Grain Bin
+Rice varieties: Basmati, Arborio, Jasmine, Carnaroli
+Ancient grains: Teff, Amaranth, Sorghum, Spelt
+Noodles: Soba, Ramen, Lo mein, Somen
+Flours: Semolina, Masa, Cassava, Almond
+~ Jasmine
+
+@ 2 | Garden Visitors
+Garden pests: Aphid, Slug, Cutworm, Weevil
+Pollinators: Bee, Hummingbird, Butterfly, Bat
+Garden helpers: Earthworm, Ladybug, Lacewing, Toad
+~ Bat
+
+@ 4 | Slang Slinger
+Slang for nose: Schnoz, Beak, Snout, Honker
+Slang for head: Noggin, Bean, Dome, Melon
+Slang for mouth: Trap, Yap, Gob, Pie hole
+Slang for face: Mug, Puss, Dial, Phiz
+~ Beak, Bean, Melon
+
+@ 3 | Body Building
+Back___: Pack, Fire, Bone, Log
+Hand___: Bag, Shake, Cuff, Rail
+Head___: Band, Phone, Quarter, Strong
+
+@ 2 | Mountain Trip
+Climbing gear: Carabiner, Harness, Rope, Crampons
+Mountain features: Summit, Ridge, Col, Glacier
+Mountain animals: Ibex, Marmot, Yak, Chamois
+~ Chamois
+
+@ 4 | Things With...
+Things with eyes: Needle, Potato, Hurricane, Target
+Things with teeth: Comb, Saw, Zipper, Gear
+Things with heads: Nail, Coin, Lettuce, Pin
+Things with necks: Bottle, Vase, Shirt, Flask
+~ Target
+
+@ 3 | Olympic Park
+Winter Olympic sports: Biathlon, Luge, Curling, Skeleton
+Summer Olympic sports: Archery, Rowing, Fencing, Handball
+Gymnastics apparatus: Pommel horse, Rings, Vault, Beam
+Swimming strokes: Butterfly, Backstroke, Breaststroke, Freestyle
+~ Skeleton, Butterfly
+
+@ 5 | Ending Credits
+Ends with a tree: Splash, Cloak, Realm, Spine
+Ends with a bird: Pattern, Escrow, Kitchen, Growl
+Ends with a fish: Console, Steel, Betray, Turnpike
+Ends with a garment: That, Handicap, Probe, Zebra
+note=ash, oak, elm, pine / tern, crow, hen, owl / sole, eel, ray, pike / hat, cap, robe, bra
+
+@ 2 | At the Bakery
+Breads: Sourdough, Rye, Baguette, Ciabatta
+Cookies: Oatmeal, Sugar, Thumbprint, Fortune
+Doughnuts: Cruller, Jelly, Glazed, Bear claw
+~ Fortune
+
+@ 4 | Dial It In
+___ code: Morse, Dress, Area, Source
+___box: Juke, Soap, Tool, Shoe
+___line: Punch, Dead, Clothes, Head
+___ ring: Ear, Onion, Bull, Boxing
+
+@ 3 | Rhyme Time
+Rhymes with cheese: Breeze, Fleas, Trapeze, Seize
+Rhymes with bread: Fled, Said, Thread, Shed
+Rhymes with cake: Steak, Ache, Break, Opaque
+
+@ 4 | Formerly Known As
+Former country names: Persia, Siam, Ceylon, Zaire
+Former city names: Bombay, Peking, Saigon, Edo
+Former currencies: Drachma, Peseta, Guilder, Schilling
+Dead languages: Sanskrit, Akkadian, Etruscan, Gothic
+~ Persia, Gothic
+
+@ 2 | Sky High
+Birds: Eagle, Hawk, Falcon, Albatross
+Aircraft: Jet, Helicopter, Glider, Blimp
+In the night sky: Moon, Comet, Meteor, Aurora
+
+@ 3 | Feeling It
+Sad: Glum, Morose, Doleful, Blue
+Angry: Irate, Livid, Cross, Sore
+Happy: Chipper, Elated, Jolly, Upbeat
+Scared: Skittish, Jumpy, Spooked, Timid
+~ Cross, Blue
+
+@ 5 | Weapons Check
+Sounds like a weapon: Soared, Beau, Canon, Missal
+Sounds like body part: Tow, Pour, Vain, Browse
+Sounds like a vehicle: Slay, Buss, Plain, Coup
+Sounds like a dessert: Sunday, Tort, Moose, Pi
+note=sword, bow, cannon, missile / toe, pore, vein, brows / sleigh, bus, plane, coupe / sundae, torte, mousse, pie
+
+@ 3 | Toolbox
+Saws: Hacksaw, Coping, Bandsaw, Fretsaw
+Screwdrivers: Phillips, Flathead, Torx, Robertson
+Wrenches: Allen, Socket, Pipe, Monkey
+Hammers: Claw, Ball-peen, Sledge, Mallet
+~ Monkey
+
+@ 1 | Library or Gym
+Library: Bookmark, Librarian, Due date, Quiet zone
+Gym: Dumbbell, Locker, Spin class, Squat rack
+
+@ 4 | Pitch In
+Pitch ___: Tent, Idea, Black, Perfect
+Hold ___: Grudge, Breath, Fort, Horses
+Break ___: Ice, News, Even, Bread
+Throw ___: Shade, Punch, Tantrum, Javelin
+
+@ 3 | Keyboard Warrior
+Programming languages: Python, Ruby, Perl, Kotlin
+File types: PDF, JPEG, CSV, MP3
+Keyboard keys: Escape, Tab, Shift, Delete
+Web terms: Cookie, Cache, Spam, Bandwidth
+~ Python, Cookie
+
+@ 4 | Capital Gains
+African capitals: Accra, Dakar, Nairobi, Kigali
+S. American capitals: Quito, Bogota, Asuncion, La Paz
+Asian capitals: Hanoi, Dhaka, Manila, Tashkent
+European capitals: Tallinn, Vilnius, Ljubljana, Sofia
+Oceanian capitals: Suva, Apia, Wellington, Honiara
+~ Sofia
+
+@ 2 | Music Store
+Guitars: Acoustic, Electric, Classical, Steel
+Drums: Snare, Bongo, Timpani, Tom-tom
+Keyboards: Piano, Organ, Harpsichord, Synth
+
+@ 3 | Dessert Cart
+Pies: Pecan, Key lime, Rhubarb, Shoofly
+Puddings: Tapioca, Figgy, Bread, Rice
+Cakes: Pound, Sponge, Lava, Angel food
+Ice cream flavors: Rocky road, Cookie dough, Neapolitan, Mint chip
+~ Bread
+
+@ 5 | First Impressions
+Starts with a vehicle: Vanish, Cabinet, Busy, Trampoline
+Starts with an insect: Antique, Mother, Ticket, Beer
+Starts with a fish: Shadow, Solemn, Perchance, Codger
+Starts with a drink: Teacher, Ginger, Rumble, Portion
+note=van, cab, bus, tram / ant, moth, tick, bee / shad, sole, perch, cod / tea, gin, rum, port
+
+@ 3 | Natural Wonders
+Deserts: Sahara, Gobi, Atacama, Mojave
+Mountains: Everest, Denali, Kilimanjaro, Matterhorn
+Waterfalls: Niagara, Victoria, Angel, Iguazu
+Lakes: Titicaca, Baikal, Superior, Tahoe
+~ Superior, Angel
+
+@ 2 | Ice Rink
+Hockey: Puck, Slap shot, Goalie, Face-off
+Figure skating: Axel, Lutz, Salchow, Toe loop
+Curling: Stone, Broom, Hammer, House
+~ Hammer, House
+
+@ 4 | Hall of Science
+Astronomers: Kepler, Hubble, Copernicus, Brahe
+Inventors: Tesla, Bell, Morse, Edison
+Biologists: Mendel, Pasteur, Linnaeus, Goodall
+Physicists: Bohr, Planck, Fermi, Feynman
+Explorers: Magellan, Cabot, Hudson, Shackleton
+~ Hudson, Bell
+
+@ 3 | Fashion Week
+Patterns: Paisley, Houndstooth, Argyle, Plaid
+Fabrics: Organza, Taffeta, Jersey, Chiffon
+Shoes: Mule, Oxford, Wedge, Pump
+Hats: Trilby, Panama, Cloche, Fez
+~ Oxford, Panama, Jersey
+
+@ 5 | Word Nerd
+Heteronyms: Wind, Tear, Minute, Desert
+Palindromes: Rotor, Refer, Madam, Tenet
+Anagrams of POTS: Tops, Spot, Opts, Post
+Contranyms: Cleave, Sanction, Dust, Oversight
+Portmanteaus: Smog, Brunch, Motel, Spork
+
+@ 2 | Hardware Store
+Fasteners: Screw, Bolt, Rivet, Washer
+Adhesives: Glue, Epoxy, Caulk, Cement
+Paint supplies: Roller, Primer, Drop cloth, Brush
+~ Washer, Bolt
+
+@ 4 | Rhyme and Reason
+Rhyming doubles: Hodgepodge, Hanky-panky, Fuddy-duddy, Hocus-pocus
+Vowel-swap doubles: Zigzag, Flip-flop, Ping-pong, Chitchat
+Exact doubles: Bonbon, Tutu, Couscous, Mahi-mahi
+
+@ 3 | All Aboard
+Train types: Bullet, Freight, Monorail, Sleeper
+Rail jobs: Conductor, Brakeman, Porter, Engineer
+Rolling stock: Caboose, Boxcar, Tender, Flatcar
+Stations: Penn, Paddington, Waterloo, Union
+~ Conductor, Waterloo
+
+@ 1 | Seaside
+Beach: Sand dune, Tide pool, Boardwalk, Seashell
+Harbor: Dock, Buoy, Marina, Tugboat
+
+@ 4 | Cheese Board
+French cheeses: Comte, Roquefort, Camembert, Reblochon
+Italian cheeses: Pecorino, Taleggio, Fontina, Asiago
+Spanish cheeses: Manchego, Mahon, Cabrales, Tetilla
+English cheeses: Stilton, Wensleydale, Cheshire, Lancashire
+Swiss cheeses: Gruyere, Emmental, Raclette, Appenzeller
+
+@ 3 | Kitchen Gadgets
+Pans: Wok, Skillet, Saucepan, Roaster
+Knives: Paring, Cleaver, Santoku, Bread
+Small appliances: Blender, Toaster, Juicer, Air fryer
+Utensils: Tongs, Ladle, Whisk, Zester
+
+@ 5 | S Club
+S + a body part: Sear, Ship, Slip, Slung
+S + a tree: Spine, Sash, Soak, Slime
+S + an animal: Scat, Scow, Snag, Stick
+S + a drink: Sale, Sport, Swine, Snog
+note=ear, hip, lip, lung / pine, ash, oak, lime / cat, cow, nag, tick / ale, port, wine, nog
+~ Spine, Swine
+
+@ 2 | Farm Kids
+Baby animals: Foal, Calf, Piglet, Lamb
+Animal homes: Den, Burrow, Nest, Hive
+Animal sounds: Neigh, Oink, Moo, Baa
+~ Calf
+
+@ 3 | Seven Seas
+Seas: Caspian, Coral, Sargasso, Adriatic
+Gulfs: Aden, Bothnia, Carpentaria, Guinea
+Straits: Gibraltar, Bering, Hormuz, Magellan
+Bays: Bengal, Biscay, Hudson, Fundy
+~ Coral, Guinea, Bengal
+
+@ 4 | Stargazing
+Zodiac constellations: Scorpius, Aquarius, Sagittarius, Gemini
+Other constellations: Lyra, Cygnus, Pegasus, Perseus
+Stars: Sirius, Vega, Betelgeuse, Rigel
+Space probes: Juno, Cassini, Galileo, Pioneer
+Comets: Halley, Hale-Bopp, Encke, Swift-Tuttle
+~ Galileo, Juno
+
+@ 3 | Instrument Anatomy
+Guitar parts: Fret, Pickup, Headstock, Tremolo
+Piano parts: Hammer, Damper, Key, Lid
+Drum parts: Snare, Rim, Head, Cymbal
+Violin parts: Bow, Scroll, F-hole, Chinrest
+
+@ 2 | Ballpark
+Baseball positions: Pitcher, Catcher, Shortstop, Center field
+Football positions: Quarterback, Tight end, Safety, Linebacker
+Soccer positions: Striker, Sweeper, Goalkeeper, Winger
+~ Pitcher, Safety
+
+@ 4 | Top Shelf
+Whiskey styles: Bourbon, Scotch, Rye, Single malt
+Brandies: Cognac, Armagnac, Calvados, Grappa
+Liqueurs: Amaretto, Chartreuse, Sambuca, Limoncello
+Gin botanicals: Juniper, Coriander, Angelica, Orris
+Beer styles: Pilsner, Dunkel, Hefeweizen, Lambic
+~ Rye, Chartreuse
+
+@ 3 | Throwback
+1920s: Flapper, Speakeasy, Charleston, Model T
+1950s: Poodle skirt, Sock hop, Jukebox, Drive-in
+1970s: Disco, Pet rock, Mood ring, Bell-bottoms
+1980s: Leg warmers, Boombox, Mullet, Aerobics
+
+@ 5 | Fruit Salad Spinner
+Anagram of a fruit: Reap, Lump, Among, Pager
+Anagram of a tree: Has, Take, Ample, Raced
+Anagram of an animal: Loin, Act, Balm, Paroled
+Anagram of a sport: Flog, Loop, Blows, Drats
+note=pear, plum, mango, grape / ash, teak, maple, cedar / lion, cat, lamb, leopard / golf, polo, bowls, darts
+
+@ 2 | Wardrobe
+Tops: Blouse, Tunic, Camisole, Polo
+Bottoms: Culottes, Chinos, Capris, Joggers
+Outerwear: Blazer, Poncho, Cape, Windbreaker
+~ Polo, Capris
+
+@ 3 | Holiday Mix
+Christmas: Mistletoe, Tinsel, Stocking, Sleigh
+Halloween: Cauldron, Costume, Candy corn, Broomstick
+Easter: Basket, Bunny, Egg hunt, Jelly bean
+Valentine's Day: Cupid, Roses, Love note, Box of candy
+~ Stocking
+
+@ 4 | Architect's Desk
+Bridge types: Suspension, Cantilever, Truss, Arch
+Column parts: Capital, Shaft, Plinth, Abacus
+Window types: Bay, Dormer, Casement, Oriel
+Roof features: Eaves, Gable, Ridge, Soffit
+~ Capital, Abacus
+
+@ 3 | Bug Collection
+Butterflies: Monarch, Swallowtail, Painted lady, Admiral
+Moths: Luna, Atlas, Sphinx, Io
+Beetles: Stag, Dung, Rhinoceros, Click
+Ants: Fire, Army, Carpenter, Bullet
+~ Monarch, Admiral
+
+@ 4 | Order in the Court
+Legal Latin: Pro bono, Voir dire, Amicus, Mens rea
+Courtroom roles: Bailiff, Clerk, Juror, Prosecutor
+Crimes: Larceny, Arson, Perjury, Fraud
+Legal documents: Subpoena, Affidavit, Deed, Warrant
+
+@ 2 | Fruit Bowl
+Tropical fruits: Mango, Papaya, Guava, Lychee
+Melons: Cantaloupe, Honeydew, Casaba, Galia
+Apples: Fuji, Gala, Braeburn, Granny Smith
+
+@ 5 | Look Again
+Hides a boy's name: Bobsled, Hijacking, Sedan, Tedious
+Hides a girl's name: Pamphlet, Annex, Clever, Pursue
+Hides a game: Stage, Brisket, Scraps, Snapper
+Hides a vegetable: Kaleidoscope, Scorn, Beetle, Repeat
+note=Bob, Jack, Dan, Ted / Pam, Ann, Eve, Sue / tag, risk, craps, snap / kale, corn, beet, pea
+
+@ 3 | Bread and Butter
+___bread: Ginger, Sweet, Corn, Flat
+___ butter: Peanut, Apple, Cocoa, Shea
+___milk: Butter, Skim, Breast, Whole
+
+@ 4 | Ship Shape
+Sails: Jib, Spinnaker, Mainsail, Genoa
+Hull parts: Keel, Rudder, Transom, Bilge
+Ship directions: Port, Starboard, Aft, Abeam
+Ship's crew: Bosun, Purser, Coxswain, Midshipman
+Ship types: Frigate, Galleon, Clipper, Trawler
+~ Genoa, Port
+
+@ 3 | Building Site
+Construction vehicles: Bulldozer, Backhoe, Crane, Excavator
+Materials: Rebar, Drywall, Plywood, Asphalt
+Site tools: Level, Plumb bob, Chalk line, Tape measure
+Trades: Mason, Welder, Glazier, Roofer
+~ Crane, Mason
+
+@ 2 | Number Crunch
+Means two: Pair, Duo, Brace, Twain
+Exact amounts: Dozen, Score, Gross, Ream
+Means lots: Slew, Heap, Oodles, Scads
+~ Score
+
+@ 4 | Here Be Monsters
+Greek creatures: Minotaur, Pegasus, Harpy, Cerberus
+Norse creatures: Fenrir, Sleipnir, Valkyrie, Draugr
+Japanese creatures: Kitsune, Kappa, Tengu, Oni
+Celtic creatures: Banshee, Selkie, Kelpie, Leprechaun
+Arabian creatures: Djinn, Roc, Ghoul, Simurgh
+~ Kappa
+
+@ 3 | Check-Up
+Fields of medicine: Oncology, Neurology, Pediatrics, Radiology
+Medical tools: Scalpel, Forceps, Otoscope, Tourniquet
+Body systems: Skeletal, Nervous, Digestive, Lymphatic
+Medical tests: Biopsy, X-ray, MRI, EKG
+~ Nervous
+
+@ 1 | Bedtime or Bath Time
+Bedtime: Pajamas, Pillow, Lullaby, Nightlight
+Bath time: Bubbles, Rubber duck, Washcloth, Shampoo
+
+@ 4 | World Music
+Indian instruments: Sitar, Tabla, Sarod, Veena
+Japanese instruments: Koto, Shamisen, Shakuhachi, Taiko
+African instruments: Kora, Djembe, Mbira, Balafon
+Latin instruments: Charango, Cajon, Guiro, Marimba
+Celtic instruments: Bodhran, Tin whistle, Bagpipes, Concertina
+
+@ 3 | Studio Arts
+Paint techniques: Fresco, Impasto, Sfumato, Glazing
+Photography: Aperture, Shutter, Exposure, Bokeh
+Sculpture terms: Bust, Relief, Armature, Patina
+Film terms: Montage, Close-up, Pan, Dolly
+~ Shutter, Bust, Dolly
+
+@ 4 | Board Talk
+Surf lingo: Barrel, Wipeout, Hang ten, Swell
+Skate tricks: Ollie, Kickflip, Grind, Manual
+Snow sports lingo: Powder, Mogul, Corduroy, Gondola
+Climbing lingo: Belay, Crimp, Crux, Beta
+~ Mogul, Manual, Beta
+
+@ 2 | Space Camp
+Astronaut gear: Spacesuit, Helmet, Visor, Tether
+Rocket parts: Booster, Nose cone, Fins, Thruster
+Space station: Module, Airlock, Solar panel, Docking port
+
+@ 3 | Under the Surface
+Layers of the Earth: Crust, Mantle, Outer core, Inner core
+Atmosphere layers: Troposphere, Stratosphere, Mesosphere, Thermosphere
+Volcano types: Shield, Cinder cone, Caldera, Fissure
+Fault types: Normal, Reverse, Thrust, Strike-slip
+~ Mantle, Shield
+
+@ 4 | Wild Kingdom
+Rodents: Agouti, Marmot, Jerboa, Porcupine
+Marsupials: Bandicoot, Bilby, Numbat, Quoll
+Primates: Loris, Bonobo, Marmoset, Galago
+Mustelids: Mink, Stoat, Wolverine, Otter
+Hoofed animals: Okapi, Ibex, Tapir, Gazelle
+~ Wolverine
+
+@ 3 | Sushi Bar
+Sushi styles: Nigiri, Maki, Sashimi, Temaki
+Sushi fish: Hamachi, Unagi, Toro, Saba
+Condiments: Wasabi, Shoyu, Ponzu, Gari
+Japanese drinks: Sake, Shochu, Ramune, Genmaicha
+
+@ 1 | Jungle, Arctic or Savanna
+Jungle: Vine, Toucan, Canopy, Jaguar
+Arctic: Iceberg, Walrus, Tundra, Snowy owl
+Savanna: Acacia, Zebra, Giraffe, Baobab
+
+@ 4 | Animal Instincts
+Golf scores: Eagle, Birdie, Bogey, Albatross
+Computer terms: Mouse, Virus, Cookie, Worm
+Poker slang: Fish, Shark, Whale, Donkey
+Market lingo: Bull, Bear, Hawk, Dove
+
+@ 3 | Taco Truck
+Salsas: Verde, Roja, Pico, Macha
+Taco fillings: Carnitas, Al pastor, Barbacoa, Carne asada
+Dried chiles: Ancho, Guajillo, Pasilla, Arbol
+Toppings: Cilantro, Crema, Cotija, Radish
+
+@ 2 | Lettered
+Postal: Stamp, Envelope, Parcel, Postmark
+Banking: Deposit, Teller, Vault, Overdraft
+Library: Stacks, Catalog, Late fee, Reading room
+~ Vault, Stacks
+
+@ 4 | Over and Out
+Over___: Bearing, Kill, Lord, Due
+Under___: Dog, Cover, Study, Belly
+Out___: Rage, Fit, Law, Skirts
+Up___: Roar, Beat, Hill, Start
+
+@ 3 | Bookworm
+Russian writers: Tolstoy, Chekhov, Gogol, Pushkin
+French writers: Hugo, Proust, Zola, Camus
+American writers: Twain, Hemingway, Faulkner, Melville
+British writers: Austen, Woolf, Bronte, Tolkien
+~ Woolf
+
+@ 2 | Veggie Patch
+Squash: Butternut, Acorn, Spaghetti, Delicata
+Lettuces: Romaine, Iceberg, Bibb, Little gem
+Onions: Shallot, Vidalia, Scallion, Leek
+~ Acorn, Spaghetti, Iceberg
+
+@ 4 | Letter Sounds
+Two-letter sounds: Envy, Excel, Cutie, Empty
+Plural-letter sounds: Seize, Ewes, Wise, Ease
+One-letter sounds: Pea, Jay, Owe, Gee
+note=NV, XL, QT, MT / Cs, Us, Ys, Es / P, J, O, G
+
+@ 3 | Puzzle Box
+___word: Pass, Cross, Buzz, Swear
+___line: Dead, Clothes, Hem, Life
+___ card: Wild, Post, Report, Green
+
+@ 4 | Dog Show
+Herding dogs: Collie, Kelpie, Sheltie, Briard
+Toy dogs: Pug, Pomeranian, Chihuahua, Papillon
+Terriers: Cairn, Airedale, Westie, Scottie
+Hounds: Saluki, Bloodhound, Basset, Whippet
+~ Papillon
+
+@ 3 | Spa Day
+Massage styles: Swedish, Shiatsu, Thai, Hot stone
+Skin care: Toner, Serum, Exfoliant, Moisturizer
+Nail care: Cuticle, Buffer, Polish, File
+Bath extras: Bath bomb, Epsom salt, Bath oil, Bath salts
+~ Swedish, Thai, Polish
+
+@ 3 | Prefix Patrol
+Ex + word: Expose, Extent, Exhale, Exact
+In + word: Insight, Inmate, Inform, Income
+Be + word: Behold, Belong, Betray, Befall
+
+@ 2 | Heads Up
+Hats: Beret, Bowler, Fedora, Beanie
+Hairstyles: Bob, Bun, Mohawk, Pixie
+Hair tools: Comb, Curler, Flat iron, Bobby pin
+~ Bowler, Bob, Pixie
+
+@ 5 | Sky Writing
+Hides a heavenly body: Mustard, Asunder, Marsh, Casanova
+Hides a boat: Parka, Draft, Eyeliner, Suburb
+Hides a color: Steal, Chamber, Sacred, Distant
+Hides an emotion: Satire, Drawer, Garage, Whatever
+note=star, sun, Mars, nova / ark, raft, liner, sub / teal, amber, red, tan / ire, awe, rage, hate
+
+@ 2 | Coin Toss
+Coins: Penny, Dime, Quarter, Half dollar
+Metals: Copper, Silver, Platinum, Zinc
+Gemstones: Emerald, Sapphire, Opal, Topaz
+~ Quarter
+
+@ 3 | Glass Act
+___glass: Hour, Spy, Looking, Stained
+___light: Flash, Spot, Moon, Lime
+___ship: Friend, Court, Hard, Owner
+___hood: Child, Knight, False, Neighbor
+
+@ 4 | Stone Cold
+___stone: Mile, Brim, Cobble, Kidney
+___wood: Holly, Drift, Sandal, Ply
+___fish: Cat, Flat, Lion, Blow
+
+@ 1 | Wedding or Birthday
+Wedding: Bouquet, Veil, Vows, Bridesmaid
+Birthday: Party hat, Pinata, Goody bag, Candles
+
+@ 5 | Hidden Pantry
+Hides an herb: Passage, Basilica, Archives, Cruel
+Hides a body of water: Flake, Coven, Ponder, Engulf
+Hides a cheese: Debrief, Fetal, Edamame, Hebrides
+Hides an animal sound: Smooth, Spurred, Neighbor, Embark
+note=sage, basil, chive, rue / lake, cove, pond, gulf / brie, feta, edam, brie / moo, purr, neigh, bark
+
+@ 4 | Map Quest
+US state capitals: Boise, Juneau, Pierre, Montpelier
+Canadian cities: Halifax, Calgary, Regina, Winnipeg
+Australian cities: Perth, Darwin, Hobart, Adelaide
+Mexican cities: Oaxaca, Merida, Puebla, Tijuana
+Indian cities: Pune, Jaipur, Kolkata, Chennai
+~ Pierre, Darwin
+
+@ 5 | Kitchen Accounts
+Sounds like money: Sent, One, Reel, Frank
+Sounds like a unit: Feat, What, Hurts, Not
+Sounds like cooking: Grille, Based, Seer, Brays
+Sounds like baking: Flower, Need, Role, Bred
+note=cent, won, real, franc / feet, watt, hertz, knot / grill, baste, sear, braise / flour, knead, roll, bread
+
+@ 3 | Bird Words
+Birds that are verbs: Duck, Swallow, Grouse, Crow
+Birds that are names: Robin, Jay, Phoebe, Martin
+Birds that are colors: Teal, Canary, Cardinal, Flamingo
+
+@ 5 | Head Start
+Starts with a currency: Yenta, Marker, Realty, Centaur
+Starts with body part: Lipid, Kneel, Chinook, Handsome
+Starts with a number: Tension, Onerous, Tentacle, Ninepin
+Starts with a bird: Henna, Emulate, Ternary, Wrench
+note=yen, mark, real, cent / lip, knee, chin, hand / ten, one, ten, nine / hen, emu, tern, wren
