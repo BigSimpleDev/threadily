@@ -1,0 +1,625 @@
+# Pack 11 — second season. Each star tier runs a notch harder than packs 1–10
+# (more herrings, bigger grids per rating); 5★ boards use purple-tier wordplay.
+
+@ 1 | Farm, Zoo or Circus
+On the farm: Tractor, Silo, Hayloft, Scarecrow
+At the zoo: Zookeeper, Enclosure, Penguin pool, Ape house
+Under the big top: Ringmaster, Trapeze, Clown car, Tightrope
+
+@ 1 | Hot or Cold
+Hot drinks: Cocoa, Espresso, Chai, Hot toddy
+Cold drinks: Lemonade, Slushie, Iced tea, Milkshake
+
+@ 2 | Pantry Shelves
+Pasta: Orzo, Rigatoni, Farfalle, Ditalini
+Grains: Quinoa, Farro, Bulgur, Barley
+Beans: Pinto, Navy, Cannellini, Adzuki
+~ Orzo, Navy
+
+@ 1 | Pack Your Bag
+Beach bag: Sunscreen, Flip-flops, Beach towel, Sunhat
+Ski bag: Goggles, Mittens, Lift pass, Hand warmers
+Camping bag: Tent stakes, Headlamp, Sleeping bag, Bug spray
+~ Goggles
+
+@ 2 | Orchestra Seating
+Strings: Viola, Cello, Harp, Double bass
+Brass: Tuba, Trombone, French horn, Cornet
+Woodwinds: Oboe, Bassoon, Piccolo, Clarinet
+
+@ 1 | Pizza or Sundae
+Sundae toppings: Sprinkles, Hot fudge, Cherry, Caramel
+Pizza toppings: Pepperoni, Mushroom, Olives, Anchovy
+
+@ 2 | Garden Center
+Flowers: Tulip, Daisy, Marigold, Peony
+Herbs: Basil, Thyme, Oregano, Dill
+Trees: Maple, Birch, Willow, Cedar
+
+@ 2 | Hit the Gym
+Gym equipment: Treadmill, Barbell, Kettlebell, Rower
+Exercises: Burpee, Crunch, Deadlift, Push-up
+Yoga poses: Warrior, Cobra, Tree, Lotus
+
+@ 1 | Snow Day or Beach Day
+Snow day: Sled, Snowman, Igloo, Snow angel
+Beach day: Sandcastle, Seashell, Boogie board, Lifeguard
+
+@ 2 | All Aboard
+In a castle: Moat, Drawbridge, Keep, Dungeon
+On a ship: Galley, Bridge, Hold, Crow's nest
+At an airport: Terminal, Runway, Hangar, Tarmac
+~ Keep, Bridge
+
+@ 3 | Finish the Word
+___board: Key, Card, Dash, Cup
+___ball: Eye, Meat, Odd, Gum
+___fish: Sword, Gold, Jelly, Cat
+
+@ 3 | Under the Hood
+Engine parts: Piston, Crankshaft, Camshaft, Spark plug
+Brake parts: Caliper, Rotor, Brake pad, Drum
+Suspension parts: Strut, Shock, Sway bar, Coil spring
+~ Rotor, Drum
+
+@ 4 | Card Table
+Poker hands: Flush, Straight, Full house, Two pair
+Bridge terms: Trump, Trick, Dummy, Rubber
+Blackjack moves: Hit, Stand, Bust, Double down
+Solitaire terms: Foundation, Tableau, Stock, Waste
+~ Trump, Rubber
+
+@ 5 | Say It Out Loud
+Like a letter: Tea, Sea, Jay, Queue
+Like a pronoun: Wee, Hymn, Hour, Yore
+Like a number: Won, Ate, For, Too
+Like a Greek letter: Pie, New, Row, Mew
+
+@ 3 | Paint Chips
+Reds: Crimson, Scarlet, Maroon, Vermilion
+Blues: Cerulean, Navy, Cobalt, Azure
+Greens: Emerald, Jade, Olive, Sage
+Yellows: Mustard, Saffron, Canary, Amber
+
+@ 4 | Things With...
+Things with keys: Laptop, Typewriter, Florida, Jailer
+Things with scales: Fish, Dragon, Pangolin, Bathroom
+Things with bark: Dog, Seal, Fox, Coyote
+Things with needles: Compass, Cactus, Haystack, Sewing kit
+Things with trunks: Elephant, Sedan, Swimmer, Steamer
+~ Florida, Seal, Swimmer
+
+@ 2 | Desk Job
+Desk drawer: Stapler, Paper clip, Rubber band, Hole punch
+Computer setup: Monitor, Mouse, Keyboard, Webcam
+Break room: Microwave, Coffee pot, Fridge, Water cooler
+
+@ 3 | European Tour
+Rivers: Danube, Rhine, Loire, Vistula
+Mountain ranges: Alps, Pyrenees, Carpathians, Apennines
+Islands: Sicily, Corsica, Crete, Mallorca
+Capitals: Lisbon, Vienna, Prague, Dublin
+
+@ 4 | Best in Breed
+Dog breeds: Beagle, Whippet, Corgi, Basenji
+Horse breeds: Arabian, Clydesdale, Appaloosa, Lipizzan
+Cat breeds: Siamese, Maine Coon, Sphynx, Ragdoll
+Cattle breeds: Angus, Hereford, Holstein, Jersey
+~ Jersey
+
+@ 5 | Inside Job
+Hides a body part: Charming, Clipboard, Washington, Feared
+Hides a vehicle: Abusive, Vocabulary, Advantage, Strainer
+Hides a bird: Lantern, Swanky, Ravenous, Hawker
+Hides a number: Often, Weight, Honest, Network
+note=arm, lip, shin, ear / bus, cab, van, train / tern, swan, raven, hawk / ten, eight, one, two
+
+@ 3 | On the Radio
+Jazz styles: Bebop, Swing, Ragtime, Dixieland
+Dance music: House, Techno, Disco, Trance
+Country styles: Bluegrass, Honky-tonk, Outlaw, Bakersfield
+Rock styles: Grunge, Punk, Prog, Glam
+~ House, Outlaw
+
+@ 2 | Breakfast Table
+Egg dishes: Omelet, Frittata, Quiche, Shakshuka
+Pastries: Danish, Croissant, Strudel, Scone
+Breakfast meats: Bacon, Sausage, Ham, Scrapple
+~ Danish
+
+@ 4 | Off to a Good Start
+Starts with a country: Perusal, Malignant, Chadors, Cubanelle
+Starts with a planet: Marsupial, Earthen, Saturnine, Venusian
+Starts with a metal: Tinsel, Ironic, Goldenrod, Leadership
+note=Peru, Mali, Chad, Cuba / Mars, Earth, Saturn, Venus / tin, iron, gold, lead
+
+@ 3 | Deli Case
+Breads: Focaccia, Naan, Challah, Brioche
+Cheeses: Gouda, Brie, Manchego, Halloumi
+Pasta: Penne, Orecchiette, Linguine, Fusilli
+Sausages: Chorizo, Bratwurst, Kielbasa, Andouille
+
+@ 3 | Mission Control
+Planets: Neptune, Uranus, Venus, Saturn
+Moons: Callisto, Europa, Io, Phobos
+Constellations: Orion, Lyra, Draco, Cassiopeia
+Space programs: Apollo, Voyager, Artemis, Viking
+~ Apollo
+
+@ 4 | Royal Court
+Chess pieces: Rook, Pawn, Bishop, Knight
+Chess terms: En passant, Check, Gambit, Fork
+Card games: Rummy, Euchre, Cribbage, Canasta
+Peerage: Duke, Earl, Baron, Viscount
+Court jobs: Jester, Herald, Squire, Falconer
+~ Knight
+
+@ 2 | Bug Life
+Beetles: Ladybug, Firefly, Weevil, Scarab
+Spiders: Tarantula, Black widow, Huntsman, Recluse
+Bees and wasps: Hornet, Yellowjacket, Bumblebee, Honeybee
+~ Firefly, Ladybug
+
+@ 3 | Read It Backward
+Palindromes: Kayak, Level, Radar, Civic
+Backward, new word: Stressed, Drawer, Diaper, Spoons
+Anagrams of LISTEN: Silent, Enlist, Tinsel, Inlets
+note=desserts, reward, repaid, snoops
+
+@ 3 | Last Call
+Cocktails: Negroni, Mojito, Sidecar, Gimlet
+Coffee drinks: Cortado, Macchiato, Flat white, Affogato
+Teas: Oolong, Darjeeling, Rooibos, Matcha
+Beers: Stout, Porter, Lager, Saison
+~ Porter, Sidecar
+
+@ 4 | Fill in the Blank
+___jack: Lumber, Flap, Apple, Car
+___pot: Crack, Honey, Flower, Chimney
+___ mail: Chain, Junk, Snail, Fan
+___bird: Song, Lady, Blue, Thunder
+
+@ 1 | Bath or Kitchen
+Bathroom: Bathtub, Toothbrush, Bath mat, Loofah
+Kitchen: Spatula, Colander, Toaster, Oven mitt
+
+@ 2 | Weather Report
+Clouds: Cumulus, Cirrus, Stratus, Nimbus
+Storms: Hurricane, Typhoon, Tornado, Blizzard
+Winds: Mistral, Chinook, Sirocco, Zephyr
+~ Chinook
+
+@ 3 | Doctor's Office
+Bones: Femur, Tibia, Clavicle, Radius
+Organs: Liver, Spleen, Pancreas, Kidney
+Muscles: Biceps, Deltoid, Glute, Quad
+Teeth: Molar, Incisor, Canine, Premolar
+~ Radius, Canine
+
+@ 4 | Drop the First Letter
+Leaves a body part: Bear, Chip, Farm, Clip
+Leaves an animal: Brat, Scow, Bowl, Pant
+Leaves a color: Bred, Scream, Prose, Clime
+note=ear, hip, arm, lip / rat, cow, owl, ant / red, cream, rose, lime
+
+@ 2 | Tool Shed
+Hand tools: Hammer, Wrench, Chisel, Pliers
+Power tools: Jigsaw, Sander, Router, Nail gun
+Garden tools: Rake, Hoe, Trowel, Shears
+~ Router, Jigsaw
+
+@ 1 | Pirates, Knights, Cowboys
+Pirates: Treasure map, Eye patch, Parrot, Plank
+Knights: Armor, Lance, Shield, Steed
+Cowboys: Lasso, Stetson, Chaps, Rodeo
+
+@ 3 | Kitchen Sink
+Knife cuts: Julienne, Dice, Mince, Chiffonade
+Cooking methods: Braise, Poach, Sear, Saute
+Baking steps: Proof, Knead, Fold, Cream
+~ Dice, Proof
+
+@ 3 | At the Movies
+Film genres: Western, Thriller, Musical, Horror
+Film crew: Gaffer, Grip, Boom op, Best boy
+Concessions: Popcorn, Nachos, Soda, Licorice
+At the cinema: Usher, Projector, Screen, Box office
+
+@ 4 | Pester or Put Up With
+Pester: Badger, Hound, Bug, Nag
+Tolerate: Stomach, Stand, Abide, Brook
+Sewing kit: Thread, Thimble, Bobbin, Seam ripper
+Paired organs: Lung, Kidney, Ovary, Eye
+~ Stomach, Badger
+
+@ 2 | Sweet Shop
+Chocolates: Truffle, Praline, Bonbon, Ganache
+Cookies: Biscotti, Macaron, Shortbread, Gingersnap
+Cakes: Bundt, Chiffon, Angel food, Red velvet
+~ Truffle
+
+@ 3 | Fly Away
+Birds of prey: Kestrel, Osprey, Harrier, Condor
+Waterbirds: Heron, Egret, Grebe, Cormorant
+Songbirds: Warbler, Finch, Thrush, Wren
+Flightless birds: Emu, Kiwi, Rhea, Cassowary
+~ Kiwi, Harrier
+
+@ 4 | Music Lesson
+Tempo marks: Allegro, Largo, Adagio, Presto
+Dynamics: Forte, Piano, Crescendo, Sforzando
+Note values: Quaver, Crotchet, Minim, Breve
+Clefs: Treble, Bass, Alto, Tenor
+Intervals: Octave, Fifth, Tritone, Unison
+~ Piano
+
+@ 2 | Snack Mix
+Nuts: Pecan, Walnut, Cashew, Pistachio
+Seeds: Sesame, Poppy, Chia, Flax
+Dried fruit: Raisin, Prune, Date, Apricot
+~ Date
+
+@ 3 | Spice Rack
+Spices: Cumin, Turmeric, Cardamom, Nutmeg
+Herbs: Tarragon, Chervil, Marjoram, Lovage
+Chili peppers: Habanero, Poblano, Serrano, Jalapeno
+Sauces: Pesto, Aioli, Chimichurri, Romesco
+
+@ 4 | Off With Their Heads
+Starts with an animal: Catalog, Ratify, Pigment, Ramble
+Starts with body part: Armada, Legend, Earnest, Hipster
+Starts with a tree: Ashtray, Firmament, Pineapple, Oakland
+note=cat, rat, pig, ram / arm, leg, ear, hip / ash, fir, pine, oak
+
+@ 1 | Cat or Dog
+Cat things: Purr, Litter box, Hairball, Catnip
+Dog things: Fetch, Leash, Bark, Kennel
+
+@ 3 | Greek Myths
+Greek gods: Hermes, Ares, Hera, Demeter
+Titans: Cronus, Rhea, Hyperion, Atlas
+Monsters: Medusa, Cyclops, Hydra, Chimera
+Heroes: Perseus, Theseus, Jason, Achilles
+~ Atlas
+
+@ 2 | Dance Floor
+Latin dances: Salsa, Samba, Mambo, Rumba
+Swing dances: Lindy hop, Jitterbug, Charleston, Balboa
+Folk dances: Polka, Jig, Hora, Reel
+~ Salsa
+
+@ 3 | Light It Up
+Fire___: Fly, Place, Work, Wall
+Sun___: Burn, Dial, Glasses, Rise
+Star___: Board, Dust, Ling, Let
+
+@ 2 | Ocean Life
+Sharks: Mako, Hammerhead, Tiger, Nurse
+Whales: Humpback, Orca, Beluga, Narwhal
+Rays: Manta, Stingray, Torpedo, Skate
+~ Tiger, Nurse, Skate
+
+@ 3 | Sewing Basket
+Fabrics: Tweed, Chiffon, Denim, Velvet
+Embroidery stitches: Blanket, Running, Chain, Cross
+Knitting terms: Purl, Cast on, Skein, Gauge
+Sewing notions: Bobbin, Thimble, Zipper, Bias tape
+~ Blanket, Chain
+
+@ 4 | World Kitchen
+Japanese dishes: Tempura, Yakitori, Okonomiyaki, Udon
+Indian dishes: Biryani, Korma, Dal, Samosa
+Mexican dishes: Mole, Pozole, Tamale, Elote
+Italian dishes: Risotto, Osso buco, Arancini, Polenta
+Korean dishes: Bibimbap, Kimchi, Bulgogi, Japchae
+~ Mole
+
+@ 3 | Math Class
+Shapes: Rhombus, Hexagon, Trapezoid, Ellipse
+Mathematicians: Euler, Gauss, Euclid, Fermat
+Number types: Prime, Integer, Rational, Complex
+Calculus terms: Limit, Derivative, Integral, Gradient
+~ Prime, Complex
+
+@ 2 | Bookshelf
+Poetry forms: Haiku, Sonnet, Limerick, Ode
+Fiction genres: Mystery, Romance, Fantasy, Western
+Book parts: Spine, Index, Preface, Chapter
+~ Spine
+
+@ 3 | Sports Bar
+Golf terms: Bogey, Mulligan, Divot, Fore
+Tennis terms: Deuce, Let, Love, Tiebreak
+Basketball terms: Dunk, Alley-oop, Rebound, Travel
+Baseball terms: Bunt, Balk, Shortstop, Dinger
+~ Love, Travel
+
+@ 1 | Fruit Stand
+Citrus: Lime, Grapefruit, Tangerine, Kumquat
+Berries: Raspberry, Blueberry, Cranberry, Gooseberry
+Stone fruit: Peach, Plum, Apricot, Cherry
+
+@ 5 | Sound Alikes
+Sounds like an animal: Dear, Hoarse, Mousse, Flee
+Sounds like body part: Heal, Knows, Naval, Aye
+Sounds like a color: Blew, Read, Rows, Lyme
+Sounds like a veggie: Leak, Beat, Carat, Maze
+note=deer, horse, moose, flea / heel, nose, navel, eye / blue, red, rose, lime / leek, beet, carrot, maize
+
+@ 2 | Sound Effects
+Animal sounds: Bray, Neigh, Low, Bleat
+Machine sounds: Whir, Clank, Hum, Beep
+Water sounds: Splash, Drip, Gurgle, Plop
+~ Low, Hum
+
+@ 4 | Color Coded
+Green___: Horn, Room, Gage, Grocer
+Black___: Smith, Mail, Jack, Ball
+Blue___: Print, Bell, Bottle, Chip
+Red___: Neck, Tape, Handed, Herring
+
+@ 3 | Garden Party
+Bulbs: Tulip, Daffodil, Crocus, Hyacinth
+Climbers: Ivy, Wisteria, Clematis, Honeysuckle
+Succulents: Aloe, Agave, Jade, Echeveria
+Grasses: Pampas, Fescue, Bamboo, Sedge
+~ Jade
+
+@ 5 | Hidden Treasure
+Hides a capital: Rigatoni, Climax, Cabernet, Romeo
+Hides a river: Senile, Industry, Plural, Coder
+Hides a metal: Satin, Environs, Mislead, Marigold
+Hides an insect: Signature, Behemoth, Dynamite, Lipstick
+note=Riga, Lima, Bern, Rome / Nile, Indus, Ural, Oder / tin, iron, lead, gold / gnat, moth, mite, tick
+
+@ 4 | Heavy Hitters
+Boxing: Jab, Uppercut, Hook, Clinch
+Wrestling: Suplex, Headlock, Pin, Half nelson
+Fencing: Parry, Riposte, Lunge, Touche
+Martial arts: Judo, Karate, Aikido, Kendo
+Soccer: Nutmeg, Offside, Header, Volley
+~ Nutmeg, Pin
+
+@ 2 | Party Planning
+Party games: Charades, Limbo, Bingo, Tag
+Decorations: Streamers, Confetti, Balloons, Banner
+Party food: Dip, Sliders, Punch, Cake pops
+~ Punch
+
+@ 3 | Camp Out
+Knots: Bowline, Clove hitch, Sheepshank, Reef
+Tents: Dome, A-frame, Yurt, Teepee
+Camp cooking: Dutch oven, Skewer, Percolator, Griddle
+Navigation: Compass, Bearing, Waypoint, Landmark
+~ Reef, Bearing
+
+@ 5 | Mixed Up
+Anagram of a body part: Earth, Below, Inch, Lamp
+Anagram of an animal: Shore, Sneak, Hear, Tab
+Anagram of a color: Cheap, Carol, Genre, Chore
+Anagram of a number: Net, Ether, Evens, Tow
+note=heart, elbow, chin, palm / horse, snake, hare, bat / peach, coral, green, ochre / ten, three, seven, two
+
+@ 4 | Creepy Crawlies
+Before "fly": Horse, Gad, House, Shoo
+Before "fish": Sword, Jelly, Cuttle, Monk
+Before "bug": Bed, June, Litter, Hum
+Before "worm": Book, Silk, Earth, Ring
+
+@ 3 | Pastry Case
+French pastries: Eclair, Madeleine, Palmier, Canele
+Italian desserts: Tiramisu, Cannoli, Panna cotta, Gelato
+Middle Eastern sweets: Baklava, Kunafa, Halva, Maamoul
+Latin desserts: Churro, Flan, Alfajor, Tres leches
+
+@ 4 | Royals and Rulers
+Ruler titles: Tsar, Shah, Kaiser, Sultan
+Royal houses: Tudor, Windsor, Bourbon, Habsburg
+Pharaohs: Ramses, Tutankhamun, Khufu, Akhenaten
+Roman emperors: Nero, Hadrian, Trajan, Caligula
+~ Bourbon, Windsor
+
+@ 5 | Royal Weather
+Sounds like weather: Reign, Hale, Missed, Whether
+Sounds like royalty: Prints, Air, Thrown, Rain
+Sounds like sea life: Wail, Soul, Place, Muscle
+Sounds like a fruit: Pair, Plumb, Current, Bury
+note=rain, hail, mist, weather / prince, heir, throne, reign / whale, sole, plaice, mussel / pear, plum, currant, berry
+
+@ 1 | Coffee or Tea
+Coffee: Arabica, Robusta, Espresso, Cold brew
+Tea: Earl Grey, Chamomile, Assam, Oolong
+
+@ 3 | On the Move
+Car types: Sedan, Coupe, Hatchback, Minivan
+Bikes: Tandem, BMX, Fixie, Cruiser
+Boats: Ketch, Sloop, Schooner, Catamaran
+Aircraft: Biplane, Glider, Blimp, Seaplane
+~ Cruiser
+
+@ 4 | Crafty
+Knitting: Purl, Cast on, Bind off, Stockinette
+Crochet: Treble, Picot, Amigurumi, Popcorn
+Quilting: Batting, Binding, Applique, Sashing
+Embroidery: Satin stitch, French knot, Hoop, Floss
+Weaving: Warp, Weft, Heddle, Shuttle
+~ Popcorn, Shuttle
+
+@ 5 | Ending Soon
+Ends with an animal: Combat, Scrape, Diagram, Scowl
+Ends with a body part: Worship, Linear, Urchin, Mistletoe
+Ends with a number: Freight, Bitten, Canine, Phone
+Ends with a container: Pecan, Taciturn, Despot, Ajar
+note=bat, ape, ram, owl / hip, ear, chin, toe / eight, ten, nine, one / can, urn, pot, jar
+
+@ 2 | Farmers Market
+Root vegetables: Turnip, Parsnip, Radish, Beet
+Leafy greens: Chard, Kale, Collards, Spinach
+Squash family: Zucchini, Pumpkin, Butternut, Cucumber
+
+@ 3 | Old Masters
+Composers: Brahms, Haydn, Dvorak, Vivaldi
+Painters: Monet, Vermeer, Caravaggio, Goya
+Sculptors: Rodin, Bernini, Donatello, Brancusi
+Architects: Gaudi, Wren, Palladio, Gehry
+~ Wren
+
+@ 4 | Reef Check
+Corals: Brain, Staghorn, Elkhorn, Sea fan
+Sea snails: Conch, Whelk, Abalone, Cowrie
+Crustaceans: Krill, Barnacle, Copepod, Shrimp
+Echinoderms: Sea urchin, Sand dollar, Sea cucumber, Brittle star
+~ Brain
+
+@ 5 | Instrument Panel
+___phone: Saxo, Mega, Ear, Gramo
+___scope: Kaleido, Stetho, Endo, Oscillo
+___meter: Speedo, Pedo, Penta, Volt
+___graph: Auto, Seismo, Choreo, Mimeo
+
+@ 3 | Temperature Check
+Hot ___: Head, Dog, Seat, Rod
+Cold ___: Shoulder, Feet, Call, Front
+Sweet ___: Tooth, Talk, Pea, Corn
+
+@ 4 | The Play's the Thing
+In Hamlet: Ophelia, Polonius, Horatio, Laertes
+In Macbeth: Banquo, Duncan, Macduff, Fleance
+In Othello: Iago, Desdemona, Cassio, Emilia
+In Romeo and Juliet: Mercutio, Tybalt, Benvolio, Paris
+~ Paris
+
+@ 2 | Art Class
+Paints: Acrylic, Gouache, Tempera, Watercolor
+Studio gear: Easel, Palette, Canvas, Smock
+Drawing media: Charcoal, Pastel, Graphite, Conte
+~ Pastel
+
+@ 5 | Calendar Thieves
+Hides a month (abbr.): Octopus, Novel, Decade, Augur
+Hides a day (abbr.): Monkey, Wedding, Thumb, Friend
+Hides a currency: Hyena, Neurotic, Wonder, Burial
+Hides a chess piece: Spawn, Brook, Smoking, Crooked
+note=Oct, Nov, Dec, Aug / Mon, Wed, Thu, Fri / yen, euro, won, rial / pawn, rook, king, rook
+
+@ 3 | Lab Bench
+Noble gases: Neon, Argon, Xenon, Krypton
+Acids: Citric, Acetic, Lactic, Folic
+Sugars: Fructose, Glucose, Sucrose, Lactose
+Enzymes: Amylase, Lipase, Pepsin, Lactase
+~ Krypton
+
+@ 4 | Big Rivers
+African rivers: Congo, Niger, Zambezi, Limpopo
+Asian rivers: Yangtze, Mekong, Ganges, Indus
+South American rivers: Orinoco, Parana, Amazon, Magdalena
+European rivers: Elbe, Tagus, Po, Dnieper
+~ Congo, Niger, Amazon
+
+@ 5 | Letter Logic
+Has all five vowels: Sequoia, Education, Facetious, Dialogue
+Has no vowels: Rhythm, Lynx, Crypt, Nymph
+Letters in ABC order: Almost, Begin, Chimp, Ghost
+Letters in reverse ABC: Spoke, Wolf, Zoned, Tied
+
+@ 3 | Clockwork
+Units of time: Decade, Eon, Fortnight, Millennium
+Clock types: Cuckoo, Grandfather, Sundial, Hourglass
+Calendars: Gregorian, Julian, Lunar, Mayan
+Clock parts: Pendulum, Dial, Escapement, Mainspring
+
+@ 4 | Gathering
+Groups of birds: Murder, Parliament, Gaggle, Murmuration
+Groups of land mammals: Pride, Dazzle, Tower, Crash
+Groups of sea life: School, Shoal, Smack, Pod
+Groups of people: Posse, Troupe, Coven, Jury
+~ Murder, Parliament
+
+@ 5 | Country Minus One
+Country minus a letter: Malt, Cub, Franc, Tong
+Baby birds: Chick, Eaglet, Cygnet, Owlet
+Kitchen tools: Ladle, Whisk, Spatula, Sieve
+Grains: Oats, Rye, Millet, Spelt
+note=Malta, Cuba, France, Tonga
+~ Cub, Malt
+
+@ 2 | Holiday Table
+Thanksgiving: Turkey, Stuffing, Cranberry, Gravy
+Fourth of July: Fireworks, Sparkler, Parade, Barbecue
+New Year's Eve: Countdown, Champagne, Noisemaker, Resolution
+~ Turkey
+
+@ 3 | Body Shop
+Eye parts: Iris, Pupil, Retina, Cornea
+Ear parts: Cochlea, Anvil, Eardrum, Stirrup
+Heart parts: Atrium, Ventricle, Aorta, Valve
+Brain parts: Cortex, Cerebellum, Amygdala, Thalamus
+~ Pupil, Anvil, Iris
+
+@ 4 | First Names First
+Famous Charleses: Darwin, Dickens, Babbage, Lindbergh
+Famous Georges: Orwell, Gershwin, Patton, Seurat
+Famous Johns: Keats, Steinbeck, Milton, Coltrane
+Famous Thomases: Edison, Jefferson, Hardy, Aquinas
+
+@ 5 | Hush Hush
+Silent K: Knee, Knit, Knob, Knife
+Silent W: Wrist, Sword, Answer, Wrap
+Silent B: Lamb, Debt, Doubt, Subtle
+Silent G: Gnome, Gnat, Foreign, Reign
+Silent L: Salmon, Yolk, Calf, Folk
+
+@ 4 | Size Matters
+Grand ___: Piano, Canyon, Prix, Jury
+Baby ___: Shower, Boom, Monitor, Carrot
+Big ___: Bang, Apple, Top, Foot
+Little ___: League, Women, Mermaid, Italy
+
+@ 3 | Smooth Talk
+Nonsense: Bunk, Hogwash, Tripe, Rot
+Steal: Lift, Swipe, Nick, Pilfer
+Deceive: Dupe, Con, Hoodwink, Bamboozle
+Tiny amount: Dash, Smidgen, Iota, Speck
+~ Tripe, Lift
+
+@ 4 | Not What It Seems
+Not actually a fish: Starfish, Jellyfish, Cuttlefish, Crayfish
+Not actually a bear: Koala, Red panda, Water bear, Bearcat
+Not actually an insect: Spider, Tick, Scorpion, Centipede
+Botanical berries: Banana, Tomato, Eggplant, Avocado
+
+@ 5 | Small Change
+Hides a unit: Clinch, Program, Smile, Bounce
+Hides a weapon: Gunk, Taxes, Grimace, Elbow
+Hides money: Dimension, Scent, Hyena, Remark
+Hides a building: Shutter, Dinner, Comfort, Smallpox
+note=inch, gram, mile, ounce / gun, axe, mace, bow / dime, cent, yen, mark / hut, inn, fort, mall
+
+@ 4 | Prefix Pile-Up
+Pro + word: Proverb, Protest, Profile, Product
+Con + word: Contour, Concrete, Convent, Consign
+Car + word: Carpet, Cartoon, Carrot, Cargo
+
+@ 4 | Animal House
+___ dog: Hot, Under, Bull, Corn
+___cat: Copy, Fat, Tom, Bob
+___ horse: Dark, Hobby, Work, Rocking
+___bird: Early, Jail, Love, Mocking
+
+@ 4 | Prefix Pantry
+Butter___: Cup, Fly, Milk, Scotch
+Pea___: Cock, Shooter, Coat, Hen
+Pan___: Handle, Demic, Ther, Try
+
+@ 3 | Grammar School
+Punctuation: Semicolon, Hyphen, Ellipsis, Apostrophe
+Parts of speech: Noun, Adverb, Pronoun, Conjunction
+Figures of speech: Simile, Metaphor, Hyperbole, Irony
+Poetic feet: Iamb, Trochee, Dactyl, Spondee
+
+@ 5 | Looking Back
+Backward animal inside: Tactic, Volume, Psalm, Market
+Backward number inside: Planet, Bowtie, Enormous, Taxis
+Backward body part: Angel, Israel, Pilot, Smug
+Backward drink inside: Regalia, Murky, Elate, Tropic
+note=cat, emu, asp, ram / ten, two, one, six / leg, ear, lip, gum / lager, rum, ale, port
