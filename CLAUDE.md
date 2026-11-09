@@ -54,6 +54,8 @@ localStorage prefix `bsd.thr.*` (see `LOCAL_STORAGE_KEYS`).
 
 **Routes** (`src/app/routes.ts`):
 - `''` — home (`HomeComponent`)
+- `packs` — every pack in order, completed ones included (home lists only
+  incomplete packs)
 - `pack/:pack` — pack select (numbered grid, stars, filter)
 - `play/:pack/:index` — the board (`GameComponent`)
 - `collection` — trinket album + gacha rolling

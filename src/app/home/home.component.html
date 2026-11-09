@@ -118,25 +118,22 @@
     <ion-icon name="chevron-forward" class="thr-row-chev"></ion-icon>
   </button>
 
-  <!-- Packs -->
-  <p class="thr-section-label">Packs · {{ totalSolved() }} / {{ totalPuzzles() }} solved</p>
-  @for (p of packs(); track p.pack) {
-  <button class="thr-pack-card" (click)="openPack(p.pack)">
-    <span class="thr-pack-badge">{{ p.pack }}</span>
-    <span class="thr-pack-body">
-      <span class="thr-pack-line">
-        <span class="thr-pack-name">Pack {{ p.pack }}</span>
-        <span class="thr-pack-count">{{ p.solved }} / {{ p.total }}</span>
-      </span>
-      <span class="thr-pack-bar"><span class="thr-pack-fill" [style.width.%]="pct(p.solved, p.total)"></span></span>
-      <span class="thr-pack-mix">
-        @for (s of stars; track s) {
-          @if (p.byRating[s]) {<span class="thr-mix-chip">{{ s }}★ {{ p.byRating[s] }}</span>}
-        }
-      </span>
+  <!-- All packs, completed ones included -->
+  <button class="thr-row-btn" (click)="openPacks()">
+    <ion-icon name="albums-outline" class="thr-row-icon thr-row-icon-packs"></ion-icon>
+    <span class="thr-row-text">
+      <span class="thr-row-title">Packs</span>
+      <span class="thr-row-sub">{{ totalSolved() }} / {{ totalPuzzles() }} solved</span>
     </span>
     <ion-icon name="chevron-forward" class="thr-row-chev"></ion-icon>
   </button>
+
+  <!-- Incomplete packs only, lowest number first -->
+  @if (incompletePacks().length) {
+  <p class="thr-section-label">Up next</p>
+  @for (p of incompletePacks(); track p.pack) {
+    <app-pack-card [pack]="p" (click)="openPack(p.pack)" (keydown.enter)="openPack(p.pack)"></app-pack-card>
+  }
   }
 
 </ion-content>

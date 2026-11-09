@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { IonContent, IonHeader, IonIcon, ToastController } from '@ionic/angular/standalone';
 import { ViewWillEnter } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { sparklesOutline, settingsOutline, chevronForward, trophyOutline } from 'ionicons/icons';
+import { sparklesOutline, settingsOutline, chevronForward, trophyOutline, albumsOutline } from 'ionicons/icons';
 import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
@@ -12,6 +12,7 @@ import { GameService, pack_summary, puzzle_ref } from '../services/game.service'
 import { EventService, event_progress } from '../services/event.service';
 import { event_config } from '../entities/constants';
 import { DailyService } from '../services/daily.service';
+import { PackCardComponent } from '../packs/pack-card.component';
 import { ShareService, buildShareText, dailyShareHeader } from '../services/share.service';
 
 @Component({
@@ -19,7 +20,7 @@ import { ShareService, buildShareText, dailyShareHeader } from '../services/shar
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonIcon]
+  imports: [IonContent, IonHeader, IonIcon, PackCardComponent]
 })
 export class HomeComponent implements ViewWillEnter {
   private router = inject(Router);
@@ -60,9 +61,12 @@ export class HomeComponent implements ViewWillEnter {
 
   totalPuzzles = computed(() => this.packs().reduce((n, p) => n + p.total, 0));
   totalSolved = computed(() => this.packs().reduce((n, p) => n + p.solved, 0));
+  // Finished packs drop off home (still reachable from the Packs screen), so
+  // the lowest-numbered pack with work left is always on top.
+  incompletePacks = computed(() => this.packs().filter(p => p.solved < p.total));
 
   constructor() {
-    addIcons({ sparklesOutline, settingsOutline, chevronForward, trophyOutline });
+    addIcons({ sparklesOutline, settingsOutline, chevronForward, trophyOutline, albumsOutline });
   }
 
   ionViewWillEnter() {
@@ -106,6 +110,10 @@ export class HomeComponent implements ViewWillEnter {
 
   openPack(pack: number) {
     this.router.navigate(['/pack', pack]);
+  }
+
+  openPacks() {
+    this.router.navigate(['/packs']);
   }
 
   openEvent(e: event_config) {

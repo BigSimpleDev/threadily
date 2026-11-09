@@ -32,6 +32,8 @@
       <ion-icon name="bulb-outline"></ion-icon>
       <span class="thr-hint-cost">{{ HINT_COST }}¢</span>
     </button>
+    <!-- Phones only: wraps the header so hearts + energy get their own short line. -->
+    <div class="thr-hdr-break"></div>
     <div class="thr-hearts" aria-label="Hearts" role="img" [attr.aria-label]="(board()?.hearts ?? 0) + ' hearts'">
       @for (filled of hearts(); track $index) {
         <svg class="thr-heart" [class.thr-heart-lost]="!filled"
@@ -43,6 +45,10 @@
         </svg>
       }
     </div>
+    <span class="thr-hdr-energy" role="status"
+      [attr.aria-label]="energySvc.overridden() ? 'Unlimited energy' : 'Energy ' + energySvc.energy() + ' of ' + energySvc.max">
+      ⚡@if (energySvc.overridden()) {∞} @else {{{ energySvc.energy() }}<span class="thr-energy-max">/{{ energySvc.max }}</span>@if (energySvc.countdown()) {<span class="thr-energy-timer">+1 in {{ energySvc.countdown() }}</span>}}
+    </span>
   </div>
 </ion-header>
 

@@ -1,0 +1,17 @@
+<ion-header class="ion-no-border">
+  <div class="thr-packs-hdr">
+    <button class="thr-icon-btn" (click)="goHome()" aria-label="Back">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </button>
+    <div class="thr-packs-title">
+      <span class="thr-packs-name">All packs</span>
+      <span class="thr-packs-sub">{{ totalSolved() }} / {{ totalPuzzles() }} solved</span>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  @for (p of packs(); track p.pack) {
+    <app-pack-card [pack]="p" (click)="openPack(p.pack)" (keydown.enter)="openPack(p.pack)"></app-pack-card>
+  }
+</ion-content>
