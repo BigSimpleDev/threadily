@@ -5,6 +5,10 @@
 //
 //   node scripts/build-daily.mjs          (extend to at least DAYS entries)
 //   node scripts/build-daily.mjs 1460     (extend to 1460 entries)
+//   node scripts/build-daily.mjs --rebuild-from 2026-11-20
+//       (drop every entry from that date on and re-plan it; for when new packs
+//        land. Pick a date past the last shipped build's reach: a daily that
+//        already ran, or that a live build still serves, must never change.)
 //
 // DAILY_EPOCH and MAX_PACK are read from src/app/entities/constants.ts.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
@@ -31,8 +35,26 @@ for (let pack = 1; pack <= maxPack; pack++) {
     for (const p of JSON.parse(readFileSync(file, 'utf8')).puzzles) puzzles.push({ id: p.id, rating: p.rating });
 }
 
-const existing = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
-const days = Math.max(DAYS, +(process.argv[2] ?? 0));
+const args = process.argv.slice(2);
+const fromAt = args.indexOf('--rebuild-from');
+const rebuildFrom = fromAt >= 0 ? args.splice(fromAt, 2)[1] : null;
+
+let existing = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : [];
+if (rebuildFrom) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(rebuildFrom)) {
+        console.error('--rebuild-from needs a YYYY-MM-DD date');
+        process.exit(1);
+    }
+    // Daily #N falls on epoch + (N-1) days, so entries before this date stay.
+    const keep = Math.round((Date.parse(rebuildFrom) - Date.parse(epoch)) / 86400000);
+    if (keep < 1) {
+        console.error(`--rebuild-from must be after DAILY_EPOCH (${epoch})`);
+        process.exit(1);
+    }
+    existing = existing.slice(0, keep);
+    console.log(`rebuilding from ${rebuildFrom} (Daily #${keep + 1}); keeping ${existing.length} entries`);
+}
+const days = Math.max(DAYS, +(args[0] ?? 0));
 const schedule = extendSchedule(existing, puzzles, epoch, days);
 
 mkdirSync(dirname(OUT), { recursive: true });
