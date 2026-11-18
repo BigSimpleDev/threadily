@@ -76,3 +76,6 @@ Thumbs.db
 /ios/App/build
 /ios/DerivedData
 /out-tsc
+
+# Marketing video generator (bigsimplesite marketing/automation) writes this before a demo build
+/src/assets/demo/

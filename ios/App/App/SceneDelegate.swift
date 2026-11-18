@@ -20,6 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // lives here. It must come from native code (not the WebView) to show on
     // iOS 17+/iPadOS 26+, and only once the scene is active.
     func sceneDidBecomeActive(_ scene: UIScene) {
+        #if targetEnvironment(simulator)
+        // The marketing video runner (bigsimplesite marketing/automation) launches
+        // with this flag so the prompt can't cover the recording. Simulator builds only.
+        if ProcessInfo.processInfo.arguments.contains("-bsdDemoSkipATT") { return }
+        #endif
         guard !attRequested,
               ATTrackingManager.trackingAuthorizationStatus == .notDetermined else { return }
         attRequested = true

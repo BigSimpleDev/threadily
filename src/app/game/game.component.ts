@@ -14,6 +14,7 @@ import { GameService } from '../services/game.service';
 import { LocalstoreService } from '../services/localstore.service';
 import { EnergyService } from '../services/energy.service';
 import { AdService } from '../services/ad.service';
+import { DemoService } from '../services/demo.service';
 import { EventService } from '../services/event.service';
 import { GachaService } from '../services/gacha.service';
 import { DailyService, daily_result } from '../services/daily.service';
@@ -47,6 +48,7 @@ export class GameComponent implements OnInit {
   private alertCtrl = inject(AlertController);
   private toastCtrl = inject(ToastController);
   private destroyRef = inject(DestroyRef);
+  private demoSvc = inject(DemoService);
 
   readonly HINT_COST = HINT_COST;
   readonly AD_HEARTS_GRANT = AD_HEARTS_GRANT;
@@ -225,6 +227,8 @@ export class GameComponent implements OnInit {
     this.attempts.set([]);
     this.hintsUsed.set(0);
     this.adContinues.set(0);
+    // Demo build only (marketing videos): hands the board to the scripted solve.
+    this.demoSvc.attach(this);
   }
 
   get playable(): boolean {

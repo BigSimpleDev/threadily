@@ -173,3 +173,39 @@ Brian runs these outside the session; the session gives him step-by-step instruc
 | Logo | Brian generates in ChatGPT with the #3 prompt; session builds the SVG |
 | Ads / IAP | Same as Trivily / Decryptly. Step-by-step + site marketing doc in #9 |
 | Session permissions | Commit, or commit + push; run and play the app |
+
+
+---
+
+## #16 — Demo mode for marketing videos
+
+For the automated video generator in the bigsimplesite repo
+(`marketing/automation`, marketing agenda D.9.1). The runner writes
+`src/assets/demo/scenario.json`, runs `npm run build:demo`, and records the
+iOS Simulator while `DemoService` plays by itself. The contract (scenario
+format and the `DEMO_*` console lines) is in that folder's README. Ported from
+Decryptly's agenda #9.
+
+### Done (2026-11-18)
+
+- [x] `src/environments/environment.demo.ts` (`demo: true`); `demo: false` in the
+      prod and dev files. `demo` configuration in `angular.json` and
+      `npm run build:demo`. Production builds ignore `src/assets/demo/**`; the
+      folder is gitignored.
+- [x] `DemoService` (`src/app/services/demo.service.ts`): seeds ad-free, tutorial
+      seen, coins and theme; opens `/play/:pack/:index`; solves by tapping a row,
+      its tiles, then Lock In (`tapCategory` / `tapPoolTile` / `lock`). Optional
+      scripted mistake (e.g. a herring → "One away…"). Touch dots;
+      `DEMO_PUZZLE` / `DEMO_START` / `DEMO_DONE` / `DEMO_ERROR`. Random mode: an
+      unplayed 12- or 16-tile board without a `warning`, no planned mistake.
+- [x] Demo build: no splash, no `AdService.init()`, no RevenueCat.
+- [x] `SceneDelegate.swift` skips the ATT prompt on `-bsdDemoSkipATT`, inside
+      `#if targetEnvironment(simulator)` only.
+- [x] Checked: `ng lint` clean, full Karma suite 136/136 (incl.
+      `demo.service.spec.ts`), demo + production builds; played in headless
+      Chrome at 440×956 (random solve 9.8 s; pack 1 #24 with the Chain
+      herring as a planned "One away…" 15.6 s).
+
+### Still to do
+
+- [ ] First real Simulator run from the runner; tune `cropY` in its config.

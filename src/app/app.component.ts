@@ -10,6 +10,8 @@ import { PurchaseService } from './services/purchase.service';
 import { LocalstoreService } from './services/localstore.service';
 import { EnergyService } from './services/energy.service';
 import { DailyService } from './services/daily.service';
+import { DemoService } from './services/demo.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -24,14 +26,21 @@ export class AppComponent {
   private lstoreSvc = inject(LocalstoreService);
   private energySvc = inject(EnergyService);
   private dailySvc = inject(DailyService);
+  private demoSvc = inject(DemoService);
 
-  showSplash = signal(true);
+  // The demo build (marketing videos) skips the splash and goes straight to the board.
+  showSplash = signal(!environment.demo);
 
   constructor() {
     // Initialize monetization during the splash so ad-free state is known before
     // the first game. Both are native no-ops on web and never throw.
-    this.adSvc.init();
-    this.purchaseSvc.configure();
+    // The demo build makes no ad or store calls at all.
+    if (environment.demo) {
+      this.demoSvc.start();
+    } else {
+      this.adSvc.init();
+      this.purchaseSvc.configure();
+    }
 
     // Start energy accrual (applies any offline refill, then ticks each second).
     this.energySvc.init();
