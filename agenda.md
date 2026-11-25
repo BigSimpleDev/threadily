@@ -128,7 +128,7 @@ Brian runs these outside the session; the session gives him step-by-step instruc
   - An ad continue appends ` · +❤️`.
   - Text only. Image share cards are a later item.
 - [x] The win screen of **normal** puzzles also gets a Share button. Same format, header `Threadily #<id> ★★★` (the authored rating).
-- [ ] Link target: `bigsimple.dev/games/threadily`. That landing page is being added on the site side (store badges + device redirect). Until it exists, the link 404s, so don't ship to stores before the site is live.
+- [x] Link target: `bigsimple.dev/games/threadily`. Landing page live on the site (2026-11-14).
 
 ### Daily reminder (optional sub-step)
 
@@ -140,7 +140,7 @@ Brian runs these outside the session; the session gives him step-by-step instruc
 ### Status (2026-11-07)
 
 - Shipped in code: daily, schedule (1,095 days from `DAILY_EPOCH` 2026-11-07), share, home card. **Before release:** set `DAILY_EPOCH` to launch day, delete `src/assets/daily/schedule.json`, run `npm run daily`.
-- Open: daily reminder (optional) and the site landing page.
+- Open: daily reminder (optional). Site landing page is live (2026-11-14).
 
 ### Done when
 

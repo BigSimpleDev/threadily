@@ -110,7 +110,7 @@ export const CHRISTMAS_EVENT: event_config = {
     icon: 'assets/events/christmas/icon.webp',
     blurb: 'Unwrap a stocking full of word groups.',
     packs: [103],
-    start: { month: 12, day: 1 },   // Dec 1
+    start: { month: 11, day: 25 },   // Nov 25
     startYear: 2026,
     end: { month: 1, day: 1 },      // Jan 1 (wraps the new year)
     legendaryTrinketId: 'winter_woolens-12',
